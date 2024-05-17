@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence version="2.2"    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+     <persistence-unit name="TUPPDB" transaction-type="RESOURCE_LOCAL">
+        <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+        <class>com.google.gwt.personal.tupracticalpieces.database.Mileage</class>
+        <exclude-unlisted-classes/>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dfalse" />
+            <property name="javax.persistence.jdbc.user" value="tad" />
+            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+            <property name="datanucleus.identifier.case" value="MixedCase"/>
+    		<property name="datanucleus.validation.mode" value="none" />
+    		<property name="datanucleus.schema.autoCreateAll" value="true"/>
+            <property name="datanucleus.schema.validateTables" value="false"/>
+            <property name="datanucleus.schema.validateConstraints" value="false"/>
+        </properties>
+     </persistence-unit>
+</persistence>
+
+          
+<!-- <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" -->
+<!--     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!--     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence -->
+<!--           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" -->
+<!--     version="2.1"> -->
+<!-- <persistence xmlns="http://java.sun.com/xml/ns/persistence" -->
+<!--     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!--     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence -->
+<!--           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" -->
+<!--     version="2.1"> -->
+<!-- 
+       http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+       http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+ -->
+<!-- 
+    <persistence-unit name="tuppdb">
+     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+	       <jta-data-source>jdbc/__default Trifle</jta-data-source>
+ -->
+ 
+  	<!-- 
+        <mapping-file>META-INF/orm-tuppdb.xml</mapping-file>
+ 	-->
+ 	<!--
+	    <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+        <jta-data-source>ecbDB</jta-data-source>
+ 		<jta-data-source>java:/mysql/Trifle</jta-data-source>
+ 	 -->
+<!-- 
+        <class>com.google.gwt.personal.tupracticalpieces.database.Mileage$DatetoStringConverter</class>
+ 		   <exclude-unlisted-classes>true</exclude-unlisted-classes>
+           <class>com.google.gwt.personal.tupracticalpieces.database.EMF</class>
+           <class>com.google.gwt.personal.tupracticalpieces.database.MileageDataUtils</class>
+ 		   <exclude-unlisted-classes>true</exclude-unlisted-classes>
+ 	       <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+-->
+ <!--
+ 	 <property name="datanucleus.mapping.Catalog" value="Trifle" />
+ 	 <property name="datanucleus.mapping.Schema" value="Trifle" />
+ -->
+             <!-- 
+             <property name="eclipselink.deploy-on-startup" value="true"/>
+              -->
+                <!-- Default database login using MySQL for EclipseLink's internal connection pool,
+                 change this to access your own database. -->
+
+            <!-- The database platform is auto-detected by default,
+                 if you want to set a specific platform this can be set. -->
+            <!-- property name=""eclipselink.target-database" value="Oracle" / -->
+
+		<!-- 
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL=true" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL=true&requireSSL=true&verifyServerCertificate=true&clientCertificateKeyStoreUrl=keystore&clientCertificateKeyStorePassword=passphrasetukeytoolclient*25&trustCertificateKeyStoreUrl=truststore&trustCertificateKeyStorePassword=passphrasetukeytool*25" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dtrue%26requireSSL%3Dtrue%26verifyServerCertificate%3Dtrue%26clientCertificateKeyStoreUrl%3Dkeystore%26clientCertificateKeyStorePassword%3Dpassphrasetukeytoolclient%2A25%26trustCertificateKeyStoreUrl%3Dtruststore%26trustCertificateKeyStorePassword%3Dpassphrasetukeytool%2A25" />
+            <property name="javax.persistence.jdbc.user" value="tom" />
+		-->
+		<!-- debug mode SSL
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dtrue" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+		 -->
+ 		<!-- Release mode. NG Once connect !!! from an authorize app engine, no password -> NG
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://address=(protocol=tcp)(host=2001:4860:4864:1:7f5d:a9a0:cf60:4014)(port=3306)/Trifle?useSSL%3Dfalse"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://173.194.246.106/Trifle?useSSL%3Dfalse"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+		com.mysql.jdbc.GoogleDriver
+            <property name="javax.persistence.jdbc.url" value="jdbc:google:mysql://accumulatio2/Trifle?user=root&amp;password=identmysql5656"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://130.211.201.236/Trifle?useSSL%3Dfalse"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />		
+            <property name="javax.persistence.jdbc.driver" value="com.google.cloud.sql.jdbc.Driver" />		
+            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulatio2/Trifle?useSSL%3Dfalse"/>
+		 -->
+		 
+		 
+		 
+<!--             <property name="javax.persistence.jdbc.url" value="jdbc:google:mysql://accumulatio2/Trifle?user=root&amp;password=identmysql5656"/> -->
+<!--             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://130.211.201.236/Trifle"/> -->
+
+
+	    <!-- Debug mode 
+		
+		
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.3.3:3306/Trifle" />
+            <property name="javax.persistence.jdbc.user" value="tad" />
+            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+		-->
+
+
+	    <!-- Release mode from 201702
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://52.193.61.161:3306/Trifle" />
+		-->
+		
+		
+
+
+		 <!-- Release 201612
+		  -->
+		  
+		  
+		  
+		  
+<!--             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.GoogleDriver" /> -->
+<!--             <property name="javax.persistence.jdbc.url" value="jdbc:google:mysql://tupracticalpieces:us-central1:accumulatio2/Trifle?useSSL%3Dfalse"/> -->
+<!--             <property name="javax.persistence.jdbc.user" value="root" /> -->
+<!--             <property name="javax.persistence.jdbc.password" value="identmysql5656" /> -->
+
+
+
+
+
+<!-- 
+ -->
+		
+        <!-- 
+        
+            <property name="javax.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
+            <property name="javax.persistence.jdbc.user" value="root" />
+         -->
+        <!-- 
+            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+         -->
+ 		<!-- !!!!OK!!!  Release mode OK -> NG -> OK == from an authorize app engine, no password 
+            <property name="javax.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
+            <property name="javax.persistence.jdbc.user" value="root" />
+ 		 -->
+            <!-- 
+            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+             -->
+            <!-- 
+            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+            <property name="javax.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle?useSSL=true"/>
+ 			-->
+	    <!-- EclipseLink -->
+            <!-- Configure connection pool.             <property name="eclipselink.connection-pool.default.initial" value="1" />
+            <property name="eclipselink.connection-pool.default.min" value="300" />
+            <property name="eclipselink.connection-pool.default.max" value="300" />
+            <property name="eclipselink.cache.shared.default" value="false"/>
+			<property name="eclipselink.cache.type.default" value="Full"/>
+			<property name="eclipselink.cache-usage" value="CheckCacheOnly"/>
+            -->
+            <!-- Configure 2nd database connection pool. -->
+            <!-- 
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.GoogleDriver" />
+            <property name="javax.persistence.jdbc.driver" value="com.google.cloud.sql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
+             -->
+            
+            
+            
+<!--             <property name="datanucleus.NontransactionalRead" value="false"/> -->
+<!--             <property name="datanucleus.NontransactionalWrite" value="false"/> -->
+			<!-- 
+            <property name="datanucleus.identifier.case" value="MixedCase"/>
+			 -->
+            <!-- 20141216 detach when EntityManager is closed, not when persist. 
+            <property name="datanucleus.jpa.persistenceContextType" value="extended"/>
+            <property name="datanucleus.jpa.level" value="DataNucleus"/>
+            -->
+            <!-- 
+            <property name="datanucleus.ConnectionURL" value="appengine"/>
+            <property name="javax.persistence.query.timeout" value="8000" />
+            <property name="datanucleus.datastoreWriteTimeout" value="15000" />
+             -->
+<!-- 
+            <property name="javax.persistence.jdbc.user" value="alice" />
+            <property name="javax.persistence.jdbc.password" value="mysqlident" />
+
+            <property name="javax.persistence.jdbc.key" value="AIzaSyA57wUXVj9I50lqF4bPrzNQrmJ6SH5nY0Q" />
+
+ -->
+ 
+ 
+ <!-- 
+            <property name="datanucleus.singletonEMFForName" value="true" /> 
+            <property name="datanucleus.cache.level2.type" value="none" />
+    		<property name="datanucleus.validation.mode" value="none" />
+	    <property name="datanucleus.cache.level1.type" value="strong"/>
+            <property name="datanucleus.schema.autoCreateAll" value="true"/>
+            <property name="datanucleus.schema.validateTables" value="false"/>
+            <property name="datanucleus.schema.validateConstraints" value="false"/>
+            <property name="datanucleus.identifier.case" value="MixedCase"/>
+            <property name="datanucleus.RetainValues" value="true"/>
+            <property name="datanucleus.transactionIsolation" value="serializable"/>
+  -->
+             
+		
+ 
+ 

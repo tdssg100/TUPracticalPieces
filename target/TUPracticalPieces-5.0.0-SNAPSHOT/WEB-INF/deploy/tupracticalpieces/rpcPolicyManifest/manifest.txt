@@ -1,0 +1,3 @@
+# Module tupracticalpieces
+# RPC service class, partial path of RPC policy file
+com.google.gwt.personal.tupracticalpieces.client.common.AdminTask, 63BAD6FAB0D04E4DDDBE5753B6223101.gwt.rpc

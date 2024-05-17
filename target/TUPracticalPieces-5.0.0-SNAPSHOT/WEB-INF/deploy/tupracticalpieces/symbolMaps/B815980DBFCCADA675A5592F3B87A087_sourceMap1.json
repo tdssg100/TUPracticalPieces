@@ -1,0 +1,10 @@
+{
+"version":3,
+"file":"sourceMap1",
+"lineCount":2,
+"mappings":"A,QAgHA,S,KAAA,a,CC9GA,QCwBA,CDxBA,MAsMA,oBACA,ytBADA,EAIA,oBACA,s0BADA,EAIA,oBACA,wbADA,EAIA,oBACA,iPADA,EAIA,oBACA,sGADA,EAIA,oBACA,saADA,EAIA,oBACA,2PADA,EAIA,oBACA,2GADA,EAIA,oBACA,4aADA,EAIA,oBACA,sjBADA,EAIA,oBACA,8LADA,EAIA,oBACA,mNADA,EAIA,oBACA,kNADA,EAIA,oBACA,+HADA,EAIA,oBACA,8EADA,EAIA,oBACA,mfADA,EAIA,oBACA,6KADA,EAIA,oBACA,wSADA,EAIA,oBACA,qUADA,EAIA,oBACA,k8BADA,EAIA,oBACA,yKADA,EAIA,oBACA,8GADA,EE1RA,QDwBA,CCxBA,MAsMA,oBACA,g3CADA,EAIA,oBACA,+hEADA,EAIA,oBACA,g4CADA,EAIA,oBACA,4YADA,EAIA,oBACA,4XADA,EAIA,oBACA,gdADA,EAIA,oBACA,u1BADA,EAIA,oBACA,gOADA,EAIA,oBACA,yhCADA,EAIA,oBACA,4+BADA,EAIA,oBACA,6UADA,EAIA,oBACA,gZADA,EAIA,oBACA,ktBADA,EAIA,oBACA,gKADA,EAIA,oBACA,iwBADA,EAIA,oBACA,i+CADA,EAIA,oBACA,+mBADA,EAIA,oBACA,6zBADA,EAIA,oBACA,8vCADA,EAIA,oBACA,miDADA,EAIA,oBACA,+bADA,EAIA,oBACA,iTADA,EHhLA,wBAEA,UACA,MACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,oBACA,OACA,kBACA,QA5BA,C;AAiCA,QEnHA,CFmHA,MAMA,oBI8PA,IJ7PA,MI6PA,CJ7PA,WI6PA,CJ9PA;",
+"sources":["com/google/gwt/personal/tupracticalpieces/client/content/CwNotes.java","gen/com/google/gwt/personal/tupracticalpieces/client/TUPracticalPiecesConstants_.java","com/google/gwt/emul/java/lang/Object.java","gen/com/google/gwt/personal/tupracticalpieces/client/TUPracticalPiecesConstants_ja.java","com/google/gwt/personal/tupracticalpieces/client/ContentWidget.java"],
+"names":[],
+"x_gwt_permutation":0,
+"x_gwt_fragment":1
+}

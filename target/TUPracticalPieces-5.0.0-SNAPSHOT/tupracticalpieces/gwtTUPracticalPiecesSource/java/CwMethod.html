@@ -1,0 +1,58 @@
+<pre>  /**
+   * The constants used in this Content Widget.
+   */
+  public static interface CwConstants extends Constants {
+	String cwMethodDescription();
+	
+	String cwMethodLink();
+    
+	String cwMethodName();
+
+    String cwMethodP1Title();
+
+    String cwMethodP1content();
+
+    String cwMethodP2Title();
+
+    String cwMethodP2content();
+
+    String cwMethodP3Title();
+
+    String cwMethodP3content();
+
+    String cwMethodP4Title();
+
+    String cwMethodP4content();
+  }
+
+  /**
+   * An instance of the constants.
+   */
+  private final CwConstants constants;
+
+  /**
+   * Initialize this example.
+   */
+  @Override
+  public Widget onInitialize() {
+    // Create a panel to align the Widgets
+    VerticalPanel vPanel = new VerticalPanel();
+    String widgetStr = "&lt;ol style='list-style-type: none'&gt;";
+    widgetStr += "&lt;li&gt;&lt;h3&gt;1 " + constants.cwMethodP1Title() + "&lt;/h3&gt;"
+              + constants.cwMethodP1content() + "&lt;/li&gt;";
+    widgetStr += "&lt;li&gt;&lt;h3&gt;2 " + constants.cwMethodP2Title() + "&lt;/h3&gt;"
+    	      + constants.cwMethodP2content() + "&lt;/li&gt;";
+    widgetStr += "&lt;li&gt;&lt;h3&gt;3 " + constants.cwMethodP3Title() + "&lt;/h3&gt;"
+    	      + constants.cwMethodP3content() + "&lt;/li&gt;";
+    widgetStr += "&lt;li&gt;&lt;h3&gt;4 " + constants.cwMethodP4Title() + "&lt;/h3&gt;"
+    	      + constants.cwMethodP4content() + "&lt;/li&gt;";
+    widgetStr += "&lt;/ol&gt;";
+	vPanel.add(new HTML(widgetStr));
+	/* 2012.07.19 obsolete
+	vPanel.add(new HTML("&lt;a href='TUPracticalPieces.tar.gz'&gt;" + constants.cwMethodLink() + "&lt;/a&gt;"));
+	*/
+	vPanel.add(new HTML("&lt;s&gt;&lt;a href='TUPracticalPieces.tar.gz'&gt;" + constants.cwMethodLink() + "&lt;/a&gt;&lt;/s&gt;"));
+    return vPanel;
+  }
+
+</pre>

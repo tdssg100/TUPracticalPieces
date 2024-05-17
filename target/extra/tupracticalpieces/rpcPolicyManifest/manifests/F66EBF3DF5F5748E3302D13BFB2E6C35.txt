@@ -1,0 +1,2 @@
+serviceClass: com.google.gwt.personal.tupracticalpieces.client.common.AdminTask
+path: 63BAD6FAB0D04E4DDDBE5753B6223101.gwt.rpc

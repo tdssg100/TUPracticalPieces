@@ -1,0 +1,94 @@
+<pre>  /**
+   * The constants used in this Content Widget.
+   */
+  public static interface CwConstants extends Constants {
+    String cwNotesDescription();
+
+    String cwNotesName();
+
+    String cwNotesP1();
+
+    String cwNotesP2();
+
+    String cwNotesP3();
+
+    String cwNotesP4();
+
+    String cwNotesP5();
+
+    String cwNotesP6();
+
+    String cwNotesP7();
+
+    String cwNotesP8();
+
+    String cwNotesP9();
+
+    String cwNotesPa();
+
+    String cwNotesPb();
+
+    String cwNotesPc();
+
+    String cwNotesPd();
+
+    String cwNotesPe();
+
+    String cwNotesPf();
+
+    String cwNotesPg();
+
+    String cwNotesPh();
+
+    String cwNotesPi();
+
+    String cwNotesPj();
+
+    String cwNotesPk();
+
+    String cwNotesPl();
+
+    String cwNotesPm();
+  }
+
+  /**
+   * An instance of the constants.
+   */
+  private final CwConstants constants;
+
+  /**
+   * Initialize this example.
+   */
+  @Override
+  public Widget onInitialize() {
+    // Create a panel to align the Widgets
+    VerticalPanel vPanel = new VerticalPanel();
+    String wedgeStr = "&lt;ol style='list-style-type: disc'&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP1() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP2() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP3() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP4() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP5() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP6() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP7() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP8() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesP9() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPa() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPb() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPc() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPd() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPe() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPf() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPg() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPh() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPi() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPj() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPk() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPl() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;li&gt;&lt;p&gt;" + constants.cwNotesPm() + "&lt;/p&gt;&lt;/li&gt;";
+    wedgeStr += "&lt;/ol&gt;";
+	vPanel.add(new HTML(wedgeStr));
+    return vPanel;
+  }
+
+</pre>

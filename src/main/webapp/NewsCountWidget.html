@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="viewerControllerApp" >
+<!-- 
+<html ng-app>
+ -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>CameraAlarmLogViewer</title>
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+ -->
+    <script src="https://code.angularjs.org/1.4.9/angular.js"></script>
+    <script src='newsCountWidget.js'></script>
+    <link rel="stylesheet" href="NewsCount.css"></link>
+</head>
+  <body>
+		<div ng-app="viewerControllerApp" ng-controller="ViewController">
+			<table class="countTable" ><tbody>
+			<tr>
+				<th>CountryCode</td>
+				<th>30days</td>
+				<th>prev30</td>
+				<th>since2015</td>
+			</tr>
+			<tr ng-repeat="nn in countList track by $index">
+				<td class="NewsCountWedgetString">{{nn.cname}}</td>
+				<td class="NewsCountWedgetInt">{{nn.last30days}}</td>
+				<td class="NewsCountWedgetInt">{{nn.prev30days}}</td>
+				<td class="NewsCountWedgetInt">{{nn.since2015}}</td>
+			</tr>
+			</tbody></table>
+		</div>
+  </body>
+</html>
+
+
