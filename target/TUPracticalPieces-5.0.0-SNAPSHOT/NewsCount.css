@@ -1,0 +1,50 @@
+
+    .countTable {
+	  font-size: 10pt;
+      text-align: center;
+
+      margin: 0px;
+      border: 1px solid #666;
+/*      border-radius: 8px;
+*/
+      padding: 0px 0px;
+      font-size: 12pt;
+      background-color: #eee;
+
+	}
+	/*
+    .NewsCountWedget {
+      margin: 8px;
+      border: 1px solid #666;
+      border-radius: 8px;
+      padding: 18px 10px;
+      font-size: 12pt;
+      background-color: #eee;
+	}
+	*/
+	table th {
+      font-style: italic;
+	  font-size: 10pt;
+      text-align: center;
+	  background-color:#ffffaa;
+  	  border: 2px solid white;
+	}
+	
+	table tr:nth-child(even) {
+		background: white;
+	}
+ /*
+ NewsCountWidgetAngular 201707
+ */
+	table tr:nth-child(odd) {
+		background: #e0e0e0;
+	}
+	.NewsCountWedgetString {
+	  font-size: 10pt;
+      text-align: center;
+	}
+    .NewsCountWedgetInt {
+      font-size: 10pt;
+      text-align: right;
+	}
+	
