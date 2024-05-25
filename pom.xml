@@ -7,7 +7,7 @@
 	<url>http://maven.apache.org</url>
   
 	<properties>
-    		<appengine.maven.plugin.version>2.4.4</appengine.maven.plugin.version>
+    		<appengine.maven.plugin.version>2.7.0</appengine.maven.plugin.version>
     		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Convenience property to set the GWT version -->
@@ -16,7 +16,9 @@
 		<gwtVersionSuffixMojo></gwtVersionSuffixMojo>
 		<gwt.extraJvmArgs>-Xmx1536m -Xss2560k</gwt.extraJvmArgs>
 <!--		<jettyVersion>9.4.29.v20200521</jettyVersion>-->
-		<jettyVersion>9.4.5.v20170502</jettyVersion>  
+<!--		<jetty.version>9.4.36.v20210114</jetty.version>-->
+<!--		<jettyVersion>9.4.5.v20170502</jettyVersion>  -->
+		<jettyVersion>9.4.54.v20240208</jettyVersion>
 		<appengine.target.version>1.9.98</appengine.target.version>
 <!--
  		<datanucleus.version>5.0.0-release</datanucleus.version> java 8
@@ -52,7 +54,7 @@
 				<name>Sonatype Google Releases</name>
 				<url>https://oss.sonatype.org/service/local/repositories/google-releases/content</url>
 			</repository>
- 
+
  <!-- https://mvnrepository.com/artifact/org.datanucleus/javax.persistence -->
  <!--
  			<repository>
@@ -78,7 +80,16 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
- 
+
+         <repository>
+            <id>sonatype</id>
+            <url>https://www.eclipse.org/jetty</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+
  
  <!-- 
  			<repository>
@@ -240,10 +251,12 @@
 									<groupId>org.eclipse.jetty</groupId>
 									<artifactId>jetty-annotations</artifactId>
 								</exclusion>
+								<!--
 								<exclusion>
 									<groupId>org.eclipse.jetty.websocket</groupId>
 									<artifactId>websocket-client</artifactId>
 								</exclusion>
+								-->
 						      </exclusions> 
 										
 			
@@ -506,6 +519,7 @@
 					<artifactId>tomcat-juli</artifactId>
 				</exclusion>
 				
+				<!--
 				<exclusion>
 					<groupId>org.eclipse.jetty.websocket</groupId>
 					<artifactId>tomcat-juli</artifactId>
@@ -562,6 +576,7 @@
 					<groupId>org.eclipse.jetty.osgi</groupId>
 					<artifactId>jetty-osgi-boot-jsp</artifactId>
 				</exclusion>
+				-->
 
 
 
@@ -578,8 +593,17 @@
 	    <version>1.10</version>
 	</dependency>
 		
-		
-		
+	
+<dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-server</artifactId>
+    <version>${jettyVersion}</version>
+</dependency>
+
+
+
+
+
 		 
 	</dependencies>
 
@@ -695,7 +719,7 @@
 			    <webApp>
 					<contextPath>/</contextPath>
 					<descriptor>src/main/webapp/web.xml</descriptor>
- 			        <defaultsDescriptor>/etc/jetty9/webdefault.xml</defaultsDescriptor>
+ 			        <defaultsDescriptor>src/main/etc/webdefault.xml</defaultsDescriptor>
 <!--				<containerIncludeJarPattern>.*/javax.servlet-[^/]*\.jar$|.*/servlet-api-[^/]*\.jar</containerIncludeJarPattern>
  			    	<containerExcludeJarPattern>org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer</containerExcludeJarPattern>
  			    	<containerExcludeJarPattern>.*javax.servlet.jsp.jstl-[^/]*\.jar|.*taglibs-standard-impl-.*\.jar</containerExcludeJarPattern> 
@@ -706,7 +730,7 @@
 			    <jettyXml>/etc/jetty9/jetty.xml,/etc/jetty9/jetty-ssl.xml,/etc/jetty9/jetty-https.xml,/etc/jetty9/jetty-ssl-context.xml</jettyXml>
  -->
 <!--			    <jettyXml>src/main/etc/jetty.xml,/etc/jetty9/jetty-ssl.xml,/etc/jetty9/jetty-ssl-context.xml,/etc/jetty9/jetty-https.xml</jettyXml>-->
-			    <jettyXml>src/main/etc/jetty.xml,src/main/etc/jetty-ssl.xml,src/main/etc/jetty-https.xml</jettyXml>
+			    <jettyXml>${project.build.directory}/${project.build.finalName}/WEB-INF/jetty.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-https.xml</jettyXml>
 			    
  			    <webAppSourceDirectory>${project.build.directory}\${project.build.finalName}</webAppSourceDirectory>
 <!--
@@ -764,6 +788,7 @@ These configuration parameters apply to your webapp. They should apply to all go
 					<artifactId>tomcat-juli</artifactId>
 				</exclusion>
 				
+				<!--
 				<exclusion>
 					<groupId>org.eclipse.jetty.websocket</groupId>
 					<artifactId>tomcat-juli</artifactId>
@@ -798,6 +823,7 @@ These configuration parameters apply to your webapp. They should apply to all go
 					<groupId>org.eclipse.jetty.websocket</groupId>
 					<artifactId>websocket-client</artifactId>
 				</exclusion>
+				-->
 
 
 				<exclusion>
@@ -1160,10 +1186,12 @@ These configuration parameters apply to your webapp. They should apply to all go
 									<groupId>org.eclipse.jetty</groupId>
 									<artifactId>jetty-servlets</artifactId>
 								</exclusion>
+								<!--
 								<exclusion>
 									<groupId>org.eclipse.jetty</groupId>
 									<artifactId>jetty-annotations</artifactId>
 								</exclusion>
+								
 								<exclusion>
 									<groupId>org.eclipse.jetty.websocket</groupId>
 									<artifactId>websocket-client</artifactId>
@@ -1176,6 +1204,7 @@ These configuration parameters apply to your webapp. They should apply to all go
 									<groupId>org.mortbay.jasper</groupId>
 									<artifactId>apache-el</artifactId>
 								</exclusion>
+								-->
 						      </exclusions> 
 						      
 						
@@ -1188,7 +1217,7 @@ These configuration parameters apply to your webapp. They should apply to all go
 									<scope>compile</scope>
 			        </dependency>
 			        <dependency>
-			            <groupId>corg.gwtproject.web.bindery</groupId>
+			            <groupId>org.gwtproject.web.bindery</groupId>
 			            <artifactId>requestfactory-apt</artifactId>
 			            <version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 									<scope>compile</scope>
@@ -1322,8 +1351,9 @@ These configuration parameters apply to your webapp. They should apply to all go
                     <props>${project.build.directory}/${project.build.finalName}/WEB-INF/classes/META-INF/persistence.xml</props>
  -->
 <!--
--->
                     <metadataDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes/META-INF</metadataDirectory>
+-->
+                    <metadataDirectory>${project.build.directory}/${project.build.finalName}</metadataDirectory>
                     <log4jConfiguration>${project.build.directory}/${project.build.finalName}/WEB-INF/classes/log4j.properties</log4jConfiguration>
                     <verbose>true</verbose>
                     <fork>false</fork>
