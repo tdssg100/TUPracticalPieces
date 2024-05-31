@@ -3,8 +3,9 @@
   <groupId>com.google.gwt.personal.tupracticalpieces</groupId>
   <artifactId>TUPracticalPieces</artifactId>
   <version>5.0.0-SNAPSHOT</version>
+  <packaging>war</packaging>
 	<name>TUPracticalPieces Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<url>ec2-13-231-151-111.ap-northeast-1.compute.amazonaws.com'</url>
   
 	<properties>
     		<appengine.maven.plugin.version>2.7.0</appengine.maven.plugin.version>
@@ -19,6 +20,7 @@
 <!--		<jetty.version>9.4.36.v20210114</jetty.version>-->
 <!--		<jettyVersion>9.4.5.v20170502</jettyVersion>  -->
 		<jettyVersion>9.4.54.v20240208</jettyVersion>
+<!--			<jettyVersion>11.0.21</jettyVersion>-->
 		<appengine.target.version>1.9.98</appengine.target.version>
 <!--
  		<datanucleus.version>5.0.0-release</datanucleus.version> java 8
@@ -27,8 +29,8 @@
 		<datanucleus.version>6.0.0-release</datanucleus.version>
 		<!-- from ver 3.2.0.m2 <artifactId>maven-datanucleus-plugin</artifactId> 
 			<artifactId>datanucleus-maven-plugin</artifactId> -->
-		    <maven.compiler.source>1.8</maven.compiler.source>
-		    <maven.compiler.target>1.8</maven.compiler.target>
+<!--		    <maven.compiler.source>1.8</maven.compiler.source>-->
+<!--		    <maven.compiler.target>1.8</maven.compiler.target>-->
 		    <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
         <maven.compiler.compilerId>javac</maven.compiler.compilerId>
 		<!-- Don't let your Mac use a crazy non-standard encoding -->
@@ -89,6 +91,13 @@
             </snapshots>
         </repository>
 
+         <repository>
+            <id>lifecycle-mapping</id>
+            <url>https://mvnrepository.com/artifact/org.eclipse.m2e/lifecycle-mapping</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
 
  
  <!-- 
@@ -304,6 +313,7 @@
       <version>3.1.0</version>
       <scope>provided</scope>
     </dependency>
+    <!--
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
@@ -315,6 +325,7 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
+    -->
 
 
 
@@ -518,11 +529,14 @@
 					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>tomcat-juli</artifactId>
 				</exclusion>
-				
-				<!--
 				<exclusion>
 					<groupId>org.eclipse.jetty.websocket</groupId>
 					<artifactId>tomcat-juli</artifactId>
+				</exclusion>
+				<!--
+				<exclusion>
+					<groupId>org.gwtproject</groupId>
+					<artifactId>gwt-dev</artifactId>
 				</exclusion>
 
 				<exclusion>
@@ -554,6 +568,7 @@
 					<groupId>org.eclipse.jetty.websocket</groupId>
 					<artifactId>websocket-client</artifactId>
 				</exclusion>
+				-->
 
 				<exclusion>
 				    <groupId>javax.servlet.jsp</groupId>
@@ -576,13 +591,7 @@
 					<groupId>org.eclipse.jetty.osgi</groupId>
 					<artifactId>jetty-osgi-boot-jsp</artifactId>
 				</exclusion>
-				-->
-
-
-
-
 		    </exclusions>
-
 		</dependency>
 		
 
@@ -593,15 +602,23 @@
 	    <version>1.10</version>
 	</dependency>
 		
+<!--
 	
 <dependency>
     <groupId>org.eclipse.jetty</groupId>
-    <artifactId>jetty-server</artifactId>
+    <artifactId>jetty-webapp</artifactId>
     <version>${jettyVersion}</version>
 </dependency>
+-->
 
 
-
+<!-- https://mvnrepository.com/artifact/org.eclipse.m2e/lifecycle-mapping 
+<dependency>
+    <groupId>org.eclipse.m2e</groupId>
+    <artifactId>lifecycle-mapping</artifactId>
+    <version>1.0.0</version>
+</dependency>
+-->
 
 
 		 
@@ -611,7 +628,55 @@
 		<!-- Generate compiled stuff in the folder used for development mode -->
 		<outputDirectory>${project.build.directory}\${project.build.finalName}\WEB-INF\classes</outputDirectory>
 
+
+
+
+
+
+
+
+
+
+
 	<plugins>
+
+
+
+
+
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-assembly-plugin</artifactId>
+		    <version>3.3.0</version>
+		    <configuration>
+			  <archive>
+			    <manifest>
+			      <mainClass>${main.class}</mainClass>
+			    </manifest>
+			  </archive>
+			  <descriptorRefs>
+			    <descriptorRef>jar-with-dependencies</descriptorRef>
+			  </descriptorRefs>
+		    </configuration>
+		    <executions>
+			<execution>
+			    <id>make-assembly</id>
+			    <phase>package</phase>
+			    <goals>
+				<goal>single</goal>
+			    </goals>
+			</execution>
+		    </executions>
+		</plugin>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -640,8 +705,9 @@
 		  <artifactId>jetty-maven-plugin</artifactId>
 		  <version>${jettyVersion}</version>
 			<configuration>
-	            <fork>false</fork>
-                <verbose>true</verbose>
+				<reload>manual</reload>
+<!--	            <fork>false</fork>-->
+<!--                <verbose>true</verbose>-->
 <!-- 
 				<jvmFlags>
 			      <jvmFlag>-Dorg.apache.jasper.compiler.disablejsr199=true -Dorg.eclipse.jetty.util.log.class=org.eclipse.jetty.util.log.Slf4jLog</jvmFlag>
@@ -674,7 +740,7 @@
 <!--					<exclude>com/google/gwt/gwt-dev/**.jar</exclude>-->
 <!--					<exclude>/home/tad/.m2/repository/com/google/gwt/gwt-dev/2.9.0/gwt-dev-2.9.0.jar</exclude>-->
 <!--				</excludes>-->
-			      <failOnError>false</failOnError>
+<!--			      <failOnError>false</failOnError>-->
 <!-- 
  				<httpConnector>
  				    <host>0.0.0.0</host>
@@ -718,8 +784,8 @@
 			    
 			    <webApp>
 					<contextPath>/</contextPath>
-					<descriptor>src/main/webapp/web.xml</descriptor>
- 			        <defaultsDescriptor>src/main/etc/webdefault.xml</defaultsDescriptor>
+					<descriptor>${project.build.directory}/${project.build.finalName}/WEB-INF/web.xml</descriptor>
+ 			        <defaultsDescriptor>${project.build.directory}/${project.build.finalName}/WEB-INF/webdefault.xml</defaultsDescriptor>
 <!--				<containerIncludeJarPattern>.*/javax.servlet-[^/]*\.jar$|.*/servlet-api-[^/]*\.jar</containerIncludeJarPattern>
  			    	<containerExcludeJarPattern>org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer</containerExcludeJarPattern>
  			    	<containerExcludeJarPattern>.*javax.servlet.jsp.jstl-[^/]*\.jar|.*taglibs-standard-impl-.*\.jar</containerExcludeJarPattern> 
@@ -730,7 +796,7 @@
 			    <jettyXml>/etc/jetty9/jetty.xml,/etc/jetty9/jetty-ssl.xml,/etc/jetty9/jetty-https.xml,/etc/jetty9/jetty-ssl-context.xml</jettyXml>
  -->
 <!--			    <jettyXml>src/main/etc/jetty.xml,/etc/jetty9/jetty-ssl.xml,/etc/jetty9/jetty-ssl-context.xml,/etc/jetty9/jetty-https.xml</jettyXml>-->
-			    <jettyXml>${project.build.directory}/${project.build.finalName}/WEB-INF/jetty.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-https.xml</jettyXml>
+			    <jettyXml>${project.build.directory}/${project.build.finalName}/WEB-INF/jetty.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl-context.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-https.xml</jettyXml>
 			    
  			    <webAppSourceDirectory>${project.build.directory}\${project.build.finalName}</webAppSourceDirectory>
 <!--
@@ -765,97 +831,98 @@ These configuration parameters apply to your webapp. They should apply to all go
 				<dependency>
 					<groupId>org.slf4j</groupId>
 					<artifactId>slf4j-log4j12</artifactId>
-					<version>1.7.30</version>
+					<version>2.0.13</version>
 				</dependency>
  				<dependency>
 					<groupId>org.slf4j</groupId>
 					<artifactId>slf4j-api</artifactId>
-					<version>1.7.30</version>
+					<version>2.0.13</version>
 				</dependency>
-		<dependency>
-		    <groupId>org.eclipse.jetty</groupId>
-		    <artifactId>jetty-maven-plugin</artifactId>
-		    <version>${jettyVersion}</version>
-<!--
- -->
-		    <exclusions>
-				<exclusion>
-					<groupId>tomcat</groupId>
-					<artifactId>tomcat-juli</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.jetty</groupId>
-					<artifactId>tomcat-juli</artifactId>
-				</exclusion>
 				
-				<!--
-				<exclusion>
-					<groupId>org.eclipse.jetty.websocket</groupId>
-					<artifactId>tomcat-juli</artifactId>
-				</exclusion>
-
-				<exclusion>
-					<groupId>org.eclipse.jetty.websocket</groupId>
-					<artifactId>websocket-common</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.jetty.websocket</groupId>
-					<artifactId>websocket-servlet</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.jetty.websocket</groupId>
-					<artifactId>websocket-api</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.jetty.websocket</groupId>
-					<artifactId>websocket-server</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.jetty.websocket</groupId>
-					<artifactId>javax-websocket-server-impl</artifactId>
-				</exclusion>
-
-				<exclusion>
-					<groupId>javax.websocket</groupId>
-					<artifactId>javax.websocket-api</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.jetty.websocket</groupId>
-					<artifactId>websocket-client</artifactId>
-				</exclusion>
-				-->
-
-
-				<exclusion>
-				    <groupId>javax.servlet.jsp</groupId>
-				    <artifactId>javax.servlet.jsp-api</artifactId>
-				</exclusion>
-				<exclusion>
+ 				<dependency>
 					<groupId>org.eclipse.jetty</groupId>
-					<artifactId>apache-jsp</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.mortbay.jasper</groupId>
-					<artifactId>apache-jsp</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.mortbay.jasper</groupId>
-					<artifactId>apache-el</artifactId>
-				</exclusion>
-<!-- 
-				<exclusion>
-					<groupId>org.eclipse.jetty</groupId>
-					<artifactId>apache-jstl</artifactId>
-				</exclusion>
- -->
+				    	<artifactId>jetty-maven-plugin</artifactId>
+				    	<version>${jettyVersion}</version>				
+					    <exclusions>
+							<exclusion>
+								<groupId>tomcat</groupId>
+								<artifactId>tomcat-juli</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty</groupId>
+								<artifactId>tomcat-juli</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.gwtproject</groupId>
+								<artifactId>gwt-dev</artifactId>
+							</exclusion>
+								
+							<!--
+							<exclusion>
+								<groupId>org.eclipse.jetty.websocket</groupId>
+								<artifactId>tomcat-juli</artifactId>
+							</exclusion>
 
-				<exclusion>
-					<groupId>org.eclipse.jetty.osgi</groupId>
-					<artifactId>jetty-osgi-boot-jsp</artifactId>
-				</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty.websocket</groupId>
+								<artifactId>websocket-common</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty.websocket</groupId>
+								<artifactId>websocket-servlet</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty.websocket</groupId>
+								<artifactId>websocket-api</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty.websocket</groupId>
+								<artifactId>websocket-server</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty.websocket</groupId>
+								<artifactId>javax-websocket-server-impl</artifactId>
+							</exclusion>
+
+							<exclusion>
+								<groupId>javax.websocket</groupId>
+								<artifactId>javax.websocket-api</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty.websocket</groupId>
+								<artifactId>websocket-client</artifactId>
+							</exclusion>
+
+							-->
+
+							<exclusion>
+							    <groupId>javax.servlet.jsp</groupId>
+							    <artifactId>javax.servlet.jsp-api</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty</groupId>
+								<artifactId>apache-jsp</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.mortbay.jasper</groupId>
+								<artifactId>apache-jsp</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.mortbay.jasper</groupId>
+								<artifactId>apache-el</artifactId>
+							</exclusion>
+							<exclusion>
+								<groupId>org.eclipse.jetty</groupId>
+								<artifactId>apache-jstl</artifactId>
+							</exclusion>
+
+							<exclusion>
+								<groupId>org.eclipse.jetty.osgi</groupId>
+								<artifactId>jetty-osgi-boot-jsp</artifactId>
+							</exclusion>
 
 
-		    </exclusions>
+					    </exclusions>
 
 <!--
  -->
@@ -867,6 +934,7 @@ These configuration parameters apply to your webapp. They should apply to all go
 
 
 		</dependency>	
+<!--
 		<dependency>
 	          <groupId>org.gwtproject</groupId>
 	          <artifactId>gwt-dev</artifactId>
@@ -891,7 +959,7 @@ These configuration parameters apply to your webapp. They should apply to all go
 				</exclusion>
 		      </exclusions> 
 		</dependency>
-
+-->
 <!-- 		<dependency>	 -->
 <!-- 			<groupId>com.google.gwt.personal.tupracticalpieces</groupId> -->
 <!-- 			<artifactId>TUPracticalPieces</artifactId> -->
@@ -1196,10 +1264,12 @@ These configuration parameters apply to your webapp. They should apply to all go
 									<groupId>org.eclipse.jetty.websocket</groupId>
 									<artifactId>websocket-client</artifactId>
 								</exclusion>
+								-->
 								<exclusion>
 									<groupId>org.mortbay.jasper</groupId>
 									<artifactId>apache-jsp</artifactId>
 								</exclusion>
+								<!--
 								<exclusion>
 									<groupId>org.mortbay.jasper</groupId>
 									<artifactId>apache-el</artifactId>

@@ -266,6 +266,7 @@
   <!--                       header is added by generated servlet  [false]  -->
   <!--                                                                      -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!--  
   <servlet id="jsp">
     <servlet-name>jsp</servlet-name>
     <servlet-class>org.eclipse.jetty.jsp.JettyJspServlet</servlet-class>
@@ -289,12 +290,10 @@
       <param-name>compilerSourceVM</param-name>
       <param-value>1.7</param-value>
     </init-param>
-    <!--  
     <init-param>
         <param-name>classpath</param-name>
         <param-value>?</param-value>
     </init-param>
-    -->
     <load-on-startup>0</load-on-startup>
   </servlet>
 
@@ -309,6 +308,7 @@
     <url-pattern>*.JSPX</url-pattern>
     <url-pattern>*.XSP</url-pattern>
   </servlet-mapping>
+    -->
 
 
   <!-- ==================================================================== -->
