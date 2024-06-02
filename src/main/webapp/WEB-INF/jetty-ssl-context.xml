@@ -1,6 +1,11 @@
 <?xml version="1.0"?><!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_3.dtd">
 
-<!-- ============================================================= --><!-- SSL ContextFactory configuration                              --><!-- ============================================================= -->
+<!-- ============================================================= 
+OBF:1ehl1k1h1m0v1v2h1pi91t3b1s4e1vne1vno1s2o1t2v1pjx1v1x1lxb1jyh1eg5
+client_keystore.p12  keystore.p12
+-->
+<!-- SSL ContextFactory configuration                              -->
+<!-- ============================================================= -->
 
 <!-- 
   To configure Includes / Excludes for Cipher Suites or Protocols see tweak-ssl.xml example at 
@@ -9,26 +14,14 @@
 
 <Configure id="sslContextFactory" class="org.eclipse.jetty.util.ssl.SslContextFactory$Server">
   <Set name="Provider"><Property name="jetty.sslContext.provider"/></Set>
-  <Set name="KeyStorePath"><Property name="jetty.base" default="." />/<Property name="jetty.sslContext.keyStorePath" deprecated="jetty.keystore" default="/etc/jetty9/jetty.keystore"/></Set>
-<!--
-
-  <Set name="KeyStorePassword"><Property name="jetty.sslContext.keyStorePassword" deprecated="jetty.keystore.password" default="OBF:1g2l1iuj1mm61y7t1tg91wtu1vuh1vnq1lz31vnc1vut1wuk1tid1y851mio1is31g0x"/></Set>
--->
-  <Set name="KeyStorePassword"><Property name="jetty.sslContext.keyStorePassword" deprecated="jetty.keystore.password" default="Satoushioshouyu555"/></Set>
-  <Set name="KeyStoreType"><Property name="jetty.sslContext.keyStoreType" default="JKS"/></Set>
+  <Set name="KeyStorePath"><Property name="jetty.base" default="." />/<Property name="jetty.sslContext.keyStorePath" deprecated="jetty.keystore" default="target/TUPracticalPieces-5.0.0-SNAPSHOT/WEB-INF/client_keystore.p12"/></Set>
+  <Set name="KeyStorePassword"><Property name="jetty.sslContext.keyStorePassword" deprecated="jetty.keystore.password" default="OBF:1ehl1k1h1m0v1v2h1pi91t3b1s4e1vne1vno1s2o1t2v1pjx1v1x1lxb1jyh1eg5"/></Set>
+  <Set name="KeyStoreType"><Property name="jetty.sslContext.keyStoreType" default="PKCS12"/></Set>
   <Set name="KeyStoreProvider"><Property name="jetty.sslContext.keyStoreProvider"/></Set>
-<!--
-
-  <Set name="KeyManagerPassword"><Property name="jetty.sslContext.keyManagerPassword" deprecated="jetty.keymanager.password" default="OBF:1g2l1iuj1mm61y7t1tg91wtu1vuh1vnq1lz31vnc1vut1wuk1tid1y851mio1is31g0x"/></Set>
--->
-  <Set name="KeyManagerPassword"><Property name="jetty.sslContext.keyManagerPassword" deprecated="jetty.keymanager.password" default="Satoushioshouyu555"/></Set>
-  <Set name="TrustStorePath"><Property name="jetty.base" default="." />/<Property name="jetty.sslContext.trustStorePath" deprecated="jetty.truststore" default="/etc/jetty9/jetty.truststore"/></Set>
-<!--
-
-  <Set name="TrustStorePassword"><Property name="jetty.sslContext.trustStorePassword" deprecated="jetty.truststore.password" default="OBF:1g2l1iuj1mm61y7t1tg91wtu1vuh1vnq1lz31vnc1vut1wuk1tid1y851mio1is31g0x"/></Set>
--->
-  <Set name="TrustStorePassword"><Property name="jetty.sslContext.trustStorePassword" deprecated="jetty.truststore.password" default="Satoushioshouyu555"/></Set>
-  <Set name="TrustStoreType"><Property name="jetty.sslContext.trustStoreType"/></Set>
+  <Set name="KeyManagerPassword"><Property name="jetty.sslContext.keyManagerPassword" deprecated="jetty.keymanager.password" default="OBF:1ehl1k1h1m0v1v2h1pi91t3b1s4e1vne1vno1s2o1t2v1pjx1v1x1lxb1jyh1eg5"/></Set>
+  <Set name="TrustStorePath"><Property name="jetty.base" default="." />/<Property name="jetty.sslContext.trustStorePath" deprecated="jetty.truststore" default="target/TUPracticalPieces-5.0.0-SNAPSHOT/WEB-INF/keystore.p12"/></Set>
+  <Set name="TrustStorePassword"><Property name="jetty.sslContext.trustStorePassword" deprecated="jetty.truststore.password" default="OBF:1ehl1k1h1m0v1v2h1pi91t3b1s4e1vne1vno1s2o1t2v1pjx1v1x1lxb1jyh1eg5"/></Set>
+  <Set name="TrustStoreType"><Property name="jetty.sslContext.trustStoreType" default="PKCS12"/></Set>
   <Set name="TrustStoreProvider"><Property name="jetty.sslContext.trustStoreProvider"/></Set>
   <Set name="EndpointIdentificationAlgorithm"><Property name="jetty.sslContext.endpointIdentificationAlgorithm"/></Set>
   <Set name="NeedClientAuth"><Property name="jetty.sslContext.needClientAuth" deprecated="jetty.ssl.needClientAuth" default="false"/></Set>
