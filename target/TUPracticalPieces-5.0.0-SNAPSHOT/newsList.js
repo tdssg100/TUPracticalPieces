@@ -56,7 +56,7 @@
 //		document.getElementById("waitMsg").innerHTML = document.getElementById("waitMsg").innerHTML +  JsonStr;
 		
 		locsArray = JSON.parse(JsonStr);
-		if (locsArray.length < 1) { // normally 7
+		if (locsArray.length < 5) { // normally 7
 			displayError("cannot load news list from server.")
 			return;
 		}

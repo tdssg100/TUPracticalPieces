@@ -8,7 +8,7 @@
 	<url>ec2-13-231-151-111.ap-northeast-1.compute.amazonaws.com'</url>
   
 	<properties>
-    		<appengine.maven.plugin.version>2.7.0</appengine.maven.plugin.version>
+<!--    		<appengine.maven.plugin.version>2.7.0</appengine.maven.plugin.version>-->
     		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Convenience property to set the GWT version -->
@@ -21,7 +21,7 @@
 <!--		<jettyVersion>9.4.5.v20170502</jettyVersion>  -->
 		<jettyVersion>9.4.54.v20240208</jettyVersion>
 <!--			<jettyVersion>11.0.21</jettyVersion>-->
-		<appengine.target.version>1.9.98</appengine.target.version>
+<!--		<appengine.target.version>1.9.98</appengine.target.version>-->
 <!--
  		<datanucleus.version>5.0.0-release</datanucleus.version> java 8
 		<datanucleus.version>4.0.0-release</datanucleus.version>
@@ -29,8 +29,8 @@
 		<datanucleus.version>6.0.0-release</datanucleus.version>
 		<!-- from ver 3.2.0.m2 <artifactId>maven-datanucleus-plugin</artifactId> 
 			<artifactId>datanucleus-maven-plugin</artifactId> -->
-<!--		    <maven.compiler.source>1.8</maven.compiler.source>-->
-<!--		    <maven.compiler.target>1.8</maven.compiler.target>-->
+		    <maven.compiler.source>1.8</maven.compiler.source>
+		    <maven.compiler.target>1.8</maven.compiler.target>
 		    <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
         <maven.compiler.compilerId>javac</maven.compiler.compilerId>
 		<!-- Don't let your Mac use a crazy non-standard encoding -->
@@ -75,13 +75,16 @@
 				<url>https://repo1.maven.org/maven2/org/datanucleus/javax.persistence/2.2.0-release</url>
 			</repository>
 -->
-<!--         <repository>-->
-<!--            <id>DataNucleus</id>-->
-<!--            <url>http://www.datanucleus.org/downloads/maven2</url>-->
-<!--            <snapshots>-->
-<!--                <enabled>false</enabled>-->
-<!--            </snapshots>-->
-<!--        </repository>-->
+<!--
+         <repository>
+            <id>DataNucleus</id>
+            <url>http://www.datanucleus.org/downloads/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+-->
+
 
          <repository>
             <id>sonatype</id>
@@ -136,15 +139,23 @@
 				<name>OPENNNMS</name>
 				<url>https://repo.opennms.org/maven2/</url>
 			</repository>		 
+<!--
+<repository>
+	<id>jakarta.oss.sonatype.org</id>
+	<name>Jakarta OSS Sonatype Staging</name>
+	<url>https://jakarta.oss.sonatype.org/content/repositories/staging</url>
+</repository>
+-->			
+			
 
 	</repositories>
 	
-<!--	<pluginRepositories>-->
-<!--        <pluginRepository>-->
-<!--            <id>DataNucleus_2</id>-->
-<!--            <url>http://www.datanucleus.org/downloads/maven2/</url>-->
-<!--        </pluginRepository>-->
-<!--    </pluginRepositories>-->
+	<pluginRepositories>
+        <pluginRepository>
+            <id>DataNucleus_2</id>
+            <url>http://www.datanucleus.org/downloads/maven2/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 	
    <dependencyManagement>
@@ -364,23 +375,29 @@
 
 
 
+<!--
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-core</artifactId>
+			<version>${datanucleus.version}</version>
+		</dependency>
 
-<!--		<dependency>-->
-<!--			<groupId>org.datanucleus</groupId>-->
-<!--			<artifactId>datanucleus-core</artifactId>-->
-<!--			<version>${datanucleus.version}</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.datanucleus</groupId>-->
-<!--			<artifactId>datanucleus-api-jpa</artifactId>-->
-<!--			<version>${datanucleus.version}</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.datanucleus</groupId>-->
-<!--			<artifactId>datanucleus-rdbms</artifactId>-->
-<!--			<version>${datanucleus.version}</version>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-api-jpa</artifactId>
+			<version>${datanucleus.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-rdbms</artifactId>
+			<version>${datanucleus.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-jpa-query</artifactId>
+			<version>${datanucleus.version}</version>
+		</dependency>
+-->
  <!-- https://mvnrepository.com/artifact/org.datanucleus/javax.persistence -->
 <!--<dependency>-->
 <!--    <groupId>org.datanucleus</groupId>-->
@@ -388,7 +405,7 @@
 <!--    <version>2.2.0-release</version>-->
 <!--    <version>2.2.0-release</version>-->
 <!--</dependency>-->
-
+		
 <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
 <dependency>
     <groupId>org.eclipse.persistence</groupId>
@@ -396,17 +413,40 @@
     <version>2.2.0</version>
 </dependency>
 
-		
-<!--		<dependency>-->
-<!--			<groupId>org.datanucleus</groupId>-->
-<!--			<artifactId>datanucleus-jpa-query</artifactId>-->
-<!--			<version>${datanucleus.version}</version>-->
-<!--		</dependency>-->
+
+<!-- See https://stackoverflow.com/q/45870753 -->
+<dependency>   
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>eclipselink</artifactId>
+    <version>2.7.15</version>
+<!--
+    <exclusions>
+        <exclusion>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+        </exclusion>
+    </exclusions>
+-->
+</dependency>
+
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>javax.persistence</artifactId>
+    <version>2.2.0</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>org.eclipse.persistence.jpa</artifactId>
+    <version>2.7.15</version>
+</dependency>
 
 	<dependency>
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
-		<version>6.0.5</version>
+		<version>8.0.30</version>
 	</dependency>
 
 
@@ -546,6 +586,7 @@
 					<groupId>org.gwtproject</groupId>
 					<artifactId>gwt-dev</artifactId>
 				</exclusion>
+				-->
 
 				<exclusion>
 					<groupId>org.eclipse.jetty.websocket</groupId>
@@ -576,7 +617,6 @@
 					<groupId>org.eclipse.jetty.websocket</groupId>
 					<artifactId>websocket-client</artifactId>
 				</exclusion>
-				-->
 
 				<exclusion>
 				    <groupId>javax.servlet.jsp</groupId>
@@ -860,12 +900,12 @@ These configuration parameters apply to your webapp. They should apply to all go
 								<groupId>org.eclipse.jetty</groupId>
 								<artifactId>tomcat-juli</artifactId>
 							</exclusion>
+							<!--
 							<exclusion>
 								<groupId>org.gwtproject</groupId>
 								<artifactId>gwt-dev</artifactId>
 							</exclusion>
-								
-							<!--
+							-->	
 							<exclusion>
 								<groupId>org.eclipse.jetty.websocket</groupId>
 								<artifactId>tomcat-juli</artifactId>
@@ -901,6 +941,7 @@ These configuration parameters apply to your webapp. They should apply to all go
 								<artifactId>websocket-client</artifactId>
 							</exclusion>
 
+							<!--
 							-->
 
 							<exclusion>
@@ -1361,18 +1402,18 @@ These configuration parameters apply to your webapp. They should apply to all go
 			<!-- appengine:run deploy
 			-->
 			
-   <plugin>
-     <groupId>com.google.cloud.tools</groupId>
-     <artifactId>appengine-maven-plugin</artifactId>
-     <version>2.2.0</version>
-     <configuration>
-       <stage.enableJarSplitting>true</stage.enableJarSplitting>
-       <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
-       <cloudSdkPath>/home/tad/google-cloud-sdk</cloudSdkPath>
-    <deploy.projectId>tupracticalpieces</deploy.projectId>
-	<deploy.version>202101</deploy.version>
-     </configuration>
-  </plugin>
+<!--   <plugin>-->
+<!--     <groupId>com.google.cloud.tools</groupId>-->
+<!--     <artifactId>appengine-maven-plugin</artifactId>-->
+<!--     <version>2.2.0</version>-->
+<!--     <configuration>-->
+<!--       <stage.enableJarSplitting>true</stage.enableJarSplitting>-->
+<!--       <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>-->
+<!--       <cloudSdkPath>/home/tad/google-cloud-sdk</cloudSdkPath>-->
+<!--    <deploy.projectId>tupracticalpieces</deploy.projectId>-->
+<!--	<deploy.version>202101</deploy.version>-->
+<!--     </configuration>-->
+<!--  </plugin>-->
   
   
 			<!-- appengine:devserver
@@ -1691,33 +1732,33 @@ These configuration parameters apply to your webapp. They should apply to all go
  <configuration>
    <lifecycleMappingMetadata>
      <pluginExecutions>
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>org.datanucleus</groupId>
-                    <artifactId>datanucleus-maven-plugin</artifactId>
-                    <versionRange>${datanucleus.version}</versionRange>
-                    <goals>
-                      <goal>enhance</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore></ignore>
-                  </action>
-                </pluginExecution>
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>com.google.appengine</groupId>
-                    <artifactId>appengine-maven-plugin</artifactId>
-                    <versionRange>${appengine.target.version}</versionRange>
-                    <goals>
-                      <goal>unpack</goal>
-                      <goal>devserver</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <execute />
-                  </action>
-                </pluginExecution>
+<!--                <pluginExecution>-->
+<!--                  <pluginExecutionFilter>-->
+<!--                    <groupId>org.datanucleus</groupId>-->
+<!--                    <artifactId>datanucleus-maven-plugin</artifactId>-->
+<!--                    <versionRange>${datanucleus.version}</versionRange>-->
+<!--                    <goals>-->
+<!--                      <goal>enhance</goal>-->
+<!--                    </goals>-->
+<!--                  </pluginExecutionFilter>-->
+<!--                  <action>-->
+<!--                    <ignore></ignore>-->
+<!--                  </action>-->
+<!--                </pluginExecution>-->
+<!--                <pluginExecution>-->
+<!--                  <pluginExecutionFilter>-->
+<!--                    <groupId>com.google.appengine</groupId>-->
+<!--                    <artifactId>appengine-maven-plugin</artifactId>-->
+<!--                    <versionRange>${appengine.target.version}</versionRange>-->
+<!--                    <goals>-->
+<!--                      <goal>unpack</goal>-->
+<!--                      <goal>devserver</goal>-->
+<!--                    </goals>-->
+<!--                  </pluginExecutionFilter>-->
+<!--                  <action>-->
+<!--                    <execute />-->
+<!--                  </action>-->
+<!--                </pluginExecution>-->
 
                 <pluginExecution>
                   <pluginExecutionFilter>

@@ -6,19 +6,20 @@
           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
     version="2.2">
      <persistence-unit name="TUPPDB" transaction-type="RESOURCE_LOCAL">
-        <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+        <!--<provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>-->
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>com.google.gwt.personal.tupracticalpieces.database.Mileage</class>
-        <class>com.google.gwt.personal.tupracticalpieces.database.MileageDataUtils</class>
         <exclude-unlisted-classes/>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dfalse" />
             <property name="javax.persistence.jdbc.user" value="tad" />
             <property name="javax.persistence.jdbc.password" value="identmysql555" />
+    		<!-- 
             <property name="datanucleus.identifier.case" value="MixedCase"/>
     		<property name="datanucleus.validation.mode" value="none" />
     		<property name="datanucleus.schema.autoCreateAll" value="true"/>
-    		<!-- 
+
             <property name="datanucleus.schema.validateTables" value="false"/>
             <property name="datanucleus.schema.validateConstraints" value="false"/>
     		 -->

@@ -39,13 +39,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-CacheInitMileage
-
+/*
 @NamedQueries( {
 	@NamedQuery(name="CacheInitMileage", query="select m from Mileage m"),
 })
 
-
+*/
 
 
 //@PersistenceContext(unitName="TUPPDB")
@@ -104,13 +103,15 @@ public class MileageDataUtils extends HttpServlet {
 //			tx.begin();
 			//Query query = TaskDataUtils.cm.createQuery("select m from Mileage m where supplyDate='" + id + "'");
 //			Query query = TaskDataUtils.cm.createQuery("select m from Task m where id=" + id); 
-//			Query query = cm.createQuery("select m from Mileage m");
-//			List<Mileage> md = (List<Mileage>) query.getResultList();
+			Query query = cm.createQuery("select m from Mileage m");
+			List<Mileage> md = (List<Mileage>) query.getResultList();
 
+/*
 				List<Mileage> md = emf.createNamedQuery("CacheInitMileage")
 						.setFirstResult(0)
 						.setMaxResults(1)
 						.getResultList();
+*/
         log.info("db cache initilized.");
 		} catch (Exception e) { 
 			log.severe("JPA cache init: " + e.toString());				
