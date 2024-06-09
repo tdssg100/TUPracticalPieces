@@ -19,7 +19,7 @@ public class CurrencyList_en_PH extends com.google.gwt.i18n.client.CurrencyList_
   @Override
   protected HashMap<String, CurrencyData> loadCurrencyMapJava() {
     HashMap<String, CurrencyData> result = super.loadCurrencyMapJava();
-    // Philippine Piso
+    // Philippine Peso
     result.put("PHP", new CurrencyDataImpl("PHP", "₱", 2, "PHP", "₱"));
     return result;
   }
@@ -31,7 +31,7 @@ public class CurrencyList_en_PH extends com.google.gwt.i18n.client.CurrencyList_
   
   private native JavaScriptObject loadMyCurrencyMapOverridesNative() /*-{
     return {
-      // Philippine Piso
+      // Philippine Peso
       "PHP": [ "PHP", "₱", 2, "PHP", "₱"],
     };
   }-*/;
@@ -39,7 +39,7 @@ public class CurrencyList_en_PH extends com.google.gwt.i18n.client.CurrencyList_
   @Override
   protected HashMap<String, String> loadNamesMapJava() {
     HashMap<String, String> result = super.loadNamesMapJava();
-    result.put("PHP", "Philippine Piso");
+    result.put("PHP", "Philippine Peso");
     return result;
   }
   
@@ -50,7 +50,7 @@ public class CurrencyList_en_PH extends com.google.gwt.i18n.client.CurrencyList_
   
   private native JavaScriptObject loadMyNamesMapOverridesNative() /*-{
     return {
-      "PHP": "Philippine Piso",
+      "PHP": "Philippine Peso",
     };
   }-*/;
 }

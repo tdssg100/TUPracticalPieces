@@ -8,6 +8,7 @@
 <!--   <inherits name="com.google.gwt.user.theme.dark.Dark"/> -->
   <inherits name="com.google.gwt.canvas.Canvas"/>
   <inherits name="com.google.gwt.core.Core"/>
+    <set-property name="gwt.uncaughtexceptionhandler.windowonerror" value="IGNORE"/>
 <!-- 20170526 for SimpleAppCacheLinker
   <inherits name="com.google.gwt.core.Ext"/>
 -->
@@ -155,5 +156,6 @@
   <inherits name='com.googlecode.mgwt.MGWT'/>
   <inherits name="com.google.maps.gwt.GoogleMaps" />
   -->
+
   
 </module>

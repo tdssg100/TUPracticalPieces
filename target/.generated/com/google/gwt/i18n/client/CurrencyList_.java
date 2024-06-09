@@ -32,7 +32,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // ALL
     result.put("ALL", new CurrencyDataImpl("ALL", "ALL", 0, "ALL", "Lek"));
     // AMD
-    result.put("AMD", new CurrencyDataImpl("AMD", "AMD", 2, "AMD", "Dram"));
+    result.put("AMD", new CurrencyDataImpl("AMD", "AMD", 0, "AMD", "Dram"));
     // ANG
     result.put("ANG", new CurrencyDataImpl("ANG", "ANG", 2, "ANG", "ANG"));
     // AOA
@@ -127,10 +127,8 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     result.put("BWP", new CurrencyDataImpl("BWP", "BWP", 2, "BWP", "P"));
     // BYB
     result.put("BYB", new CurrencyDataImpl("BYB", "BYB", 130, "BYB", "BYB"));
-    // BYN
-    result.put("BYN", new CurrencyDataImpl("BYN", "BYN", 2, "BYN", "BYN"));
     // BYR
-    result.put("BYR", new CurrencyDataImpl("BYR", "BYR", 128, "BYR", "BYR"));
+    result.put("BYR", new CurrencyDataImpl("BYR", "BYR", 0, "BYR", "BYR"));
     // BZD
     result.put("BZD", new CurrencyDataImpl("BZD", "BZD", 2, "BZD", "$"));
     // CAD
@@ -146,21 +144,19 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // CLE
     result.put("CLE", new CurrencyDataImpl("CLE", "CLE", 130, "CLE", "CLE"));
     // CLF
-    result.put("CLF", new CurrencyDataImpl("CLF", "CLF", 132, "CLF", "CLF"));
+    result.put("CLF", new CurrencyDataImpl("CLF", "CLF", 128, "CLF", "CLF"));
     // CLP
     result.put("CLP", new CurrencyDataImpl("CLP", "CL$", 0, "CL$", "$"));
-    // CNH
-    result.put("CNH", new CurrencyDataImpl("CNH", "CNH", 130, "CNH", "CNH"));
     // CNX
     result.put("CNX", new CurrencyDataImpl("CNX", "CNX", 130, "CNX", "CNX"));
     // CNY
     result.put("CNY", new CurrencyDataImpl("CNY", "CN¥", 2, "RMB¥", "¥"));
     // COP
-    result.put("COP", new CurrencyDataImpl("COP", "COL$", 2, "COL$", "$"));
+    result.put("COP", new CurrencyDataImpl("COP", "COL$", 0, "COL$", "$"));
     // COU
     result.put("COU", new CurrencyDataImpl("COU", "COU", 130, "COU", "COU"));
     // CRC
-    result.put("CRC", new CurrencyDataImpl("CRC", "CR₡", 2, "CR₡", "₡"));
+    result.put("CRC", new CurrencyDataImpl("CRC", "CR₡", 0, "CR₡", "₡"));
     // CSD
     result.put("CSD", new CurrencyDataImpl("CSD", "CSD", 130, "CSD", "CSD"));
     // CSK
@@ -244,7 +240,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // GWP
     result.put("GWP", new CurrencyDataImpl("GWP", "GWP", 130, "GWP", "GWP"));
     // GYD
-    result.put("GYD", new CurrencyDataImpl("GYD", "GYD", 2, "GYD", "$"));
+    result.put("GYD", new CurrencyDataImpl("GYD", "GYD", 0, "GYD", "$"));
     // HKD
     result.put("HKD", new CurrencyDataImpl("HKD", "HK$", 2, "HK$", "$"));
     // HNL
@@ -256,9 +252,9 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // HTG
     result.put("HTG", new CurrencyDataImpl("HTG", "HTG", 2, "HTG", "HTG"));
     // HUF
-    result.put("HUF", new CurrencyDataImpl("HUF", "HUF", 2, "HUF", "Ft"));
+    result.put("HUF", new CurrencyDataImpl("HUF", "HUF", 0, "HUF", "Ft"));
     // IDR
-    result.put("IDR", new CurrencyDataImpl("IDR", "IDR", 2, "IDR", "Rp"));
+    result.put("IDR", new CurrencyDataImpl("IDR", "IDR", 0, "IDR", "Rp"));
     // IEP
     result.put("IEP", new CurrencyDataImpl("IEP", "IEP", 130, "IEP", "IEP"));
     // ILP
@@ -268,7 +264,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // ILS
     result.put("ILS", new CurrencyDataImpl("ILS", "₪", 2, "IL₪", "₪"));
     // INR
-    result.put("INR", new CurrencyDataImpl("INR", "₹", 2, "Rs", "₹"));
+    result.put("INR", new CurrencyDataImpl("INR", "Rs.", 2, "Rs", "₹"));
     // IQD
     result.put("IQD", new CurrencyDataImpl("IQD", "IQD", 0, "IQD", "din"));
     // IRR
@@ -318,7 +314,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // LSL
     result.put("LSL", new CurrencyDataImpl("LSL", "LSL", 2, "LSL", "LSL"));
     // LTL
-    result.put("LTL", new CurrencyDataImpl("LTL", "LTL", 130, "LTL", "Lt"));
+    result.put("LTL", new CurrencyDataImpl("LTL", "LTL", 2, "LTL", "Lt"));
     // LTT
     result.put("LTT", new CurrencyDataImpl("LTT", "LTT", 130, "LTT", "LTT"));
     // LUC
@@ -356,19 +352,17 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // MMK
     result.put("MMK", new CurrencyDataImpl("MMK", "MMK", 0, "MMK", "K"));
     // MNT
-    result.put("MNT", new CurrencyDataImpl("MNT", "MN₮", 2, "MN₮", "₮"));
+    result.put("MNT", new CurrencyDataImpl("MNT", "MN₮", 0, "MN₮", "₮"));
     // MOP
     result.put("MOP", new CurrencyDataImpl("MOP", "MOP", 2, "MOP", "MOP"));
     // MRO
-    result.put("MRO", new CurrencyDataImpl("MRO", "MRO", 128, "MRO", "MRO"));
-    // MRU
-    result.put("MRU", new CurrencyDataImpl("MRU", "MRU", 2, "MRU", "MRU"));
+    result.put("MRO", new CurrencyDataImpl("MRO", "MRO", 0, "MRO", "MRO"));
     // MTL
     result.put("MTL", new CurrencyDataImpl("MTL", "MTL", 130, "MTL", "MTL"));
     // MTP
     result.put("MTP", new CurrencyDataImpl("MTP", "MTP", 130, "MTP", "MTP"));
     // MUR
-    result.put("MUR", new CurrencyDataImpl("MUR", "MUR", 2, "MUR", "Rs"));
+    result.put("MUR", new CurrencyDataImpl("MUR", "MUR", 0, "MUR", "Rs"));
     // MVP
     result.put("MVP", new CurrencyDataImpl("MVP", "MVP", 130, "MVP", "MVP"));
     // MVR
@@ -420,7 +414,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // PHP
     result.put("PHP", new CurrencyDataImpl("PHP", "PHP", 2, "PHP", "₱"));
     // PKR
-    result.put("PKR", new CurrencyDataImpl("PKR", "PKRs.", 2, "PKRs.", "Rs"));
+    result.put("PKR", new CurrencyDataImpl("PKR", "PKRs.", 0, "PKRs.", "Rs"));
     // PLN
     result.put("PLN", new CurrencyDataImpl("PLN", "PLN", 2, "PLN", "zł"));
     // PLZ
@@ -478,9 +472,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // SSP
     result.put("SSP", new CurrencyDataImpl("SSP", "SSP", 2, "SSP", "SSP"));
     // STD
-    result.put("STD", new CurrencyDataImpl("STD", "STD", 128, "STD", "Db"));
-    // STN
-    result.put("STN", new CurrencyDataImpl("STN", "STN", 2, "STN", "STN"));
+    result.put("STD", new CurrencyDataImpl("STD", "STD", 0, "STD", "Db"));
     // SUR
     result.put("SUR", new CurrencyDataImpl("SUR", "SUR", 130, "SUR", "SUR"));
     // SVC
@@ -490,7 +482,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // SZL
     result.put("SZL", new CurrencyDataImpl("SZL", "SZL", 2, "SZL", "SZL"));
     // THB
-    result.put("THB", new CurrencyDataImpl("THB", "THB", 2, "THB", "฿"));
+    result.put("THB", new CurrencyDataImpl("THB", "฿", 2, "THB", "฿"));
     // TJR
     result.put("TJR", new CurrencyDataImpl("TJR", "TJR", 130, "TJR", "TJR"));
     // TJS
@@ -514,7 +506,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // TWD
     result.put("TWD", new CurrencyDataImpl("TWD", "NT$", 2, "NT$", "NT$"));
     // TZS
-    result.put("TZS", new CurrencyDataImpl("TZS", "TZS", 2, "TZS", "TSh"));
+    result.put("TZS", new CurrencyDataImpl("TZS", "TZS", 0, "TZS", "TSh"));
     // UAH
     result.put("UAH", new CurrencyDataImpl("UAH", "UAH", 2, "UAH", "₴"));
     // UAK
@@ -535,16 +527,12 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     result.put("UYP", new CurrencyDataImpl("UYP", "UYP", 130, "UYP", "UYP"));
     // UYU
     result.put("UYU", new CurrencyDataImpl("UYU", "UY$", 2, "UY$", "$"));
-    // UYW
-    result.put("UYW", new CurrencyDataImpl("UYW", "UYW", 132, "UYW", "UYW"));
     // UZS
-    result.put("UZS", new CurrencyDataImpl("UZS", "UZS", 2, "UZS", "soʼm"));
+    result.put("UZS", new CurrencyDataImpl("UZS", "UZS", 0, "UZS", "soʼm"));
     // VEB
     result.put("VEB", new CurrencyDataImpl("VEB", "VEB", 130, "VEB", "VEB"));
     // VEF
-    result.put("VEF", new CurrencyDataImpl("VEF", "VEF", 130, "VEF", "Bs"));
-    // VES
-    result.put("VES", new CurrencyDataImpl("VES", "VES", 2, "VES", "VES"));
+    result.put("VEF", new CurrencyDataImpl("VEF", "VEF", 2, "VEF", "Bs"));
     // VND
     result.put("VND", new CurrencyDataImpl("VND", "₫", 24, "₫", "₫"));
     // VNN
@@ -594,7 +582,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
     // XUA
     result.put("XUA", new CurrencyDataImpl("XUA", "XUA", 130, "XUA", "XUA"));
     // XXX
-    result.put("XXX", new CurrencyDataImpl("XXX", "¤", 130, "¤", "¤"));
+    result.put("XXX", new CurrencyDataImpl("XXX", "XXX", 130, "XXX", "XXX"));
     // YDD
     result.put("YDD", new CurrencyDataImpl("YDD", "YDD", 130, "YDD", "YDD"));
     // YER
@@ -648,7 +636,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // ALL
       "ALL": [ "ALL", "ALL", 0, "ALL", "Lek"],
       // AMD
-      "AMD": [ "AMD", "AMD", 2, "AMD", "Dram"],
+      "AMD": [ "AMD", "AMD", 0, "AMD", "Dram"],
       // ANG
       "ANG": [ "ANG", "ANG", 2, "ANG", "ANG"],
       // AOA
@@ -743,10 +731,8 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       "BWP": [ "BWP", "BWP", 2, "BWP", "P"],
       // BYB
       "BYB": [ "BYB", "BYB", 130, "BYB", "BYB"],
-      // BYN
-      "BYN": [ "BYN", "BYN", 2, "BYN", "BYN"],
       // BYR
-      "BYR": [ "BYR", "BYR", 128, "BYR", "BYR"],
+      "BYR": [ "BYR", "BYR", 0, "BYR", "BYR"],
       // BZD
       "BZD": [ "BZD", "BZD", 2, "BZD", "$"],
       // CAD
@@ -762,21 +748,19 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // CLE
       "CLE": [ "CLE", "CLE", 130, "CLE", "CLE"],
       // CLF
-      "CLF": [ "CLF", "CLF", 132, "CLF", "CLF"],
+      "CLF": [ "CLF", "CLF", 128, "CLF", "CLF"],
       // CLP
       "CLP": [ "CLP", "CL$", 0, "CL$", "$"],
-      // CNH
-      "CNH": [ "CNH", "CNH", 130, "CNH", "CNH"],
       // CNX
       "CNX": [ "CNX", "CNX", 130, "CNX", "CNX"],
       // CNY
       "CNY": [ "CNY", "CN¥", 2, "RMB¥", "¥"],
       // COP
-      "COP": [ "COP", "COL$", 2, "COL$", "$"],
+      "COP": [ "COP", "COL$", 0, "COL$", "$"],
       // COU
       "COU": [ "COU", "COU", 130, "COU", "COU"],
       // CRC
-      "CRC": [ "CRC", "CR₡", 2, "CR₡", "₡"],
+      "CRC": [ "CRC", "CR₡", 0, "CR₡", "₡"],
       // CSD
       "CSD": [ "CSD", "CSD", 130, "CSD", "CSD"],
       // CSK
@@ -860,7 +844,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // GWP
       "GWP": [ "GWP", "GWP", 130, "GWP", "GWP"],
       // GYD
-      "GYD": [ "GYD", "GYD", 2, "GYD", "$"],
+      "GYD": [ "GYD", "GYD", 0, "GYD", "$"],
       // HKD
       "HKD": [ "HKD", "HK$", 2, "HK$", "$"],
       // HNL
@@ -872,9 +856,9 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // HTG
       "HTG": [ "HTG", "HTG", 2, "HTG", "HTG"],
       // HUF
-      "HUF": [ "HUF", "HUF", 2, "HUF", "Ft"],
+      "HUF": [ "HUF", "HUF", 0, "HUF", "Ft"],
       // IDR
-      "IDR": [ "IDR", "IDR", 2, "IDR", "Rp"],
+      "IDR": [ "IDR", "IDR", 0, "IDR", "Rp"],
       // IEP
       "IEP": [ "IEP", "IEP", 130, "IEP", "IEP"],
       // ILP
@@ -884,7 +868,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // ILS
       "ILS": [ "ILS", "₪", 2, "IL₪", "₪"],
       // INR
-      "INR": [ "INR", "₹", 2, "Rs", "₹"],
+      "INR": [ "INR", "Rs.", 2, "Rs", "₹"],
       // IQD
       "IQD": [ "IQD", "IQD", 0, "IQD", "din"],
       // IRR
@@ -934,7 +918,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // LSL
       "LSL": [ "LSL", "LSL", 2, "LSL", "LSL"],
       // LTL
-      "LTL": [ "LTL", "LTL", 130, "LTL", "Lt"],
+      "LTL": [ "LTL", "LTL", 2, "LTL", "Lt"],
       // LTT
       "LTT": [ "LTT", "LTT", 130, "LTT", "LTT"],
       // LUC
@@ -972,19 +956,17 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // MMK
       "MMK": [ "MMK", "MMK", 0, "MMK", "K"],
       // MNT
-      "MNT": [ "MNT", "MN₮", 2, "MN₮", "₮"],
+      "MNT": [ "MNT", "MN₮", 0, "MN₮", "₮"],
       // MOP
       "MOP": [ "MOP", "MOP", 2, "MOP", "MOP"],
       // MRO
-      "MRO": [ "MRO", "MRO", 128, "MRO", "MRO"],
-      // MRU
-      "MRU": [ "MRU", "MRU", 2, "MRU", "MRU"],
+      "MRO": [ "MRO", "MRO", 0, "MRO", "MRO"],
       // MTL
       "MTL": [ "MTL", "MTL", 130, "MTL", "MTL"],
       // MTP
       "MTP": [ "MTP", "MTP", 130, "MTP", "MTP"],
       // MUR
-      "MUR": [ "MUR", "MUR", 2, "MUR", "Rs"],
+      "MUR": [ "MUR", "MUR", 0, "MUR", "Rs"],
       // MVP
       "MVP": [ "MVP", "MVP", 130, "MVP", "MVP"],
       // MVR
@@ -1036,7 +1018,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // PHP
       "PHP": [ "PHP", "PHP", 2, "PHP", "₱"],
       // PKR
-      "PKR": [ "PKR", "PKRs.", 2, "PKRs.", "Rs"],
+      "PKR": [ "PKR", "PKRs.", 0, "PKRs.", "Rs"],
       // PLN
       "PLN": [ "PLN", "PLN", 2, "PLN", "zł"],
       // PLZ
@@ -1094,9 +1076,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // SSP
       "SSP": [ "SSP", "SSP", 2, "SSP", "SSP"],
       // STD
-      "STD": [ "STD", "STD", 128, "STD", "Db"],
-      // STN
-      "STN": [ "STN", "STN", 2, "STN", "STN"],
+      "STD": [ "STD", "STD", 0, "STD", "Db"],
       // SUR
       "SUR": [ "SUR", "SUR", 130, "SUR", "SUR"],
       // SVC
@@ -1106,7 +1086,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // SZL
       "SZL": [ "SZL", "SZL", 2, "SZL", "SZL"],
       // THB
-      "THB": [ "THB", "THB", 2, "THB", "฿"],
+      "THB": [ "THB", "฿", 2, "THB", "฿"],
       // TJR
       "TJR": [ "TJR", "TJR", 130, "TJR", "TJR"],
       // TJS
@@ -1130,7 +1110,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // TWD
       "TWD": [ "TWD", "NT$", 2, "NT$", "NT$"],
       // TZS
-      "TZS": [ "TZS", "TZS", 2, "TZS", "TSh"],
+      "TZS": [ "TZS", "TZS", 0, "TZS", "TSh"],
       // UAH
       "UAH": [ "UAH", "UAH", 2, "UAH", "₴"],
       // UAK
@@ -1151,16 +1131,12 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       "UYP": [ "UYP", "UYP", 130, "UYP", "UYP"],
       // UYU
       "UYU": [ "UYU", "UY$", 2, "UY$", "$"],
-      // UYW
-      "UYW": [ "UYW", "UYW", 132, "UYW", "UYW"],
       // UZS
-      "UZS": [ "UZS", "UZS", 2, "UZS", "soʼm"],
+      "UZS": [ "UZS", "UZS", 0, "UZS", "soʼm"],
       // VEB
       "VEB": [ "VEB", "VEB", 130, "VEB", "VEB"],
       // VEF
-      "VEF": [ "VEF", "VEF", 130, "VEF", "Bs"],
-      // VES
-      "VES": [ "VES", "VES", 2, "VES", "VES"],
+      "VEF": [ "VEF", "VEF", 2, "VEF", "Bs"],
       // VND
       "VND": [ "VND", "₫", 24, "₫", "₫"],
       // VNN
@@ -1210,7 +1186,7 @@ public class CurrencyList_ extends com.google.gwt.i18n.client.CurrencyList {
       // XUA
       "XUA": [ "XUA", "XUA", 130, "XUA", "XUA"],
       // XXX
-      "XXX": [ "XXX", "¤", 130, "¤", "¤"],
+      "XXX": [ "XXX", "XXX", 130, "XXX", "XXX"],
       // YDD
       "YDD": [ "YDD", "YDD", 130, "YDD", "YDD"],
       // YER

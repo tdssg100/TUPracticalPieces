@@ -21,64 +21,34 @@ public class CurrencyList_en_AU extends com.google.gwt.i18n.client.CurrencyList_
     HashMap<String, CurrencyData> result = super.loadCurrencyMapJava();
     // Australian Dollar
     result.put("AUD", new CurrencyDataImpl("AUD", "$", 2, "AU$", "$"));
-    // Bosnia-Herzegovina Convertible Marka
-    result.put("BAM", new CurrencyDataImpl("BAM", "BAM", 2, "BAM", "KM"));
-    // Barbados Dollar
-    result.put("BBD", new CurrencyDataImpl("BBD", "BBD", 2, "BBD", "$"));
-    // Bermuda Dollar
-    result.put("BMD", new CurrencyDataImpl("BMD", "BMD", 2, "BMD", "$"));
-    // Boliviano
-    result.put("BOB", new CurrencyDataImpl("BOB", "BOB", 2, "BOB", "Bs"));
-    // Brazilian Real
-    result.put("BRL", new CurrencyDataImpl("BRL", "R$", 2, "R$", "R$"));
-    // Canadian Dollar
-    result.put("CAD", new CurrencyDataImpl("CAD", "C$", 2, "C$", "$"));
-    // CNH
-    result.put("CNH", new CurrencyDataImpl("CNH", "CNH", 130, "CNH", "CNH"));
-    // Chinese Yuan
-    result.put("CNY", new CurrencyDataImpl("CNY", "RMB¥", 2, "RMB¥", "¥"));
-    // Euro
-    result.put("EUR", new CurrencyDataImpl("EUR", "€", 2, "€", "€"));
+    // Belarusian New Rouble (1994–1999)
+    result.put("BYB", new CurrencyDataImpl("BYB", "BYB", 130, "BYB", "BYB"));
+    // Belarusian Rouble
+    result.put("BYR", new CurrencyDataImpl("BYR", "BYR", 0, "BYR", "BYR"));
     // British Pound
-    result.put("GBP", new CurrencyDataImpl("GBP", "GB£", 2, "GB£", "£"));
-    // Hong Kong Dollar
-    result.put("HKD", new CurrencyDataImpl("HKD", "HK$", 2, "HK$", "$"));
-    // Israeli Shekel
-    result.put("ILS", new CurrencyDataImpl("ILS", "IL₪", 2, "IL₪", "₪"));
+    result.put("GBP", new CurrencyDataImpl("GBP", "£", 2, "GB£", "£"));
+    // Israeli Shekel (1980–1985)
+    result.put("ILR", new CurrencyDataImpl("ILR", "ILR", 130, "ILR", "ILR"));
+    // Israeli New Shekel
+    result.put("ILS", new CurrencyDataImpl("ILS", "₪", 2, "IL₪", "₪"));
     // Indian Rupee
-    result.put("INR", new CurrencyDataImpl("INR", "Rs", 2, "Rs", "₹"));
-    // Japanese Yen
-    result.put("JPY", new CurrencyDataImpl("JPY", "JP¥", 0, "JP¥", "¥"));
-    // South Korean Won
-    result.put("KRW", new CurrencyDataImpl("KRW", "KR₩", 0, "KR₩", "₩"));
-    // Mexican Peso
-    result.put("MXN", new CurrencyDataImpl("MXN", "Mex$", 2, "Mex$", "$"));
-    // New Zealand Dollar
-    result.put("NZD", new CurrencyDataImpl("NZD", "NZD", 2, "NZD", "$"));
-    // Qatari Riyal
-    result.put("QAR", new CurrencyDataImpl("QAR", "QAR", 2, "QAR", "Rial"));
-    // Seychellois Rupee
-    result.put("SCR", new CurrencyDataImpl("SCR", "Rs", 2, "Rs", "SCR"));
-    // Suriname Dollar
-    result.put("SRD", new CurrencyDataImpl("SRD", "SRD", 2, "SRD", "$"));
-    // New Taiwan Dollar
-    result.put("TWD", new CurrencyDataImpl("TWD", "NT$", 2, "NT$", "NT$"));
-    // US Dollar
-    result.put("USD", new CurrencyDataImpl("USD", "US$", 2, "US$", "$"));
-    // Peso Uruguayo
-    result.put("UYU", new CurrencyDataImpl("UYU", "UY$", 2, "UY$", "$"));
-    // VES
-    result.put("VES", new CurrencyDataImpl("VES", "VES", 2, "VES", "VES"));
-    // Vietnamese Dong
-    result.put("VND", new CurrencyDataImpl("VND", "₫", 24, "₫", "₫"));
+    result.put("INR", new CurrencyDataImpl("INR", "₹", 2, "Rs", "₹"));
+    // Latvian Rouble
+    result.put("LVR", new CurrencyDataImpl("LVR", "LVR", 130, "LVR", "LVR"));
+    // Russian Rouble
+    result.put("RUB", new CurrencyDataImpl("RUB", "руб.", 2, "руб.", "руб."));
+    // Russian Rouble (1991–1998)
+    result.put("RUR", new CurrencyDataImpl("RUR", "RUR", 130, "RUR", "RUR"));
+    // Seychelles Rupee
+    result.put("SCR", new CurrencyDataImpl("SCR", "SCR", 2, "SCR", "SCR"));
+    // Tajikistani Rouble
+    result.put("TJR", new CurrencyDataImpl("TJR", "TJR", 130, "TJR", "TJR"));
+    // Uzbekistani Som
+    result.put("UZS", new CurrencyDataImpl("UZS", "UZS", 0, "UZS", "soʼm"));
     // Central African CFA Franc
-    result.put("XAF", new CurrencyDataImpl("XAF", "XAF", 0, "XAF", "FCFA"));
-    // East Caribbean Dollar
-    result.put("XCD", new CurrencyDataImpl("XCD", "XCD", 2, "XCD", "$"));
+    result.put("XAF", new CurrencyDataImpl("XAF", "FCFA", 0, "FCFA", "FCFA"));
     // West African CFA Franc
-    result.put("XOF", new CurrencyDataImpl("XOF", "XOF", 0, "XOF", "CFA"));
-    // CFP Franc
-    result.put("XPF", new CurrencyDataImpl("XPF", "CFP", 0, "CFP", "FCFP"));
+    result.put("XOF", new CurrencyDataImpl("XOF", "CFA", 0, "CFA", "CFA"));
     return result;
   }
   
@@ -91,64 +61,34 @@ public class CurrencyList_en_AU extends com.google.gwt.i18n.client.CurrencyList_
     return {
       // Australian Dollar
       "AUD": [ "AUD", "$", 2, "AU$", "$"],
-      // Bosnia-Herzegovina Convertible Marka
-      "BAM": [ "BAM", "BAM", 2, "BAM", "KM"],
-      // Barbados Dollar
-      "BBD": [ "BBD", "BBD", 2, "BBD", "$"],
-      // Bermuda Dollar
-      "BMD": [ "BMD", "BMD", 2, "BMD", "$"],
-      // Boliviano
-      "BOB": [ "BOB", "BOB", 2, "BOB", "Bs"],
-      // Brazilian Real
-      "BRL": [ "BRL", "R$", 2, "R$", "R$"],
-      // Canadian Dollar
-      "CAD": [ "CAD", "C$", 2, "C$", "$"],
-      // CNH
-      "CNH": [ "CNH", "CNH", 130, "CNH", "CNH"],
-      // Chinese Yuan
-      "CNY": [ "CNY", "RMB¥", 2, "RMB¥", "¥"],
-      // Euro
-      "EUR": [ "EUR", "€", 2, "€", "€"],
+      // Belarusian New Rouble (1994–1999)
+      "BYB": [ "BYB", "BYB", 130, "BYB", "BYB"],
+      // Belarusian Rouble
+      "BYR": [ "BYR", "BYR", 0, "BYR", "BYR"],
       // British Pound
-      "GBP": [ "GBP", "GB£", 2, "GB£", "£"],
-      // Hong Kong Dollar
-      "HKD": [ "HKD", "HK$", 2, "HK$", "$"],
-      // Israeli Shekel
-      "ILS": [ "ILS", "IL₪", 2, "IL₪", "₪"],
+      "GBP": [ "GBP", "£", 2, "GB£", "£"],
+      // Israeli Shekel (1980–1985)
+      "ILR": [ "ILR", "ILR", 130, "ILR", "ILR"],
+      // Israeli New Shekel
+      "ILS": [ "ILS", "₪", 2, "IL₪", "₪"],
       // Indian Rupee
-      "INR": [ "INR", "Rs", 2, "Rs", "₹"],
-      // Japanese Yen
-      "JPY": [ "JPY", "JP¥", 0, "JP¥", "¥"],
-      // South Korean Won
-      "KRW": [ "KRW", "KR₩", 0, "KR₩", "₩"],
-      // Mexican Peso
-      "MXN": [ "MXN", "Mex$", 2, "Mex$", "$"],
-      // New Zealand Dollar
-      "NZD": [ "NZD", "NZD", 2, "NZD", "$"],
-      // Qatari Riyal
-      "QAR": [ "QAR", "QAR", 2, "QAR", "Rial"],
-      // Seychellois Rupee
-      "SCR": [ "SCR", "Rs", 2, "Rs", "SCR"],
-      // Suriname Dollar
-      "SRD": [ "SRD", "SRD", 2, "SRD", "$"],
-      // New Taiwan Dollar
-      "TWD": [ "TWD", "NT$", 2, "NT$", "NT$"],
-      // US Dollar
-      "USD": [ "USD", "US$", 2, "US$", "$"],
-      // Peso Uruguayo
-      "UYU": [ "UYU", "UY$", 2, "UY$", "$"],
-      // VES
-      "VES": [ "VES", "VES", 2, "VES", "VES"],
-      // Vietnamese Dong
-      "VND": [ "VND", "₫", 24, "₫", "₫"],
+      "INR": [ "INR", "₹", 2, "Rs", "₹"],
+      // Latvian Rouble
+      "LVR": [ "LVR", "LVR", 130, "LVR", "LVR"],
+      // Russian Rouble
+      "RUB": [ "RUB", "руб.", 2, "руб.", "руб."],
+      // Russian Rouble (1991–1998)
+      "RUR": [ "RUR", "RUR", 130, "RUR", "RUR"],
+      // Seychelles Rupee
+      "SCR": [ "SCR", "SCR", 2, "SCR", "SCR"],
+      // Tajikistani Rouble
+      "TJR": [ "TJR", "TJR", 130, "TJR", "TJR"],
+      // Uzbekistani Som
+      "UZS": [ "UZS", "UZS", 0, "UZS", "soʼm"],
       // Central African CFA Franc
-      "XAF": [ "XAF", "XAF", 0, "XAF", "FCFA"],
-      // East Caribbean Dollar
-      "XCD": [ "XCD", "XCD", 2, "XCD", "$"],
+      "XAF": [ "XAF", "FCFA", 0, "FCFA", "FCFA"],
       // West African CFA Franc
-      "XOF": [ "XOF", "XOF", 0, "XOF", "CFA"],
-      // CFP Franc
-      "XPF": [ "XPF", "CFP", 0, "CFP", "FCFP"],
+      "XOF": [ "XOF", "CFA", 0, "CFA", "CFA"],
     };
   }-*/;
   
@@ -156,33 +96,20 @@ public class CurrencyList_en_AU extends com.google.gwt.i18n.client.CurrencyList_
   protected HashMap<String, String> loadNamesMapJava() {
     HashMap<String, String> result = super.loadNamesMapJava();
     result.put("AUD", "Australian Dollar");
-    result.put("BAM", "Bosnia-Herzegovina Convertible Marka");
-    result.put("BBD", "Barbados Dollar");
-    result.put("BMD", "Bermuda Dollar");
-    result.put("BOB", "Boliviano");
-    result.put("BRL", "Brazilian Real");
-    result.put("CAD", "Canadian Dollar");
-    result.put("CNY", "Chinese Yuan");
-    result.put("EUR", "Euro");
+    result.put("BYB", "Belarusian New Rouble (1994–1999)");
+    result.put("BYR", "Belarusian Rouble");
     result.put("GBP", "British Pound");
-    result.put("HKD", "Hong Kong Dollar");
-    result.put("ILS", "Israeli Shekel");
+    result.put("ILR", "Israeli Shekel (1980–1985)");
+    result.put("ILS", "Israeli New Shekel");
     result.put("INR", "Indian Rupee");
-    result.put("JPY", "Japanese Yen");
-    result.put("KRW", "South Korean Won");
-    result.put("MXN", "Mexican Peso");
-    result.put("NZD", "New Zealand Dollar");
-    result.put("QAR", "Qatari Riyal");
-    result.put("SCR", "Seychellois Rupee");
-    result.put("SRD", "Suriname Dollar");
-    result.put("TWD", "New Taiwan Dollar");
-    result.put("USD", "US Dollar");
-    result.put("UYU", "Peso Uruguayo");
-    result.put("VND", "Vietnamese Dong");
+    result.put("LVR", "Latvian Rouble");
+    result.put("RUB", "Russian Rouble");
+    result.put("RUR", "Russian Rouble (1991–1998)");
+    result.put("SCR", "Seychelles Rupee");
+    result.put("TJR", "Tajikistani Rouble");
+    result.put("UZS", "Uzbekistani Som");
     result.put("XAF", "Central African CFA Franc");
-    result.put("XCD", "East Caribbean Dollar");
     result.put("XOF", "West African CFA Franc");
-    result.put("XPF", "CFP Franc");
     return result;
   }
   
@@ -194,33 +121,20 @@ public class CurrencyList_en_AU extends com.google.gwt.i18n.client.CurrencyList_
   private native JavaScriptObject loadMyNamesMapOverridesNative() /*-{
     return {
       "AUD": "Australian Dollar",
-      "BAM": "Bosnia-Herzegovina Convertible Marka",
-      "BBD": "Barbados Dollar",
-      "BMD": "Bermuda Dollar",
-      "BOB": "Boliviano",
-      "BRL": "Brazilian Real",
-      "CAD": "Canadian Dollar",
-      "CNY": "Chinese Yuan",
-      "EUR": "Euro",
+      "BYB": "Belarusian New Rouble (1994–1999)",
+      "BYR": "Belarusian Rouble",
       "GBP": "British Pound",
-      "HKD": "Hong Kong Dollar",
-      "ILS": "Israeli Shekel",
+      "ILR": "Israeli Shekel (1980–1985)",
+      "ILS": "Israeli New Shekel",
       "INR": "Indian Rupee",
-      "JPY": "Japanese Yen",
-      "KRW": "South Korean Won",
-      "MXN": "Mexican Peso",
-      "NZD": "New Zealand Dollar",
-      "QAR": "Qatari Riyal",
-      "SCR": "Seychellois Rupee",
-      "SRD": "Suriname Dollar",
-      "TWD": "New Taiwan Dollar",
-      "USD": "US Dollar",
-      "UYU": "Peso Uruguayo",
-      "VND": "Vietnamese Dong",
+      "LVR": "Latvian Rouble",
+      "RUB": "Russian Rouble",
+      "RUR": "Russian Rouble (1991–1998)",
+      "SCR": "Seychelles Rupee",
+      "TJR": "Tajikistani Rouble",
+      "UZS": "Uzbekistani Som",
       "XAF": "Central African CFA Franc",
-      "XCD": "East Caribbean Dollar",
       "XOF": "West African CFA Franc",
-      "XPF": "CFP Franc",
     };
   }-*/;
 }

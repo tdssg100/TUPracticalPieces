@@ -32,7 +32,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     // Albanian Lek
     result.put("ALL", new CurrencyDataImpl("ALL", "ALL", 0, "ALL", "Lek"));
     // Armenian Dram
-    result.put("AMD", new CurrencyDataImpl("AMD", "AMD", 2, "AMD", "Dram"));
+    result.put("AMD", new CurrencyDataImpl("AMD", "AMD", 0, "AMD", "Dram"));
     // Netherlands Antillean Guilder
     result.put("ANG", new CurrencyDataImpl("ANG", "ANG", 2, "ANG", "ANG"));
     // Angolan Kwanza
@@ -125,12 +125,10 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("BUK", new CurrencyDataImpl("BUK", "BUK", 130, "BUK", "BUK"));
     // Botswanan Pula
     result.put("BWP", new CurrencyDataImpl("BWP", "BWP", 2, "BWP", "P"));
-    // Belarusian Ruble (1994–1999)
+    // Belarusian New Ruble (1994–1999)
     result.put("BYB", new CurrencyDataImpl("BYB", "BYB", 130, "BYB", "BYB"));
     // Belarusian Ruble
-    result.put("BYN", new CurrencyDataImpl("BYN", "BYN", 2, "BYN", "BYN"));
-    // Belarusian Ruble (2000–2016)
-    result.put("BYR", new CurrencyDataImpl("BYR", "BYR", 128, "BYR", "BYR"));
+    result.put("BYR", new CurrencyDataImpl("BYR", "BYR", 0, "BYR", "BYR"));
     // Belize Dollar
     result.put("BZD", new CurrencyDataImpl("BZD", "BZD", 2, "BZD", "$"));
     // Canadian Dollar
@@ -146,21 +144,19 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     // Chilean Escudo
     result.put("CLE", new CurrencyDataImpl("CLE", "CLE", 130, "CLE", "CLE"));
     // Chilean Unit of Account (UF)
-    result.put("CLF", new CurrencyDataImpl("CLF", "CLF", 132, "CLF", "CLF"));
+    result.put("CLF", new CurrencyDataImpl("CLF", "CLF", 128, "CLF", "CLF"));
     // Chilean Peso
     result.put("CLP", new CurrencyDataImpl("CLP", "CL$", 0, "CL$", "$"));
-    // Chinese Yuan (offshore)
-    result.put("CNH", new CurrencyDataImpl("CNH", "CNH", 130, "CNH", "CNH"));
     // Chinese People’s Bank Dollar
     result.put("CNX", new CurrencyDataImpl("CNX", "CNX", 130, "CNX", "CNX"));
     // Chinese Yuan
     result.put("CNY", new CurrencyDataImpl("CNY", "CN¥", 2, "RMB¥", "¥"));
     // Colombian Peso
-    result.put("COP", new CurrencyDataImpl("COP", "COL$", 2, "COL$", "$"));
+    result.put("COP", new CurrencyDataImpl("COP", "COL$", 0, "COL$", "$"));
     // Colombian Real Value Unit
     result.put("COU", new CurrencyDataImpl("COU", "COU", 130, "COU", "COU"));
     // Costa Rican Colón
-    result.put("CRC", new CurrencyDataImpl("CRC", "CR₡", 2, "CR₡", "₡"));
+    result.put("CRC", new CurrencyDataImpl("CRC", "CR₡", 0, "CR₡", "₡"));
     // Serbian Dinar (2002–2006)
     result.put("CSD", new CurrencyDataImpl("CSD", "CSD", 130, "CSD", "CSD"));
     // Czechoslovak Hard Koruna
@@ -173,7 +169,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("CVE", new CurrencyDataImpl("CVE", "CVE", 2, "CVE", "CVE"));
     // Cypriot Pound
     result.put("CYP", new CurrencyDataImpl("CYP", "CYP", 130, "CYP", "CYP"));
-    // Czech Koruna
+    // Czech Republic Koruna
     result.put("CZK", new CurrencyDataImpl("CZK", "Kč", 2, "Kč", "Kč"));
     // East German Mark
     result.put("DDM", new CurrencyDataImpl("DDM", "DDM", 130, "DDM", "DDM"));
@@ -215,7 +211,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("FKP", new CurrencyDataImpl("FKP", "FKP", 2, "FKP", "£"));
     // French Franc
     result.put("FRF", new CurrencyDataImpl("FRF", "FRF", 130, "FRF", "FRF"));
-    // British Pound
+    // British Pound Sterling
     result.put("GBP", new CurrencyDataImpl("GBP", "£", 2, "GB£", "£"));
     // Georgian Kupon Larit
     result.put("GEK", new CurrencyDataImpl("GEK", "GEK", 130, "GEK", "GEK"));
@@ -244,7 +240,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     // Guinea-Bissau Peso
     result.put("GWP", new CurrencyDataImpl("GWP", "GWP", 130, "GWP", "GWP"));
     // Guyanaese Dollar
-    result.put("GYD", new CurrencyDataImpl("GYD", "GYD", 2, "GYD", "$"));
+    result.put("GYD", new CurrencyDataImpl("GYD", "GYD", 0, "GYD", "$"));
     // Hong Kong Dollar
     result.put("HKD", new CurrencyDataImpl("HKD", "HK$", 2, "HK$", "$"));
     // Honduran Lempira
@@ -256,19 +252,19 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     // Haitian Gourde
     result.put("HTG", new CurrencyDataImpl("HTG", "HTG", 2, "HTG", "HTG"));
     // Hungarian Forint
-    result.put("HUF", new CurrencyDataImpl("HUF", "HUF", 2, "HUF", "Ft"));
+    result.put("HUF", new CurrencyDataImpl("HUF", "HUF", 0, "HUF", "Ft"));
     // Indonesian Rupiah
-    result.put("IDR", new CurrencyDataImpl("IDR", "IDR", 2, "IDR", "Rp"));
+    result.put("IDR", new CurrencyDataImpl("IDR", "IDR", 0, "IDR", "Rp"));
     // Irish Pound
     result.put("IEP", new CurrencyDataImpl("IEP", "IEP", 130, "IEP", "IEP"));
     // Israeli Pound
     result.put("ILP", new CurrencyDataImpl("ILP", "ILP", 130, "ILP", "ILP"));
-    // Israeli Shekel (1980–1985)
+    // Israeli Sheqel (1980–1985)
     result.put("ILR", new CurrencyDataImpl("ILR", "ILR", 130, "ILR", "ILR"));
-    // Israeli New Shekel
+    // Israeli New Sheqel
     result.put("ILS", new CurrencyDataImpl("ILS", "₪", 2, "IL₪", "₪"));
     // Indian Rupee
-    result.put("INR", new CurrencyDataImpl("INR", "₹", 2, "Rs", "₹"));
+    result.put("INR", new CurrencyDataImpl("INR", "Rs.", 2, "Rs", "₹"));
     // Iraqi Dinar
     result.put("IQD", new CurrencyDataImpl("IQD", "IQD", 0, "IQD", "din"));
     // Iranian Rial
@@ -318,7 +314,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     // Lesotho Loti
     result.put("LSL", new CurrencyDataImpl("LSL", "LSL", 2, "LSL", "LSL"));
     // Lithuanian Litas
-    result.put("LTL", new CurrencyDataImpl("LTL", "LTL", 130, "LTL", "Lt"));
+    result.put("LTL", new CurrencyDataImpl("LTL", "LTL", 2, "LTL", "Lt"));
     // Lithuanian Talonas
     result.put("LTT", new CurrencyDataImpl("LTT", "LTT", 130, "LTT", "LTT"));
     // Luxembourgian Convertible Franc
@@ -356,20 +352,18 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     // Myanmar Kyat
     result.put("MMK", new CurrencyDataImpl("MMK", "MMK", 0, "MMK", "K"));
     // Mongolian Tugrik
-    result.put("MNT", new CurrencyDataImpl("MNT", "MN₮", 2, "MN₮", "₮"));
+    result.put("MNT", new CurrencyDataImpl("MNT", "MN₮", 0, "MN₮", "₮"));
     // Macanese Pataca
     result.put("MOP", new CurrencyDataImpl("MOP", "MOP", 2, "MOP", "MOP"));
-    // Mauritanian Ouguiya (1973–2017)
-    result.put("MRO", new CurrencyDataImpl("MRO", "MRO", 128, "MRO", "MRO"));
     // Mauritanian Ouguiya
-    result.put("MRU", new CurrencyDataImpl("MRU", "MRU", 2, "MRU", "MRU"));
+    result.put("MRO", new CurrencyDataImpl("MRO", "MRO", 0, "MRO", "MRO"));
     // Maltese Lira
     result.put("MTL", new CurrencyDataImpl("MTL", "MTL", 130, "MTL", "MTL"));
     // Maltese Pound
     result.put("MTP", new CurrencyDataImpl("MTP", "MTP", 130, "MTP", "MTP"));
     // Mauritian Rupee
-    result.put("MUR", new CurrencyDataImpl("MUR", "MUR", 2, "MUR", "Rs"));
-    // Maldivian Rupee (1947–1981)
+    result.put("MUR", new CurrencyDataImpl("MUR", "MUR", 0, "MUR", "Rs"));
+    // Maldivian Rupee
     result.put("MVP", new CurrencyDataImpl("MVP", "MVP", 130, "MVP", "MVP"));
     // Maldivian Rufiyaa
     result.put("MVR", new CurrencyDataImpl("MVR", "MVR", 2, "MVR", "MVR"));
@@ -411,16 +405,16 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("PAB", new CurrencyDataImpl("PAB", "B/.", 2, "B/.", "B/."));
     // Peruvian Inti
     result.put("PEI", new CurrencyDataImpl("PEI", "PEI", 130, "PEI", "PEI"));
-    // Peruvian Sol
+    // Peruvian Nuevo Sol
     result.put("PEN", new CurrencyDataImpl("PEN", "S/.", 2, "S/.", "S/."));
     // Peruvian Sol (1863–1965)
     result.put("PES", new CurrencyDataImpl("PES", "PES", 130, "PES", "PES"));
     // Papua New Guinean Kina
     result.put("PGK", new CurrencyDataImpl("PGK", "PGK", 2, "PGK", "PGK"));
-    // Philippine Piso
-    result.put("PHP", new CurrencyDataImpl("PHP", "PHP", 2, "PHP", "₱"));
+    // Philippine Peso
+    result.put("PHP", new CurrencyDataImpl("PHP", "Php", 2, "PHP", "₱"));
     // Pakistani Rupee
-    result.put("PKR", new CurrencyDataImpl("PKR", "PKRs.", 2, "PKRs.", "Rs"));
+    result.put("PKR", new CurrencyDataImpl("PKR", "PKRs.", 0, "PKRs.", "Rs"));
     // Polish Zloty
     result.put("PLN", new CurrencyDataImpl("PLN", "PLN", 2, "PLN", "zł"));
     // Polish Zloty (1950–1995)
@@ -461,7 +455,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("SEK", new CurrencyDataImpl("SEK", "kr", 2, "kr", "kr"));
     // Singapore Dollar
     result.put("SGD", new CurrencyDataImpl("SGD", "S$", 2, "S$", "$"));
-    // St. Helena Pound
+    // Saint Helena Pound
     result.put("SHP", new CurrencyDataImpl("SHP", "SHP", 2, "SHP", "£"));
     // Slovenian Tolar
     result.put("SIT", new CurrencyDataImpl("SIT", "SIT", 130, "SIT", "SIT"));
@@ -477,10 +471,8 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("SRG", new CurrencyDataImpl("SRG", "SRG", 130, "SRG", "SRG"));
     // South Sudanese Pound
     result.put("SSP", new CurrencyDataImpl("SSP", "SSP", 2, "SSP", "SSP"));
-    // São Tomé & Príncipe Dobra (1977–2017)
-    result.put("STD", new CurrencyDataImpl("STD", "STD", 128, "STD", "Db"));
-    // São Tomé & Príncipe Dobra
-    result.put("STN", new CurrencyDataImpl("STN", "STN", 2, "STN", "STN"));
+    // São Tomé and Príncipe Dobra
+    result.put("STD", new CurrencyDataImpl("STD", "STD", 0, "STD", "Db"));
     // Soviet Rouble
     result.put("SUR", new CurrencyDataImpl("SUR", "SUR", 130, "SUR", "SUR"));
     // Salvadoran Colón
@@ -490,7 +482,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     // Swazi Lilangeni
     result.put("SZL", new CurrencyDataImpl("SZL", "SZL", 2, "SZL", "SZL"));
     // Thai Baht
-    result.put("THB", new CurrencyDataImpl("THB", "THB", 2, "THB", "฿"));
+    result.put("THB", new CurrencyDataImpl("THB", "฿", 2, "THB", "฿"));
     // Tajikistani Ruble
     result.put("TJR", new CurrencyDataImpl("TJR", "TJR", 130, "TJR", "TJR"));
     // Tajikistani Somoni
@@ -509,12 +501,12 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("TRL", new CurrencyDataImpl("TRL", "TRL", 128, "TRL", "TRL"));
     // Turkish Lira
     result.put("TRY", new CurrencyDataImpl("TRY", "TL", 2, "YTL", "TL"));
-    // Trinidad & Tobago Dollar
+    // Trinidad and Tobago Dollar
     result.put("TTD", new CurrencyDataImpl("TTD", "TTD", 2, "TTD", "$"));
     // New Taiwan Dollar
     result.put("TWD", new CurrencyDataImpl("TWD", "NT$", 2, "NT$", "NT$"));
     // Tanzanian Shilling
-    result.put("TZS", new CurrencyDataImpl("TZS", "TZS", 2, "TZS", "TSh"));
+    result.put("TZS", new CurrencyDataImpl("TZS", "TZS", 0, "TZS", "TSh"));
     // Ukrainian Hryvnia
     result.put("UAH", new CurrencyDataImpl("UAH", "UAH", 2, "UAH", "₴"));
     // Ukrainian Karbovanets
@@ -535,16 +527,12 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("UYP", new CurrencyDataImpl("UYP", "UYP", 130, "UYP", "UYP"));
     // Uruguayan Peso
     result.put("UYU", new CurrencyDataImpl("UYU", "UY$", 2, "UY$", "$"));
-    // Uruguayan Nominal Wage Index Unit
-    result.put("UYW", new CurrencyDataImpl("UYW", "UYW", 132, "UYW", "UYW"));
-    // Uzbekistani Som
-    result.put("UZS", new CurrencyDataImpl("UZS", "UZS", 2, "UZS", "soʼm"));
+    // Uzbekistan Som
+    result.put("UZS", new CurrencyDataImpl("UZS", "UZS", 0, "UZS", "soʼm"));
     // Venezuelan Bolívar (1871–2008)
     result.put("VEB", new CurrencyDataImpl("VEB", "VEB", 130, "VEB", "VEB"));
-    // Venezuelan Bolívar (2008–2018)
-    result.put("VEF", new CurrencyDataImpl("VEF", "VEF", 130, "VEF", "Bs"));
     // Venezuelan Bolívar
-    result.put("VES", new CurrencyDataImpl("VES", "VES", 2, "VES", "VES"));
+    result.put("VEF", new CurrencyDataImpl("VEF", "VEF", 2, "VEF", "Bs"));
     // Vietnamese Dong
     result.put("VND", new CurrencyDataImpl("VND", "₫", 24, "₫", "₫"));
     // Vietnamese Dong (1978–1985)
@@ -553,7 +541,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("VUV", new CurrencyDataImpl("VUV", "VUV", 0, "VUV", "VUV"));
     // Samoan Tala
     result.put("WST", new CurrencyDataImpl("WST", "WST", 2, "WST", "WST"));
-    // Central African CFA Franc
+    // CFA Franc BEAC
     result.put("XAF", new CurrencyDataImpl("XAF", "FCFA", 0, "FCFA", "FCFA"));
     // Silver
     result.put("XAG", new CurrencyDataImpl("XAG", "XAG", 130, "XAG", "XAG"));
@@ -577,7 +565,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("XFO", new CurrencyDataImpl("XFO", "XFO", 130, "XFO", "XFO"));
     // French UIC-Franc
     result.put("XFU", new CurrencyDataImpl("XFU", "XFU", 130, "XFU", "XFU"));
-    // West African CFA Franc
+    // CFA Franc BCEAO
     result.put("XOF", new CurrencyDataImpl("XOF", "CFA", 0, "CFA", "CFA"));
     // Palladium
     result.put("XPD", new CurrencyDataImpl("XPD", "XPD", 130, "XPD", "XPD"));
@@ -594,7 +582,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     // ADB Unit of Account
     result.put("XUA", new CurrencyDataImpl("XUA", "XUA", 130, "XUA", "XUA"));
     // Unknown Currency
-    result.put("XXX", new CurrencyDataImpl("XXX", "¤", 130, "¤", "¤"));
+    result.put("XXX", new CurrencyDataImpl("XXX", "XXX", 130, "XXX", "XXX"));
     // Yemeni Dinar
     result.put("YDD", new CurrencyDataImpl("YDD", "YDD", 130, "YDD", "YDD"));
     // Yemeni Rial
@@ -648,7 +636,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       // Albanian Lek
       "ALL": [ "ALL", "ALL", 0, "ALL", "Lek"],
       // Armenian Dram
-      "AMD": [ "AMD", "AMD", 2, "AMD", "Dram"],
+      "AMD": [ "AMD", "AMD", 0, "AMD", "Dram"],
       // Netherlands Antillean Guilder
       "ANG": [ "ANG", "ANG", 2, "ANG", "ANG"],
       // Angolan Kwanza
@@ -741,12 +729,10 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "BUK": [ "BUK", "BUK", 130, "BUK", "BUK"],
       // Botswanan Pula
       "BWP": [ "BWP", "BWP", 2, "BWP", "P"],
-      // Belarusian Ruble (1994–1999)
+      // Belarusian New Ruble (1994–1999)
       "BYB": [ "BYB", "BYB", 130, "BYB", "BYB"],
       // Belarusian Ruble
-      "BYN": [ "BYN", "BYN", 2, "BYN", "BYN"],
-      // Belarusian Ruble (2000–2016)
-      "BYR": [ "BYR", "BYR", 128, "BYR", "BYR"],
+      "BYR": [ "BYR", "BYR", 0, "BYR", "BYR"],
       // Belize Dollar
       "BZD": [ "BZD", "BZD", 2, "BZD", "$"],
       // Canadian Dollar
@@ -762,21 +748,19 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       // Chilean Escudo
       "CLE": [ "CLE", "CLE", 130, "CLE", "CLE"],
       // Chilean Unit of Account (UF)
-      "CLF": [ "CLF", "CLF", 132, "CLF", "CLF"],
+      "CLF": [ "CLF", "CLF", 128, "CLF", "CLF"],
       // Chilean Peso
       "CLP": [ "CLP", "CL$", 0, "CL$", "$"],
-      // Chinese Yuan (offshore)
-      "CNH": [ "CNH", "CNH", 130, "CNH", "CNH"],
       // Chinese People’s Bank Dollar
       "CNX": [ "CNX", "CNX", 130, "CNX", "CNX"],
       // Chinese Yuan
       "CNY": [ "CNY", "CN¥", 2, "RMB¥", "¥"],
       // Colombian Peso
-      "COP": [ "COP", "COL$", 2, "COL$", "$"],
+      "COP": [ "COP", "COL$", 0, "COL$", "$"],
       // Colombian Real Value Unit
       "COU": [ "COU", "COU", 130, "COU", "COU"],
       // Costa Rican Colón
-      "CRC": [ "CRC", "CR₡", 2, "CR₡", "₡"],
+      "CRC": [ "CRC", "CR₡", 0, "CR₡", "₡"],
       // Serbian Dinar (2002–2006)
       "CSD": [ "CSD", "CSD", 130, "CSD", "CSD"],
       // Czechoslovak Hard Koruna
@@ -789,7 +773,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "CVE": [ "CVE", "CVE", 2, "CVE", "CVE"],
       // Cypriot Pound
       "CYP": [ "CYP", "CYP", 130, "CYP", "CYP"],
-      // Czech Koruna
+      // Czech Republic Koruna
       "CZK": [ "CZK", "Kč", 2, "Kč", "Kč"],
       // East German Mark
       "DDM": [ "DDM", "DDM", 130, "DDM", "DDM"],
@@ -831,7 +815,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "FKP": [ "FKP", "FKP", 2, "FKP", "£"],
       // French Franc
       "FRF": [ "FRF", "FRF", 130, "FRF", "FRF"],
-      // British Pound
+      // British Pound Sterling
       "GBP": [ "GBP", "£", 2, "GB£", "£"],
       // Georgian Kupon Larit
       "GEK": [ "GEK", "GEK", 130, "GEK", "GEK"],
@@ -860,7 +844,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       // Guinea-Bissau Peso
       "GWP": [ "GWP", "GWP", 130, "GWP", "GWP"],
       // Guyanaese Dollar
-      "GYD": [ "GYD", "GYD", 2, "GYD", "$"],
+      "GYD": [ "GYD", "GYD", 0, "GYD", "$"],
       // Hong Kong Dollar
       "HKD": [ "HKD", "HK$", 2, "HK$", "$"],
       // Honduran Lempira
@@ -872,19 +856,19 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       // Haitian Gourde
       "HTG": [ "HTG", "HTG", 2, "HTG", "HTG"],
       // Hungarian Forint
-      "HUF": [ "HUF", "HUF", 2, "HUF", "Ft"],
+      "HUF": [ "HUF", "HUF", 0, "HUF", "Ft"],
       // Indonesian Rupiah
-      "IDR": [ "IDR", "IDR", 2, "IDR", "Rp"],
+      "IDR": [ "IDR", "IDR", 0, "IDR", "Rp"],
       // Irish Pound
       "IEP": [ "IEP", "IEP", 130, "IEP", "IEP"],
       // Israeli Pound
       "ILP": [ "ILP", "ILP", 130, "ILP", "ILP"],
-      // Israeli Shekel (1980–1985)
+      // Israeli Sheqel (1980–1985)
       "ILR": [ "ILR", "ILR", 130, "ILR", "ILR"],
-      // Israeli New Shekel
+      // Israeli New Sheqel
       "ILS": [ "ILS", "₪", 2, "IL₪", "₪"],
       // Indian Rupee
-      "INR": [ "INR", "₹", 2, "Rs", "₹"],
+      "INR": [ "INR", "Rs.", 2, "Rs", "₹"],
       // Iraqi Dinar
       "IQD": [ "IQD", "IQD", 0, "IQD", "din"],
       // Iranian Rial
@@ -934,7 +918,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       // Lesotho Loti
       "LSL": [ "LSL", "LSL", 2, "LSL", "LSL"],
       // Lithuanian Litas
-      "LTL": [ "LTL", "LTL", 130, "LTL", "Lt"],
+      "LTL": [ "LTL", "LTL", 2, "LTL", "Lt"],
       // Lithuanian Talonas
       "LTT": [ "LTT", "LTT", 130, "LTT", "LTT"],
       // Luxembourgian Convertible Franc
@@ -972,20 +956,18 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       // Myanmar Kyat
       "MMK": [ "MMK", "MMK", 0, "MMK", "K"],
       // Mongolian Tugrik
-      "MNT": [ "MNT", "MN₮", 2, "MN₮", "₮"],
+      "MNT": [ "MNT", "MN₮", 0, "MN₮", "₮"],
       // Macanese Pataca
       "MOP": [ "MOP", "MOP", 2, "MOP", "MOP"],
-      // Mauritanian Ouguiya (1973–2017)
-      "MRO": [ "MRO", "MRO", 128, "MRO", "MRO"],
       // Mauritanian Ouguiya
-      "MRU": [ "MRU", "MRU", 2, "MRU", "MRU"],
+      "MRO": [ "MRO", "MRO", 0, "MRO", "MRO"],
       // Maltese Lira
       "MTL": [ "MTL", "MTL", 130, "MTL", "MTL"],
       // Maltese Pound
       "MTP": [ "MTP", "MTP", 130, "MTP", "MTP"],
       // Mauritian Rupee
-      "MUR": [ "MUR", "MUR", 2, "MUR", "Rs"],
-      // Maldivian Rupee (1947–1981)
+      "MUR": [ "MUR", "MUR", 0, "MUR", "Rs"],
+      // Maldivian Rupee
       "MVP": [ "MVP", "MVP", 130, "MVP", "MVP"],
       // Maldivian Rufiyaa
       "MVR": [ "MVR", "MVR", 2, "MVR", "MVR"],
@@ -1027,16 +1009,16 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "PAB": [ "PAB", "B/.", 2, "B/.", "B/."],
       // Peruvian Inti
       "PEI": [ "PEI", "PEI", 130, "PEI", "PEI"],
-      // Peruvian Sol
+      // Peruvian Nuevo Sol
       "PEN": [ "PEN", "S/.", 2, "S/.", "S/."],
       // Peruvian Sol (1863–1965)
       "PES": [ "PES", "PES", 130, "PES", "PES"],
       // Papua New Guinean Kina
       "PGK": [ "PGK", "PGK", 2, "PGK", "PGK"],
-      // Philippine Piso
-      "PHP": [ "PHP", "PHP", 2, "PHP", "₱"],
+      // Philippine Peso
+      "PHP": [ "PHP", "Php", 2, "PHP", "₱"],
       // Pakistani Rupee
-      "PKR": [ "PKR", "PKRs.", 2, "PKRs.", "Rs"],
+      "PKR": [ "PKR", "PKRs.", 0, "PKRs.", "Rs"],
       // Polish Zloty
       "PLN": [ "PLN", "PLN", 2, "PLN", "zł"],
       // Polish Zloty (1950–1995)
@@ -1077,7 +1059,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "SEK": [ "SEK", "kr", 2, "kr", "kr"],
       // Singapore Dollar
       "SGD": [ "SGD", "S$", 2, "S$", "$"],
-      // St. Helena Pound
+      // Saint Helena Pound
       "SHP": [ "SHP", "SHP", 2, "SHP", "£"],
       // Slovenian Tolar
       "SIT": [ "SIT", "SIT", 130, "SIT", "SIT"],
@@ -1093,10 +1075,8 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "SRG": [ "SRG", "SRG", 130, "SRG", "SRG"],
       // South Sudanese Pound
       "SSP": [ "SSP", "SSP", 2, "SSP", "SSP"],
-      // São Tomé & Príncipe Dobra (1977–2017)
-      "STD": [ "STD", "STD", 128, "STD", "Db"],
-      // São Tomé & Príncipe Dobra
-      "STN": [ "STN", "STN", 2, "STN", "STN"],
+      // São Tomé and Príncipe Dobra
+      "STD": [ "STD", "STD", 0, "STD", "Db"],
       // Soviet Rouble
       "SUR": [ "SUR", "SUR", 130, "SUR", "SUR"],
       // Salvadoran Colón
@@ -1106,7 +1086,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       // Swazi Lilangeni
       "SZL": [ "SZL", "SZL", 2, "SZL", "SZL"],
       // Thai Baht
-      "THB": [ "THB", "THB", 2, "THB", "฿"],
+      "THB": [ "THB", "฿", 2, "THB", "฿"],
       // Tajikistani Ruble
       "TJR": [ "TJR", "TJR", 130, "TJR", "TJR"],
       // Tajikistani Somoni
@@ -1125,12 +1105,12 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "TRL": [ "TRL", "TRL", 128, "TRL", "TRL"],
       // Turkish Lira
       "TRY": [ "TRY", "TL", 2, "YTL", "TL"],
-      // Trinidad & Tobago Dollar
+      // Trinidad and Tobago Dollar
       "TTD": [ "TTD", "TTD", 2, "TTD", "$"],
       // New Taiwan Dollar
       "TWD": [ "TWD", "NT$", 2, "NT$", "NT$"],
       // Tanzanian Shilling
-      "TZS": [ "TZS", "TZS", 2, "TZS", "TSh"],
+      "TZS": [ "TZS", "TZS", 0, "TZS", "TSh"],
       // Ukrainian Hryvnia
       "UAH": [ "UAH", "UAH", 2, "UAH", "₴"],
       // Ukrainian Karbovanets
@@ -1151,16 +1131,12 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "UYP": [ "UYP", "UYP", 130, "UYP", "UYP"],
       // Uruguayan Peso
       "UYU": [ "UYU", "UY$", 2, "UY$", "$"],
-      // Uruguayan Nominal Wage Index Unit
-      "UYW": [ "UYW", "UYW", 132, "UYW", "UYW"],
-      // Uzbekistani Som
-      "UZS": [ "UZS", "UZS", 2, "UZS", "soʼm"],
+      // Uzbekistan Som
+      "UZS": [ "UZS", "UZS", 0, "UZS", "soʼm"],
       // Venezuelan Bolívar (1871–2008)
       "VEB": [ "VEB", "VEB", 130, "VEB", "VEB"],
-      // Venezuelan Bolívar (2008–2018)
-      "VEF": [ "VEF", "VEF", 130, "VEF", "Bs"],
       // Venezuelan Bolívar
-      "VES": [ "VES", "VES", 2, "VES", "VES"],
+      "VEF": [ "VEF", "VEF", 2, "VEF", "Bs"],
       // Vietnamese Dong
       "VND": [ "VND", "₫", 24, "₫", "₫"],
       // Vietnamese Dong (1978–1985)
@@ -1169,7 +1145,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "VUV": [ "VUV", "VUV", 0, "VUV", "VUV"],
       // Samoan Tala
       "WST": [ "WST", "WST", 2, "WST", "WST"],
-      // Central African CFA Franc
+      // CFA Franc BEAC
       "XAF": [ "XAF", "FCFA", 0, "FCFA", "FCFA"],
       // Silver
       "XAG": [ "XAG", "XAG", 130, "XAG", "XAG"],
@@ -1193,7 +1169,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "XFO": [ "XFO", "XFO", 130, "XFO", "XFO"],
       // French UIC-Franc
       "XFU": [ "XFU", "XFU", 130, "XFU", "XFU"],
-      // West African CFA Franc
+      // CFA Franc BCEAO
       "XOF": [ "XOF", "CFA", 0, "CFA", "CFA"],
       // Palladium
       "XPD": [ "XPD", "XPD", 130, "XPD", "XPD"],
@@ -1210,7 +1186,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       // ADB Unit of Account
       "XUA": [ "XUA", "XUA", 130, "XUA", "XUA"],
       // Unknown Currency
-      "XXX": [ "XXX", "¤", 130, "¤", "¤"],
+      "XXX": [ "XXX", "XXX", 130, "XXX", "XXX"],
       // Yemeni Dinar
       "YDD": [ "YDD", "YDD", 130, "YDD", "YDD"],
       // Yemeni Rial
@@ -1300,9 +1276,8 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("BTN", "Bhutanese Ngultrum");
     result.put("BUK", "Burmese Kyat");
     result.put("BWP", "Botswanan Pula");
-    result.put("BYB", "Belarusian Ruble (1994–1999)");
-    result.put("BYN", "Belarusian Ruble");
-    result.put("BYR", "Belarusian Ruble (2000–2016)");
+    result.put("BYB", "Belarusian New Ruble (1994–1999)");
+    result.put("BYR", "Belarusian Ruble");
     result.put("BZD", "Belize Dollar");
     result.put("CAD", "Canadian Dollar");
     result.put("CDF", "Congolese Franc");
@@ -1312,7 +1287,6 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("CLE", "Chilean Escudo");
     result.put("CLF", "Chilean Unit of Account (UF)");
     result.put("CLP", "Chilean Peso");
-    result.put("CNH", "Chinese Yuan (offshore)");
     result.put("CNX", "Chinese People’s Bank Dollar");
     result.put("CNY", "Chinese Yuan");
     result.put("COP", "Colombian Peso");
@@ -1324,7 +1298,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("CUP", "Cuban Peso");
     result.put("CVE", "Cape Verdean Escudo");
     result.put("CYP", "Cypriot Pound");
-    result.put("CZK", "Czech Koruna");
+    result.put("CZK", "Czech Republic Koruna");
     result.put("DDM", "East German Mark");
     result.put("DEM", "German Mark");
     result.put("DJF", "Djiboutian Franc");
@@ -1345,7 +1319,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("FJD", "Fijian Dollar");
     result.put("FKP", "Falkland Islands Pound");
     result.put("FRF", "French Franc");
-    result.put("GBP", "British Pound");
+    result.put("GBP", "British Pound Sterling");
     result.put("GEK", "Georgian Kupon Larit");
     result.put("GEL", "Georgian Lari");
     result.put("GHC", "Ghanaian Cedi (1979–2007)");
@@ -1369,8 +1343,8 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("IDR", "Indonesian Rupiah");
     result.put("IEP", "Irish Pound");
     result.put("ILP", "Israeli Pound");
-    result.put("ILR", "Israeli Shekel (1980–1985)");
-    result.put("ILS", "Israeli New Shekel");
+    result.put("ILR", "Israeli Sheqel (1980–1985)");
+    result.put("ILS", "Israeli New Sheqel");
     result.put("INR", "Indian Rupee");
     result.put("IQD", "Iraqi Dinar");
     result.put("IRR", "Iranian Rial");
@@ -1417,12 +1391,11 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("MMK", "Myanmar Kyat");
     result.put("MNT", "Mongolian Tugrik");
     result.put("MOP", "Macanese Pataca");
-    result.put("MRO", "Mauritanian Ouguiya (1973–2017)");
-    result.put("MRU", "Mauritanian Ouguiya");
+    result.put("MRO", "Mauritanian Ouguiya");
     result.put("MTL", "Maltese Lira");
     result.put("MTP", "Maltese Pound");
     result.put("MUR", "Mauritian Rupee");
-    result.put("MVP", "Maldivian Rupee (1947–1981)");
+    result.put("MVP", "Maldivian Rupee");
     result.put("MVR", "Maldivian Rufiyaa");
     result.put("MWK", "Malawian Kwacha");
     result.put("MXN", "Mexican Peso");
@@ -1443,10 +1416,10 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("OMR", "Omani Rial");
     result.put("PAB", "Panamanian Balboa");
     result.put("PEI", "Peruvian Inti");
-    result.put("PEN", "Peruvian Sol");
+    result.put("PEN", "Peruvian Nuevo Sol");
     result.put("PES", "Peruvian Sol (1863–1965)");
     result.put("PGK", "Papua New Guinean Kina");
-    result.put("PHP", "Philippine Piso");
+    result.put("PHP", "Philippine Peso");
     result.put("PKR", "Pakistani Rupee");
     result.put("PLN", "Polish Zloty");
     result.put("PLZ", "Polish Zloty (1950–1995)");
@@ -1468,7 +1441,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("SDP", "Sudanese Pound (1957–1998)");
     result.put("SEK", "Swedish Krona");
     result.put("SGD", "Singapore Dollar");
-    result.put("SHP", "St. Helena Pound");
+    result.put("SHP", "Saint Helena Pound");
     result.put("SIT", "Slovenian Tolar");
     result.put("SKK", "Slovak Koruna");
     result.put("SLL", "Sierra Leonean Leone");
@@ -1476,8 +1449,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("SRD", "Surinamese Dollar");
     result.put("SRG", "Surinamese Guilder");
     result.put("SSP", "South Sudanese Pound");
-    result.put("STD", "São Tomé & Príncipe Dobra (1977–2017)");
-    result.put("STN", "São Tomé & Príncipe Dobra");
+    result.put("STD", "São Tomé and Príncipe Dobra");
     result.put("SUR", "Soviet Rouble");
     result.put("SVC", "Salvadoran Colón");
     result.put("SYP", "Syrian Pound");
@@ -1492,7 +1464,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("TPE", "Timorese Escudo");
     result.put("TRL", "Turkish Lira (1922–2005)");
     result.put("TRY", "Turkish Lira");
-    result.put("TTD", "Trinidad & Tobago Dollar");
+    result.put("TTD", "Trinidad and Tobago Dollar");
     result.put("TWD", "New Taiwan Dollar");
     result.put("TZS", "Tanzanian Shilling");
     result.put("UAH", "Ukrainian Hryvnia");
@@ -1505,16 +1477,14 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("UYI", "Uruguayan Peso (Indexed Units)");
     result.put("UYP", "Uruguayan Peso (1975–1993)");
     result.put("UYU", "Uruguayan Peso");
-    result.put("UYW", "Uruguayan Nominal Wage Index Unit");
-    result.put("UZS", "Uzbekistani Som");
+    result.put("UZS", "Uzbekistan Som");
     result.put("VEB", "Venezuelan Bolívar (1871–2008)");
-    result.put("VEF", "Venezuelan Bolívar (2008–2018)");
-    result.put("VES", "Venezuelan Bolívar");
+    result.put("VEF", "Venezuelan Bolívar");
     result.put("VND", "Vietnamese Dong");
     result.put("VNN", "Vietnamese Dong (1978–1985)");
     result.put("VUV", "Vanuatu Vatu");
     result.put("WST", "Samoan Tala");
-    result.put("XAF", "Central African CFA Franc");
+    result.put("XAF", "CFA Franc BEAC");
     result.put("XAG", "Silver");
     result.put("XAU", "Gold");
     result.put("XBA", "European Composite Unit");
@@ -1526,7 +1496,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("XEU", "European Currency Unit");
     result.put("XFO", "French Gold Franc");
     result.put("XFU", "French UIC-Franc");
-    result.put("XOF", "West African CFA Franc");
+    result.put("XOF", "CFA Franc BCEAO");
     result.put("XPD", "Palladium");
     result.put("XPF", "CFP Franc");
     result.put("XPT", "Platinum");
@@ -1613,9 +1583,8 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "BTN": "Bhutanese Ngultrum",
       "BUK": "Burmese Kyat",
       "BWP": "Botswanan Pula",
-      "BYB": "Belarusian Ruble (1994–1999)",
-      "BYN": "Belarusian Ruble",
-      "BYR": "Belarusian Ruble (2000–2016)",
+      "BYB": "Belarusian New Ruble (1994–1999)",
+      "BYR": "Belarusian Ruble",
       "BZD": "Belize Dollar",
       "CAD": "Canadian Dollar",
       "CDF": "Congolese Franc",
@@ -1625,7 +1594,6 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "CLE": "Chilean Escudo",
       "CLF": "Chilean Unit of Account (UF)",
       "CLP": "Chilean Peso",
-      "CNH": "Chinese Yuan (offshore)",
       "CNX": "Chinese People’s Bank Dollar",
       "CNY": "Chinese Yuan",
       "COP": "Colombian Peso",
@@ -1637,7 +1605,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "CUP": "Cuban Peso",
       "CVE": "Cape Verdean Escudo",
       "CYP": "Cypriot Pound",
-      "CZK": "Czech Koruna",
+      "CZK": "Czech Republic Koruna",
       "DDM": "East German Mark",
       "DEM": "German Mark",
       "DJF": "Djiboutian Franc",
@@ -1658,7 +1626,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "FJD": "Fijian Dollar",
       "FKP": "Falkland Islands Pound",
       "FRF": "French Franc",
-      "GBP": "British Pound",
+      "GBP": "British Pound Sterling",
       "GEK": "Georgian Kupon Larit",
       "GEL": "Georgian Lari",
       "GHC": "Ghanaian Cedi (1979–2007)",
@@ -1682,8 +1650,8 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "IDR": "Indonesian Rupiah",
       "IEP": "Irish Pound",
       "ILP": "Israeli Pound",
-      "ILR": "Israeli Shekel (1980–1985)",
-      "ILS": "Israeli New Shekel",
+      "ILR": "Israeli Sheqel (1980–1985)",
+      "ILS": "Israeli New Sheqel",
       "INR": "Indian Rupee",
       "IQD": "Iraqi Dinar",
       "IRR": "Iranian Rial",
@@ -1730,12 +1698,11 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "MMK": "Myanmar Kyat",
       "MNT": "Mongolian Tugrik",
       "MOP": "Macanese Pataca",
-      "MRO": "Mauritanian Ouguiya (1973–2017)",
-      "MRU": "Mauritanian Ouguiya",
+      "MRO": "Mauritanian Ouguiya",
       "MTL": "Maltese Lira",
       "MTP": "Maltese Pound",
       "MUR": "Mauritian Rupee",
-      "MVP": "Maldivian Rupee (1947–1981)",
+      "MVP": "Maldivian Rupee",
       "MVR": "Maldivian Rufiyaa",
       "MWK": "Malawian Kwacha",
       "MXN": "Mexican Peso",
@@ -1756,10 +1723,10 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "OMR": "Omani Rial",
       "PAB": "Panamanian Balboa",
       "PEI": "Peruvian Inti",
-      "PEN": "Peruvian Sol",
+      "PEN": "Peruvian Nuevo Sol",
       "PES": "Peruvian Sol (1863–1965)",
       "PGK": "Papua New Guinean Kina",
-      "PHP": "Philippine Piso",
+      "PHP": "Philippine Peso",
       "PKR": "Pakistani Rupee",
       "PLN": "Polish Zloty",
       "PLZ": "Polish Zloty (1950–1995)",
@@ -1781,7 +1748,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "SDP": "Sudanese Pound (1957–1998)",
       "SEK": "Swedish Krona",
       "SGD": "Singapore Dollar",
-      "SHP": "St. Helena Pound",
+      "SHP": "Saint Helena Pound",
       "SIT": "Slovenian Tolar",
       "SKK": "Slovak Koruna",
       "SLL": "Sierra Leonean Leone",
@@ -1789,8 +1756,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "SRD": "Surinamese Dollar",
       "SRG": "Surinamese Guilder",
       "SSP": "South Sudanese Pound",
-      "STD": "São Tomé & Príncipe Dobra (1977–2017)",
-      "STN": "São Tomé & Príncipe Dobra",
+      "STD": "São Tomé and Príncipe Dobra",
       "SUR": "Soviet Rouble",
       "SVC": "Salvadoran Colón",
       "SYP": "Syrian Pound",
@@ -1805,7 +1771,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "TPE": "Timorese Escudo",
       "TRL": "Turkish Lira (1922–2005)",
       "TRY": "Turkish Lira",
-      "TTD": "Trinidad & Tobago Dollar",
+      "TTD": "Trinidad and Tobago Dollar",
       "TWD": "New Taiwan Dollar",
       "TZS": "Tanzanian Shilling",
       "UAH": "Ukrainian Hryvnia",
@@ -1818,16 +1784,14 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "UYI": "Uruguayan Peso (Indexed Units)",
       "UYP": "Uruguayan Peso (1975–1993)",
       "UYU": "Uruguayan Peso",
-      "UYW": "Uruguayan Nominal Wage Index Unit",
-      "UZS": "Uzbekistani Som",
+      "UZS": "Uzbekistan Som",
       "VEB": "Venezuelan Bolívar (1871–2008)",
-      "VEF": "Venezuelan Bolívar (2008–2018)",
-      "VES": "Venezuelan Bolívar",
+      "VEF": "Venezuelan Bolívar",
       "VND": "Vietnamese Dong",
       "VNN": "Vietnamese Dong (1978–1985)",
       "VUV": "Vanuatu Vatu",
       "WST": "Samoan Tala",
-      "XAF": "Central African CFA Franc",
+      "XAF": "CFA Franc BEAC",
       "XAG": "Silver",
       "XAU": "Gold",
       "XBA": "European Composite Unit",
@@ -1839,7 +1803,7 @@ public class CurrencyList_en extends com.google.gwt.i18n.client.CurrencyList_ {
       "XEU": "European Currency Unit",
       "XFO": "French Gold Franc",
       "XFU": "French UIC-Franc",
-      "XOF": "West African CFA Franc",
+      "XOF": "CFA Franc BCEAO",
       "XPD": "Palladium",
       "XPF": "CFP Franc",
       "XPT": "Platinum",
