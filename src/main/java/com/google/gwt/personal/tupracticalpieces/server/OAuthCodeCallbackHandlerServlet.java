@@ -171,10 +171,17 @@ public class OAuthCodeCallbackHandlerServlet extends HttpServlet {
 					 *
 					 * add a new Oauth2 ID 20121215
 					 * 
-					 */
 					postStr = "code="+ code[0]
 							+ "&client_id=" + URLEncoder.encode("9571369657.apps.googleusercontent.com", "UTF-8") 
 							+ "&client_secret=" + URLEncoder.encode("8ZNyNXhWQlcqBSkK49StjrEr", "UTF-8")
+							+ "&redirect_uri=" + URLEncoder.encode(req.getRequestURL().toString(),  "UTF-8")
+							+ "&grant_type=" + URLEncoder.encode("authorization_code", "UTF-8");
+					 *
+					 * add at 20240612
+					 */
+					postStr = "code="+ code[0]
+							+ "&client_id=" + URLEncoder.encode("665228524445-n826p8nec0b91tk5mlg6iuu7ss9g3kl6.apps.googleusercontent.com", "UTF-8") 
+							+ "&client_secret=" + URLEncoder.encode("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", "UTF-8")
 							+ "&redirect_uri=" + URLEncoder.encode(req.getRequestURL().toString(),  "UTF-8")
 							+ "&grant_type=" + URLEncoder.encode("authorization_code", "UTF-8");
 	//			} else if (("tupracticalpices.appspot.com:8888/oauth2callback").equals(req.getRequestURL().toString())) {
@@ -504,7 +511,9 @@ public class OAuthCodeCallbackHandlerServlet extends HttpServlet {
 		/* 20170419 I missed!!
 		resp.sendRedirect("/#!CwUpdate");
 		*/
+		/* 20240614
 		resp.sendRedirect(oauthTokenDao.getLocus());
+		*/
 	}
 }
 

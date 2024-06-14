@@ -172,6 +172,7 @@ public class LoginState  {
 						//localhost jetty ssl
 						if (("127.0.0.1:8443").equals(Window.Location.getHost())
 								|| ("localhost:8443").equals(Window.Location.getHost())) {
+							/*
 							url = "https://accounts.google.com/o/oauth2/auth?" + 
 									URL.encode("response_type=code&" +
 											"client_id=9571369657.apps.googleusercontent.com&" +
@@ -179,6 +180,16 @@ public class LoginState  {
 											"scope=https://www.googleapis.com/auth/userinfo.profile " +  
 											"https://www.googleapis.com/auth/userinfo.email&" +
 											"state=/profile");
+							*/				
+							url = "https://accounts.google.com/o/oauth2/auth?" + 
+									URL.encode("response_type=code&" +
+											"client_id=665228524445-n826p8nec0b91tk5mlg6iuu7ss9g3kl6.apps.googleusercontent.com&" +
+											"redirect_uri=https://localhost:8443/oauth2callback&" +
+											"scope=https://www.googleapis.com/auth/userinfo.profile " +  
+											"https://www.googleapis.com/auth/userinfo.email&" +
+											"state=/profile");
+											
+											
 //							Window.alert(url); //TODO when restart to update, open this url.
 					    // localhost devserver
 //						} else  if (("tupracticalpieces.appspot.com:8888").equals(Window.Location.getHost())) {
