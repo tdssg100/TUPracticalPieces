@@ -1,17 +1,45 @@
     var locsArray;
     var gMap;
     var gMarker;
+    /*
+    function initMap() {
+    // (the 'map' here is the result of the created 'var map = ...' above)
+	    google.maps.event.trigger(map, "resize");
+    });
+    //google.maps.event.addDomListener(window, 'load', initializeGMap);
+    */
+        
+//    let map;
+//    let gMap;
+/*    
+    async function initMap() {
+	  const { Map } = await google.maps.importLibrary("maps");
+
+//	  map = new Map(document.getElementById("mapcanvas"), {
+//	  gMap = new google.maps.Map(document.getElementById("mapcanvas"), {
+	  gMap = new Map(document.getElementById("mapcanvas"), {
+	    center: { lat: -34.397, lng: 150.644 },
+	    zoom: 8,
+	  });
+	}
+
+    //initMap();
+*/
+
     function initializeGMap() {
     //function initMap() {
+ 
         var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
+//          center: new google.maps.LatLng(-34.397, 150.644),
+          center:  { lat: -34.397, lng: 150.644 },
           mapTypeId:google.maps.MapTypeId.ROADMAP,
           zoom: 8
         };
         gMap = new google.maps.Map(document.getElementById("mapcanvas"),
             mapOptions);
+
 		//gMap = map;
-	    gMarker = new google.maps.Circle({
+	gMarker = new google.maps.Circle({
 	    	  center: {lat: -34.397, lng: 150.644},
 	    	  radius:20000,
 	    	  strokeColor:"#FF0000",
@@ -21,22 +49,31 @@
 	    	  fillOpacity:0.4
 	    	  });
 	    gMarker.setMap(gMap);
-    }
-    /*
-    function initMap() {
-    // (the 'map' here is the result of the created 'var map = ...' above)
-	    google.maps.event.trigger(map, "resize");
-    });
-    //google.maps.event.addDomListener(window, 'load', initializeGMap);
-        
-    */
+   }
+    
+
+    
+
     function setSpot(lat, lng) {
-        var latlng = new google.maps.LatLng(parseFloat(lat), parseFloat(lng));
-    	gMap.setCenter(latlng, 8);
+    //function setSpot(latlng) {
+    	/*
+        const latlng = new google.maps.LatLng(parseFloat(lat), parseFloat(lng));
+     	//gMap.setCenter(latlng, 8);
+	gMap.panTo(latlng);
     	gMarker.setCenter(latlng);
+    	gMaker.setMap(gMap);
     	//document.getElementById("mapcanvas").trigger("resize");
     	//google.maps.event.trigger(gMap, 'resize');
+    	new google.maps.Marker({
+    		position: latlng,
+    		map: gMap,
+  	});    	*/
+    	const latlng = new google.maps.LatLng(parseFloat(lat), parseFloat(lng));
+    	gMap.setCenter(latlng, 8);
+    	gMarker.setCenter(latlng);
+    	gMarker.setMap(gMap);
     }
+
     
 	function setListBox(JsonStr) {
 		if (JsonStr == null || JsonStr.length <= 100) {
@@ -151,7 +188,7 @@
 	
 	function setupMap() {
 	    setSpot(locsArray[0][1]["lat"], locsArray[0][2]["lng"]);
-		google.maps.event.addListenerOnce(gMap, 'idle', function() {
+	    google.maps.event.addListenerOnce(gMap, 'idle', function() {
     		google.maps.event.trigger(gMap, 'resize');
 		});	}
 	
