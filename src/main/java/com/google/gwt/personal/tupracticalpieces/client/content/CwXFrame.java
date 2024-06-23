@@ -31,6 +31,8 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
+import com.google.gwt.user.client.ui.DialogBox; //202406
+
 import java.util.Arrays;
 
 import com.google.gwt.core.client.GWT;
@@ -40,10 +42,10 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.personal.tupracticalpieces.client.ContentWidget;
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesAnnotations.TUPracticalPiecesData;
 //import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesAnnotations.TUPracticalPiecesSource;
-import com.google.gwt.personal.tupracticalpieces.client.common.AdminTask;
-import com.google.gwt.personal.tupracticalpieces.client.common.AdminTaskAsync;
-import com.google.gwt.personal.tupracticalpieces.client.common.LoginState;
-import com.google.gwt.personal.tupracticalpieces.client.common.ResultFetch;
+//import com.google.gwt.personal.tupracticalpieces.client.common.AdminTask;
+//import com.google.gwt.personal.tupracticalpieces.client.common.AdminTaskAsync;
+//import com.google.gwt.personal.tupracticalpieces.client.common.ResultFetch;
+import com.google.gwt.personal.tupracticalpieces.client.common.LoginState; //202406
 /**
  * Load and store the mileage data.
  */
@@ -51,19 +53,26 @@ public class CwXFrame extends CwFrame {
 //   /**
 //   * The constants used in this Content Widget.
 //   */
-//  //@TUPracticalPiecesSource
-//  public static interface CwConstants extends Constants {
-//    String cwXFrameDescription();
-//  
-//    String cwXFrameName();
-//  
-//  }
+  //@TUPracticalPiecesSource
+  //public static interface CwConstants extends Constants implements CwFrame.CwConstants {
+  //public static interface CwConstants extends Constants {
+  public static interface CwConstants extends CwFrame.CwConstants {
+    String cwXFrameDescription();
   
-  /**
-   * RPC.
-   */
-  //@TUPracticalPiecesData
-  private final AdminTaskAsync adminTaskSvc = GWT.create(AdminTask.class);
+    String cwXFrameName();
+ 
+    String cwCommonAdminTitle();
+    
+    String cwCommonAdminName();
+    
+    String cwCommonAdminPassword();
+    
+    String cwCommonAdminOk();
+    
+    String cwCommonAdminCancel();
+ 
+  
+  }
   
   /**
    * OAuth 2 access url.
@@ -148,12 +157,11 @@ public class CwXFrame extends CwFrame {
   //@TUPracticalPiecesData
   private Button excludeButton = new Button("Show");
   
-  
-  /**
-   * Mileage Table (Widget).
+    /**
+   * admin authentication 202406
    */
   //@TUPracticalPiecesData
-  private MileageWidget milegeTable = null;
+  public  final DialogBox dialogBox = new DialogBox();
 
   /**
    * API IFRAME.
@@ -170,18 +178,17 @@ public class CwXFrame extends CwFrame {
 //  /**
 //   * An instance of the constants.
 //   */
-//  //@TUPracticalPiecesData
-//  private final CwConstants constants;
+  @TUPracticalPiecesData
+  private final CwConstants constants;
   
   /**
    * Constructor.
    */
   public CwXFrame(CwConstants constants) {
-//    super(constants.cwXFrameName(), constants.cwXFrameDescription(), constants);
+    //super().super(constants.cwXFrameName(), constants.cwXFrameDescription(), false);
     super(constants);
-    //this.constants = this.constants;
-    //this.constants = constants;
-//    this.constants = constants;
+    this.constants = constants;
+
   }
   
   /**
@@ -196,24 +203,7 @@ public class CwXFrame extends CwFrame {
 	super.setAdmin(true);
 	superWidget = super.onInitialize();
 	contPanel.add(superWidget);
-//    if (("127.0.0.1:8888").equals(Window.Location.getHost())
-//    		|| ("localhost:8888").equals(Window.Location.getHost())) {
-//        url = "https://accounts.google.com/o/oauth2/auth?" + 
-//            	URL.encode("response_type=code&" +
-//            	"client_id=9571369657.apps.googleusercontent.com&" +
-//            	"redirect_uri=" + "http://localhost:8888/oauth2callback&" +
-//            	"scope=https://www.googleapis.com/auth/userinfo.profile " +  
-//            		"https://www.googleapis.com/auth/userinfo.email&" +
-//            	"state=/profile");
-//             // Window.alert(url); //TODO when restart to update, open this url.
-//    } else {
-//        url = "https://accounts.google.com/o/oauth2/auth?" + 
-//                URL.encode("response_type=code&" +
-//                "client_id=9571369657-7va8o0mlabijtltni1bmjui8ofqmurm8.apps.googleusercontent.com&" +
-//                "redirect_uri=" + Window.Location.getProtocol() + "//" + Window.Location.getHost() + "/oauth2callback&" +
-//            	"scope=https://www.googleapis.com/auth/userinfo.profile " +  
-//        			"https://www.googleapis.com/auth/userinfo.email&" +
-//        	    "state=/profile");
+
 //        		//Window.confirm(url); //xxxTODO when restart to update, open this url.
 //    }
 //    
@@ -226,36 +216,23 @@ public class CwXFrame extends CwFrame {
 	contentDiv = new HTML("<p></p>");
     vPanel.add(contentDiv);
     contPanel.add(vPanel);
-//    /* retrieve the last session properties */
-//    AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
-//	      public void onFailure(Throwable caught) {
-//	    	String wedgeStr = "<ol style='list-style-type: disc'>";
-//	    	wedgeStr += "<li>" + "RPC failure." + "</li>";
-//	    	wedgeStr += "</ol>";
-//	    	contentDiv.setHTML(contentDiv.getHTML() + wedgeStr);
-//	      }
-//	      public void onSuccess(ResultFetch result) {
-//	          if (result.getResult()) {
-//	        	  contentDiv.setHTML(result.getText());
-//		    	  String[] tmp = result.getText().split(",");
-//			      java.util.Date tmpDate = new java.util.Date(Long.parseLong(tmp[2]));
-//			      contentDiv.setHTML(" go into bodyWidget" + ":" + tmp[0] + "," + tmp[1] + "," + tmpDate + "," + tmp[3] + ".");
-//			      bodyWidget(tmp[0], tmp[1], tmpDate, tmp[3]);
-//	          } else {
-//			      contentDiv.setHTML(contentDiv.getHTML() + result.getText());
-//	          }
-//	      }
-//	};
-//	adminTaskSvc.saveJobName("ConsentCheck", callback);
+
     excludeButton.setEnabled(false);
-    checkLoginAdmin();
+    //checkLoginAdmin();
+	/* 202406 add User authentication dialog */
+	LoginState ls = LoginState.getInstance();
+	ls.checkLoginAdmin(dialogBox, constants.cwCommonAdminTitle(),
+	    constants.cwCommonAdminName(), constants.cwCommonAdminPassword(), 
+	    constants.cwCommonAdminOk(), constants.cwCommonAdminCancel(),
+	    Arrays.asList(excludeButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	contPanel.add(dialogBox);		    
 	return contPanel;
   }
   
   /*
    * login 
    * @see com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView#checkLoginAdmin()
-   */
+   
   public void checkLoginAdmin() {
 	Window.alert("From Edit. Enter checkLoginAdmin. path=" + Window.Location.getHref());
 
@@ -263,82 +240,8 @@ public class CwXFrame extends CwFrame {
 //	ls.loginQury(Arrays.asList(executeButton, deleteButton, insertCloudButton), Arrays.asList(contentDiv),Window.Location.getHref());
 	ls.loginQury(Arrays.asList(excludeButton), Arrays.asList(contentDiv),Window.Location.getHref());
   }
-  
-//private void bodyWidget(String regiuser, String state, java.util.Date expire, String session) {
-//    //Window.alert("bodyWidget entered.");
-//	//long session = 0; @@@@@getSessionIdInJava();
-//	/* the other user is making login process */
-//	if (!session.equals(regiuser) && state.equals("LoginTRY")) {
-//		contentDiv.setHTML(contentDiv.getHTML() + "Please retry after a while.");
-//		return;
-//    }
-//	java.util.Date curTime = new java.util.Date();
-//	/* login failuer 2
-//	 * 1/2: in service to other user */
-//	if (!session.equals(regiuser) && state.equals("LoginOK") && expire.compareTo(curTime) > 0) {
-//		contentDiv.setHTML(contentDiv.getHTML() + "You are not authorized.");
-//		return;
-//    }
-//	/* 2/2: not authorative of google accout*/
-//	if (session.equals(regiuser) && !state.equals("LoginOK") ) {
-//		contentDiv.setHTML(contentDiv.getHTML() + "You are not authorized in google account.");
-//		return;
-//    }
-//	/* TimeOut occurs */
-//	if (session.equals(regiuser) && state.equals("LoginOK") &&  curTime.compareTo(expire) > 0) {
-//		contentDiv.setHTML("Time out occurs.");
-//	    /*  need to reset time out */
-//	    AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
-//		      public void onFailure(Throwable caught) {
-//		    	String wedgeStr = "<ol style='list-style-type: disc'>";
-//		    	wedgeStr += "<li>" + "RPC failure." + "</li>";
-//		    	wedgeStr += "</ol>";
-//		    	contentDiv.setHTML(contentDiv.getHTML() + wedgeStr);
-//		      }
-//		      public void onSuccess(ResultFetch result) {
-//		          if (result.getResult()) {
-//		        	  contentDiv.setHTML(result.getText());
-//		          } else {
-//				      contentDiv.setHTML(contentDiv.getHTML() + result.getText());
-//		          }
-//		      }
-//		};
-//		adminTaskSvc.saveJobName("ConsentTimeOut", callback);
-//		return;
-//    }
-//    /* can try to login 
-//     *  not 
-//     *  no need to consult google account.
-//     *  session == regiuser && state = "LoginOK" && expire > curTime || 
-//     */
-//    /* login process */
-//    //Window.alert("before login condition check.");
-//    if ((curTime.compareTo(expire) > 0) || (!session.equals(regiuser)) || !state.equals("LoginOK")) {
-//        //if (Window.confirm("after login condition check.")) {
-//        /* log on process */
-//        AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
-//    	      public void onFailure(Throwable caught) {
-//    	    	String wedgeStr = "<ol style='list-style-type: disc'>";
-//    	    	wedgeStr += "<li>" + "RPC failure." + "</li>";
-//    	    	wedgeStr += "</ol>";
-//    	    	contentDiv.setHTML(contentDiv.getHTML() + wedgeStr);
-//    	      }
-//    	      public void onSuccess(ResultFetch result) {
-//	              if (result.getResult()) {
-//	            	  Window.Location.assign(url);
-//	              } else {
-//	    		    contentDiv.setHTML(contentDiv.getHTML() + result.getText());
-//	              }
-//	          }
-//    	};
-//    	adminTaskSvc.saveJobName("ConsentLogin:" + session + "," + "LoginTRY" + ",0,CwXFrame", callback);
-//        //}
-//    }
-//       
-//    //gridPanel.setVisible(false);
-//    //contPanel.add(gridPanel);
-//  }
-  
+   */
+
   @Override
   protected void asyncOnInitialize(final AsyncCallback<Widget> callback) {
 	   GWT.runAsync(CwXFrame.class, new RunAsyncCallback() {
@@ -351,34 +254,7 @@ public class CwXFrame extends CwFrame {
 	   });
   }
   
-  /* 
-   * check if the user has finished the consent.
-   */
-  /*
-  private void checkConsent() {
-	AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
-	  public void onFailure(Throwable caught) {
-		timer.cancel();
-		String wedgeStr = "<ol style='list-style-type: disc'>";
-		wedgeStr += "<li>" + "RPC failure. exception:" + caught.toString() + "</li>";
-		wedgeStr += "</ol>";
-		contentDiv.setHTML(wedgeStr);
-      }
-	  public void onSuccess(ResultFetch result) {
-		timer.cancel();
-		if (result.getResult()) {
-		  contentDiv.setHTML(result.getText());
-		  apiFrame.setUrl("adminmethod?dp=" + URL.encode(url));
-		  //Window.open(url,"Goolge Appengine Concent", "");
-		  enableButton();
-		} else {
-  		  contentDiv.setHTML(result.getText());    		    	
-		}
-	  }
-	};
-	adminTaskSvc.saveJobName("CheckConsent", callback);	  
-  }
-  */
+
 /*
  * JS function call. Get the session id. @@@ session id ???
  * 	return $wnd.__gwtStatsSessionId; @@@@@@

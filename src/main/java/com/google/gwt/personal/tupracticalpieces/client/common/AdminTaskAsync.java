@@ -9,4 +9,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 public interface AdminTaskAsync {
 	void fetchMileageData(String postParam, AsyncCallback<ResultFetch> callback);
 	void saveJobName(String postParam, AsyncCallback<ResultFetch> callback);
+	void getJobName(String postParam, AsyncCallback<ResultFetch> callback);	// 202406
 }

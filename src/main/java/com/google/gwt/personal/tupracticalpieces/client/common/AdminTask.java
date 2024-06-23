@@ -10,4 +10,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 public interface AdminTask extends RemoteService {
 	ResultFetch fetchMileageData(String postParam);
 	ResultFetch saveJobName(String postParam);
+	ResultFetch getJobName(String postParam); //202406
 }

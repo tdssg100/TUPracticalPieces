@@ -40,6 +40,7 @@ import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesAnnotat
 //import com.google.gwt.personal.tupracticalpieces.client.common.AdminTaskAsync;
 //import com.google.gwt.personal.tupracticalpieces.client.common.ResultFetch;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
+import com.google.gwt.personal.tupracticalpieces.client.common.LoginState;
 /**
  * Load and store the mileage data.
  */
@@ -54,7 +55,19 @@ public class CwUpdate extends ContentWidget {
     String cwUpdateForbidden();
     
     String cwUpdateName();
-  
+    
+    String cwXFrameName();
+    
+    String cwCommonAdminTitle();
+    
+    String cwCommonAdminName();
+    
+    String cwCommonAdminPassword();
+    
+    String cwCommonAdminOk();
+    
+    String cwCommonAdminCancel();
+    
   }
   
 //  /**
@@ -339,7 +352,13 @@ public class CwUpdate extends ContentWidget {
 //		  }
 //		});  
 	  
-	  
+	/* 202406 add User authentication dialog
+	LoginState ls = LoginState.getInstance();
+	ls.checkLoginAdmin(dialogBox, constants.cwCommonAdminTitle(),
+	    constants.cwCommonAdminName(), constants.cwCommonAdminPassword(), 
+	    constants.cwCommonAdminOk(), constants.cwCommonAdminCancel(),
+	    Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	 */	  
 	  
 	  
 	return contPanel;

@@ -7,7 +7,19 @@
     String cwUpdateForbidden();
     
     String cwUpdateName();
-  
+    
+    String cwXFrameName();
+    
+    String cwCommonAdminTitle();
+    
+    String cwCommonAdminName();
+    
+    String cwCommonAdminPassword();
+    
+    String cwCommonAdminOk();
+    
+    String cwCommonAdminCancel();
+    
   }
 
   /**
@@ -243,7 +255,13 @@
 //		  }
 //		});  
 	  
-	  
+	/* 202406 add User authentication dialog
+	LoginState ls = LoginState.getInstance();
+	ls.checkLoginAdmin(dialogBox, constants.cwCommonAdminTitle(),
+	    constants.cwCommonAdminName(), constants.cwCommonAdminPassword(), 
+	    constants.cwCommonAdminOk(), constants.cwCommonAdminCancel(),
+	    Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	 */	  
 	  
 	  
 	return contPanel;

@@ -538,6 +538,34 @@ public class TUPracticalPiecesConstants_ implements com.google.gwt.personal.tupr
     return "UpdateMileageDB";
   }
   
+  public java.lang.String cwXFrameName() {
+    return "EntryLocBlackList";
+  }
+  
+  public java.lang.String cwCommonAdminTitle() {
+    return "User authentication";
+  }
+  
+  public java.lang.String cwCommonAdminName() {
+    return "Name:";
+  }
+  
+  public java.lang.String cwCommonAdminPassword() {
+    return "Password:";
+  }
+  
+  public java.lang.String cwCommonAdminOk() {
+    return "OK";
+  }
+  
+  public java.lang.String cwCommonAdminCancel() {
+    return "Cancel";
+  }
+  
+  public java.lang.String cwXFrameDescription() {
+    return "Adjust screening news to exclude improper for location name.";
+  }
+  
   public java.lang.String cwFrameAttached() {
     return "Please complete the attached form";
   }

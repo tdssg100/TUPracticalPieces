@@ -1,144 +1,27 @@
 <pre>  /**
 //   * The constants used in this Content Widget.
 //   */
-//  public static interface CwConstants extends Constants {
-//    String cwXFrameDescription();
-//  
-//    String cwXFrameName();
-//  
-//  }
+  //public static interface CwConstants extends Constants implements CwFrame.CwConstants {
+  //public static interface CwConstants extends Constants {
+  public static interface CwConstants extends CwFrame.CwConstants {
+    String cwXFrameDescription();
   
-  /**
-   * RPC.
-   */
-  //@TUPracticalPiecesData
-  private final AdminTaskAsync adminTaskSvc = GWT.create(AdminTask.class);
-  
-  /**
-   * OAuth 2 access url.
-   */
-  //@TUPracticalPiecesData
-  private String url = null;
+    String cwXFrameName();
  
-  /**
-   * DB field supplyDate.
-   */
-  //@TUPracticalPiecesData
-  private TextBox supplyDateTextBox = new TextBox();
+    String cwCommonAdminTitle();
+    
+    String cwCommonAdminName();
+    
+    String cwCommonAdminPassword();
+    
+    String cwCommonAdminOk();
+    
+    String cwCommonAdminCancel();
+ 
   
-  /**
-   * DB field quantity.
-   */
-  //@TUPracticalPiecesData
-  private TextBox quantityTextBox = new TextBox();
-  
-  /**
-   * DB field unitPrice.
-   */
-  //@TUPracticalPiecesData
-  private TextBox unitPriceTextBox = new TextBox();
-  
-  /**
-   * DB field totalPrice.
-   */
-  //@TUPracticalPiecesData
-  private TextBox totalPriceTextBox = new TextBox();
-  
-  /**
-   * DB field bsMileage.
-   */
-  //@TUPracticalPiecesData
-  private TextBox bsMileageTextBox = new TextBox();
-  
-  /**
-   * DB field totalMileage.
-   */
-  //@TUPracticalPiecesData
-  private TextBox totalMileageTextBox = new TextBox();
-  
-  /**
-   * DB update parameters.
-   */
-  //@TUPracticalPiecesData
-  static String tempStr;
-
-  /**
-   * main panel.
-   */
-  private VerticalPanel vPanel = new VerticalPanel();
-  
-  /**
-   * page content.
-   */
-  //@TUPracticalPiecesData
-  private HTML contentDiv = null;
-  
-  /**
-   * page content of super class.
-   */
-  @TUPracticalPiecesData
-  private Widget superWidget = null;
-  
-  /**
-   * page content.
-   */
-  @TUPracticalPiecesData
-  private VerticalPanel gridPanel = new VerticalPanel();
-  
-  /**
-   * page content.
-   */
-  @TUPracticalPiecesData
-  private HorizontalPanel contPanel = new HorizontalPanel();
-  
-  /**
-   * Issue the api call.
-   */
-  //@TUPracticalPiecesData
-  private Button excludeButton = new Button("Show");
-  
-  
-  /**
-   * Mileage Table (Widget).
-   */
-  //@TUPracticalPiecesData
-  private MileageWidget milegeTable = null;
-
-  /**
-   * API IFRAME.
-   */
-  //@TUPracticalPiecesData
-  //private Frame apiFrame = new Frame();
-  
-  /**
-   * Message Timer.
-   */
-  //@TUPracticalPiecesData
-  //private Timer timer;
-  
-//  /**
-//   * An instance of the constants.
-//   */
-//  //@TUPracticalPiecesData
-//  private final CwConstants constants;
-  
-  /**
-   * Constructor.
-   */
-  public CwXFrame(CwConstants constants) {
-//    super(constants.cwXFrameName(), constants.cwXFrameDescription(), constants);
-    super(constants);
-    //this.constants = this.constants;
-    //this.constants = constants;
-//    this.constants = constants;
   }
 
   /**
-   * RPC.
-   */
-  private final AdminTaskAsync adminTaskSvc = GWT.create(AdminTask.class);
-
-  /**
    * OAuth 2 access url.
    */
   private String url = null;
@@ -204,9 +87,9 @@
   private Button excludeButton = new Button("Show");
 
   /**
-   * Mileage Table (Widget).
+   * admin authentication 202406
    */
-  private MileageWidget milegeTable = null;
+  public  final DialogBox dialogBox = new DialogBox();
 
   /**
    * API IFRAME.
@@ -221,7 +104,7 @@
   /**
 //   * An instance of the constants.
 //   */
-//  private final CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -234,24 +117,7 @@
 	super.setAdmin(true);
 	superWidget = super.onInitialize();
 	contPanel.add(superWidget);
-//    if (("127.0.0.1:8888").equals(Window.Location.getHost())
-//    		|| ("localhost:8888").equals(Window.Location.getHost())) {
-//        url = "https://accounts.google.com/o/oauth2/auth?" + 
-//            	URL.encode("response_type=code&" +
-//            	"client_id=9571369657.apps.googleusercontent.com&" +
-//            	"redirect_uri=" + "http://localhost:8888/oauth2callback&" +
-//            	"scope=https://www.googleapis.com/auth/userinfo.profile " +  
-//            		"https://www.googleapis.com/auth/userinfo.email&" +
-//            	"state=/profile");
-//             // Window.alert(url); //TODO when restart to update, open this url.
-//    } else {
-//        url = "https://accounts.google.com/o/oauth2/auth?" + 
-//                URL.encode("response_type=code&" +
-//                "client_id=9571369657-7va8o0mlabijtltni1bmjui8ofqmurm8.apps.googleusercontent.com&" +
-//                "redirect_uri=" + Window.Location.getProtocol() + "//" + Window.Location.getHost() + "/oauth2callback&" +
-//            	"scope=https://www.googleapis.com/auth/userinfo.profile " +  
-//        			"https://www.googleapis.com/auth/userinfo.email&" +
-//        	    "state=/profile");
+
 //        		//Window.confirm(url); //xxxTODO when restart to update, open this url.
 //    }
 //    
@@ -264,29 +130,16 @@
 	contentDiv = new HTML("&lt;p&gt;&lt;/p&gt;");
     vPanel.add(contentDiv);
     contPanel.add(vPanel);
-//    /* retrieve the last session properties */
-//    AsyncCallback&lt;ResultFetch&gt; callback = new AsyncCallback&lt;ResultFetch&gt;() {
-//	      public void onFailure(Throwable caught) {
-//	    	String wedgeStr = "&lt;ol style='list-style-type: disc'&gt;";
-//	    	wedgeStr += "&lt;li&gt;" + "RPC failure." + "&lt;/li&gt;";
-//	    	wedgeStr += "&lt;/ol&gt;";
-//	    	contentDiv.setHTML(contentDiv.getHTML() + wedgeStr);
-//	      }
-//	      public void onSuccess(ResultFetch result) {
-//	          if (result.getResult()) {
-//	        	  contentDiv.setHTML(result.getText());
-//		    	  String[] tmp = result.getText().split(",");
-//			      java.util.Date tmpDate = new java.util.Date(Long.parseLong(tmp[2]));
-//			      contentDiv.setHTML(" go into bodyWidget" + ":" + tmp[0] + "," + tmp[1] + "," + tmpDate + "," + tmp[3] + ".");
-//			      bodyWidget(tmp[0], tmp[1], tmpDate, tmp[3]);
-//	          } else {
-//			      contentDiv.setHTML(contentDiv.getHTML() + result.getText());
-//	          }
-//	      }
-//	};
-//	adminTaskSvc.saveJobName("ConsentCheck", callback);
+
     excludeButton.setEnabled(false);
-    checkLoginAdmin();
+    //checkLoginAdmin();
+	/* 202406 add User authentication dialog */
+	LoginState ls = LoginState.getInstance();
+	ls.checkLoginAdmin(dialogBox, constants.cwCommonAdminTitle(),
+	    constants.cwCommonAdminName(), constants.cwCommonAdminPassword(), 
+	    constants.cwCommonAdminOk(), constants.cwCommonAdminCancel(),
+	    Arrays.asList(excludeButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	contPanel.add(dialogBox);		    
 	return contPanel;
   }
 

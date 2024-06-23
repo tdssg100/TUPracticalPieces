@@ -270,7 +270,7 @@ public class OAuthCodeCallbackHandlerServlet extends HttpServlet {
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-			log.info("oauth handler entered2.key :" + key + ":" + val.toString());
+			//log.info("oauth handler entered2.key :" + key + ":" + val.toString());
 			queryString += key + "=" + val.toString();
 			if (iToken.hasNext()) {
 				queryString += "&";
@@ -279,14 +279,14 @@ public class OAuthCodeCallbackHandlerServlet extends HttpServlet {
 		/*
     oauthTokenDao.saveKeys("Authoauth", queryString);
 		 */
-		log.info("getting token(5chars) :" + queryString.substring(5));
+		//log.info("getting token(5chars) :" + queryString.substring(5));
 		/*
 		 * resp.sendRedirect(REDIRECT_URL);
 		 */
 		//resp.setContentType("text/plain");
 		//resp.getWriter().append("<h2> Succeed in obtaining the token...</h2>" + "\n\n");
 		String message = "<h2> Succeed in obtaining the token...</h2>" + "\n\n";
-		log.info("Check user. jobname:" + oauthTokenDao.getJob());
+		//log.info("Check user. jobname:" + oauthTokenDao.getJob());
 		if ("ConsentLogin".equals(oauthTokenDao.getJob().substring(0,12))) {
 		    /*
 		     *  check whether the user is the owner.
@@ -319,7 +319,7 @@ public class OAuthCodeCallbackHandlerServlet extends HttpServlet {
 		          if (respStr.equals("")) {
 		            log.warning("isOwner resp: empty. Not retreive profile.");
 		          } else {
-		            log.info("isOwner resp:" + respStr);
+		            //log.info("isOwner resp:" + respStr);
 		          }
 		          jsonToken = new JSONObject(respStr);
 		          if (jsonToken.has("error")) {
@@ -511,9 +511,7 @@ public class OAuthCodeCallbackHandlerServlet extends HttpServlet {
 		/* 20170419 I missed!!
 		resp.sendRedirect("/#!CwUpdate");
 		*/
-		/* 20240614
 		resp.sendRedirect(oauthTokenDao.getLocus());
-		*/
 	}
 }
 
@@ -570,7 +568,6 @@ public class OAuthCodeCallbackHandlerServlet extends HttpServlet {
 			}
 			Date supplyDate = null;
 			try {
-				SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
 				try {
 					java.util.Date wkDate = df.parse(rs.getSupplyDate());
 					supplyDate = new java.sql.Date(wkDate.getTime());

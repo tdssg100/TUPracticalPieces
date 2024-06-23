@@ -122,6 +122,15 @@
     <servlet-name>SurveillanceCameraProxyServlet</servlet-name>
     <url-pattern>/surveillancecamera</url-pattern>
   </servlet-mapping>
+  <!-- 202406 -->
+  <servlet>
+    <servlet-name>MessageDigestServlet</servlet-name>
+    <servlet-class>com.google.gwt.personal.tupracticalpieces.server.MessageDigestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MessageDigestServlet</servlet-name>
+    <url-pattern>/messagedigest</url-pattern>
+  </servlet-mapping>
 
 <!-- 
 

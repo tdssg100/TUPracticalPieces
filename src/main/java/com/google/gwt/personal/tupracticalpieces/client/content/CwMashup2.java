@@ -29,6 +29,8 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
+import com.google.gwt.user.client.ui.DialogBox;	//202406
+
 import java.util.Arrays;
 
 import com.google.gwt.core.client.GWT;
@@ -37,7 +39,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.personal.tupracticalpieces.client.ContentWidget;
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesAnnotations.TUPracticalPiecesData;
-import com.google.gwt.personal.tupracticalpieces.client.common.LoginState;
+import com.google.gwt.personal.tupracticalpieces.client.common.LoginState; //202406
 /**
  * Load and store the mileage data.
  */
@@ -50,7 +52,16 @@ public class CwMashup2 extends ContentWidget {
     String cwMashup2Description();
     
     String cwMashup2Name();
-  
+    
+    String cwCommonAdminTitle();
+    
+    String cwCommonAdminName();
+    
+    String cwCommonAdminPassword();
+    
+    String cwCommonAdminOk();
+    
+    String cwCommonAdminCancel();
   }
    
   /**
@@ -76,7 +87,12 @@ public class CwMashup2 extends ContentWidget {
    */
   //@TUPracticalPiecesData
   public HTML contentDiv = null;
-  
+
+  /**
+   * admin authentication 202406
+   */
+  //@TUPracticalPiecesData
+  public  final DialogBox dialogBox = new DialogBox();
 
   /**
    * An instance of the constants.
@@ -99,6 +115,8 @@ public class CwMashup2 extends ContentWidget {
  @Override
  public Widget onInitialize() {
 	VerticalPanel contPanel = new VerticalPanel();
+	
+	
 	showButton.addClickHandler(new ClickHandler() {
 	      public void onClick(ClickEvent event) {
 	    	   serverSnmpWidget.setVisible(true);
@@ -122,20 +140,28 @@ public class CwMashup2 extends ContentWidget {
    contPanel.add(contentDiv);
    contPanel.add(new HTML("<H1>Hello!</H1>"));
    showButton.setEnabled(false);
-	checkLoginAdmin();	  
+	/* 202406 add User authentication dialog */
+	LoginState ls = LoginState.getInstance();
+	ls.checkLoginAdmin(dialogBox, constants.cwCommonAdminTitle(),
+	    constants.cwCommonAdminName(), constants.cwCommonAdminPassword(), 
+	    constants.cwCommonAdminOk(), constants.cwCommonAdminCancel(),
+	    Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	contPanel.add(dialogBox);
 	return contPanel;
  }
  
   /*
    * login 
    * @see com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView#checkLoginAdmin()
-   */
   public void checkLoginAdmin() {
 	Window.alert("From Edit. Enter checkLoginAdmin. path=" + Window.Location.getHref());
 	LoginState ls = LoginState.getInstance();
+	
+	
 //	ls.loginQury(Arrays.asList(executeButton, deleteButton, insertCloudButton), Arrays.asList(contentDiv),Window.Location.getHref());
-	ls.loginQury(Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	ls.loginQury(dialogBox,Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
   }
+   */
   @Override
   protected void asyncOnInitialize(final AsyncCallback<Widget> callback) {
 	   GWT.runAsync(CwMashup2.class, new RunAsyncCallback() {

@@ -215,4 +215,23 @@ public class AdminTaskImpl extends RemoteServiceServlet implements AdminTask {
 		}
 		return ret;
 	}
+
+	// 202406	
+	public ResultFetch getJobName(String jobName) {
+		log.info("enterd getJobName (RPC)");
+		ret.setResult(true);
+		try {
+			log.info("before task name store, name=" + jobName);
+			String[] tmp = oauthTokenDao.getPropMesg().split(",");
+//			ret.setText(tmp[0] + "," + tmp[1] + "," + tmp[2] + "," + session.getId());
+			ret.setText(tmp[0] + "," + tmp[1] + "," + tmp[2]);
+			return ret;
+		} catch (Exception e) {
+			ret.setText("<ol style='list-style-type: disc'><li>"
+					+ "[SET JOB NAME]" + e.toString() + "</li></ol>");
+			ret.setResult(false);
+			//e.printStackTrace();
+		}
+		return ret;
+	}	
 }

@@ -457,11 +457,6 @@
 -->
 </dependency>
 
-<dependency>
-    <groupId>org.eclipse.persistence</groupId>
-    <artifactId>javax.persistence</artifactId>
-    <version>2.2.0</version>
-</dependency>
 
 
 <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
@@ -476,6 +471,16 @@
 		<artifactId>mysql-connector-java</artifactId>
 		<version>8.0.30</version>
 	</dependency>
+
+
+
+<!-- https://mvnrepository.com/artifact/org.apache.pulsar/pulsar-client-messagecrypto-bc -->
+<dependency>
+    <groupId>org.apache.pulsar</groupId>
+    <artifactId>pulsar-client-messagecrypto-bc</artifactId>
+    <version>3.3.0</version>
+</dependency>
+
 
 
 

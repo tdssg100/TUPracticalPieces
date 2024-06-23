@@ -5,7 +5,16 @@
     String cwMashup2Description();
     
     String cwMashup2Name();
-  
+    
+    String cwCommonAdminTitle();
+    
+    String cwCommonAdminName();
+    
+    String cwCommonAdminPassword();
+    
+    String cwCommonAdminOk();
+    
+    String cwCommonAdminCancel();
   }
 
   /**
@@ -29,6 +38,11 @@
   public HTML contentDiv = null;
 
   /**
+   * admin authentication 202406
+   */
+  public  final DialogBox dialogBox = new DialogBox();
+
+  /**
    * An instance of the constants.
    */
   private final CwConstants constants;
@@ -39,6 +53,8 @@
  @Override
  public Widget onInitialize() {
 	VerticalPanel contPanel = new VerticalPanel();
+	
+	
 	showButton.addClickHandler(new ClickHandler() {
 	      public void onClick(ClickEvent event) {
 	    	   serverSnmpWidget.setVisible(true);
@@ -62,19 +78,26 @@
    contPanel.add(contentDiv);
    contPanel.add(new HTML("&lt;H1&gt;Hello!&lt;/H1&gt;"));
    showButton.setEnabled(false);
-	checkLoginAdmin();	  
+	/* 202406 add User authentication dialog */
+	LoginState ls = LoginState.getInstance();
+	ls.checkLoginAdmin(dialogBox, constants.cwCommonAdminTitle(),
+	    constants.cwCommonAdminName(), constants.cwCommonAdminPassword(), 
+	    constants.cwCommonAdminOk(), constants.cwCommonAdminCancel(),
+	    Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	contPanel.add(dialogBox);
 	return contPanel;
  }
  
   /*
    * login 
    * @see com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView#checkLoginAdmin()
-   */
   public void checkLoginAdmin() {
 	Window.alert("From Edit. Enter checkLoginAdmin. path=" + Window.Location.getHref());
 	LoginState ls = LoginState.getInstance();
+	
+	
 //	ls.loginQury(Arrays.asList(executeButton, deleteButton, insertCloudButton), Arrays.asList(contentDiv),Window.Location.getHref());
-	ls.loginQury(Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	ls.loginQury(dialogBox,Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
   }
 
 </pre>

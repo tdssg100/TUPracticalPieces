@@ -73,6 +73,7 @@
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/activity/AppActivityMapper.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadPresenter.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/mobile/MainMenuTreeViewModelMobile.java
+/home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/database/User.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/ui/client/WindowBasedOrientationHelper.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/ui/SoundEffects.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileageSuperView.java
@@ -86,6 +87,7 @@
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/activity/MileageEditActivity.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/gaerequest/shared/GaeHelper.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas3d.java
+/home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/server/MessageDigestServlet.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/ClientFactoryImpl.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditPresenter.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditView.java

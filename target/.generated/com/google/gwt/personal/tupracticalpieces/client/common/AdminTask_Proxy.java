@@ -35,6 +35,18 @@ public class AdminTask_Proxy extends RemoteServiceProxy implements com.google.gw
     }
   }
   
+  public void getJobName(java.lang.String postParam, com.google.gwt.user.client.rpc.AsyncCallback callback) {
+    com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper helper = new com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper("AdminTask_Proxy", "getJobName");
+    try {
+      SerializationStreamWriter streamWriter = helper.start(REMOTE_SERVICE_INTERFACE_NAME, 1);
+      streamWriter.writeString("java.lang.String/2004016611");
+      streamWriter.writeString(postParam);
+      helper.finish(callback, ResponseReader.OBJECT);
+    } catch (SerializationException ex) {
+      callback.onFailure(ex);
+    }
+  }
+  
   public void saveJobName(java.lang.String postParam, com.google.gwt.user.client.rpc.AsyncCallback callback) {
     com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper helper = new com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper("AdminTask_Proxy", "saveJobName");
     try {

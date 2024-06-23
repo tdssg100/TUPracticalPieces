@@ -1,6 +1,20 @@
 package com.google.gwt.personal.tupracticalpieces.client.common;
-import java.util.List;
+import java.nio.charset.Charset;
+import java.security.Security;
+//import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
+import java.security.MessageDigest;
+import java.lang.StringBuilder;
+import java.lang.String;
+import java.lang.Integer;
+import java.lang.Byte;
+import java.util.List;
+import java.util.Arrays;
+import java.lang.StringBuilder;
+import java.net.URLEncoder;
+import java.security.NoSuchAlgorithmException;
+import java.nio.charset.StandardCharsets;
+import java.lang.Thread;
 //import org.apache.tools.ant.taskdefs.Javadoc.Html;
 
 import com.google.gwt.user.client.History;
@@ -8,14 +22,36 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HTML;
+
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+
+import com.google.gwt.user.client.Timer;	//202406
+
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.KeyPressEvent;
+import com.google.gwt.event.dom.client.KeyPressHandler;
 import com.google.gwt.http.client.URL;
+import com.google.gwt.i18n.client.LocaleInfo;
 import com.google.gwt.personal.tupracticalpieces.client.common.AdminTask;
 import com.google.gwt.personal.tupracticalpieces.client.common.AdminTaskAsync;
 import com.google.gwt.personal.tupracticalpieces.client.common.ResultFetch;
 
+import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.PasswordTextBox;
+import com.google.gwt.user.client.ui.TextArea;
+
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.http.client.URL;
 
 public class LoginState  {
+
 	private static LoginState singleton = new LoginState();
 
 	private List<Button> btnList;
@@ -23,12 +59,17 @@ public class LoginState  {
 	public static List<HTML> logList;
 	
 	private String callbackUrl;
+
+	private static boolean isFinish = false;	//202406
+	
+	private static boolean isConfirmation = false;	//202406
 	/**
 	 * RPC.
 	 * 
 	 */
 	//@TUPracticalPiecesData
 	public final AdminTaskAsync adminTaskSvc = GWT.create(AdminTask.class);
+	public final AdminTaskAsync loginSvc = GWT.create(AdminTask.class);	//202406
 
 	//	
 	//	public void setButtonList(List<Button> btnList) {
@@ -46,7 +87,62 @@ public class LoginState  {
 		return singleton;
 	}
 
-
+	/* login sesquence. 202406 */
+	public void checkLoginAdmin(DialogBox dialogBox, String pcwCommonAdminTitle, String pcwCommonAdminName,
+   	  String pcwCommonAdminPassword, String pcwCommonAdminOk, String pcwCommonAdminCancel,
+   	  List<Button> btnList, List<HTML> logList, String callbackUrl) {
+   	  	
+   	  	/*
+   	  	this.btnList = btnList;
+		this.logList = logList;
+		this.callbackUrl = callbackUrl;
+		*/
+		
+		/* retrieve the last session properties */
+		isConfirmation = false;
+		AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
+			public void onFailure(Throwable caught) {
+				isFinish = true;
+				String wedgeStr = "<ol style='list-style-type: disc'>";
+				wedgeStr += "<li>" + "RPC failure." + "</li>";
+				wedgeStr += "</ol>";
+				//		    	contentDiv.setHTML(contentDiv.getHTML() + wedgeStr);
+				//com.google.gwt.personal.tupracticalpieces.client.common.LoginState.logList.get(0).setHTML(wedgeStr);
+				Window.alert("login getJobName error: " + wedgeStr);
+			}
+			public void onSuccess(ResultFetch result) {
+				isFinish = true;
+				if (result.getResult()) {
+					String[] tmp = result.getText().split(",");
+					String loginState = tmp[1];
+					java.util.Date loginExpire = new java.util.Date(Long.parseLong(tmp[2]));
+			   	  	java.util.Date curTime = new java.util.Date();
+			   	  	if (!(loginState.equals("LoginOK")) || (curTime.compareTo(loginExpire) > 0)) {
+						isConfirmation = true;
+						//Window.alert("Finish with need");
+						setAminAuthDialog(dialogBox, pcwCommonAdminTitle, pcwCommonAdminName, 
+						 		pcwCommonAdminPassword, pcwCommonAdminOk, pcwCommonAdminCancel,
+								btnList, logList, callbackUrl);
+						dialogBox.center();
+						dialogBox.show();
+						
+						
+					} else {
+						loginQury(btnList, logList, callbackUrl);
+					}
+					//Window.alert("Not confirmation condition");
+				} else {
+					com.google.gwt.personal.tupracticalpieces.client.common.LoginState.logList.get(0).setHTML(
+							 result.getText() + "<br/>"+ com.google.gwt.personal.tupracticalpieces.client.common.LoginState.logList.get(0).getText());
+					//				      contentDiv.setHTML(contentDiv.getHTML() + result.getText());
+					Window.alert("login getJobName error: " + result.getText());
+				}
+			}
+		};
+		loginSvc.getJobName("", callback);
+		return;
+	}
+   	  	
 
 	public void loginQury(List<Button> btnList, List<HTML> logList, String callbackUrl) {
 
@@ -203,7 +299,7 @@ public class LoginState  {
 											"state=/profile");
 
 
-							Window.alert(url); //TODO when restart to update, open this url.
+							//Window.alert(url); //TODO when restart to update, open this url.
 
 
 						} else {
@@ -259,8 +355,186 @@ public class LoginState  {
 
 
 
+  /**
+   * Create the dialog box for this example.
+   *
+   * @return the new dialog box
+   */
+  public void setAminAuthDialog(DialogBox dialogBox, String pcwCommonAdminTitle, String pcwCommonAdminName,
+   String pcwCommonAdminPassword, String pcwCommonAdminOk, String pcwCommonAdminCancel,
+   List<Button> btnList, List<HTML> logList, String callbackUrl) {
+    // Create a dialog box and set the caption text
+    dialogBox.setText(pcwCommonAdminTitle);
+
+    // Create a table to layout the content
+    VerticalPanel dialogContents = new VerticalPanel();
+    dialogContents.setSpacing(4);
+    dialogBox.setWidget(dialogContents);
+
+    // Add TextBox (name)
+    VerticalPanel namePanel = new VerticalPanel();
+    namePanel.add(new HTML(pcwCommonAdminName));
+    
+    TextBox tbn = new TextBox();
+
+    // Let's make an 80x50 text area to go along with the other two.
+
+    namePanel.add(tbn);
+    
+    dialogContents.add(namePanel);
 
 
 
+    // Add PasswordTextBox 
+    VerticalPanel passwordPanel = new VerticalPanel();
+    passwordPanel.add(new HTML(pcwCommonAdminPassword));
+    
+    PasswordTextBox ptb = new PasswordTextBox();
+    
+    passwordPanel.add(ptb);
+    
+    dialogContents.add(passwordPanel);
+    
+    // Add a Ok cancel button at the bottom of the dialog
+    HorizontalPanel buttonPanel = new HorizontalPanel();
+    Button okButton = new Button(
+        pcwCommonAdminOk, new ClickHandler() {
+          public void onClick(ClickEvent event) {
+		String token = ptb.getText();
+		byte[] tokenByte = token.getBytes(StandardCharsets.UTF_8);
+                String hashedStr = "";
+		byte[] hashedBytes = null;
+		
+		//Window.alert(token);	
+		try {
+		 
 
+//		Security.addProvider(new BouncyCastleProvider());
+		
+		
+		    MessageDigest md = MessageDigest.getInstance("SHA-256");
+/*
+		    for (byte b : ptb.getText().getBytes("UTF-8")) {
+			try {
+	     	            	md.update(b);
+			} catch (Exception e) {  //NoSuchAlgorithmException
+			        Window.alert("UPDATE fail. " + e.toString());
+			}
+     	            }
+*/                     
+		    //MessageDigest tc1 = md.clone();
+		    //byte[] hashedBytes = tc1.digest(ptb.getValue().getBytes());
+		    //hashedBytes = md.digest(token.getBytes("UTF-8"));
+		    hashedBytes = md.digest(tokenByte);
+/*
+		    try {
+		    	hashedBytes = md.digest();
+		    } catch (Exception e) {
+		    	Window.alert("DIGEST" + e.toString());
+		    }
+*/
+		    //hashedStr = new String(hashedBytes);
+		    //hashedStr = Arrays.toString(hashedBytes);
+		    StringBuilder sb = new StringBuilder();
+		    for (byte b : hashedBytes) {
+			sb.append(Byte.toString(b));
+		    }
+		    hashedStr = sb.toString();
+		} catch (Exception e) {  //NoSuchAlgorithmException
+			Window.alert("Encrypt fail. " + e.toString());
+		}
+
+/*		    
+MessageDigest md;
+try {
+  md = MessageDigest.getInstance("SHA-256");
+} catch (NoSuchAlgorithmException e) {
+  throw new RuntimeException(e);
 }
+md.update(message.getBytes(Charset.forName("UTF-8")));
+StringBuilder sb = new StringBuilder();
+for (byte b : md.digest()) {
+  sb.append(String.format("%02x", b & 0xff)); // String#format に修正
+}
+System.out.println(sb);		    
+*/		    
+		    
+		    
+		    
+          
+    		//Window.alert("password=" + hashedStr);
+    		checkMatch(tbn.getValue(), hashedStr, btnList, logList, callbackUrl);
+                dialogBox.hide();
+          }
+        });
+    buttonPanel.add(okButton);
+
+    Button cancelButton = new Button(
+        pcwCommonAdminCancel, new ClickHandler() {
+          public void onClick(ClickEvent event) {
+            dialogBox.hide();
+          }
+        });
+    buttonPanel.add(cancelButton);
+
+
+    dialogContents.add(buttonPanel);
+
+    // Return the dialog box
+    return;
+  }
+
+private void checkMatch(String name, String digest, List<Button> btnList, List<HTML> logList, String callbackUrl) {
+//https://localhost:8443/messagedigest?name=tad&digest=48-42-107158-79-63-49-101793-84-85-85511988-84-76-45-1267395-114-9589-5-776113-42-6
+		String url;
+		String postData;
+//	  	if (("127.0.0.1:8888").equals(Window.Location.getHost())
+//	    		|| ("localhost:8888").equals(Window.Location.getHost())) {
+//			url= "http://localhost:8888/proxy8181?method=location";
+//	  	} else {
+//	  		url= "http://tupracticalpieces.appspot.com/proxy8181?method=location";
+//	  	}
+//	  	url = Window.Location.getHref() + "/proxy8181?method=location";
+		url = "/messagedigest";
+		postData = "name=" + name + "&digest=" + digest;
+		/* Send request to server and catch any errors. */
+		//Window.alert("isMatch entered url:" + url);
+		RequestBuilder builder = new RequestBuilder(RequestBuilder.POST, url);
+		try { 
+			//builder.setHeader("Content-Type","text/plain");
+		      	builder.setHeader("Content-Type", "application/x-www-form-urlencoded");
+		      	builder.setHeader("Access-Control-Allow-Origin","*");
+			@SuppressWarnings("unused")
+			Request request = builder.sendRequest(postData, 
+				new RequestCallback() {
+			        	public void onError(Request request, Throwable exception) {
+						Window.alert("checkDigest on error");
+			        	}
+			        	public void onResponseReceived(Request request, Response response) {
+			          	if (200 == response.getStatusCode()) {
+			        	  //Window.alert(response.getText());
+			        	  	//Window.alert("checkDigest: status 200");
+			        		boolean checkDigest = checkDigestInJava(response.getText());
+			        	  	//Window.alert("checkDigest:" + checkDigest);
+			        	  	if (checkDigest) {
+			        	  		loginQury(btnList, logList, callbackUrl);
+			        	  	}
+	
+			          	} else {
+			            		 // @@@@@@@@@@+ response.getStatusCode() + ":" + response.getStatusText()
+						Window.alert("checkDigest on error StatusCode");
+					}
+				}});
+		} catch (Exception e) {
+ 	     	      Window.alert("RequestBuilder expeption:" + e.toString());
+		}
+		return;
+	}
+
+//  @TUPracticalPiecesSource
+  public static native boolean checkDigestInJava(String JsonStr) /*-{
+    return $wnd.checkDigest(JsonStr);
+  }-*/;
+  
+}
+

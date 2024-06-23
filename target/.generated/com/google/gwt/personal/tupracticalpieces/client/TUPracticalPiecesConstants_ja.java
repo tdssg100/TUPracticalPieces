@@ -538,6 +538,34 @@ public class TUPracticalPiecesConstants_ja implements com.google.gwt.personal.tu
     return "走行距離DB更新";
   }
   
+  public java.lang.String cwXFrameName() {
+    return "ニュース位置情報調整";
+  }
+  
+  public java.lang.String cwCommonAdminTitle() {
+    return "ユーザー認証";
+  }
+  
+  public java.lang.String cwCommonAdminName() {
+    return "名前:";
+  }
+  
+  public java.lang.String cwCommonAdminPassword() {
+    return "パスワード:";
+  }
+  
+  public java.lang.String cwCommonAdminOk() {
+    return "続行";
+  }
+  
+  public java.lang.String cwCommonAdminCancel() {
+    return "キャンセル";
+  }
+  
+  public java.lang.String cwXFrameDescription() {
+    return "不適当な位置名称の除去登録。";
+  }
+  
   public java.lang.String cwFrameAttached() {
     return "発信元";
   }
