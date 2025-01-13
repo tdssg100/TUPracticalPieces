@@ -279,11 +279,12 @@ public class LoginState  {
 							*/				
 							url = "https://accounts.google.com/o/oauth2/auth?" + 
 									URL.encode("response_type=code&" +
-											"client_id=665228524445-n826p8nec0b91tk5mlg6iuu7ss9g3kl6.apps.googleusercontent.com&" +
+											"client_id=882057016296-tl5oic5jm1anrd625dlt1t10ud1rhpn0.apps.googleusercontent.com&" + 
 											"redirect_uri=https://localhost:8443/oauth2callback&" +
 											"scope=https://www.googleapis.com/auth/userinfo.profile " +  
 											"https://www.googleapis.com/auth/userinfo.email&" +
 											"state=/profile");
+							//"client_id=665228524445-n826p8nec0b91tk5mlg6iuu7ss9g3kl6.apps.googleusercontent.com&" +
 											
 											
 //							Window.alert(url); //TODO when restart to update, open this url.
@@ -293,7 +294,7 @@ public class LoginState  {
 							url = "https://accounts.google.com/o/oauth2/auth?" + 
 									URL.encode("response_type=code&" +
 											"client_id=9571369657-0omq28sbvq94as3bl127ia3de85lf2l9.apps.googleusercontent.com&" +
-											"redirect_uri=" + Window.Location.getProtocol() + "//" + Window.Location.getHost() + "/oauth2callback&" +
+											"redirect_uri=" + Window.Location.getProtocol() + "/" + Window.Location.getHost() + "//oauth2callback&" +
 											"scope=https://www.googleapis.com/auth/userinfo.profile " +  
 											"https://www.googleapis.com/auth/userinfo.email&" +
 											"state=/profile");
@@ -305,11 +306,12 @@ public class LoginState  {
 						} else {
 							url = "https://accounts.google.com/o/oauth2/auth?" + 
 									URL.encode("response_type=code&" +
-											"client_id=9571369657-3mqoa0q64gfer18q52gmhmul9gg5anus.apps.googleusercontent.com&" +
-											"redirect_uri=" + Window.Location.getProtocol() + "//" + Window.Location.getHost() + "/oauth2callback&" +
+											"client_id=882057016296-tl5oic5jm1anrd625dlt1t10ud1rhpn0.apps.googleusercontent.com&" + 
+											"redirect_uri=" + Window.Location.getProtocol() + "/" + Window.Location.getHost() + "/oauth2callback&" +
 											"scope=https://www.googleapis.com/auth/userinfo.profile " +  
 											"https://www.googleapis.com/auth/userinfo.email&" +
 											"state=/profile");
+							//"client_id=9571369657-3mqoa0q64gfer18q52gmhmul9gg5anus.apps.googleusercontent.com&" +
 							//Window.confirm(url); //xxxTODO when restart to update, open this url.
 						}
 
@@ -439,7 +441,9 @@ public class LoginState  {
 		    for (byte b : hashedBytes) {
 			sb.append(Byte.toString(b));
 		    }
-		    hashedStr = sb.toString();
+		    hashedStr = "{" + sb.toString() + "}";
+		   
+//Window.alert("Encrypt :" + hashedStr);	//
 		} catch (Exception e) {  //NoSuchAlgorithmException
 			Window.alert("Encrypt fail. " + e.toString());
 		}
@@ -515,7 +519,7 @@ private void checkMatch(String name, String digest, List<Button> btnList, List<H
 			        	  //Window.alert(response.getText());
 			        	  	//Window.alert("checkDigest: status 200");
 			        		boolean checkDigest = checkDigestInJava(response.getText());
-			        	  	//Window.alert("checkDigest:" + checkDigest);
+                            //Window.alert("checkDigest:" + checkDigest);
 			        	  	if (checkDigest) {
 			        	  		loginQury(btnList, logList, callbackUrl);
 			        	  	}

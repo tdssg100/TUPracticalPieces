@@ -21,29 +21,38 @@
 //package com.google.gwt.sample.mobilewebapp.presenter.tasklist;
 package com.google.gwt.personal.tupracticalpieces.presenter.list;
 
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 //import com.google.gwt.sample.mobilewebapp.client.ClientFactory;
 //import com.google.gwt.sample.mobilewebapp.client.event.ShowTaskEvent;
 //import com.google.gwt.sample.mobilewebapp.client.event.TaskListUpdateEvent;
 //import com.google.gwt.sample.mobilewebapp.shared.TaskProxy;
-
+//import java.util.Arrays;
+//import java.util.List;
 import com.google.gwt.personal.tupracticalpieces.client.ClientFactory;
 import com.google.gwt.personal.tupracticalpieces.client.event.ActionEvent;
 import com.google.gwt.personal.tupracticalpieces.client.event.ActionNames;
 import com.google.gwt.personal.tupracticalpieces.client.event.MileageEditEvent;
 import com.google.gwt.personal.tupracticalpieces.client.event.MileageListUpdateEvent;
 import com.google.gwt.personal.tupracticalpieces.client.event.ShowMileageEvent;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileagePlace;
+import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
 //import com.google.gwt.personal.tupracticalpieces.client.event.MileageListEvent;
 //import com.google.gwt.personal.tupracticalpieces.client.event.ShowTaskEvent;
 //import com.google.gwt.personal.tupracticalpieces.client.event.MileageListUpdateEvent;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.web.bindery.event.shared.EventBus;
+import com.google.web.bindery.requestfactory.gwt.client.DefaultRequestTransport;
 import com.google.web.bindery.requestfactory.shared.Receiver;
+import com.google.web.bindery.requestfactory.shared.RequestTransport;
 import com.google.web.bindery.requestfactory.shared.ServerFailure;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPlace;
+import com.google.gwt.personal.tupracticalpieces.client.content.CwUpdate;
+import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
 
 import java.util.Collections;
 import java.util.List;
@@ -96,18 +105,96 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
 //  }
   public AdminMileagePresenter(ClientFactory clientFactory, AdminMileagePlace place) {
 	    this(clientFactory, place.isMileageListStale());
+	    
+	    //Button btn;
+	    
+	    
+	    //btn = clientFactory.getMyAppAdminMileageView().getShowButton();
+	    clientFactory.getMyAppAdminMileageView().getShowButton().addClickHandler(new ClickHandler() {
+		  public void onClick(ClickEvent event) {
+//Window.alert("Show button clicked");
+		    clientFactory.getMyAppAdminMileageView().getShowButton().setEnabled(false);
+		    //presenter.refreshMileageList();
+                  RequestTransport requestTransport = new DefaultRequestTransport();
+                  clientFactory.getRequestFactory().initialize(eventBus, requestTransport);
+                  clientFactory.getRequestFactory().mileageRequest().findAllMileages().fire(
+		    new Receiver<List<MileageProxy>>() {
+		      @Override
+		      public void onFailure(ServerFailure error) {
+		      	Window.alert("rf mileage fail" + error.toString());
+		        // ignore
+		      }
+
+		      @Override
+		      public void onSuccess(List<MileageProxy> response) {
+		        // Early exit if this activity has already been canceled.
+		        //if (eventBus == null) {
+		        //  return;
+		        //}
+
+		        // Display the tasks in the view.
+		        if (response == null) {
+		          response = Collections.<MileageProxy> emptyList();
+		        }
+		        //Window.alert("mileage:" + response.size());
+//            Window.alert("Show button clicked before setMileages");            
+		        setMileages(response);
+//            Window.alert("Show button clicked after setMileages");
+		        // save the response to storage
+		        //clientFactory.getTaskProxyLocalStorage().setTasks(response);
+
+		        // Restart the timer.
+		        //refreshTimer.schedule(REFRESH_DELAY);
+		      }
+		    });	
+		 
+          clientFactory.getMyAppAdminMileageView().getEditButton().setEnabled(true);
+          clientFactory.getMyAppAdminMileageView().getDeleteButton().setEnabled(true);
+          clientFactory.getMyAppAdminMileageView().getInsertButton().setEnabled(true);
+		  //gridPanel.setVisible(true);
+    
+	    }});
+
+	    //btn = clientFactory.getMyAppAdminMileageView().getEditButton();
+	    clientFactory.getMyAppAdminMileageView().getEditButton().addClickHandler(new ClickHandler() {
+			@Override
+		    public void onClick(ClickEvent event) {
+
+
+        if (clientFactory.getMyAppAdminMileageView().getSelected()== null) {
+          Window.confirm("Select a row.");
+          return;
+        }
+				editMileage(clientFactory.getMyAppAdminMileageView().getSelected());
+			}
+	    });
+
+	    	    
+	    
+	    //btn = clientFactory.getMyAppAdminMileageView().getInsertButton();
+      clientFactory.getMyAppAdminMileageView().getInsertButton().addClickHandler(new ClickHandler() {
+				@Override
+			    public void onClick(ClickEvent event) {
+				        addMileage();
+			    }
+		});    
+			    
+	    
+	    
+	    
+	    
+	    
   }
-/*
-  @Override
+
+//@Override
   public Widget asWidget() {
     return getView().asWidget();
   }
 
-  @Override
+//  @Override
   public String mayStop() {
     return null; // always happy to stop
   }
-*/
 
 //  public void selectTask(TaskProxy selected) {
 //    // Go into edit mode when a task is selected.
@@ -116,26 +203,49 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
 //  public void selectTask(TaskProxy selected) {
   public void selectMileage(MileageProxy selected) {
 	    // Go into edit mode when a task is selected.
-    eventBus.fireEvent(new ShowMileageEvent(selected));
+//    eventBus.fireEvent(new ShowMileageEvent(selected));
 
   
   }
   
- 
   @Override
-  public void addMileage(Place place) {
+  public void editMileage(MileageProxy selected) {
+	  clientFactory.getPlaceController().goTo(new MileageEditPlace(selected.getId(), "adminEdit:" + selected.getId()));
+//Window.alert("edit mileage :" + selected.getId());
+      eventBus.fireEvent(new ShowMileageEvent(selected));
+//      eventBus.fireEvent(new MileageEditEvent(selected));
+	  
+  }
+ 
+  //@Override
+  //public void addMileage(Place place) {
+  public void addMileage() {
     // Go into edit mode when clicking AddCouldSQL.
 //    eventBus.fireEvent(new MileageEditEvent(null));
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	  
-//	  ActionEvent.fire(eventBus, ActionNames.ADD_MILEAGE);
 //	  
 //    clientFactory.getPlaceController().goTo(new MileagePlace(null, null));
+	  
+//	  clientFactory.getPlaceController().goTo(new MileageEditPlace(null, "adminCreate"));
+
+	  //	  ActionEvent.fire(eventBus, ActionNames.ADD_MILEAGE);
 //  clientFactory.getPlaceController().goTo(MileagePlace.getMileageCreatePlace());
-    clientFactory.getPlaceController().goTo(place);
+//    clientFactory.getPlaceController().goTo(place);
+//    goTo(MileagePlace.getMileageCreatePlace(null, Collections.<MileageProxy> emptyList()));
+//    Window.alert("addMileage to go to getMileageCreatePlace in Presenter.");
+    //goTo(MileagePlace.getMileageCreatePlace());
+    //gotTo(new MileageEditPlace().createMileageEditPlace(null, null));
+    //gotTo(new Place("adminEdit:adminCreate"));
+	  clientFactory.getPlaceController().goTo(new MileageEditPlace(null, "adminCeate"));
+    eventBus.fireEvent(new ShowMileageEvent(null));
+//		    MileageEditView mileageEditView = clientFactory.getMileageEditView();
+//		    mileageEditView.asWidget();
+//		    container.setWidget(contentPanel);
+//		    container.setAnimationDuration(500);
   }
   
-  /*
+  
 
   @Override
   public void start(EventBus eventBus) {
@@ -151,15 +261,15 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
 
     // Clear the task list and display it.
 //    if (clearTaskList) {
-    if (clearMileageList) {
-      getView().clearList();
-    }
+//    if (clearMileageList) {
+//      getView().clearList();
+//    }
 
-//    // Create a timer to periodically refresh the task list.
+    // Create a timer to periodically refresh the task list.
 //    refreshTimer = new Timer() {
 //      @Override
 //      public void run() {
-//        refreshMileageList();
+//       refreshMileageList();
 //      }
 //    };
 
@@ -177,7 +287,7 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
     //setMileages(mileages);
 
 
-    checkLogin();
+    //checkLogin();
     
     
     // Request the task list now.
@@ -186,16 +296,16 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
     
 //    refreshMileageList();
     // Create a timer to periodically refresh the task list.
-    refreshTimer = new Timer() {
-     @Override
-      public void run() {
-        refreshMileageList();
-      }
-    };
-    refreshTimer.schedule(REFRESH_DELAY);
+//    refreshTimer = new Timer() {
+//     @Override
+//      public void run() {
+//        refreshMileageList();
+//      }
+//    };
+//    refreshTimer.schedule(REFRESH_DELAY);
   }
 
- */
+ 
   @Override
   public void stop() {
     eventBus = null;
@@ -214,54 +324,56 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
 //  private TaskListView getView() {
 //    return clientFactory.getTaskListView();
 //  }
-  private AdminMileageSuperView getView() {
+//  private AdminMileageSuperView getView() {
+  private CwUpdate getView() {
 	    return clientFactory.getMyAppAdminMileageView();
   }
 
   /**
    * Refresh the task list.
    */
-//  private void refreshTaskList() {
-  private void refreshMileageList() {
-//    clientFactory.getRequestFactory().taskRequest().findAllTasks().fire(
-      clientFactory.getRequestFactory().mileageRequest().findAllMileages().fire(
-//        new Receiver<List<TaskProxy>>() {
-          new Receiver<List<MileageProxy>>() {
-//  TODO servier validation error
+////  private void refreshTaskList() {
+//  public void refreshMileageList() {
+////    clientFactory.getRequestFactory().taskRequest().findAllTasks().fire(
+//      clientFactory.getRequestFactory().mileageRequest().findAllMileages().fire(
+////        new Receiver<List<TaskProxy>>() {
+//          new Receiver<List<MileageProxy>>() {
+////  TODO servier validation error
+////          @Override
+////          public void onConstraintViolation() {
+////        	  
+////          }
 //          @Override
-//          public void onConstraintViolation() {
-//        	  
+//          public void onFailure(ServerFailure error) {
+//            // ignore
 //          }
-          @Override
-          public void onFailure(ServerFailure error) {
-            // ignore
-          }
-
-          @Override
-//          public void onSuccess(List<TaskProxy> response) {
-          public void onSuccess(List<MileageProxy> response) {
-            // Early exit if this activity has already been canceled.
-            if (eventBus == null) {
-              return;
-            }
-
-            // Display the tasks in the view.
-            if (response == null) {
-//              response = Collections.<TaskProxy> emptyList();
-              response = Collections.<MileageProxy> emptyList();
-            }
-//            setTasks(response);
-            setMileages(response);
-
-            // save the response to storage
-//            clientFactory.getTaskProxyLocalStorage().setTasks(response);
-// TODO localStorage           clientFactory.getMileageProxyLocalStorage().setMileages(response);
-
-            // Restart the timer.
-            //refreshTimer.schedule(REFRESH_DELAY);
-          }
-        });
-  }
+//
+//          @Override
+////          public void onSuccess(List<TaskProxy> response) {
+//          public void onSuccess(List<MileageProxy> response) {
+//
+//            // Early exit if this activity has already been canceled.
+//            //if (eventBus == null) {
+//            //  return;
+//            //}
+//
+//            // Display the tasks in the view.
+//            if (response == null) {
+////              response = Collections.<TaskProxy> emptyList();
+//              response = Collections.<MileageProxy> emptyList();
+//            }
+////            setTasks(response);
+//            setMileages(response);
+//
+//            // save the response to storage
+////            clientFactory.getTaskProxyLocalStorage().setTasks(response);
+//// TODO localStorage           clientFactory.getMileageProxyLocalStorage().setMileages(response);
+//
+//            // Restart the timer.
+//            //refreshTimer.schedule(REFRESH_DELAY);
+//          }
+//        });
+//  }
 
   /**
    * Set the list of tasks.
@@ -272,19 +384,20 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
 //  }
   private void setMileages(List<MileageProxy> mileages) {
 	    this.mileages = mileages;
+
 	    getView().setMileages(mileages);
 //	    eventBus.fireEventFromSource(new MileageListUpdateEvent(mileages), this);
-	    eventBus.fireEventFromSource(new MileageListUpdateEvent(mileages), this);
+//	    eventBus.fireEventFromSource(new MileageListUpdateEvent(mileages), this);
   }
   /**
    * Call login routine when a view needing it were invoked.
-   */
+
   private void checkLogin() {
 	  getView().checkLoginAdmin();
   }
-
-@Override
-public void goTo(Place place) {
+  202406 */
+//@Override
+ public void goTo(Place place) {
 	// TODO Auto-generated method stub
 	clientFactory.getPlaceController().goTo(place);
 	

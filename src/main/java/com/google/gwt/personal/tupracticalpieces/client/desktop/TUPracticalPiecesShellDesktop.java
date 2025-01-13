@@ -76,21 +76,23 @@ import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditVie
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPlace;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
-import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
+//import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
+import com.google.gwt.i18n.client.Constants;
+import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesConstants;
+import com.google.gwt.personal.tupracticalpieces.client.content.CwUpdate;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
-
+import java.util.Collections;
 /**
  * Application shell for TUPracticalPieces personal.
  */
 
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesShell;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageEditView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageReadView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
+//import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
+import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPlace;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 import com.google.gwt.safehtml.shared.SafeHtmlUtils;
@@ -114,6 +116,8 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 //	      TUPracticalPiecesResources.class);
   public static final TUPracticalPiecesResourcesDesktop images = GWT.create(
 	      TUPracticalPiecesResourcesDesktop.class);
+  
+ //   private CwUpdate myAppAdminMileageView;
   
   /**
    * The callback used when retrieving source code.
@@ -151,10 +155,6 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
   private static int nextCallbackId = 0;
 
   
-//  private AdminMileageView adminViewMileage;
-  private AdminMileageSuperView adminViewMileage;
-//  private MileageEditView adminEditMileage;
-//  private MileageReadView adminReadMileage;
   private SimpleLayoutPanel contentPanel = new SimpleLayoutPanel();
 
   /**
@@ -356,17 +356,21 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 //	public TUPracticalPiecesShellDesktop(EventBus bus, final PlaceController placeController) {
 //	public TUPracticalPiecesShellDesktop(final EventBus eventBus, 
 //			PlaceController placeController) {
-		public TUPracticalPiecesShellDesktop(final PlaceController placeController, MileageReadView mileageReadView, MileageEditView mileageEditView) {
-
+  public TUPracticalPiecesShellDesktop(final PlaceController placeController, MileageReadView mileageReadView, MileageEditView mileageEditView, CwUpdate cwUpdate, TUPracticalPiecesConstants constants) {
+ 
 		 
 		// Create the application shell.
 		final SingleSelectionModel<ContentWidget> selectionModel = new SingleSelectionModel<ContentWidget>();
 		//final MainMenuTreeViewModel treeModel = new MainMenuTreeViewModel(
-		AdminMileageView adminViewMileageList = new AdminMileageView(TUPracticalPieces.constants);
+//		AdminMileageView adminViewMileageList = new AdminMileageView(TUPracticalPieces.constants);
 
+//		final MainMenuTreeViewModelDesktop treeModel = new MainMenuTreeViewModelDesktop(
+//				TUPracticalPieces.constants, selectionModel, adminViewMileageList);
+//		final MainMenuTreeViewModelDesktop treeModel = new MainMenuTreeViewModelDesktop(
+//				TUPracticalPieces.constants, selectionModel);
 		final MainMenuTreeViewModelDesktop treeModel = new MainMenuTreeViewModelDesktop(
-				TUPracticalPieces.constants, selectionModel, adminViewMileageList);
-		adminViewMileage = adminViewMileageList;
+				constants, selectionModel, cwUpdate);
+		//adminViewMileage = adminViewMileageList;
 //		adminEditMileage = treeModel.getAdminMaileageEditView();
 //		adminReadMileage = treeModel.getAdminMaileageReadView();
 		Set<ContentWidget> contentWidgets = treeModel.getAllContentWidgets();
@@ -454,24 +458,25 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 	    // Handle events from the tabs.
 	    tabExample.addClickHandler(new ClickHandler() {
 	      public void onClick(ClickEvent event) {
+//Window.alert("showExample entered.");	      
 	        showExample();
 	      }
 	    });
-	    tabStyle.addClickHandler(new ClickHandler() {
-	      public void onClick(ClickEvent event) {
-	        showSourceStyles();
-	      }
-	    });
-	    tabSource.addClickHandler(new ClickHandler() {
-	      public void onClick(ClickEvent event) {
-	        showSourceFile();
-	      }
-	    });
-	    tabSourceList.addChangeHandler(new ChangeHandler() {
-	      public void onChange(ChangeEvent event) {
-	        showSourceFile();
-	      }
-	    });
+//	    tabStyle.addClickHandler(new ClickHandler() {
+//	      public void onClick(ClickEvent event) {
+//	        showSourceStyles();
+//	      }
+//	    });
+//	    tabSource.addClickHandler(new ClickHandler() {
+//	      public void onClick(ClickEvent event) {
+//	        showSourceFile();
+//	      }
+//	    });
+//	    tabSourceList.addChangeHandler(new ChangeHandler() {
+//	      public void onChange(ChangeEvent event) {
+//	        showSourceFile();
+//	      }
+//	    });
 //
 //	    // Default to no content.
 //	    contentPanel.ensureDebugId("contentPanel");
@@ -490,6 +495,27 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 //	    setContent(content, catInx);
 	    
 	    
+	    
+		
+		
+//		cwUpdate.insertCloudButton.addClickHandler(new ClickHandler() {
+//			@Override
+//		    public void onClick(ClickEvent event) {
+//				placeController.goTo(new MileageEditPlace(null, (String) null));
+//		        //contentContainer.setWidget(mileageEditView.asWidget());
+//			    //contentContainer.setAnimationDuration(500);
+//			}});  
+//	    
+//		// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ need to change
+//		cwUpdate.editButton.addClickHandler(new ClickHandler() {
+//			@Override
+//		    public void onClick(ClickEvent event) {
+//				placeController.goTo(new MileageEditPlace(null, (String) null));
+//		        //contentContainer.setWidget(mileageEditView.asWidget());
+//			    //contentContainer.setAnimationDuration(500);
+//			}});  
+//	    
+//	    
 	    
 	    
 	    //shell = new TUPracticalPiecesShell(treeModel);
@@ -523,6 +549,7 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 	          public void onSelectionChange(SelectionChangeEvent event) {
 	        	  
 		            ContentWidget selected = selectionModel.getSelectedObject();
+
 		            
 //	            if (selected instanceof AdminMileageView) {
 //	            	selected.setPresenter(AdminMileagePresenter);
@@ -577,6 +604,7 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 		            
 		            
 		            }
+		            
 		      }
 	        });
 
@@ -610,17 +638,30 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 	      public void onValueChange(ValueChangeEvent<String> event) {
 	        // Get the content widget associated with the history token.
 	    	// transit to app
-	    	String token = event.getValue();
+
+
+
+/*
+        String token = event.getValue();
+	    	
+	    	
+//	    	Window.alert("History token:" + token);
 	    	if ("adminEdit:adminC".equals(token.substring(0,16))) {
 		    		placeController.goTo(MileageReadPlace.getMileageCreatePlace());
 		    		return;
 	    	}
 	    	if ("adminEdit:".equals(token.substring(0,10))) {
 	    			try {
+
 	    				// Parse the task ID from the URL.
 	    				Long mileageId = Long.parseLong(token);
-	    				placeController.goTo( new MileageReadPlace(mileageId, null));
+	    				Window.alert("History value change: adminEdit:" + mileageId);
+	    				//placeController.goTo( new MileageReadPlace(mileageId, null));
+
+	                    //contentContainer.setWidget(mileageEditView);
+	                    //contentContainer.setAnimationDuration(500);	    				
 	    			} catch (NumberFormatException e) {
+	    				Window.alert("History value change: long Exception");
 	    				// do nothing
 	    				return;
 	    			}
@@ -628,12 +669,17 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 			    	// do nothing
 			    	return;
 	    	}
-	        if ("!AdminMileageView".equals(token.substring(0,17))) {
-	        	// transit mobileapp pattern
-	    		placeController.goTo(new AdminMileagePlace(true));
-	    		return;
-	    	}
+//	        if ("!AdminMileageView".equals(token.substring(0,17))) {
+//	        	// transit mobileapp pattern
+//	    		placeController.goTo(new AdminMileagePlace(true));
+//	    		return;
+//	    	}
+		
+		
+ */          
 
+		
+		
 
 	        
 	    	ContentWidget contentWidget = treeModel.getContentWidgetForToken(
@@ -724,8 +770,8 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 
 	    
 	    contentContainer.add(contentPanel);
-	    contentContainer.add(adminViewMileage);
-	    contentContainer.add(mileageReadView);
+//	    contentContainer.add(adminViewMileage);
+	    contentContainer.add(mileageReadView); 
 	    contentContainer.add(mileageEditView);
 	    
 //	    content = treeModel.getFirstContentWidget();
@@ -733,7 +779,7 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 //		displayContentWidget(content, catInx);
 //	    
         contentContainer.setWidget(contentPanel);
-	    contentContainer.setAnimationDuration(500);
+	    contentContainer.setAnimationDuration(100);
 	    
 	    
 	    
@@ -1054,13 +1100,16 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 //  public AdminMileageView getAdminMileageView() {
 //	  return adminViewMileage;
 //  }
-  public AdminMileageSuperView getAdminMileageView() {
-	  return adminViewMileage;
-  }
+//  public AdminMileageSuperView getAdminMileageView() {
+//	  return adminViewMileage;
+//  }
 //  public MileageEditView getAdminMileageEditView() {
 //	  return adminEditMileage;
 //  }
 //  public MileageReadView getAdminMileageReadView() {
 //	  return adminReadMileage;
 //  }
+
+
+
  }

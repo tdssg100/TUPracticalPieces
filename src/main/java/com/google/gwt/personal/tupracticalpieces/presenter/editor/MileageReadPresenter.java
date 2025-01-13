@@ -90,7 +90,6 @@ public class MileageReadPresenter implements MileageReadView.Presenter {
     eventBus.fireEvent(new MileageEditEvent(mileage));
   }
 
-  /*
   @Override
   public Widget asWidget() {
     return getView().asWidget();
@@ -160,7 +159,6 @@ public class MileageReadPresenter implements MileageReadView.Presenter {
         getView().getReadEditorDriver().edit(mileage);
     }
   }
-*/
 
   @Override
   public void stop() {

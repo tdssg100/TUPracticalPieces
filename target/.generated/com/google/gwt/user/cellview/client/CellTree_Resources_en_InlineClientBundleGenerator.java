@@ -92,46 +92,46 @@ public class CellTree_Resources_en_InlineClientBundleGenerator implements com.go
         return "cellTreeStyle";
       }
       public String getText() {
-        return com.google.gwt.i18n.client.LocaleInfo.getCurrentLocale().isRTL() ? ((".GKLQPWSLG{padding-right:" + ("16px")  + ";font-style:" + ("italic")  + ";}.GKLQPWSMG{padding-top:" + ("4px")  + ";padding-bottom:" + ("4px")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";zoom:" + ("1")  + ";}.GKLQPWSOG{zoom:" + ("1")  + ";}.GKLQPWSPG{padding-right:" + ("3px")  + ";padding-left:" + ("3px")  + ";outline:") + (("none")  + ";}.GKLQPWSEH{font-weight:" + ("bold")  + ";color:" + ("#4b4a4a")  + ";margin-top:" + ("20px")  + ";padding:" + ("3px"+ " " +"10px"+ " " +"3px"+ " " +"13px")  + " !important;}.GKLQPWSGH{border-bottom:" + ("1px"+ " " +"solid"+ " " +"#6f7277")  + ";padding-bottom:" + ("1px")  + ";}.GKLQPWSAH{background-color:" + ("#ffc")  + ";outline:" + ("none")  + ";}.GKLQPWSCH{height:" + ((CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getHeight() + "px")  + ";overflow:" + ("hidden") ) + (";background:" + ("url(\"" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getSafeUri().asString() + "\") -" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getLeft() + "px -" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getTop() + "px  repeat-x")  + ";background-color:" + ("#628cd5")  + ";color:" + ("white")  + ";height:" + ("auto")  + ";overflow:" + ("visible")  + ";}.GKLQPWSDH{padding-right:" + ("16px")  + ";outline:" + ("none")  + ";}")) : ((".GKLQPWSLG{padding-left:" + ("16px")  + ";font-style:" + ("italic")  + ";}.GKLQPWSMG{padding-top:" + ("4px")  + ";padding-bottom:" + ("4px")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";zoom:" + ("1")  + ";}.GKLQPWSOG{zoom:" + ("1")  + ";}.GKLQPWSPG{padding-left:" + ("3px")  + ";padding-right:" + ("3px")  + ";outline:") + (("none")  + ";}.GKLQPWSEH{font-weight:" + ("bold")  + ";color:" + ("#4b4a4a")  + ";margin-top:" + ("20px")  + ";padding:" + ("3px"+ " " +"13px"+ " " +"3px"+ " " +"10px")  + " !important;}.GKLQPWSGH{border-bottom:" + ("1px"+ " " +"solid"+ " " +"#6f7277")  + ";padding-bottom:" + ("1px")  + ";}.GKLQPWSAH{background-color:" + ("#ffc")  + ";outline:" + ("none")  + ";}.GKLQPWSCH{height:" + ((CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getHeight() + "px")  + ";overflow:" + ("hidden") ) + (";background:" + ("url(\"" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getSafeUri().asString() + "\") -" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getLeft() + "px -" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getTop() + "px  repeat-x")  + ";background-color:" + ("#628cd5")  + ";color:" + ("white")  + ";height:" + ("auto")  + ";overflow:" + ("visible")  + ";}.GKLQPWSDH{padding-left:" + ("16px")  + ";outline:" + ("none")  + ";}"));
+        return com.google.gwt.i18n.client.LocaleInfo.getCurrentLocale().isRTL() ? ((".GP-OPMDLG{padding-right:" + ("16px")  + ";font-style:" + ("italic")  + ";}.GP-OPMDMG{padding-top:" + ("4px")  + ";padding-bottom:" + ("4px")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";zoom:" + ("1")  + ";}.GP-OPMDOG{zoom:" + ("1")  + ";}.GP-OPMDPG{padding-right:" + ("3px")  + ";padding-left:" + ("3px")  + ";outline:") + (("none")  + ";}.GP-OPMDEH{font-weight:" + ("bold")  + ";color:" + ("#4b4a4a")  + ";margin-top:" + ("20px")  + ";padding:" + ("3px"+ " " +"10px"+ " " +"3px"+ " " +"13px")  + " !important;}.GP-OPMDGH{border-bottom:" + ("1px"+ " " +"solid"+ " " +"#6f7277")  + ";padding-bottom:" + ("1px")  + ";}.GP-OPMDAH{background-color:" + ("#ffc")  + ";outline:" + ("none")  + ";}.GP-OPMDCH{height:" + ((CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getHeight() + "px")  + ";overflow:" + ("hidden") ) + (";background:" + ("url(\"" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getSafeUri().asString() + "\") -" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getLeft() + "px -" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getTop() + "px  repeat-x")  + ";background-color:" + ("#628cd5")  + ";color:" + ("white")  + ";height:" + ("auto")  + ";overflow:" + ("visible")  + ";}.GP-OPMDDH{padding-right:" + ("16px")  + ";outline:" + ("none")  + ";}")) : ((".GP-OPMDLG{padding-left:" + ("16px")  + ";font-style:" + ("italic")  + ";}.GP-OPMDMG{padding-top:" + ("4px")  + ";padding-bottom:" + ("4px")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";zoom:" + ("1")  + ";}.GP-OPMDOG{zoom:" + ("1")  + ";}.GP-OPMDPG{padding-left:" + ("3px")  + ";padding-right:" + ("3px")  + ";outline:") + (("none")  + ";}.GP-OPMDEH{font-weight:" + ("bold")  + ";color:" + ("#4b4a4a")  + ";margin-top:" + ("20px")  + ";padding:" + ("3px"+ " " +"13px"+ " " +"3px"+ " " +"10px")  + " !important;}.GP-OPMDGH{border-bottom:" + ("1px"+ " " +"solid"+ " " +"#6f7277")  + ";padding-bottom:" + ("1px")  + ";}.GP-OPMDAH{background-color:" + ("#ffc")  + ";outline:" + ("none")  + ";}.GP-OPMDCH{height:" + ((CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getHeight() + "px")  + ";overflow:" + ("hidden") ) + (";background:" + ("url(\"" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getSafeUri().asString() + "\") -" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getLeft() + "px -" + (CellTree_Resources_en_InlineClientBundleGenerator.this.cellTreeSelectedBackground()).getTop() + "px  repeat-x")  + ";background-color:" + ("#628cd5")  + ";color:" + ("white")  + ";height:" + ("auto")  + ";overflow:" + ("visible")  + ";}.GP-OPMDDH{padding-left:" + ("16px")  + ";outline:" + ("none")  + ";}"));
       }
       public java.lang.String cellTreeEmptyMessage() {
-        return "GKLQPWSLG";
+        return "GP-OPMDLG";
       }
       public java.lang.String cellTreeItem() {
-        return "GKLQPWSMG";
+        return "GP-OPMDMG";
       }
       public java.lang.String cellTreeItemImage() {
-        return "GKLQPWSNG";
+        return "GP-OPMDNG";
       }
       public java.lang.String cellTreeItemImageValue() {
-        return "GKLQPWSOG";
+        return "GP-OPMDOG";
       }
       public java.lang.String cellTreeItemValue() {
-        return "GKLQPWSPG";
+        return "GP-OPMDPG";
       }
       public java.lang.String cellTreeKeyboardSelectedItem() {
-        return "GKLQPWSAH";
+        return "GP-OPMDAH";
       }
       public java.lang.String cellTreeOpenItem() {
-        return "GKLQPWSBH";
+        return "GP-OPMDBH";
       }
       public java.lang.String cellTreeSelectedItem() {
-        return "GKLQPWSCH";
+        return "GP-OPMDCH";
       }
       public java.lang.String cellTreeShowMoreButton() {
-        return "GKLQPWSDH";
+        return "GP-OPMDDH";
       }
       public java.lang.String cellTreeTopItem() {
-        return "GKLQPWSEH";
+        return "GP-OPMDEH";
       }
       public java.lang.String cellTreeTopItemImage() {
-        return "GKLQPWSFH";
+        return "GP-OPMDFH";
       }
       public java.lang.String cellTreeTopItemImageValue() {
-        return "GKLQPWSGH";
+        return "GP-OPMDGH";
       }
       public java.lang.String cellTreeWidget() {
-        return "GKLQPWSHH";
+        return "GP-OPMDHH";
       }
     }
     ;

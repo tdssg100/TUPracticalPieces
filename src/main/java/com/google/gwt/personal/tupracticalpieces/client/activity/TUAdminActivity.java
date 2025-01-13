@@ -34,12 +34,10 @@ package com.google.gwt.personal.tupracticalpieces.client.activity;
 import com.google.gwt.event.shared.EventBus; 
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.personal.tupracticalpieces.client.ClientFactory;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
+//import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
 import com.google.gwt.personal.tupracticalpieces.client.event.MileageEditEvent;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPresenter;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileagePlace;
-//import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileagePlace;
+//import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPlace;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPresenter;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
@@ -50,6 +48,7 @@ import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 //import com.google.gwt.personal.tupracticalpieces.shared.TaskProxy;
 import com.google.gwt.personal.ui.client.PresentsWidgets;
 import com.google.gwt.place.shared.Place;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.web.bindery.event.shared.ResettableEventBus;
 import java.util.logging.Level;
@@ -61,7 +60,8 @@ import java.util.logging.Logger;
  * edit it.
  */
 //public class TaskActivity extends AbstractActivity {
-public class TUAdminActivity extends AbstractActivity implements AdminMileageSuperView.Presenter {
+//public class TUAdminActivity extends AbstractActivity implements AdminMileageSuperView.Presenter {
+public class TUAdminActivity extends AbstractActivity {
 	
   private static final Logger log = Logger.getLogger(TUAdminActivity.class.getName());
 	
@@ -74,7 +74,7 @@ public class TUAdminActivity extends AbstractActivity implements AdminMileageSup
   //You are not required to use it, for example it's a good practice to user Gin (Dependency injection for client in gwt).
   private final ClientFactory clientFactory;
 
-  private String name;
+  private MileageEditPlace place;
   
   private ResettableEventBus childEventBus;
 
@@ -85,8 +85,8 @@ public class TUAdminActivity extends AbstractActivity implements AdminMileageSup
    * @param place configuration for this activity
    */
   //public TaskActivity(ClientFactory clientFactory, TaskPlace place) {
-  public TUAdminActivity(ClientFactory clientFactory, AdminMileagePlace place) {
-    this.name = place.toString();
+  public TUAdminActivity(ClientFactory clientFactory, MileageEditPlace place) {
+    this.place = place;
     this.clientFactory = clientFactory;
   }
 
@@ -123,10 +123,15 @@ public class TUAdminActivity extends AbstractActivity implements AdminMileageSup
 //	    presenter = startEdit(event.getReadOnlyTask());
 	    presenter = startEdit(event.getReadOnlyMileage());
 
-	    
-	    
-	    
-	    
+	    Window.alert("TUAdminActivity start. startEdit");	    
+//	    if (event.getReadOnlyMileage() == null) {
+//	        presenter = startCreate();
+//	    } else {
+//
+//	        presenter = startDisplay(event.getReadOnlyMileage());
+//	    }   
+//	    
+//	    
 	    
 	    
 	    
@@ -148,14 +153,13 @@ public class TUAdminActivity extends AbstractActivity implements AdminMileageSup
 //	}
 //	container.setWidget(presenter);
 
-/*	
+
 	if (place.getMileageId() == null) {
 	  presenter = startCreate();
 	} else {
-	  presenter = startDisplay(place);
+	  presenter = startDisplay(place.getMileage());
 	}
 	
-*/
 	container.setWidget(presenter);
 
 //Tutorial : Activity inherites view's presenter	
@@ -173,7 +177,7 @@ public class TUAdminActivity extends AbstractActivity implements AdminMileageSup
   }
 
   // private PresentsWidgets startDisplay(TaskPlace place) {
-  private PresentsWidgets startDisplay(MileagePlace place) {
+  private PresentsWidgets startDisplay(MileageProxy mileage) {
 	  //PresentsWidgets rtn = new TaskReadPresenter(clientFactory, place);
 	  PresentsWidgets rtn = (PresentsWidgets) new MileageEditPresenter(clientFactory);
 	  rtn.start(childEventBus);
@@ -185,7 +189,8 @@ public class TUAdminActivity extends AbstractActivity implements AdminMileageSup
 	  rtn.start(childEventBus);
 	  return rtn;
   }
-@Override
+
+//@Override
 public void selectMileage(MileageProxy selected) {
 	// TODO Auto-generated method stub
 	
@@ -197,19 +202,20 @@ public void addMileage() {
 	
 }
 */
-@Override
+
+//@Override
 public void goTo(Place place) {
 	// TODO Auto-generated method stub
 	
 }
 
-@Override
+//@Override
 public void stop() {
 	// TODO Auto-generated method stub
 	
 }
 
-@Override
+//@Override
 public void addMileage(Place place) {
 	// TODO Auto-generated method stub
 	

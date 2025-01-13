@@ -38,22 +38,22 @@ public class CellList_Resources_ja_InlineClientBundleGenerator implements com.go
         return "cellListStyle";
       }
       public String getText() {
-        return (".GKLQPWSHC,.GKLQPWSJC{cursor:" + ("pointer")  + ";zoom:" + ("1")  + ";}.GKLQPWSIC{background:" + ("#ffc")  + ";}.GKLQPWSKC{height:" + ((CellList_Resources_ja_InlineClientBundleGenerator.this.cellListSelectedBackground()).getHeight() + "px")  + ";overflow:" + ("hidden")  + ";background:" + ("url(\"" + (CellList_Resources_ja_InlineClientBundleGenerator.this.cellListSelectedBackground()).getSafeUri().asString() + "\") -" + (CellList_Resources_ja_InlineClientBundleGenerator.this.cellListSelectedBackground()).getLeft() + "px -" + (CellList_Resources_ja_InlineClientBundleGenerator.this.cellListSelectedBackground()).getTop() + "px  repeat-x")  + ";background-color:" + ("#628cd5")  + ";color:" + ("white")  + ";height:" + ("auto")  + ";overflow:" + ("visible")  + ";}");
+        return (".GP-OPMDHC,.GP-OPMDJC{cursor:" + ("pointer")  + ";zoom:" + ("1")  + ";}.GP-OPMDIC{background:" + ("#ffc")  + ";}.GP-OPMDKC{height:" + ((CellList_Resources_ja_InlineClientBundleGenerator.this.cellListSelectedBackground()).getHeight() + "px")  + ";overflow:" + ("hidden")  + ";background:" + ("url(\"" + (CellList_Resources_ja_InlineClientBundleGenerator.this.cellListSelectedBackground()).getSafeUri().asString() + "\") -" + (CellList_Resources_ja_InlineClientBundleGenerator.this.cellListSelectedBackground()).getLeft() + "px -" + (CellList_Resources_ja_InlineClientBundleGenerator.this.cellListSelectedBackground()).getTop() + "px  repeat-x")  + ";background-color:" + ("#628cd5")  + ";color:" + ("white")  + ";height:" + ("auto")  + ";overflow:" + ("visible")  + ";}");
       }
       public java.lang.String cellListEvenItem() {
-        return "GKLQPWSHC";
+        return "GP-OPMDHC";
       }
       public java.lang.String cellListKeyboardSelectedItem() {
-        return "GKLQPWSIC";
+        return "GP-OPMDIC";
       }
       public java.lang.String cellListOddItem() {
-        return "GKLQPWSJC";
+        return "GP-OPMDJC";
       }
       public java.lang.String cellListSelectedItem() {
-        return "GKLQPWSKC";
+        return "GP-OPMDKC";
       }
       public java.lang.String cellListWidget() {
-        return "GKLQPWSLC";
+        return "GP-OPMDLC";
       }
     }
     ;

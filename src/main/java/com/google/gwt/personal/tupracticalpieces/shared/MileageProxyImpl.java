@@ -22,12 +22,12 @@
 package com.google.gwt.personal.tupracticalpieces.shared;
 
 import java.math.BigDecimal;
-
+import java.util.List;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import com.google.web.bindery.requestfactory.shared.EntityProxyId;
-
+import com.google.gwt.personal.tupracticalpieces.database.Mileage;
 //import java.util.Date;
 
 //import java.sql.Date;
@@ -182,6 +182,12 @@ public class MileageProxyImpl implements MileageProxy {
 //	  public String getId() {
 //		  return this.supplyDate;
 //	  }
+	  
+//	  List<Mileage> getList() {
+//		  List<Mileage> list;
+//		  
+//		  retrun list; 
+//	  }
 
 
 
@@ -190,5 +196,7 @@ public class MileageProxyImpl implements MileageProxy {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

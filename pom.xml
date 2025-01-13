@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.google.gwt.personal.tupracticalpieces</groupId>
   <artifactId>TUPracticalPieces</artifactId>
-  <version>5.0.0-SNAPSHOT</version>
+  <version>6.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
 	<name>TUPracticalPieces Maven Webapp</name>
 	<url>ec2-13-231-151-111.ap-northeast-1.compute.amazonaws.com'</url>
@@ -12,15 +12,16 @@
     		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Convenience property to set the GWT version -->
-		<gwtVersion>2.8.2</gwtVersion>
+		<gwtVersion>2.12.1</gwtVersion>
         <gwtVersionSuffixGoogle></gwtVersionSuffixGoogle>
 		<gwtVersionSuffixMojo></gwtVersionSuffixMojo>
 		<gwt.extraJvmArgs>-Xmx1536m -Xss2560k</gwt.extraJvmArgs>
 <!--		<jettyVersion>9.4.29.v20200521</jettyVersion>-->
 <!--		<jetty.version>9.4.36.v20210114</jetty.version>-->
 <!--		<jettyVersion>9.4.5.v20170502</jettyVersion>  -->
-		<jettyVersion>9.4.54.v20240208</jettyVersion>
-<!--			<jettyVersion>11.0.21</jettyVersion>-->
+		<!-- <jettyVersion>9.4.54.v20240208</jettyVersion> -->
+		<jettyVersion>11.0.24</jettyVersion>
+<!--			<jettyVersion>11.0.24</jettyVersion>-->
 <!--		<appengine.target.version>1.9.98</appengine.target.version>-->
 <!--
  		<datanucleus.version>5.0.0-release</datanucleus.version> java 8
@@ -29,8 +30,9 @@
 		<datanucleus.version>6.0.0-release</datanucleus.version>
 		<!-- from ver 3.2.0.m2 <artifactId>maven-datanucleus-plugin</artifactId> 
 			<artifactId>datanucleus-maven-plugin</artifactId> -->
-		    <maven.compiler.source>1.8</maven.compiler.source>
+<!-- 		<maven.compiler.source>1.8</maven.compiler.source>
 		    <maven.compiler.target>1.8</maven.compiler.target>
+ -->
 		    <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
         <maven.compiler.compilerId>javac</maven.compiler.compilerId>
 		<!-- Don't let your Mac use a crazy non-standard encoding -->
@@ -40,7 +42,7 @@
 	</properties>
 
 	<prerequisites>
-		<maven>3.6.3</maven>
+		<maven>3.9.9</maven>
 	</prerequisites>
 	<!-- <mirrors> <mirror> <id>jaist</id> <name>nearest mirror</name> <url>http://ftp.jaist.ac.jp/pub/apache/</url> 
 		<mirrorOf>central</mirrorOf> </mirror> </mirrors> -->
@@ -187,10 +189,11 @@
 		<dependency>
 			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-core</artifactId>
-<!-- 20171121
+<!-- 20250108
 			<version>3.3.3</version>
+			<version>3.9.7</version>
  -->
-			<version>3.9.6</version>
+			<version>3.9.9</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -199,7 +202,7 @@
 <!-- 20171121
 			<version>3.3.3</version>
  -->
-			<version>3.9.6</version>
+			<version>3.9.9</version>
 			<scope>provided</scope>
 		</dependency>
 		
@@ -234,32 +237,27 @@
 		</dependency>
     -->
 		<!-- 
-		"provided" so that we don't deploy -->
-		<dependency>
- 			<!--
- 			<groupId>org.gwtproject</groupId>
- 			-->
+			<scope>runtime</scope>
  			<groupId>com.google.gwt</groupId>
-			<artifactId>gwt-servlet</artifactId>
+		"provided" so that we don't deploy -->
+
+<!-- https://mvnrepository.com/artifact/org.gwtproject/gwt-servlet -->
+		<dependency>
+			<groupId>org.gwtproject</groupId>
+			<artifactId>gwt-servlet-jakarta</artifactId>
 			<version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 		</dependency>
-		
+
 		
 		<dependency>
- 			<!--
  			<groupId>org.gwtproject</groupId>
- 			-->
- 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-codeserver</artifactId>
 			<version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
- 			<!--
  			<groupId>org.gwtproject</groupId>
- 			-->
- 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
 			<version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 			<scope>provided</scope>
@@ -268,10 +266,7 @@
 			<scope>provided</scope>
 		-->
 		<dependency>
- 			<!--
  			<groupId>org.gwtproject</groupId>
- 			-->
- 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-dev</artifactId>
 			<version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 			<scope>provided</scope>
@@ -308,18 +303,15 @@
 			
 		</dependency>
 <!-- 
- -->		
 
+ -->
+		<!-- https://mvnrepository.com/artifact/org.gwtproject.web.bindery/requestfactory-server -->
 		<dependency>
- 			<!--
- 			<groupId>org.gwtproject</groupId>
- 			<groupId>com.google.gwt</groupId>
- 			-->
- 			<groupId>com.google.web.bindery</groupId>
-			<artifactId>requestfactory-server</artifactId>
+			<groupId>org.gwtproject.web.bindery</groupId>
+			<artifactId>requestfactory-server-jakarta</artifactId>
 			<version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
-			<scope>provided</scope>
 		</dependency>
+
 		<!--  GIN and Guice for IoC / DI  -->
 		<dependency>
 			<groupId>com.google.inject</groupId>
@@ -346,15 +338,16 @@
        
  
 <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+<!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>5.0.0</version>
       <scope>provided</scope>
     </dependency>
     <!--
     <dependency>
-      <groupId>javax.servlet.jsp</groupId>
+      <groupId>jakarta.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
       <version>2.2</version>
       <scope>provided</scope>
@@ -393,13 +386,15 @@
 
 
 
-
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-validator</artifactId>
+<!--
 		    <version>5.2.4.Final</version>
+		    <version>4.3.2.Final</version>
+-->
+		    <version>5.4.3.Final</version>
 		</dependency>		
-
 
 
 
@@ -466,6 +461,10 @@
     <version>2.7.15</version>
 </dependency>
 
+<!--
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. 
+The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+-->
 	<dependency>
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
@@ -601,6 +600,8 @@
 		    <groupId>org.eclipse.jetty</groupId>
 		    <artifactId>jetty-maven-plugin</artifactId>
 		    <version>${jettyVersion}</version>
+
+
 		    <exclusions>
 				<exclusion>
 					<groupId>tomcat</groupId>
@@ -614,13 +615,7 @@
 					<groupId>org.eclipse.jetty.websocket</groupId>
 					<artifactId>tomcat-juli</artifactId>
 				</exclusion>
-				<!--
-				<exclusion>
-					<groupId>org.gwtproject</groupId>
-					<artifactId>gwt-dev</artifactId>
-				</exclusion>
-				-->
-
+<!--
 				<exclusion>
 					<groupId>org.eclipse.jetty.websocket</groupId>
 					<artifactId>websocket-common</artifactId>
@@ -652,13 +647,15 @@
 				</exclusion>
 
 				<exclusion>
-				    <groupId>javax.servlet.jsp</groupId>
-				    <artifactId>javax.servlet.jsp-api</artifactId>
+				    <groupId>jakarta.servlet.jsp</groupId>
+				    <artifactId>jakarta.servlet.jsp-api</artifactId>
 				</exclusion>
 				<exclusion>
 					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>apache-jsp</artifactId>
 				</exclusion>
+-->
+
 				<exclusion>
 					<groupId>org.mortbay.jasper</groupId>
 					<artifactId>apache-jsp</artifactId>
@@ -667,12 +664,15 @@
 					<groupId>org.mortbay.jasper</groupId>
 					<artifactId>apache-el</artifactId>
 				</exclusion>
-
+<!--
 				<exclusion>
 					<groupId>org.eclipse.jetty.osgi</groupId>
 					<artifactId>jetty-osgi-boot-jsp</artifactId>
 				</exclusion>
+-->
 		    </exclusions>
+
+
 		</dependency>
 		
 
@@ -702,9 +702,14 @@
 -->
 
 
-		 
-	</dependencies>
-
+<!--    <dependency>
+     <groupId>com.google.gwt</groupId>
+     <artifactId>gwt-servlet</artifactId>
+     <version>2.8.2</version>
+   </dependency>
+  -->
+ 
+ </dependencies> 
 	<build>
 		<!-- Generate compiled stuff in the folder used for development mode -->
 		<outputDirectory>${project.build.directory}\${project.build.finalName}\WEB-INF\classes</outputDirectory>
@@ -867,17 +872,18 @@
 					<contextPath>/</contextPath>
 					<descriptor>${project.build.directory}/${project.build.finalName}/WEB-INF/web.xml</descriptor>
  			        <defaultsDescriptor>${project.build.directory}/${project.build.finalName}/WEB-INF/webdefault.xml</defaultsDescriptor>
-<!--				<containerIncludeJarPattern>.*/javax.servlet-[^/]*\.jar$|.*/servlet-api-[^/]*\.jar</containerIncludeJarPattern>
+<!--				<containerIncludeJarPattern>.*/jakarta.servlet-[^/]*\.jar$|.*/servlet-api-[^/]*\.jar</containerIncludeJarPattern>
  			    	<containerExcludeJarPattern>org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer</containerExcludeJarPattern>
- 			    	<containerExcludeJarPattern>.*javax.servlet.jsp.jstl-[^/]*\.jar|.*taglibs-standard-impl-.*\.jar</containerExcludeJarPattern> 
+ 			    	<containerExcludeJarPattern>.*jakarta.servlet.jsp.jstl-[^/]*\.jar|.*taglibs-standard-impl-.*\.jar</containerExcludeJarPattern> 
 -->
 
 			    </webApp>
 <!-- 			    
 			    <jettyXml>/etc/jetty9/jetty.xml,/etc/jetty9/jetty-ssl.xml,/etc/jetty9/jetty-https.xml,/etc/jetty9/jetty-ssl-context.xml</jettyXml>
+			    <jettyXml>${project.build.directory}/${project.build.finalName}/WEB-INF/jetty.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl-context.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-https.xml</jettyXml>
  -->
 <!--			    <jettyXml>src/main/etc/jetty.xml,/etc/jetty9/jetty-ssl.xml,/etc/jetty9/jetty-ssl-context.xml,/etc/jetty9/jetty-https.xml</jettyXml>-->
-			    <jettyXml>${project.build.directory}/${project.build.finalName}/WEB-INF/jetty.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl-context.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-https.xml</jettyXml>
+			    <jettyXmls>${project.build.directory}/${project.build.finalName}/WEB-INF/jetty.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl-context.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-ssl.xml,${project.build.directory}/${project.build.finalName}/WEB-INF/jetty-https.xml</jettyXmls>
 			    
  			    <webAppSourceDirectory>${project.build.directory}\${project.build.finalName}</webAppSourceDirectory>
 <!--
@@ -904,22 +910,38 @@ These configuration parameters apply to your webapp. They should apply to all go
 			</configuration>
 	        <dependencies>
 	        
+
+	        	<dependency>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-jmx</artifactId>
+					<version>${jettyVersion}</version>
+				</dependency>
+
+				<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-reload4j -->
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-reload4j</artifactId>
+					<version>2.0.12</version>
+				</dependency>
+ 				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+					<version>2.0.12</version>
+				</dependency>
 	        
-	        
-	        
-	        
+<!-- 	        
 	        
 				<dependency>
 					<groupId>org.slf4j</groupId>
 					<artifactId>slf4j-log4j12</artifactId>
 					<version>2.0.13</version>
 				</dependency>
- 				<dependency>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-api</artifactId>
-					<version>2.0.13</version>
-				</dependency>
 				
+
+
+ -->
+
+
  				<dependency>
 					<groupId>org.eclipse.jetty</groupId>
 				    	<artifactId>jetty-maven-plugin</artifactId>
@@ -978,8 +1000,8 @@ These configuration parameters apply to your webapp. They should apply to all go
 							-->
 
 							<exclusion>
-							    <groupId>javax.servlet.jsp</groupId>
-							    <artifactId>javax.servlet.jsp-api</artifactId>
+							    <groupId>jakarta.servlet.jsp</groupId>
+							    <artifactId>jakarta.servlet.jsp-api</artifactId>
 							</exclusion>
 							<exclusion>
 								<groupId>org.eclipse.jetty</groupId>
@@ -1073,14 +1095,16 @@ These configuration parameters apply to your webapp. They should apply to all go
          </connectors>
        </configuration>
      </plugin>
+
+
  -->
      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
+        <version>3.13.0</version>
         <configuration>
-          <verbose>false</verbose>
+          <verbose>ture</verbose>
           <fork>false</fork>
 <!--           <executable>C:\Program Files\Java\jdk1.8.0_112\bin\javac</executable> -->
           <compilerVersion>$(maven.compiler.source)</compilerVersion>
@@ -1092,6 +1116,9 @@ These configuration parameters apply to your webapp. They should apply to all go
 		<JAVA_1_7_HOME>${JAVA_HOME}</JAVA_1_7_HOME>
          <java.home>C:\Progra~1\Java\jdk1.7.0_80</java.home>          
  -->
+ 			  	<source>11</source>
+			  	<target>11</target>
+				<release>11</release>
           <forceJavacCompilerUse>true</forceJavacCompilerUse>
          <excludes>
       		<!-- <exclude>com.google.gwt.personal.tupracticalpieces.client.content.auth.CwXFrame</exclude> -->
@@ -1101,28 +1128,30 @@ These configuration parameters apply to your webapp. They should apply to all go
 	      <failOnError>false</failOnError>
         </configuration>
         <dependencies>
-	        <dependency>
- 			<!--
+
+
+
+	        <!-- <dependency>
  			<groupId>com.google.gwt</groupId>
  			<groupId>org.gwtproject</groupId>
  			-->
- 			<groupId>com.google.web.bindery</groupId>
+<!--  			<groupId>com.google.web.bindery</groupId>
 	            <artifactId>requestfactory-server</artifactId>
 	            <version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 	            			<scope>compile</scope>
 	            
 	        </dependency>
-	        <dependency>
+	        <dependency> -->
  			<!--
  			<groupId>com.google.gwt</groupId>
  			<groupId>org.gwtproject</groupId>
  			-->
- 			<groupId>com.google.web.bindery</groupId>
+<!--  			<groupId>com.google.web.bindery</groupId>
 	            <artifactId>requestfactory-apt</artifactId>
 	            <version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 							<scope>compile</scope>
 
-	        </dependency>	        
+	        </dependency>	 -->        
 	        
 <!--	        
 			<dependency>
@@ -1131,7 +1160,9 @@ These configuration parameters apply to your webapp. They should apply to all go
  				<version>1.0.0.GA</version>
 				<classifier>sources</classifier>
 			</dependency>
--->
+--> 
+
+
 
 <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 <dependency>
@@ -1194,13 +1225,14 @@ These configuration parameters apply to your webapp. They should apply to all go
               <!-- 
 		<JAVA_1_7_HOME>${JAVA_HOME}</JAVA_1_7_HOME>
         <java.home>C:\Progra~1\Java\jdk1.7.0_80</java.home>
+				<version>${gwtVersion}${gwtVersionSuffixMojo}</version>
                -->
       
 			<!-- GWT Maven Plugin -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
-				<version>${gwtVersion}${gwtVersionSuffixMojo}</version>
+				<version>2.10.0</version>
 				<!-- JS is only needed in the package phase, this speeds up testing -->
 					<!-- 
 				   <execution>
@@ -1311,6 +1343,8 @@ These configuration parameters apply to your webapp. They should apply to all go
 					<copyWebapp>true</copyWebapp>
 				</configuration>
 			-->
+
+<!-- 
 				<dependencies>
 					<dependency>
 						<groupId>com.google.gwt</groupId>
@@ -1345,51 +1379,38 @@ These configuration parameters apply to your webapp. They should apply to all go
 									<groupId>org.eclipse.jetty</groupId>
 									<artifactId>jetty-servlets</artifactId>
 								</exclusion>
-								<!--
-								<exclusion>
-									<groupId>org.eclipse.jetty</groupId>
-									<artifactId>jetty-annotations</artifactId>
-								</exclusion>
-								
-								<exclusion>
-									<groupId>org.eclipse.jetty.websocket</groupId>
-									<artifactId>websocket-client</artifactId>
-								</exclusion>
-								-->
 								<exclusion>
 									<groupId>org.mortbay.jasper</groupId>
 									<artifactId>apache-jsp</artifactId>
 								</exclusion>
-								<!--
-								<exclusion>
-									<groupId>org.mortbay.jasper</groupId>
-									<artifactId>apache-el</artifactId>
-								</exclusion>
-								-->
 						      </exclusions> 
 						      
 						
 					</dependency>
 
-			        <dependency>
+ -->
+
+
  			<!--
+
+			        <dependency>
  			<groupId>org.gwtproject</groupId>
  			-->
- 			<groupId>com.google.web.bindery</groupId>
+<!--  			<groupId>com.google.web.bindery</groupId>
 			            <artifactId>requestfactory-server</artifactId>
 			            <version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 									<scope>compile</scope>
 			        </dependency>
 			        <dependency>
- 			<!--
- 			<groupId>org.gwtproject</groupId>
- 			-->
  			<groupId>com.google.web.bindery</groupId>
 			            <artifactId>requestfactory-apt</artifactId>
 			            <version>${gwtVersion}${gwtVersionSuffixGoogle}</version>
 									<scope>compile</scope>
 			        </dependency>
-<!-- 
+ -->
+ 
+ 
+ <!-- 
 					<dependency>
 						<groupId>javax.validation</groupId>
 						<artifactId>validation-api</artifactId>
@@ -1443,7 +1464,8 @@ These configuration parameters apply to your webapp. They should apply to all go
 
 
 			
-							</dependencies>
+							<!-- </dependencies> -->
+
 			</plugin>
 
 

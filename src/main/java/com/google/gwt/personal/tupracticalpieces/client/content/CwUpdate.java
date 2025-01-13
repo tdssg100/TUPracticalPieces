@@ -16,35 +16,68 @@
 package com.google.gwt.personal.tupracticalpieces.client.content;
 
 //import java.util.Date;
+import java.util.Arrays;
+import java.util.List;
 
-import com.google.gwt.http.client.URL;
+
+//import com.google.gwt.http.client.URL;
 import com.google.gwt.i18n.client.Constants;
+import com.google.gwt.cell.client.AbstractCell;
+import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
+//import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.cellview.client.CellList;
 //import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.DialogBox;
+//import com.google.gwt.user.client.ui.DialogBox;
 //import com.google.gwt.user.client.ui.Frame;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.RunAsyncCallback;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+//import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.personal.tupracticalpieces.client.ContentWidget;
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesAnnotations.TUPracticalPiecesData;
 //import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesAnnotations.TUPracticalPiecesSource;
 //import com.google.gwt.personal.tupracticalpieces.client.common.AdminTask;
 //import com.google.gwt.personal.tupracticalpieces.client.common.AdminTaskAsync;
 //import com.google.gwt.personal.tupracticalpieces.client.common.ResultFetch;
-import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
+//import com.google.gwt.personal.tupracticalpieces.shared.UserProxy;
+import com.google.gwt.personal.tupracticalpieces.client.event.MileageEditEvent;
+//import com.google.gwt.view.client.ListDataProvider;
+//import com.google.gwt.view.client.NoSelectionModel;
+import com.google.gwt.view.client.SelectionChangeEvent;
+import com.google.gwt.view.client.SelectionModel;
+import com.google.gwt.view.client.SingleSelectionModel;
+import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
 import com.google.gwt.personal.tupracticalpieces.client.common.LoginState;
-/**
+//import com.google.gwt.personal.tupracticalpieces.client.content.MileageWidget;
+import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
+//import com.google.gwt.personal.tupracticalpieces.shared.MileageRequestFactory;
+//import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPlace;
+//import com.google.web.bindery.requestfactory.shared.Receiver;
+//import com.google.web.bindery.requestfactory.shared.ServerFailure;
+//import com.google.web.bindery.requestfactory.shared.RequestTransport;
+//import com.google.web.bindery.requestfactory.gwt.client.DefaultRequestTransport; 
+//import com.google.web.bindery.event.shared.EventBus;
+//import com.google.web.bindery.event.shared.SimpleEventBus;
+//import com.google.gwt.personal.tupracticalpieces.client.event.ShowMileageEvent;
+import com.google.gwt.user.client.ui.DialogBox; //202406
+//import com.google.gwt.personal.tupracticalpieces.client.ClientFactoryImpl;
+
+import java.util.Collections;
+
+ /**
  * Load and store the mileage data.
  */
-public class CwUpdate extends ContentWidget {
+public class CwUpdate extends ContentWidget implements AdminMileageSuperView {
    /**
    * The constants used in this Content Widget.
    */
@@ -52,11 +85,7 @@ public class CwUpdate extends ContentWidget {
   public static interface CwConstants extends Constants {
     String cwUpdateDescription();
   
-    String cwUpdateForbidden();
-    
     String cwUpdateName();
-    
-    String cwXFrameName();
     
     String cwCommonAdminTitle();
     
@@ -77,53 +106,42 @@ public class CwUpdate extends ContentWidget {
 //  //@TUPracticalPiecesData
 //  public final AdminTaskAsync adminTaskSvc = GWT.create(AdminTask.class);
 //  
-  /**
-   * OAuth 2 access url.
-   */
-  //@TUPracticalPiecesData
-  public String url = null;
+  //private final ClientFactoryImpl cf;
+//  interface Presenter {
+//  	void goTo(Place place);
+//  }
+  
+  Presenter presenter;
+  //private final EventBus eventBus = new EventBus();
+  //private final PlaceController placeController = new PlaceController(eventBus);
  
+  //private final MileageRequestFactory requestFactory = GWT.create(MileageRequestFactory.class);
   /**
-   * DB field supplyDate.
+   * DB field name.
    */
   //@TUPracticalPiecesData
-  private TextBox supplyDateTextBox = new TextBox();
+  private TextBox nameTextBox = new TextBox();
   
   /**
-   * DB field quantity.
+   * DB field password.
    */
   //@TUPracticalPiecesData
-  private TextBox quantityTextBox = new TextBox();
+  private TextBox passwordTextBox = new TextBox();
   
   /**
-   * DB field unitPrice.
+   * DB field comment.
    */
   //@TUPracticalPiecesData
-  private TextBox unitPriceTextBox = new TextBox();
-  
-  /**
-   * DB field totalPrice.
-   */
-  //@TUPracticalPiecesData
-  private TextBox totalPriceTextBox = new TextBox();
-  
-  /**
-   * DB field bsMileage.
-   */
-  //@TUPracticalPiecesData
-  private TextBox bsMileageTextBox = new TextBox();
-  
-  /**
-   * DB field totalMileage.
-   */
-  //@TUPracticalPiecesData
-  private TextBox totalMileageTextBox = new TextBox();
+  private TextBox commentTextBox = new TextBox();
   
   /**
    * DB update parameters.
    */
   //@TUPracticalPiecesData
   static String tempStr;
+
+  //@TUPracticalPiecesData
+  public  final DialogBox dialogBox = new DialogBox();
 
   /**
    * main panel.
@@ -134,7 +152,7 @@ public class CwUpdate extends ContentWidget {
    * page content.
    */
   //@TUPracticalPiecesData
-  public HTML contentDiv = null;
+  public HTML contentDiv =  new HTML("<p>Log:</p>");
   
   /**
    * page content.
@@ -146,7 +164,7 @@ public class CwUpdate extends ContentWidget {
    * page content.
    */
   //@TUPracticalPiecesData
-  public HorizontalPanel contPanel = new HorizontalPanel();
+  public VerticalPanel contPanel = new VerticalPanel();
   
   /**
    * page content.
@@ -158,19 +176,24 @@ public class CwUpdate extends ContentWidget {
    * Issue the api call.
    */
   //@TUPracticalPiecesData
-  public Button executeButton = new Button("Show");
+  public Button showButton = new Button("Show");
   
   /**
    * Issue the api call.
    */
   //@TUPracticalPiecesData
-  public Button deleteButton = new Button("DeleteJDO");
+  public Button editButton = new Button("Edit");
+  /**
+   * Issue the api call.
+   */
+  //@TUPracticalPiecesData
+  public Button deleteButton = new Button("Delete");
   
   /**
    * Issue the api call.
    */
   //@TUPracticalPiecesData
-  public Button insertCloudButton = new Button("InsertIntoGoogleCloudSQL");
+  public Button insertCloudButton = new Button("Insert");
 //  
 //  /**
 //   * Mileage Table (Widget).
@@ -182,7 +205,7 @@ public class CwUpdate extends ContentWidget {
    * Mileage Table (Widget).
    */
   //@TUPracticalPiecesData
-  public CellList<MileageProxy> mileageList = null;
+//  public CellList<MileageProxy> mileageList = null;
 //  /**
 //   * Mileage Table (Widget).
 //   */
@@ -201,12 +224,84 @@ public class CwUpdate extends ContentWidget {
   //@TUPracticalPiecesData
   //private Timer timer;
   
+    /**
+   * Resources used by the mobile CellList.
+   */
+  interface CellListResources extends CellList.Resources {
+    @Source({CellList.Style.DEFAULT_CSS})
+    CellListStyle cellListStyle();
+  }
+
+  /**
+   * Styles used by the mobile CellList.
+   */
+  interface CellListStyle extends CellList.Style {
+  }
+
+
+
+// XXX use default celllist style.
+//
+//  /**
+//   * The UiBinder interface.
+//   */
+//  //interface MobileAppTaskListViewUiBinder extends UiBinder<Widget, MobileAppTaskListView> {
+//  interface AdminMileageViewUiBinder extends UiBinder<Widget, AdminMileageView> {
+//  }
+//
+//  /**
+//   * The UiBinder used to generate the view.
+//   */
+//  //private static MobileAppTaskListViewUiBinder uiBinder = GWT.create(MobileAppTaskListViewUiBinder.class);
+//  private static AdminMileageViewUiBinder uiBinder = GWT.create(AdminMileageViewUiBinder.class);
+  /**
+   * A custom {@link Cell} used to render a {@link Contact}.
+   * A custom {@link Cell} used to render a {@link Mileage}.
+   */
+  private static class MileageCell extends AbstractCell<MileageProxy> {
+    @Override
+    public void render(Context context, MileageProxy value, SafeHtmlBuilder sb) {
+      if (value != null) {
+        sb.appendHtmlConstant("<div style=\"height:32px;overflow:auto;\"><table>");
+        sb.appendHtmlConstant("<tr><td>");
+        sb.appendEscaped(value.getSupplyDate());
+        sb.appendHtmlConstant("</td><td>");
+//        sb.appendEscaped(String.valueOf(value.getQuantity()).substring(0, 5));
+        sb.appendEscaped(String.valueOf(value.getQuantity()));
+        sb.appendHtmlConstant("</td><td>");
+        sb.appendEscaped(String.valueOf(value.getUnitPrice()));
+        sb.appendHtmlConstant("</td><td>");
+        sb.appendEscaped(String.valueOf(value.getTotalPrice()));        
+        sb.appendHtmlConstant("</td><td>");
+//        sb.appendEscaped(String.valueOf(value.getBsMileage()).substring(0, 5));
+        sb.appendEscaped(String.valueOf(value.getBsMileage()));
+        sb.appendHtmlConstant("</td><td>");
+ //       sb.appendEscaped(String.valueOf(value.getTotalMileage()).substring(0, 6));
+        sb.appendEscaped(String.valueOf(value.getTotalMileage()));
+        sb.appendHtmlConstant("</td></tr></table></div>");
+      }
+    }
+  } //
+//  /**
+//   * Displays the list of tasks.
+//   */
+////  @UiField(provided = true)
+////  CellList<TaskProxy> taskList;
+    CellList<MileageProxy> mileageList; // = new CellList<MileageProxy>(new MileageCell());
+  
+    private ScrollPanel sp;
+    private MileageProxy selected;
+    
+  //final ListDataProvider<MileageProxy> dataProvider = new ListDataProvider<MileageProxy>();
+    
   /**
    * An instance of the constants.
    */
   @TUPracticalPiecesData
-  private final CwConstants constants;
+  public final CwConstants constants;
   
+
+
   /**
    * Constructor.
    */
@@ -216,18 +311,6 @@ public class CwUpdate extends ContentWidget {
     this.constants = constants;
   }
   
-//  public CwUpdate() {
-//	  CwConstants constants = this.constants;
-//	  super(constants.cwUpdateName(), constants.cwUpdateDescription(), false);
-//  }
-//  
-//  public CwUpdate(String title, String descript, com.google.gwt.personal.tupracticalpieces.client.content.auth.CwXFrame.CwConstants constants2) {
-//	  super(title, descript, false);
-//	  //this.constants = this.constants;
-//	  this.constants = (CwConstants) constants2;
-//	  //new CwFrame(this.constants);
-//  }
-
   
   /**
    * Initialize this example.
@@ -235,225 +318,88 @@ public class CwUpdate extends ContentWidget {
   //@TUPracticalPiecesSource
   @Override
   public Widget onInitialize() {
-	
-    /* removed from Google API Console
-    if (("tupracticalpieces.appspot.com").equals(Window.Location.getHost())
-    		|| ("www.tupracticalpieces.appspot.com").equals(Window.Location.getHost())) {
-      url = "https://accounts.google.com/o/oauth2/auth?" + 
-        URL.encode("response_type=code&" +
-        "client_id=142776700795.apps.googleusercontent.com&" +
-        "redirect_uri=" + Window.Location.getProtocol() + "//" + Window.Location.getHost() + "/oauth2callback&" +
-        "scope=https://www.googleapis.com/auth/userinfo.profile " +
-	        "https://www.googleapis.com/auth/sqlservice&" + 
-	    "state=/profile");
-    } else {
-      url = "https://accounts.google.com/o/oauth2/auth?" + 
-    	URL.encode("response_type=code&" +
-    	"client_id=142776700795-mh5vdbe743a9imq4jh224661dhmh397g.apps.googleusercontent.com&" +
-    	"redirect_uri=" + "http://localhost:8888/oauth2callback&" +
-    	"scope=https://www.googleapis.com/auth/userinfo.profile " +
-    	    "https://www.googleapis.com/auth/sqlservice&" + 
-    	"state=/profile");
-    }
-  	  * 
-  	  * create OAuth2 ID 20131215/16
-  	  */
-	/*
-    if (("tupracticalpieces.appspot.com").equals(Window.Location.getHost())
-    		|| ("www.tupracticalpieces.appspot.com").equals(Window.Location.getHost())) {
-      url = "https://accounts.google.com/o/oauth2/auth?" + 
-        URL.encode("response_type=code&" +
-        "client_id=9571369657-pst4k53gna3tssfp6dfjp1g82elfrjnb.apps.googleusercontent.com&" +
-        "redirect_uri=" + Window.Location.getProtocol() + "//" + Window.Location.getHost() + "/oauth2callback&" +
-        "scope=https://www.googleapis.com/auth/userinfo.profile " +
-	        "https://www.googleapis.com/auth/sqlservice&" + 
-	    "state=/profile");
-    } else {
-      url = "https://accounts.google.com/o/oauth2/auth?" + 
-    	URL.encode("response_type=code&" +
-    	"client_id=9571369657.apps.googleusercontent.com&" +
-    	"redirect_uri=" + "http://localhost:8888/oauth2callback&" +
-    	"scope=https://www.googleapis.com/auth/userinfo.profile " +
-    	    "https://www.googleapis.com/auth/sqlservice&" + 
-    	"state=/profile");
-      Window.alert(url); //XXTODO when restart to update, open this url.
-   
-    }
-    */
-	/* 20140501 add admin to scope
-    */
-//    if (("127.0.0.1:8888").equals(Window.Location.getHost())
-//    		|| ("localhost:8888").equals(Window.Location.getHost())) {
-//        url = "https://accounts.google.com/o/oauth2/auth?" + 
-//            	URL.encode("response_type=code&" +
-//            	"client_id=9571369657.apps.googleusercontent.com&" +
-//            	"redirect_uri=" + "http://localhost:8888/oauth2callback&" +
-//            	"scope=https://www.googleapis.com/auth/userinfo.profile " +  
-//            		"https://www.googleapis.com/auth/userinfo.email&" +
-//            	"state=/profile");
-//              Window.alert(url); //xxxTODO when restart to update, open this url.
-//    } else {
-//        url = "https://accounts.google.com/o/oauth2/auth?" + 
-//                URL.encode("response_type=code&" +
-//                "client_id=9571369657-7va8o0mlabijtltni1bmjui8ofqmurm8.apps.googleusercontent.com&" +
-//                "redirect_uri=" + Window.Location.getProtocol() + "//" + Window.Location.getHost() + "/oauth2callback&" +
-//            	"scope=https://www.googleapis.com/auth/userinfo.profile " +  
-//        			"https://www.googleapis.com/auth/userinfo.email&" +
-//        	    "state=/profile");
-//        		//Window.confirm(url); //xxxTODO when restart to update, open this url.
-//    }
-//    
-//    vPanel.setSpacing(10);
-//    //apiFrame.setHeight("15em");
-//    //apiFrame.setWidth("24em");
-//    vPanel.add(new HTML("<a href='https://appengine.google.com/'>dashboard</a>"));
-//    //vPanel.add(new HTML("<a href='https://code.google.com/apis/console/'>Google API console</a>"));
-//    vPanel.add(new HTML("<a href='https://console.developers.google.com/'>Google API console</a>"));
-//    HorizontalPanel buttonPanel = new HorizontalPanel();
-//    buttonPanel.add(executeButton);
-//    buttonPanel.add(deleteButton);
-//    buttonPanel.add(insertCloudButton);
-//	disenableButton();
-//    vPanel.add(buttonPanel);
-//    //vPanel.add(apiFrame);
-//	contentDiv = new HTML("<p></p>");
-//    vPanel.add(contentDiv);
-//    contPanel.add(vPanel);
-//    /* retrieve the last session properties */
-//    AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
-//	      public void onFailure(Throwable caught) {
-//	    	String wedgeStr = "<ol style='list-style-type: disc'>";
-//	    	wedgeStr += "<li>" + "RPC failure." + "</li>";
-//	    	wedgeStr += "</ol>";
-//	    	contentDiv.setHTML(contentDiv.getHTML() + wedgeStr);
-//	      }
-//	      public void onSuccess(ResultFetch result) {
-//	          if (result.getResult()) {
-//	        	  contentDiv.setHTML(result.getText());
-//		    	  String[] tmp = result.getText().split(",");
-//			      java.util.Date tmpDate = new java.util.Date(Long.parseLong(tmp[2]));
-//			      contentDiv.setHTML(" go into bodyWidget" + ":" + tmp[0] + "," + tmp[1] + "," + tmpDate + "," + tmp[3] + ".");
-//			      bodyWidget(tmp[0], tmp[1], tmpDate, tmp[3]);
-//	          } else {
-//			      contentDiv.setHTML(contentDiv.getHTML() + result.getText());
-//	          }
-//	      }
-//	};
-//	adminTaskSvc.saveJobName("ConsentCheck", callback);
-	  
-	  
-	  
-//	  
-//	  contPanel.addAttachHandler(new AttachEvent.Handler() {
-//
-//		  @Override
-//		  public void onAttachOrDetach(AttachEvent event) {
-//		    // do something
-//		  }
-//		});  
-	  
+    // Create the CellList.
+    CellListResources cellListRes = GWT.create(CellListResources.class);
+    mileageList = new CellList<MileageProxy>(new MileageCell(), cellListRes);
+    final SingleSelectionModel<MileageProxy> selectionModel = new SingleSelectionModel<MileageProxy>();
+    mileageList.setSelectionModel(selectionModel);
+    selected = selectionModel.getSelectedObject();
+    selectionModel.addSelectionChangeHandler(new SelectionChangeEvent.Handler() {
+        @Override
+        public void onSelectionChange(SelectionChangeEvent event) {
+        	selected = selectionModel.getSelectedObject();
+            //if (selected != null) {
+            //	 presenter.selectMileage(selected);
+            //}
+
+        }
+	});
+    showButton.setEnabled(false);
+    editButton.setEnabled(false);	    
+    deleteButton.setEnabled(false);
+    insertCloudButton.setEnabled(false);
+    
+
+	    
+	    buttonPanel.add(showButton);
+	    buttonPanel.add(editButton);
+	    buttonPanel.add(deleteButton);
+	    buttonPanel.add(insertCloudButton);
+		//disenableButton(); 
+	    contPanel.add(buttonPanel);
+	    
+	    
+	    //contPanel.add( new MileageWidget(15));
+	    //vPanel.add(apiFrame);
+
+		//mileageList.setHTML("<table><tr><td>writing maileage list...</td></tr></table>");
+		//setMileages();
+		
+	    // Create a CellList.
+	    //mileageList = new CellList<MileageProxy>(new MileageCell());
+	    // Create a list data provider.
+	    //final ListDataProvider<MileageProxy> dataProvider = new ListDataProvider<MileageProxy>();
+	    // Add the cellList to the dataProvider.
+	    //dataProvider.addDataDisplay(mileageList);		
+
+
+	    //mileageList.setHeight("100%");
+	    sp = new ScrollPanel(mileageList);
+	    sp.setHeight("500px");
+	    sp.setWidth("500px");
+	    vPanel.add(sp);
+	    //mileageList.setHeight("500px");
+	    
+
+	    
+	    //contentDiv = new HTML("<p>Log:</p>");
+	    
+	    //gridPanel.add(mileageList);
+	    //gridPanel.setVisible(true);  // @@@@@@@@@@@@@@@@@@@@@@@@@@@a
+	    vPanel.add(contentDiv);
+	    vPanel.add(gridPanel);
+//	    HTML contentTemp = new HTML("<table><tr><td>writing test list...</td></tr></table>");
+//		vPanel.add(contentTemp);
+	    contPanel.add(vPanel);
+		//return contPanel;
+		//adminMileageView.add(contPanel);
+//		adminMileageView.add(super.onInitialize());
+//	    //initWidget(uiBinder.createAndBindUi(this));
+	    //initWidget(uiBinder.createAndBindUi(this)); //@@@@@@@@@@@@@@@@@@
+//  
+
 	/* 202406 add User authentication dialog
+	 */
 	LoginState ls = LoginState.getInstance();
 	ls.checkLoginAdmin(dialogBox, constants.cwCommonAdminTitle(),
 	    constants.cwCommonAdminName(), constants.cwCommonAdminPassword(), 
 	    constants.cwCommonAdminOk(), constants.cwCommonAdminCancel(),
-	    Arrays.asList(showButton), Arrays.asList(contentDiv),Window.Location.getHref());
-	 */	  
-	  
+	    Arrays.asList(showButton), Arrays.asList(contentDiv), Window.Location.getHref());
 	  
 	return contPanel;
+
+
   }
-//  
-//public void bodyWidget(String regiuser, String state, java.util.Date expire, String session) {
-//    //Window.alert("bodyWidget entered.");
-//	//long session = 0; @@@@@getSessionIdInJava();
-//	/* the other user is making login process */
-//	if (!session.equals(regiuser) && state.equals("LoginTRY")) {
-//		contentDiv.setHTML(contentDiv.getHTML() + "Please retry after a while.");
-//		return;
-//    }
-//	java.util.Date curTime = new java.util.Date();
-//	/* login failuer 2
-//	 * 1/2: in service to other user */
-//	if (!session.equals(regiuser) && state.equals("LoginOK") && expire.compareTo(curTime) > 0) {
-//		contentDiv.setHTML(contentDiv.getHTML() + "You are not authorized.");
-//		return;
-//    }
-//	/* 2/2: not authorative of google accout*/
-//	if (session.equals(regiuser) && !state.equals("LoginOK") ) {
-//		contentDiv.setHTML(contentDiv.getHTML() + "You are not authorized in google account.");
-//		return;
-//    }
-//	/* TimeOut occurs */
-//	if (session.equals(regiuser) && state.equals("LoginOK") &&  curTime.compareTo(expire) > 0) {
-//		contentDiv.setHTML("Time out occurs.");
-//	    /* need to reset time out */
-//	    AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
-//		      public void onFailure(Throwable caught) {
-//		    	String wedgeStr = "<ol style='list-style-type: disc'>";
-//		    	wedgeStr += "<li>" + "RPC failure." + "</li>";
-//		    	wedgeStr += "</ol>";
-//		    	contentDiv.setHTML(contentDiv.getHTML() + wedgeStr);
-//		      }
-//		      public void onSuccess(ResultFetch result) {
-//		          if (result.getResult()) {
-//		        	  contentDiv.setHTML(result.getText());
-//		          } else {
-//				      contentDiv.setHTML(contentDiv.getHTML() + result.getText());
-//		          }
-//		      }
-//		};
-//		adminTaskSvc.saveJobName("ConsentTimeOut", callback);
-//		return;
-//    }
-//    /* can try to login 
-//     *  not 
-//     *  no need to consult google account.
-//     *  session == regiuser && state = "LoginOK" && expire > curTime || 
-//     */
-//    /* login process */
-//    //Window.alert("before login condition check.");
-//    if ((curTime.compareTo(expire) > 0) || (!session.equals(regiuser)) || !state.equals("LoginOK")) {
-//        //if (Window.confirm("after login condition check.")) {
-//        /* log on process */
-//        AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
-//    	      public void onFailure(Throwable caught) {
-//    	    	String wedgeStr = "<ol style='list-style-type: disc'>";
-//    	    	wedgeStr += "<li>" + "RPC failure." + "</li>";
-//    	    	wedgeStr += "</ol>";
-//    	    	contentDiv.setHTML(contentDiv.getHTML() + wedgeStr);
-//    	      }
-//    	      public void onSuccess(ResultFetch result) {
-//	              if (result.getResult()) {
-//	            	  Window.Location.assign(url);
-//	              } else {
-//	    		    contentDiv.setHTML(contentDiv.getHTML() + result.getText());
-//	              }
-//	          }
-//    	};
-////    	adminTaskSvc.saveJobName("ConsentLogin:" + session + "," + "LoginTRY" + ",0,CwUpdate", callback);
-//    	adminTaskSvc.saveJobName("ConsentLogin:" + session + "," + "LoginTRY" + ",0,AdminMileageView", callback);
-//        //}
-//    }
-//    /* otherwise continue */
-//    /*      (session == regiuser) && state == 'LoginOK' && expire > curTime
-//     * not( (session != regiuser) || state != 'LoginOK' || expire <= curTime)
-//     */
-//    // Create the dialog box
-//  	enableButton();
-//    final DialogBox dialogBox = new DialogBox();
-//    dialogBox.setText("Insert record into Google-Cloud-SQL as follows:");
-//    dialogBox.setAnimationEnabled(true);
-//    VerticalPanel dialogVPanel = new VerticalPanel();
-//    dialogBox.add(dialogVPanel);
-//    dialogVPanel.setWidth("100%");
-//    dialogVPanel.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
-//    dialogVPanel.add(supplyDateTextBox);
-//    dialogVPanel.add(quantityTextBox);
-//    dialogVPanel.add(unitPriceTextBox);
-//    dialogVPanel.add(totalPriceTextBox);
-//    dialogVPanel.add(bsMileageTextBox);
-//    dialogVPanel.add(totalMileageTextBox);
 //       
 //    Button insertButton = new Button("insert");
 //    dialogVPanel.add(insertButton);
@@ -623,34 +569,36 @@ public class CwUpdate extends ContentWidget {
 	   });
   }
   
-  /* 
-   * check if the user has finished the consent.
-   */
-  /*
-  private void checkConsent() {
-	AsyncCallback<ResultFetch> callback = new AsyncCallback<ResultFetch>() {
-	  public void onFailure(Throwable caught) {
-		timer.cancel();
-		String wedgeStr = "<ol style='list-style-type: disc'>";
-		wedgeStr += "<li>" + "RPC failure. exception:" + caught.toString() + "</li>";
-		wedgeStr += "</ol>";
-		contentDiv.setHTML(wedgeStr);
-      }
-	  public void onSuccess(ResultFetch result) {
-		timer.cancel();
-		if (result.getResult()) {
-		  contentDiv.setHTML(result.getText());
-		  apiFrame.setUrl("adminmethod?dp=" + URL.encode(url));
-		  //Window.open(url,"Goolge Appengine Concent", "");
-		  enableButton();
-		} else {
-  		  contentDiv.setHTML(result.getText());    		    	
-		}
-	  }
-	};
-	adminTaskSvc.saveJobName("CheckConsent", callback);	  
+  public void setPresenter(Presenter presenter) {
+  //Window.alert("setPresenter enter.");
+  	this.presenter = presenter;
   }
-  */
+  
+  public void setMileages(List<MileageProxy> mileages) {
+    mileageList.setRowData(mileages);
+    contentDiv.setHTML(contentDiv.getHTML() + "<p>mileage count:" + mileages.size() + "</p>");
+    //contentDiv.setHTML("<p>mileage count:" + mileages.size() + "</p>);
+  }
+    
+//  private void fireMileageEdit() {
+//  //Window.alert("fireMileageEdit enter");
+//  //    eventBus.fireEventFromSource(new MileageEditEvent(selected), this);
+//  //	placeController.goTo("!adminEdit?id=" + selected.getId());
+//  //	placeController.goTo(new MileageEditPlace(selected.getId(), "app"));
+//  //	eventBus.fireEvent(new ShowMileageEvent(selected));
+//  //    eventBus.fireEventFromSource(new ShowMileageEvent(selected), this);
+//  //	placeController.goTo(new MileageEditPlace(selected.getId(), selected));
+//  //	placeController.goTo(new MileageEditPlace(selected.getId(), "app"));
+//  //	presenter.goTo(new MileageEditPlace(selected.getId(), selected));
+//  //Window.alert("fireMileageEdit exit");
+//  }
+  
+  private void fireMileageDelete() {
+  
+      //eventBus.fireEventFromSource(new MileageEditEvent(selected), this);
+  }
+
+  
   /*
    * enable the button
    *
@@ -674,4 +622,26 @@ public class CwUpdate extends ContentWidget {
  * JS function call. Get the session id. @@@ session id ???
  * 	return $wnd.__gwtStatsSessionId; @@@@@@
  */
+
+  public Button getShowButton() {
+	return showButton;
+  }
+
+  public Button getEditButton() {
+    return editButton;
+  }
+  
+  public Button getDeleteButton() {
+    return deleteButton;
+  }
+
+  public Button getInsertButton() {
+    return insertCloudButton;
+  }
+  
+  public MileageProxy getSelected() {
+	return selected;
+  }
+  
 }
+

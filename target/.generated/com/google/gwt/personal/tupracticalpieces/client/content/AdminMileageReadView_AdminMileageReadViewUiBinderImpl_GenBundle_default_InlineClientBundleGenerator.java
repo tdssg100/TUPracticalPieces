@@ -20,43 +20,43 @@ public class AdminMileageReadView_AdminMileageReadViewUiBinderImpl_GenBundle_def
         return "style";
       }
       public String getText() {
-        return com.google.gwt.i18n.client.LocaleInfo.getCurrentLocale().isRTL() ? ((".GKLQPWSIM{padding:" + ("4px"+ " " +"10px")  + ";font-size:" + ("14pt")  + ";font-weight:" + ("bold")  + ";color:" + ("#666")  + ";}.GKLQPWSBM{padding:" + ("10px")  + ";background:" + ("white")  + ";}.GKLQPWSDM{color:" + ("#333")  + ";font-size:" + ("10pt")  + ";padding-bottom:" + ("3px")  + ";}.GKLQPWSCM{width:" + ("300px")  + ";}.GKLQPWSHM{margin-left:") + (("10px")  + ";}.GKLQPWSEM{height:" + ("6em")  + ";}.GKLQPWSJM{color:" + ("red")  + ";}.GKLQPWSOL{padding-top:" + ("8px")  + ";padding-bottom:" + ("8px")  + ";color:" + ("#3f3f3f")  + ";}.GKLQPWSAM{text-align:" + ("center")  + ";}.GKLQPWSPL{padding:" + ("10px")  + ";margin-top:" + ("15px")  + ";}.GKLQPWSFM{width:" + ("130px")  + ";margin-left:" + ("5px") ) + (";}.GKLQPWSGM{border-right:" + ("1px"+ " " +"solid"+ " " +"#aaa")  + ";}")) : ((".GKLQPWSIM{padding:" + ("4px"+ " " +"10px")  + ";font-size:" + ("14pt")  + ";font-weight:" + ("bold")  + ";color:" + ("#666")  + ";}.GKLQPWSBM{padding:" + ("10px")  + ";background:" + ("white")  + ";}.GKLQPWSDM{color:" + ("#333")  + ";font-size:" + ("10pt")  + ";padding-bottom:" + ("3px")  + ";}.GKLQPWSCM{width:" + ("300px")  + ";}.GKLQPWSHM{margin-right:") + (("10px")  + ";}.GKLQPWSEM{height:" + ("6em")  + ";}.GKLQPWSJM{color:" + ("red")  + ";}.GKLQPWSOL{padding-top:" + ("8px")  + ";padding-bottom:" + ("8px")  + ";color:" + ("#3f3f3f")  + ";}.GKLQPWSAM{text-align:" + ("center")  + ";}.GKLQPWSPL{padding:" + ("10px")  + ";margin-top:" + ("15px")  + ";}.GKLQPWSFM{width:" + ("130px")  + ";margin-right:" + ("5px") ) + (";}.GKLQPWSGM{border-left:" + ("1px"+ " " +"solid"+ " " +"#aaa")  + ";}"));
+        return com.google.gwt.i18n.client.LocaleInfo.getCurrentLocale().isRTL() ? ((".GP-OPMDKM{padding:" + ("4px"+ " " +"10px")  + ";font-size:" + ("14pt")  + ";font-weight:" + ("bold")  + ";color:" + ("#666")  + ";}.GP-OPMDDM{padding:" + ("10px")  + ";background:" + ("white")  + ";}.GP-OPMDFM{color:" + ("#333")  + ";font-size:" + ("10pt")  + ";padding-bottom:" + ("3px")  + ";}.GP-OPMDEM{width:" + ("300px")  + ";}.GP-OPMDJM{margin-left:") + (("10px")  + ";}.GP-OPMDGM{height:" + ("6em")  + ";}.GP-OPMDLM{color:" + ("red")  + ";}.GP-OPMDAM{padding-top:" + ("8px")  + ";padding-bottom:" + ("8px")  + ";color:" + ("#3f3f3f")  + ";}.GP-OPMDCM{text-align:" + ("center")  + ";}.GP-OPMDBM{padding:" + ("10px")  + ";margin-top:" + ("15px")  + ";}.GP-OPMDHM{width:" + ("130px")  + ";margin-left:" + ("5px") ) + (";}.GP-OPMDIM{border-right:" + ("1px"+ " " +"solid"+ " " +"#aaa")  + ";}")) : ((".GP-OPMDKM{padding:" + ("4px"+ " " +"10px")  + ";font-size:" + ("14pt")  + ";font-weight:" + ("bold")  + ";color:" + ("#666")  + ";}.GP-OPMDDM{padding:" + ("10px")  + ";background:" + ("white")  + ";}.GP-OPMDFM{color:" + ("#333")  + ";font-size:" + ("10pt")  + ";padding-bottom:" + ("3px")  + ";}.GP-OPMDEM{width:" + ("300px")  + ";}.GP-OPMDJM{margin-right:") + (("10px")  + ";}.GP-OPMDGM{height:" + ("6em")  + ";}.GP-OPMDLM{color:" + ("red")  + ";}.GP-OPMDAM{padding-top:" + ("8px")  + ";padding-bottom:" + ("8px")  + ";color:" + ("#3f3f3f")  + ";}.GP-OPMDCM{text-align:" + ("center")  + ";}.GP-OPMDBM{padding:" + ("10px")  + ";margin-top:" + ("15px")  + ";}.GP-OPMDHM{width:" + ("130px")  + ";margin-right:" + ("5px") ) + (";}.GP-OPMDIM{border-left:" + ("1px"+ " " +"solid"+ " " +"#aaa")  + ";}"));
       }
       public java.lang.String button() {
-        return "GKLQPWSOL";
+        return "GP-OPMDAM";
       }
       public java.lang.String buttonPanel() {
-        return "GKLQPWSPL";
+        return "GP-OPMDBM";
       }
       public java.lang.String dateButton() {
-        return "GKLQPWSAM";
+        return "GP-OPMDCM";
       }
       public java.lang.String editForm() {
-        return "GKLQPWSBM";
+        return "GP-OPMDDM";
       }
       public java.lang.String field() {
-        return "GKLQPWSCM";
+        return "GP-OPMDEM";
       }
       public java.lang.String label() {
-        return "GKLQPWSDM";
+        return "GP-OPMDFM";
       }
       public java.lang.String notesBox() {
-        return "GKLQPWSEM";
+        return "GP-OPMDGM";
       }
       public java.lang.String saveButton() {
-        return "GKLQPWSFM";
+        return "GP-OPMDHM";
       }
       public java.lang.String templateList() {
-        return "GKLQPWSGM";
+        return "GP-OPMDIM";
       }
       public java.lang.String textBoxWrapper() {
-        return "GKLQPWSHM";
+        return "GP-OPMDJM";
       }
       public java.lang.String title() {
-        return "GKLQPWSIM";
+        return "GP-OPMDKM";
       }
       public java.lang.String violation() {
-        return "GKLQPWSJM";
+        return "GP-OPMDLM";
       }
     }
     ;

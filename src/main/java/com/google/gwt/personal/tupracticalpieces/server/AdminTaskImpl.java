@@ -7,14 +7,16 @@ package com.google.gwt.personal.tupracticalpieces.server;
  import com.google.appengine.api.urlfetch.HTTPResponse;
  import com.google.appengine.api.urlfetch.URLFetchServiceFactory;
  */
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+//import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import com.google.gwt.user.server.rpc.jakarta.RemoteServiceServlet;
 import com.google.gwt.personal.tupracticalpieces.client.common.AdminTask;
 import com.google.gwt.personal.tupracticalpieces.client.common.ResultFetch;
 import com.google.gwt.personal.tupracticalpieces.database.MileageDataUtils;
 
 import java.util.logging.Logger;//TODO when deploy, change loglevel in log.properties
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpServletRequest;
+//import com.google.gwt.user.server.rpc.AbstractRemoteServiceServlet;
+import jakarta.servlet.http.HttpSession;
 //import java.net.URLEncoder;
 
 /**
@@ -131,7 +133,8 @@ public class AdminTaskImpl extends RemoteServiceServlet implements AdminTask {
 			if (jobName.length() >= 12
 					&& "ConsentCheck".equals(jobName.substring(0, 12))) {				
 				// create session and store userid
-				HttpServletRequest request = this.getThreadLocalRequest();
+				//AbstractRemoteServiceServlet request = this.getThreadLocalRequest();
+				HttpServletRequest request = (HttpServletRequest) this.getThreadLocalRequest();
 				HttpSession session = request.getSession(true);
 				session.setAttribute("UserID", 1);
 				log.info("..session id=" + session.getId());

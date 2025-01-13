@@ -18,7 +18,7 @@ public com.google.gwt.safehtml.shared.SafeHtml html3(java.lang.String arg0,java.
 StringBuilder sb = new java.lang.StringBuilder();
 sb.append("<table align='center' cellspacing='10'> <tr> <td align='center' class='");
 sb.append(com.google.gwt.safehtml.shared.SafeHtmlUtils.htmlEscape(arg0));
-sb.append("' colspan='2'>Task Details</td> </tr>   <tr> <td class='");
+sb.append("' colspan='2'>Mileage Details</td> </tr>   <tr> <td class='");
 sb.append(com.google.gwt.safehtml.shared.SafeHtmlUtils.htmlEscape(arg1));
 sb.append("'>Supply date:</td> <td> <span id='");
 sb.append(com.google.gwt.safehtml.shared.SafeHtmlUtils.htmlEscape(arg2));

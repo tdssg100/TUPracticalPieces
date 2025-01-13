@@ -26,7 +26,9 @@ package com.google.gwt.personal.tupracticalpieces.presenter.list;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.place.shared.Place;
-
+import com.google.web.bindery.event.shared.EventBus;
+import com.google.gwt.personal.tupracticalpieces.presenter.list.PresentsWidgets;
+//import com.gwtplatform.mvp.client.PresenterWidget;
 //import com.google.gwt.sample.mobilewebapp.shared.TaskProxy;
 //import com.google.gwt.personal.ui.client.PresentsWidgets;
 import java.util.List;
@@ -40,33 +42,40 @@ public interface AdminMileageSuperView extends IsWidget {
    * The presenter for this view.
    */
 //	  public interface Presenter extends PresentsWidgets {
-	public interface Presenter {
+  public interface Presenter extends PresentsWidgets {
     /**
      * Select a task.
      * 
      * @param selected the select task
      */
-    void selectMileage(MileageProxy selected);
+    public void selectMileage(MileageProxy selected);
     
+    public void editMileage(MileageProxy selected);
+    //public void addMileage(Place place);
+    public void addMileage();
     
-    void addMileage(Place place);
+//    public void refreshMileageList();
     
-    void goTo(Place place);
+    public void goTo(Place place);
     
-    void stop();
+//    public void start(EventBus eventBus);
+    
+//    public void stop();
 
   }
+
+
 
 //  /**
 //   * Clear the list of tasks.
 //   */
-  void clearList();
+//  void clearList();
 
   /**
    * Sets the new presenter, and calls {@link Presenter#stop()} on the previous
    * one.
    */
-  void setPresenter(Presenter presenter);
+  public void setPresenter(Presenter presenter);
 
   /**
    * Set the list of tasks to display.
@@ -74,7 +83,7 @@ public interface AdminMileageSuperView extends IsWidget {
    * @param tasks the list of tasks
    */
   //void setTasks(List<MileageProxy> tasks);
-  void setMileages(List<MileageProxy> mileages);
+  public void setMileages(List<MileageProxy> mileages);
 
 
 
@@ -83,6 +92,6 @@ public interface AdminMileageSuperView extends IsWidget {
    * 
    * @param tasks the list of tasks
    */
-  void checkLoginAdmin();
+  //void checkLoginAdmin();
 
 }

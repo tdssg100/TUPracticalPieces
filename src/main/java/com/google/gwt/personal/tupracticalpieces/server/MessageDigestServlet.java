@@ -13,9 +13,9 @@ import java.net.URLEncoder;
 import java.util.Iterator;
 import java.util.logging.Logger;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -70,10 +70,10 @@ public class MessageDigestServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		if (digest.equals(getStoredDigest(user))) {
 			resp.getWriter().print("{\"match\":true}");
-			log.info("MessageDigestServlet retrun true");
+			log.info("MessageDigestServlet retrun {\"match\":true}");
 			return;
 		}
-		resp.getWriter().print("{match:false}");
+		resp.getWriter().print("{\"match\":false}");
 		log.warning("MessageDigestServlet retrun false");
 	}
 	

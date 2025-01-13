@@ -31,9 +31,9 @@ import java.net.URLEncoder;
 import java.util.Iterator;
 import java.util.logging.Logger;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 //import com.google.appengine.labs.repackaged.org.json.JSONException;
 //import com.google.appengine.labs.repackaged.org.json.JSONObject;
@@ -180,24 +180,31 @@ public class OAuthCodeCallbackHandlerServlet extends HttpServlet {
 					 * add at 20240612
 					 */
 					postStr = "code="+ code[0]
-							+ "&client_id=" + URLEncoder.encode("665228524445-n826p8nec0b91tk5mlg6iuu7ss9g3kl6.apps.googleusercontent.com", "UTF-8") 
-							+ "&client_secret=" + URLEncoder.encode("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", "UTF-8")
+							+ "&client_id=" + URLEncoder.encode("882057016296-tl5oic5jm1anrd625dlt1t10ud1rhpn0.apps.googleusercontent.com", "UTF-8") 
+							+ "&client_secret=" + URLEncoder.encode("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", "UTF-8")
 							+ "&redirect_uri=" + URLEncoder.encode(req.getRequestURL().toString(),  "UTF-8")
 							+ "&grant_type=" + URLEncoder.encode("authorization_code", "UTF-8");
+				// 20250101 Obsolete
+				//	+ "&client_id=" + URLEncoder.encode("665228524445-n826p8nec0b91tk5mlg6iuu7ss9g3kl6.apps.googleusercontent.com", "UTF-8") 
+				//	+ "&client_secret=" + URLEncoder.encode("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", "UTF-8")
 	//			} else if (("tupracticalpices.appspot.com:8888/oauth2callback").equals(req.getRequestURL().toString())) {
 				} else if (("http://127.0.0.1:8888/oauth2callback").equals(req.getRequestURL().toString())
 				 			 || ("http://localhost:8888/oauth2callback").equals(req.getRequestURL().toString())) {
 					postStr = "code="+ code[0]
-							+ "&client_id=" + URLEncoder.encode("9571369657-3mqoa0q64gfer18q52gmhmul9gg5anus.apps.googleusercontent.com", "UTF-8") 
-							+ "&client_secret=" + URLEncoder.encode("4cdJ0m8aeu_CVy2Kq4wKZo_4", "UTF-8")
+							+ "&client_id=" + URLEncoder.encode("882057016296-tl5oic5jm1anrd625dlt1t10ud1rhpn0.apps.googleusercontent.com", "UTF-8") 
+							+ "&client_secret=" + URLEncoder.encode("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", "UTF-8")
 							+ "&redirect_uri=" + URLEncoder.encode(req.getRequestURL().toString(),  "UTF-8")
 							+ "&grant_type=" + URLEncoder.encode("authorization_code", "UTF-8");
+				//	+ "&client_id=" + URLEncoder.encode("9571369657-3mqoa0q64gfer18q52gmhmul9gg5anus.apps.googleusercontent.com", "UTF-8") 
+				//	+ "&client_secret=" + URLEncoder.encode("4cdJ0m8aeu_CVy2Kq4wKZo_4", "UTF-8")
 				} else {
 					postStr = "code="+ code[0]
-							+ "&client_id=" + URLEncoder.encode("9571369657-0omq28sbvq94as3bl127ia3de85lf2l9.apps.googleusercontent.com", "UTF-8") 
-							+ "&client_secret=" + URLEncoder.encode("V4Xp9cIxUvJHi1Pec1UpwLso", "UTF-8")
+							+ "&client_id=" + URLEncoder.encode("882057016296-tl5oic5jm1anrd625dlt1t10ud1rhpn0.apps.googleusercontent.com", "UTF-8") 
+							+ "&client_secret=" + URLEncoder.encode("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", "UTF-8")
 							+ "&redirect_uri=" + URLEncoder.encode(req.getRequestURL().toString(),  "UTF-8")
 							+ "&grant_type=" + URLEncoder.encode("authorization_code", "UTF-8");
+				//	+ "&client_id=" + URLEncoder.encode("9571369657-0omq28sbvq94as3bl127ia3de85lf2l9.apps.googleusercontent.com", "UTF-8") 
+				//	+ "&client_secret=" + URLEncoder.encode("V4Xp9cIxUvJHi1Pec1UpwLso", "UTF-8")
 				}
 				ps.print(postStr);
 				ps.close();

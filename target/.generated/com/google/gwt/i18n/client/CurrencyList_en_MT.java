@@ -21,8 +21,6 @@ public class CurrencyList_en_MT extends com.google.gwt.i18n.client.CurrencyList_
     HashMap<String, CurrencyData> result = super.loadCurrencyMapJava();
     // British Pound
     result.put("GBP", new CurrencyDataImpl("GBP", "GB£", 2, "GB£", "£"));
-    // US Dollar
-    result.put("USD", new CurrencyDataImpl("USD", "US$", 2, "US$", "$"));
     return result;
   }
   
@@ -35,8 +33,6 @@ public class CurrencyList_en_MT extends com.google.gwt.i18n.client.CurrencyList_
     return {
       // British Pound
       "GBP": [ "GBP", "GB£", 2, "GB£", "£"],
-      // US Dollar
-      "USD": [ "USD", "US$", 2, "US$", "$"],
     };
   }-*/;
   
@@ -44,7 +40,6 @@ public class CurrencyList_en_MT extends com.google.gwt.i18n.client.CurrencyList_
   protected HashMap<String, String> loadNamesMapJava() {
     HashMap<String, String> result = super.loadNamesMapJava();
     result.put("GBP", "British Pound");
-    result.put("USD", "US Dollar");
     return result;
   }
   
@@ -56,7 +51,6 @@ public class CurrencyList_en_MT extends com.google.gwt.i18n.client.CurrencyList_
   private native JavaScriptObject loadMyNamesMapOverridesNative() /*-{
     return {
       "GBP": "British Pound",
-      "USD": "US Dollar",
     };
   }-*/;
 }

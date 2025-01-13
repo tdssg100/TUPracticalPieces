@@ -28,7 +28,7 @@ import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.place.shared.Place;
 //import com.google.gwt.sample.mobilewebapp.shared.TaskProxy;
 //import com.google.gwt.sample.ui.client.PresentsWidgets;
-//import com.google.gwt.personal.ui.client.PresentsWidgets;
+import com.google.gwt.personal.tupracticalpieces.presenter.list.PresentsWidgets;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
 
@@ -41,8 +41,8 @@ public interface MileageReadView extends Editor<MileageProxy>, IsWidget {
   /**
    * The presenter for this view.
    */
-//  public interface Presenter extends PresentsWidgets {
-	  public interface Presenter  {
+  public interface Presenter extends PresentsWidgets {
+//	  public interface Presenter  {
     /**
      * Switch to an edit view of this task.
      */

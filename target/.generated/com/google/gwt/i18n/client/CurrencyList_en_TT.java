@@ -19,7 +19,7 @@ public class CurrencyList_en_TT extends com.google.gwt.i18n.client.CurrencyList_
   @Override
   protected HashMap<String, CurrencyData> loadCurrencyMapJava() {
     HashMap<String, CurrencyData> result = super.loadCurrencyMapJava();
-    // Trinidad and Tobago Dollar
+    // Trinidad & Tobago Dollar
     result.put("TTD", new CurrencyDataImpl("TTD", "$", 2, "$", "$"));
     return result;
   }
@@ -31,7 +31,7 @@ public class CurrencyList_en_TT extends com.google.gwt.i18n.client.CurrencyList_
   
   private native JavaScriptObject loadMyCurrencyMapOverridesNative() /*-{
     return {
-      // Trinidad and Tobago Dollar
+      // Trinidad & Tobago Dollar
       "TTD": [ "TTD", "$", 2, "$", "$"],
     };
   }-*/;
@@ -39,7 +39,7 @@ public class CurrencyList_en_TT extends com.google.gwt.i18n.client.CurrencyList_
   @Override
   protected HashMap<String, String> loadNamesMapJava() {
     HashMap<String, String> result = super.loadNamesMapJava();
-    result.put("TTD", "Trinidad and Tobago Dollar");
+    result.put("TTD", "Trinidad & Tobago Dollar");
     return result;
   }
   
@@ -50,7 +50,7 @@ public class CurrencyList_en_TT extends com.google.gwt.i18n.client.CurrencyList_
   
   private native JavaScriptObject loadMyNamesMapOverridesNative() /*-{
     return {
-      "TTD": "Trinidad and Tobago Dollar",
+      "TTD": "Trinidad & Tobago Dollar",
     };
   }-*/;
 }

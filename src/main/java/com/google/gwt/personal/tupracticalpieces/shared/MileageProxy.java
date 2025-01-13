@@ -26,7 +26,7 @@ import com.google.web.bindery.requestfactory.shared.EntityProxy;
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 
 import java.math.BigDecimal;
-
+import java.util.List;
 import com.google.gwt.personal.tupracticalpieces.database.Mileage;
 
 //import java.util.Date;
@@ -81,5 +81,7 @@ public interface MileageProxy extends EntityProxy {
     void setBsMileage(BigDecimal bsMileage);
 
     void setTotalMileage(BigDecimal totalMileage);
+    
+//    List<Mileage> getList();
 
 }

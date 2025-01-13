@@ -70,7 +70,7 @@
   	});    	*/
     	const latlng = new google.maps.LatLng(parseFloat(lat), parseFloat(lng));
     	gMap.setCenter(latlng, 8);
-    	gMarker.setCenter(latlng;
+    	gMarker.setCenter(latlng);
     	gMarker.setMap(gMap);
     }
 

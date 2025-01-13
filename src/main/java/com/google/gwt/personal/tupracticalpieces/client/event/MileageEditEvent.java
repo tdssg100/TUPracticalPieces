@@ -39,7 +39,7 @@ public class MileageEditEvent extends GwtEvent<MileageEditEvent.Handler> {
     //void onTaskEdit(TaskEditEvent event);
     void onMileageEdit(MileageEditEvent event);
   }
-
+  
   /**
    * The event type.
    */
@@ -55,6 +55,10 @@ public class MileageEditEvent extends GwtEvent<MileageEditEvent.Handler> {
 
   public MileageEditEvent(MileageProxy mileage) {
     this.mileage = mileage;
+  }
+  
+  public MileageProxy getMileage() {
+	  return this.mileage;
   }
 
   @Override

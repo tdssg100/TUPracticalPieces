@@ -8,49 +8,19 @@ public class CurrencyList_en_PK extends com.google.gwt.i18n.client.CurrencyList_
   
   @Override
   protected CurrencyData getDefaultJava() {
-    return new CurrencyDataImpl("PKR", "Rs", 0, "PKRs.", "Rs");
+    return new CurrencyDataImpl("PKR", "Rs", 2, "PKRs.", "Rs");
   }
   
   @Override
   protected native CurrencyData getDefaultNative() /*-{
-    return [ "PKR", "Rs", 0, "PKRs.", "Rs"];
+    return [ "PKR", "Rs", 2, "PKRs.", "Rs"];
   }-*/;
   
   @Override
   protected HashMap<String, CurrencyData> loadCurrencyMapJava() {
     HashMap<String, CurrencyData> result = super.loadCurrencyMapJava();
-    // Australian Dollar
-    result.put("AUD", new CurrencyDataImpl("AUD", "AU$", 2, "AU$", "$"));
-    // Belarusian New Rouble (1994–1999)
-    result.put("BYB", new CurrencyDataImpl("BYB", "BYB", 130, "BYB", "BYB"));
-    // Belarusian Rouble
-    result.put("BYR", new CurrencyDataImpl("BYR", "BYR", 0, "BYR", "BYR"));
-    // British Pound
-    result.put("GBP", new CurrencyDataImpl("GBP", "£", 2, "GB£", "£"));
-    // Israeli Shekel (1980–1985)
-    result.put("ILR", new CurrencyDataImpl("ILR", "ILR", 130, "ILR", "ILR"));
-    // Israeli New Shekel
-    result.put("ILS", new CurrencyDataImpl("ILS", "₪", 2, "IL₪", "₪"));
-    // Indian Rupee
-    result.put("INR", new CurrencyDataImpl("INR", "₹", 2, "Rs", "₹"));
-    // Latvian Rouble
-    result.put("LVR", new CurrencyDataImpl("LVR", "LVR", 130, "LVR", "LVR"));
     // Pakistani Rupee
-    result.put("PKR", new CurrencyDataImpl("PKR", "Rs", 0, "PKRs.", "Rs"));
-    // Russian Rouble
-    result.put("RUB", new CurrencyDataImpl("RUB", "руб.", 2, "руб.", "руб."));
-    // Russian Rouble (1991–1998)
-    result.put("RUR", new CurrencyDataImpl("RUR", "RUR", 130, "RUR", "RUR"));
-    // Seychelles Rupee
-    result.put("SCR", new CurrencyDataImpl("SCR", "SCR", 2, "SCR", "SCR"));
-    // Tajikistani Rouble
-    result.put("TJR", new CurrencyDataImpl("TJR", "TJR", 130, "TJR", "TJR"));
-    // Uzbekistani Som
-    result.put("UZS", new CurrencyDataImpl("UZS", "UZS", 0, "UZS", "soʼm"));
-    // Central African CFA Franc
-    result.put("XAF", new CurrencyDataImpl("XAF", "FCFA", 0, "FCFA", "FCFA"));
-    // West African CFA Franc
-    result.put("XOF", new CurrencyDataImpl("XOF", "CFA", 0, "CFA", "CFA"));
+    result.put("PKR", new CurrencyDataImpl("PKR", "Rs", 2, "PKRs.", "Rs"));
     return result;
   }
   
@@ -61,60 +31,15 @@ public class CurrencyList_en_PK extends com.google.gwt.i18n.client.CurrencyList_
   
   private native JavaScriptObject loadMyCurrencyMapOverridesNative() /*-{
     return {
-      // Australian Dollar
-      "AUD": [ "AUD", "AU$", 2, "AU$", "$"],
-      // Belarusian New Rouble (1994–1999)
-      "BYB": [ "BYB", "BYB", 130, "BYB", "BYB"],
-      // Belarusian Rouble
-      "BYR": [ "BYR", "BYR", 0, "BYR", "BYR"],
-      // British Pound
-      "GBP": [ "GBP", "£", 2, "GB£", "£"],
-      // Israeli Shekel (1980–1985)
-      "ILR": [ "ILR", "ILR", 130, "ILR", "ILR"],
-      // Israeli New Shekel
-      "ILS": [ "ILS", "₪", 2, "IL₪", "₪"],
-      // Indian Rupee
-      "INR": [ "INR", "₹", 2, "Rs", "₹"],
-      // Latvian Rouble
-      "LVR": [ "LVR", "LVR", 130, "LVR", "LVR"],
       // Pakistani Rupee
-      "PKR": [ "PKR", "Rs", 0, "PKRs.", "Rs"],
-      // Russian Rouble
-      "RUB": [ "RUB", "руб.", 2, "руб.", "руб."],
-      // Russian Rouble (1991–1998)
-      "RUR": [ "RUR", "RUR", 130, "RUR", "RUR"],
-      // Seychelles Rupee
-      "SCR": [ "SCR", "SCR", 2, "SCR", "SCR"],
-      // Tajikistani Rouble
-      "TJR": [ "TJR", "TJR", 130, "TJR", "TJR"],
-      // Uzbekistani Som
-      "UZS": [ "UZS", "UZS", 0, "UZS", "soʼm"],
-      // Central African CFA Franc
-      "XAF": [ "XAF", "FCFA", 0, "FCFA", "FCFA"],
-      // West African CFA Franc
-      "XOF": [ "XOF", "CFA", 0, "CFA", "CFA"],
+      "PKR": [ "PKR", "Rs", 2, "PKRs.", "Rs"],
     };
   }-*/;
   
   @Override
   protected HashMap<String, String> loadNamesMapJava() {
     HashMap<String, String> result = super.loadNamesMapJava();
-    result.put("AUD", "Australian Dollar");
-    result.put("BYB", "Belarusian New Rouble (1994–1999)");
-    result.put("BYR", "Belarusian Rouble");
-    result.put("GBP", "British Pound");
-    result.put("ILR", "Israeli Shekel (1980–1985)");
-    result.put("ILS", "Israeli New Shekel");
-    result.put("INR", "Indian Rupee");
-    result.put("LVR", "Latvian Rouble");
     result.put("PKR", "Pakistani Rupee");
-    result.put("RUB", "Russian Rouble");
-    result.put("RUR", "Russian Rouble (1991–1998)");
-    result.put("SCR", "Seychelles Rupee");
-    result.put("TJR", "Tajikistani Rouble");
-    result.put("UZS", "Uzbekistani Som");
-    result.put("XAF", "Central African CFA Franc");
-    result.put("XOF", "West African CFA Franc");
     return result;
   }
   
@@ -125,22 +50,7 @@ public class CurrencyList_en_PK extends com.google.gwt.i18n.client.CurrencyList_
   
   private native JavaScriptObject loadMyNamesMapOverridesNative() /*-{
     return {
-      "AUD": "Australian Dollar",
-      "BYB": "Belarusian New Rouble (1994–1999)",
-      "BYR": "Belarusian Rouble",
-      "GBP": "British Pound",
-      "ILR": "Israeli Shekel (1980–1985)",
-      "ILS": "Israeli New Shekel",
-      "INR": "Indian Rupee",
-      "LVR": "Latvian Rouble",
       "PKR": "Pakistani Rupee",
-      "RUB": "Russian Rouble",
-      "RUR": "Russian Rouble (1991–1998)",
-      "SCR": "Seychelles Rupee",
-      "TJR": "Tajikistani Rouble",
-      "UZS": "Uzbekistani Som",
-      "XAF": "Central African CFA Franc",
-      "XOF": "West African CFA Franc",
     };
   }-*/;
 }

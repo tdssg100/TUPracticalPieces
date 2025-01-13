@@ -1,7 +1,8 @@
 package com.google.gwt.personal.tupracticalpieces.server;
 
 //import com.google.appengine.api.utils.SystemProperty;
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+//import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import com.google.gwt.user.server.rpc.jakarta.RemoteServiceServlet;
 import com.google.gwt.personal.tupracticalpieces.client.common.AdminSvc;
 import com.google.gwt.personal.tupracticalpieces.client.common.ResultSvc;
 //import com.google.gwt.personal.tupracticalpieces.database.mileage;

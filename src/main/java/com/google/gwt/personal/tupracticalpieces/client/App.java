@@ -107,7 +107,8 @@ public class App {
 	public App(Storage storage, EventBus eventBus, PlaceController placeController, ActivityManager activityManager,
 			TUAppPlaceHistoryMapper historyMapper, PlaceHistoryHandler historyHandler, TUPracticalPiecesShell shell) {
 
-		this.storage = storage;
+//		this.storage = storage;
+		this.storage = null;
 		this.eventBus = eventBus;
 		this.placeController = placeController;
 		this.activityManager = activityManager;
@@ -157,7 +158,8 @@ public class App {
 			public void onShowMileage(ShowMileageEvent event) {
 				MileageProxy mileage = event.getMileage();
 				History.newItem("adminEdit:" + mileage.getId()); // TODO
-//																					// @@@@@@@
+//		
+//Window.alert("createMileageEditPlace to go.");																			// @@@@@@@
 				placeController.goTo(MileageEditPlace.createMileageEditPlace(mileage.getId(), mileage));
 			}
 		});
@@ -189,7 +191,7 @@ public class App {
 		ActionEvent.register(eventBus, ActionNames.GO_HOME, new ActionEvent.Handler() {
 			@Override
 			public void onAction(ActionEvent event) {
-				History.newItem("!AdminMileageView");
+				History.newItem("!Preface");
 				History.fireCurrentHistoryState();
 				//
 				// placeController.goTo(new AdminMileagePlace(false));
@@ -212,34 +214,34 @@ public class App {
 			}
 		});
 
-//		GWT.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
-//			@Override
-//			public void onUncaughtException(Throwable e) {
-//				String msg = "";
-//				while (e instanceof UmbrellaException) {
-//					msg += "[" + e.getClass() + "]";
-//					msg += e.getMessage() + "+";
-//					e = ((UmbrellaException) e).getCauses().iterator().next();
+		GWT.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
+			@Override
+			public void onUncaughtException(Throwable e) {
+				String msg = "";
+				while (e instanceof UmbrellaException) {
+					msg += "[" + e.getClass() + "]";
+					msg += e.getMessage() + "+";
+					e = ((UmbrellaException) e).getCauses().iterator().next();
+				}
+
+				msg += "[" + e.getClass() + "]";
+				msg += e.getMessage() + "+";
+				if (msg == null) {
+					msg = "[" + e.getClass() + "]";
+					msg += e.toString();
+				}
+//				String message = e.getMessage();
+//				if (message == null) {
+//					message = e.toString();
 //				}
-//
-//				msg += "[" + e.getClass() + "]";
-//				msg += e.getMessage() + "+";
-//				if (msg == null) {
-//					msg = "[" + e.getClass() + "]";
-//					msg += e.toString();
-//				}
-////				String message = e.getMessage();
-////				if (message == null) {
-////					message = e.toString();
-////				}
-//				// log.log(Level.SEVERE, "Uncaught exception", e);
-////				Window.alert("An unexpected error occurred: " + message);
-//				Window.alert("An unexpected error occurred: " + msg);
-//			}
-//		});
+				// log.log(Level.SEVERE, "Uncaught exception", e);
+//				Window.alert("An unexpected error occurred: " + message);
+				Window.alert("An unexpected error occurred: " + msg);
+			}
+		});
 		//
 		// // Check for authentication failures or mismatches
-		// reloadOnAuthenticationFailure.register(eventBus);
+	    // reloadOnAuthenticationFailure.register(eventBus);
 		//
 		// initBrowserHistory(historyMapper, historyHandler, new
 		// TaskListPlace(true));new AdminMileagePlace(true)
@@ -273,7 +275,7 @@ public class App {
 		if (savedPlace == null) {
 			savedPlace = defaultPlace;
 		}
-		// historyHandler.register(placeController, eventBus, savedPlace);
+		historyHandler.register(placeController, eventBus, savedPlace);
 		/*
 		 * Go to the place represented in the URL. This is what makes bookmarks
 		 * work.
@@ -284,14 +286,16 @@ public class App {
 
 		// Place listPlace = new AdminMileagePlace(true);
 		// Place editPlace;
+
 		
+
+/*
+ * 
 //		if (("!AdminM".equals(prevToken.substring(0, 7))) || ("adminE".equals(prevToken.substring(0, 6)))) {
-		if (("!AdminM".equals(prevToken.substring(0, 7))) || ("adminE".equals(prevToken.substring(0, 6)))) {
+		if ("adminE".equals(prevToken.substring(0, 6))) {
 					 historyHandler.register(placeController, eventBus, savedPlace);
-			/*
 			 * Go to the place represented in the URL. This is what makes
 			 * bookmarks work.
-			 */
 			historyHandler.handleCurrentHistory();
 
 			// } else if ("adminEdit".equals(prevToken.substring(1,9))) {
@@ -312,6 +316,12 @@ public class App {
 			History.fireCurrentHistoryState();
 		}
 
+
+		*/
+
+		historyHandler.handleCurrentHistory();
+
+
 		/*
 		 * Monitor the eventbus for place changes and note them in LocalStorage
 		 * for the next launch.
@@ -323,7 +333,7 @@ public class App {
 					// 
 					// if session is fix, need to reset the timeout.
 					// to make bookmark's timeout effective, cookie needs
-//					storage.setItem(HISTORY_SAVE_KEY, historyMapper.getToken(event.getNewPlace()));
+					storage.setItem(HISTORY_SAVE_KEY, historyMapper.getToken(event.getNewPlace()));
 					Place place = event.getNewPlace();
 					storage.setItem(HISTORY_SAVE_KEY, (place instanceof AdminMileagePlace) ? "!AdminMileageView" : "adminEdit" + historyMapper.getToken(place));
 				}

@@ -22,12 +22,19 @@
 package com.google.gwt.personal.tupracticalpieces.client;
 
 import java.util.Set;
-
+import java.util.List;
+import java.util.Collections;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
+
+import com.google.gwt.i18n.client.Constants;
+import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesConstants;
+import com.google.gwt.personal.tupracticalpieces.client.content.CwUpdate;
 /**
  * 20160123 MVP for mobile
  * 20160222 eventbus, presenter, place, activities
@@ -53,15 +60,18 @@ import com.google.gwt.place.shared.PlaceHistoryHandler;
 //import com.google.gwt.personal.gaerequest.client.ReloadOnAuthenticationFailure;
 import com.google.gwt.personal.tupracticalpieces.client.activity.AppActivityMapper;
 import com.google.gwt.personal.tupracticalpieces.client.activity.TUAppPlaceHistoryMapper;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageEditView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageReadView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
+//import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
 //import com.google.gwt.personal.tupracticalpieces.client.desktop.DesktopTaskEditView;
 //import com.google.gwt.personal.tupracticalpieces.client.desktop.DesktopTaskListView;
 //import com.google.gwt.personal.tupracticalpieces.client.desktop.DesktopTaskReadView;
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesShell;
+import com.google.gwt.personal.tupracticalpieces.client.desktop.MileageEditViewDesktop;
+import com.google.gwt.personal.tupracticalpieces.client.desktop.MileageReadViewDesktop;
 import com.google.gwt.personal.tupracticalpieces.client.desktop.TUPracticalPiecesShellDesktop;
+import com.google.gwt.personal.tupracticalpieces.client.mobile.MileageEditViewMobile;
+import com.google.gwt.personal.tupracticalpieces.client.mobile.MileageReadViewMobile;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageRequestFactory;
+
 //import com.google.gwt.personal.tupracticalpieces.client.ui.PieChart;
 //import com.google.gwt.personal.tupracticalpieces.presenter.task.TaskEditView;
 //import com.google.gwt.personal.tupracticalpieces.presenter.task.TaskReadView;
@@ -78,12 +88,15 @@ import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 import com.google.web.bindery.requestfactory.shared.RequestTransport;
 import com.google.web.bindery.requestfactory.gwt.client.DefaultRequestTransport; 
-import com.google.web.bindery.requestfactory.shared.ServerFailure; 
-
+import com.google.web.bindery.requestfactory.shared.Receiver;
+import com.google.web.bindery.requestfactory.shared.ServerFailure;
+import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.personal.tupracticalpieces.generator.TUPracticalPiecesGenerator;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
-import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
+import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePresenter;
+//import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
+
 /**
  * Default implementation of {@link ClientFactory}. Used by desktop version.
  */
@@ -92,10 +105,31 @@ import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSupe
 //class ClientFactoryImpl extends TUPracticalPiecesGenerator implements ClientFactory {
 class ClientFactoryImpl implements ClientFactory {
 
+  public static final TUPracticalPiecesConstants constants = GWT.create(TUPracticalPiecesConstants.class);
+//  private static TUPracticalPiecesConstants constants = TUPracticalPieces.constants;
   /**
    * The URL argument used to enable or disable local storage.
    */
   private static final String STORAGE_URL_ARG = "storage";
+  
+//  public static interface CwConstants extends Constants {
+//    String cwUpdateDescription();
+//  
+//    String cwUpdateName();
+//    
+//    String cwCommonAdminTitle();
+//    
+//    String cwCommonAdminName();
+//    
+//    String cwCommonAdminPassword();
+//    
+//    String cwCommonAdminOk();
+//    
+//    String cwCommonAdminCancel();
+//    
+//  }
+  
+  //public final CwConstants constants;
 
   private final EventBus eventBus = new SimpleEventBus();
   private final PlaceController placeController = new PlaceController(eventBus);
@@ -106,9 +140,11 @@ class ClientFactoryImpl implements ClientFactory {
   //private TaskEditView taskEditView;
   //private TaskListView taskListView;
 //  TODO localStorage private final MileageProxyLocalStorage mileageProxyLocalStorage;
-  private AdminMileageSuperView myAppAdminMileageView;
+  //private AdminMileageSuperView myAppAdminMileageView;
+  private CwUpdate myAppAdminMileageView;
   private MileageEditView mileageEditView;
   private MileageReadView mileageReadView;
+  //private CwUpdate cwUpdate;
 //  private MileageEditView myAppAdminMileageEdit;
 //  private MileageReadView myAppAdminMileageRead;
 //  private MileageEditView mileageEditView;
@@ -139,10 +175,56 @@ class ClientFactoryImpl implements ClientFactory {
     } else {
       localStorage = null;
     }
+    
+    
+    //getLoginWidget().setPresenter(new LoginWidgetPresenter(placeController));
+    getMyAppAdminMileageView().setPresenter(new AdminMileagePresenter(this, true));
+    
+    
+    
     //taskProxyLocalStorage = new TaskProxyLocalStorage(localStorage);
 // TODO localStorage   mileageProxyLocalStorage = new MileageProxyLocalStorage(localStorage);
+    
+    /*
+    cwUpdate.showButton.addClickHandler(new ClickHandler() {
+	public void onClick(ClickEvent event) {
+	  cwUpdate.showButton.setEnabled(false);
+	  cwUpdate.deleteButton.setEnabled(true);
+	  cwUpdate.insertCloudButton.setEnabled(true);
+	  cwUpdate.gridPanel.setVisible(true);
+    	  requestFactory.mileageRequest().findAllMileages().fire(
+            new Receiver<List<MileageProxy>>() {
+              @Override
+              public void onFailure(ServerFailure error) {
+              	Window.alert("rf mileage fail" + error.toString());
+                // ignore
+              }
+
+              @Override
+              public void onSuccess(List<MileageProxy> response) {
+                // Early exit if this activity has already been canceled.
+                //if (eventBus == null) {
+                //  return;
+                //}
+
+                // Display the tasks in the view.
+                if (response == null) {
+                  response = Collections.<MileageProxy> emptyList();
+                }
+                Window.alert("mileage:" + response.size());
+                cwUpdate.setMileages(response);
+
+                // save the response to storage
+                //clientFactory.getTaskProxyLocalStorage().setTasks(response);
+
+                // Restart the timer.
+                //refreshTimer.schedule(REFRESH_DELAY);
+              }
+            });	
+    
+	    }});
+	*/    
   }
-  
 //  public App getApp() {
 //    return new App(getLocalStorageIfSupported(), eventBus, getPlaceController(),
 //        getActivityManager(), historyMapper, historyHandler, new ReloadOnAuthenticationFailure(),
@@ -177,41 +259,6 @@ class ClientFactoryImpl implements ClientFactory {
     return shell;
   }
 
-//  public TaskEditView getTaskEditView() {
-//    if (taskEditView == null) {
-//      taskEditView = createTaskEditView();
-//    }
-//    return taskEditView;
-//  }
-  public MileageEditView getMileageEditView() {
-//    return myAppAdminMileageEdit;
-	if (mileageEditView == null) {
-		mileageEditView = createMileageEditView();
-	}
-	return mileageEditView;
-  }
-  public MileageReadView getMileageReadView() {
-//    return myAppAdminMileageRead;
-		if (mileageReadView == null) {
-			mileageReadView = createMileageReadView();
-		}
-		return mileageReadView;
-  }
-//
-//  public TaskListView getTaskListView() {
-//  }
-public AdminMileageSuperView getMyAppAdminMileageView() {
-//  if (myAppAdminMileageView == null) {
-//  	Timer timerView = new Timer () {
-//	      @Override
-//	      public void run() {
-//	    	  myAppAdminMileageView = createMyAppAdminMileageView();
-//	      }
-//	};
-//	timerView.schedule(100);
-//  }
-  return myAppAdminMileageView;
-}
 //
 //  public TaskProxyLocalStorage getTaskProxyLocalStorage() {
 //    return taskProxyLocalStorage;
@@ -269,8 +316,8 @@ public AdminMileageSuperView getMyAppAdminMileageView() {
 //    return new TUPracticalPiecesShellDesktop(eventBus, placeController, treeModel);
       //return new TUPracticalPiecesShellDesktop(eventBus, placeController);
 //	  TUPracticalPiecesShellDesktop tmp = new TUPracticalPiecesShellDesktop(eventBus, placeController);
-	  TUPracticalPiecesShellDesktop tmp = new TUPracticalPiecesShellDesktop(getPlaceController(), getMileageReadView(), getMileageEditView());
-	  myAppAdminMileageView = tmp.getAdminMileageView();
+	  TUPracticalPiecesShellDesktop tmp = new TUPracticalPiecesShellDesktop(getPlaceController(), getMileageReadView(), getMileageEditView(), getMyAppAdminMileageView(), constants);
+//	  myAppAdminMileageView = tmp.getAdminMileageView();
 //	  myAppAdminMileageEdit = tmp.getAdminMileageEditView();
 //	  myAppAdminMileageRead = tmp.getAdminMileageReadView();
 	  return tmp;
@@ -278,24 +325,51 @@ public AdminMileageSuperView getMyAppAdminMileageView() {
   }
 
   
-/**
-* Create a {@link MileageEditView}.
-* 
-* @return a new {@link MileageEditView}
-*/
-protected MileageEditView createMileageEditView() {
- return new AdminMileageEditView();
+  public MileageEditView getMileageEditView() {
+//    return myAppAdminMileageEdit;
+	if (mileageEditView == null) {
+		mileageEditView = createMileageEditView();
+	}
+	return mileageEditView;
+  }
+  public MileageReadView getMileageReadView() {
+//    return myAppAdminMileageRead;
+		if (mileageReadView == null) {
+			mileageReadView = createMileageReadView();
+		}
+		return mileageReadView;
+  }
+  public CwUpdate getMyAppAdminMileageView() {
+	if (myAppAdminMileageView == null) {
+		myAppAdminMileageView = createCwUpdate();
+	}
+	return myAppAdminMileageView;
 }
+  /**
+  * Create a {@link MileageEditView}.
+  * 
+  * @return a new {@link MileageEditView}
+  */
+  protected MileageEditView createMileageEditView() {
+   return new MileageEditViewDesktop();
+  }
 
-/**
-* Create a {@link MileageListView}.
-* 
-* @return a new {@link MileageListView}
-*/
-protected MileageReadView createMileageReadView() {
- return new AdminMileageReadView();
-}
+  /**
+  * Create a {@link MileageListView}.
+  * 
+  * @return a new {@link MileageListView}
+  */
+  protected MileageReadView createMileageReadView() {
+   return new MileageReadViewDesktop();
+  }
+
   
+protected CwUpdate createCwUpdate() {
+//	 return new CwUpdate(TUPracticalPieces.constants);
+	return new CwUpdate(constants);
+}
+	  
+	  
   
   
   

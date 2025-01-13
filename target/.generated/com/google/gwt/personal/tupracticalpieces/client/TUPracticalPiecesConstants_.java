@@ -530,16 +530,8 @@ public class TUPracticalPiecesConstants_ implements com.google.gwt.personal.tupr
     return "Update Mileage Data from Google Cloud SQL.";
   }
   
-  public java.lang.String cwUpdateForbidden() {
-    return "Access is not allowed.";
-  }
-  
   public java.lang.String cwUpdateName() {
     return "UpdateMileageDB";
-  }
-  
-  public java.lang.String cwXFrameName() {
-    return "EntryLocBlackList";
   }
   
   public java.lang.String cwCommonAdminTitle() {
@@ -564,6 +556,10 @@ public class TUPracticalPiecesConstants_ implements com.google.gwt.personal.tupr
   
   public java.lang.String cwXFrameDescription() {
     return "Adjust screening news to exclude improper for location name.";
+  }
+  
+  public java.lang.String cwXFrameName() {
+    return "EntryLocBlackList";
   }
   
   public java.lang.String cwFrameAttached() {

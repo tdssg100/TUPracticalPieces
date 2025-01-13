@@ -54,6 +54,10 @@ public class User {
 	  @Column(name = "password")
 	  private String password;
 
+	  @Basic //JPA
+	  @Column(name = "comment")
+	  private String comment;
+
 
 	  public User() {
 		  /* empty */
@@ -72,6 +76,11 @@ public class User {
 	  public String getPassword() {
 		  return this.password;
 	  }
+
+	  public String getComment() {
+		  return this.comment;
+	  }
+
 	  public void setName(String name) {
 		  this.name = name;
 	  }
@@ -80,6 +89,10 @@ public class User {
 		  this.password = password;
 	  }
 	  
+	  public void setComment(String comment) {
+		  this.comment = comment;
+	  }
+
 	  public Long getId() {
 		    return this.id;
 		  }

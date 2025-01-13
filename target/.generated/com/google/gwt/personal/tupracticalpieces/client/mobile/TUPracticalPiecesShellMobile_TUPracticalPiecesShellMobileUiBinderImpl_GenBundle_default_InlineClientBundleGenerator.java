@@ -20,67 +20,67 @@ public class TUPracticalPiecesShellMobile_TUPracticalPiecesShellMobileUiBinderIm
         return "style";
       }
       public String getText() {
-        return com.google.gwt.i18n.client.LocaleInfo.getCurrentLocale().isRTL() ? ((".GKLQPWSNJ{background-color:" + ("#9aa")  + ";}.GKLQPWSOJ{background-color:" + ("#ccf")  + ";}.GKLQPWSGK{padding:" + ("2px"+ " " +"0"+ " " +"2px"+ " " +"22px")  + ";background:" + ("white")  + ";text-align:" + ("left")  + ";}.GKLQPWSFK{font-size:" + ("8pt")  + ";line-height:" + ("10pt")  + ";}.GKLQPWSAL{padding:" + ("0"+ " " +"10px")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GKLQPWSPK{color:" + ("#7b8fae")  + ";font-size:") + (("8pt")  + ";font-weight:" + ("bold")  + ";text-shadow:" + ("#ddd"+ " " +"3px"+ " " +"3px"+ " " +"1px")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"4px"+ " " +"0"+ " " +"0")  + ";}.GKLQPWSOK{color:" + ("#888")  + ";font-size:" + ("8pt")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"6px"+ " " +"0"+ " " +"0")  + ";}.GKLQPWSJK{padding:" + ("6px"+ " " +"0"+ " " +"0"+ " " +"10px")  + ";}.GKLQPWSHK{color:" + ("blue") ) + (";font-size:" + ("8pt")  + ";margin-right:" + ("4px")  + ";}.GKLQPWSKK{width:" + ("36px")  + ";height:" + ("16px")  + ";margin:" + ("3px"+ " " +"10px"+ " " +"0"+ " " +"0")  + ";padding:" + ("0")  + ";}.GKLQPWSNK{background:" + ("#d0e4f6")  + ";}.GKLQPWSLK{background:" + ("#ccc")  + ";}.GKLQPWSMK{background:" + ("#3d3d3d")  + ";}.GKLQPWSIK{background-color:" + ("#d7dde8")  + ";border-left:") + (("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GKLQPWSDK{background-color:" + ("#d7dde8")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("0"+ " " +"10px")  + ";}.GKLQPWSBK{margin-left:" + ("20px")  + ";color:" + ("#888")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("20pt")  + ";vertical-align:" + ("middle") ) + (";}.GKLQPWSBK:hover{color:" + ("#4b4a4a")  + ";text-decoration:" + ("underline")  + ";}.GKLQPWSCK{margin-left:" + ("4px")  + ";}.GKLQPWSEK{font-size:" + ("8pt")  + ";color:" + ("#4b4a4a")  + ";direction:" + ("ltr")  + ";}.GKLQPWSPJ{border:" + ("0")  + ";background-color:" + ("#fff")  + ";width:" + ("64px")  + ";padding:" + ("2px")  + ";}.GKLQPWSAK{background-color:") + (("#fff")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("3px"+ " " +"3px")  + ";margin-left:" + ("3px")  + ";color:" + ("#464646")  + ";font-size:" + ("36pt")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("36pt")  + ";vertical-align:" + ("middle") ) + (";}")) : ((".GKLQPWSNJ{background-color:" + ("#9aa")  + ";}.GKLQPWSOJ{background-color:" + ("#ccf")  + ";}.GKLQPWSGK{padding:" + ("2px"+ " " +"22px"+ " " +"2px"+ " " +"0")  + ";background:" + ("white")  + ";text-align:" + ("right")  + ";}.GKLQPWSFK{font-size:" + ("8pt")  + ";line-height:" + ("10pt")  + ";}.GKLQPWSAL{padding:" + ("0"+ " " +"10px")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GKLQPWSPK{color:" + ("#7b8fae")  + ";font-size:") + (("8pt")  + ";font-weight:" + ("bold")  + ";text-shadow:" + ("#ddd"+ " " +"3px"+ " " +"3px"+ " " +"1px")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"0"+ " " +"0"+ " " +"4px")  + ";}.GKLQPWSOK{color:" + ("#888")  + ";font-size:" + ("8pt")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"0"+ " " +"0"+ " " +"6px")  + ";}.GKLQPWSJK{padding:" + ("6px"+ " " +"10px"+ " " +"0"+ " " +"0")  + ";}.GKLQPWSHK{color:" + ("blue") ) + (";font-size:" + ("8pt")  + ";margin-left:" + ("4px")  + ";}.GKLQPWSKK{width:" + ("36px")  + ";height:" + ("16px")  + ";margin:" + ("3px"+ " " +"0"+ " " +"0"+ " " +"10px")  + ";padding:" + ("0")  + ";}.GKLQPWSNK{background:" + ("#d0e4f6")  + ";}.GKLQPWSLK{background:" + ("#ccc")  + ";}.GKLQPWSMK{background:" + ("#3d3d3d")  + ";}.GKLQPWSIK{background-color:" + ("#d7dde8")  + ";border-right:") + (("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GKLQPWSDK{background-color:" + ("#d7dde8")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("0"+ " " +"10px")  + ";}.GKLQPWSBK{margin-right:" + ("20px")  + ";color:" + ("#888")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("20pt")  + ";vertical-align:" + ("middle") ) + (";}.GKLQPWSBK:hover{color:" + ("#4b4a4a")  + ";text-decoration:" + ("underline")  + ";}.GKLQPWSCK{margin-right:" + ("4px")  + ";}.GKLQPWSEK{font-size:" + ("8pt")  + ";color:" + ("#4b4a4a")  + ";direction:" + ("ltr")  + ";}.GKLQPWSPJ{border:" + ("0")  + ";background-color:" + ("#fff")  + ";width:" + ("64px")  + ";padding:" + ("2px")  + ";}.GKLQPWSAK{background-color:") + (("#fff")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("3px"+ " " +"3px")  + ";margin-right:" + ("3px")  + ";color:" + ("#464646")  + ";font-size:" + ("36pt")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("36pt")  + ";vertical-align:" + ("middle") ) + (";}"));
+        return com.google.gwt.i18n.client.LocaleInfo.getCurrentLocale().isRTL() ? ((".GP-OPMDNJ{background-color:" + ("#9aa")  + ";}.GP-OPMDOJ{background-color:" + ("#ccf")  + ";}.GP-OPMDGK{padding:" + ("2px"+ " " +"0"+ " " +"2px"+ " " +"22px")  + ";background:" + ("white")  + ";text-align:" + ("left")  + ";}.GP-OPMDFK{font-size:" + ("8pt")  + ";line-height:" + ("10pt")  + ";}.GP-OPMDAL{padding:" + ("0"+ " " +"10px")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GP-OPMDPK{color:" + ("#7b8fae")  + ";font-size:") + (("8pt")  + ";font-weight:" + ("bold")  + ";text-shadow:" + ("#ddd"+ " " +"3px"+ " " +"3px"+ " " +"1px")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"4px"+ " " +"0"+ " " +"0")  + ";}.GP-OPMDOK{color:" + ("#888")  + ";font-size:" + ("8pt")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"6px"+ " " +"0"+ " " +"0")  + ";}.GP-OPMDJK{padding:" + ("6px"+ " " +"0"+ " " +"0"+ " " +"10px")  + ";}.GP-OPMDHK{color:" + ("blue") ) + (";font-size:" + ("8pt")  + ";margin-right:" + ("4px")  + ";}.GP-OPMDKK{width:" + ("36px")  + ";height:" + ("16px")  + ";margin:" + ("3px"+ " " +"10px"+ " " +"0"+ " " +"0")  + ";padding:" + ("0")  + ";}.GP-OPMDNK{background:" + ("#d0e4f6")  + ";}.GP-OPMDLK{background:" + ("#ccc")  + ";}.GP-OPMDMK{background:" + ("#3d3d3d")  + ";}.GP-OPMDIK{background-color:" + ("#d7dde8")  + ";border-left:") + (("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GP-OPMDDK{background-color:" + ("#d7dde8")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("0"+ " " +"10px")  + ";}.GP-OPMDBK{margin-left:" + ("20px")  + ";color:" + ("#888")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("20pt")  + ";vertical-align:" + ("middle") ) + (";}.GP-OPMDBK:hover{color:" + ("#4b4a4a")  + ";text-decoration:" + ("underline")  + ";}.GP-OPMDCK{margin-left:" + ("4px")  + ";}.GP-OPMDEK{font-size:" + ("8pt")  + ";color:" + ("#4b4a4a")  + ";direction:" + ("ltr")  + ";}.GP-OPMDPJ{border:" + ("0")  + ";background-color:" + ("#fff")  + ";width:" + ("64px")  + ";padding:" + ("2px")  + ";}.GP-OPMDAK{background-color:") + (("#fff")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("3px"+ " " +"3px")  + ";margin-left:" + ("3px")  + ";color:" + ("#464646")  + ";font-size:" + ("36pt")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("36pt")  + ";vertical-align:" + ("middle") ) + (";}")) : ((".GP-OPMDNJ{background-color:" + ("#9aa")  + ";}.GP-OPMDOJ{background-color:" + ("#ccf")  + ";}.GP-OPMDGK{padding:" + ("2px"+ " " +"22px"+ " " +"2px"+ " " +"0")  + ";background:" + ("white")  + ";text-align:" + ("right")  + ";}.GP-OPMDFK{font-size:" + ("8pt")  + ";line-height:" + ("10pt")  + ";}.GP-OPMDAL{padding:" + ("0"+ " " +"10px")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GP-OPMDPK{color:" + ("#7b8fae")  + ";font-size:") + (("8pt")  + ";font-weight:" + ("bold")  + ";text-shadow:" + ("#ddd"+ " " +"3px"+ " " +"3px"+ " " +"1px")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"0"+ " " +"0"+ " " +"4px")  + ";}.GP-OPMDOK{color:" + ("#888")  + ";font-size:" + ("8pt")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"0"+ " " +"0"+ " " +"6px")  + ";}.GP-OPMDJK{padding:" + ("6px"+ " " +"10px"+ " " +"0"+ " " +"0")  + ";}.GP-OPMDHK{color:" + ("blue") ) + (";font-size:" + ("8pt")  + ";margin-left:" + ("4px")  + ";}.GP-OPMDKK{width:" + ("36px")  + ";height:" + ("16px")  + ";margin:" + ("3px"+ " " +"0"+ " " +"0"+ " " +"10px")  + ";padding:" + ("0")  + ";}.GP-OPMDNK{background:" + ("#d0e4f6")  + ";}.GP-OPMDLK{background:" + ("#ccc")  + ";}.GP-OPMDMK{background:" + ("#3d3d3d")  + ";}.GP-OPMDIK{background-color:" + ("#d7dde8")  + ";border-right:") + (("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GP-OPMDDK{background-color:" + ("#d7dde8")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("0"+ " " +"10px")  + ";}.GP-OPMDBK{margin-right:" + ("20px")  + ";color:" + ("#888")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("20pt")  + ";vertical-align:" + ("middle") ) + (";}.GP-OPMDBK:hover{color:" + ("#4b4a4a")  + ";text-decoration:" + ("underline")  + ";}.GP-OPMDCK{margin-right:" + ("4px")  + ";}.GP-OPMDEK{font-size:" + ("8pt")  + ";color:" + ("#4b4a4a")  + ";direction:" + ("ltr")  + ";}.GP-OPMDPJ{border:" + ("0")  + ";background-color:" + ("#fff")  + ";width:" + ("64px")  + ";padding:" + ("2px")  + ";}.GP-OPMDAK{background-color:") + (("#fff")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("3px"+ " " +"3px")  + ";margin-right:" + ("3px")  + ";color:" + ("#464646")  + ";font-size:" + ("36pt")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("36pt")  + ";vertical-align:" + ("middle") ) + (";}"));
       }
       public java.lang.String backgroundDocLayoutPanel() {
-        return "GKLQPWSNJ";
+        return "GP-OPMDNJ";
       }
       public java.lang.String backgroundSimpleLayoutPanel() {
-        return "GKLQPWSOJ";
+        return "GP-OPMDOJ";
       }
       public java.lang.String burgerMenu() {
-        return "GKLQPWSPJ";
+        return "GP-OPMDPJ";
       }
       public java.lang.String burgerMenuButton() {
-        return "GKLQPWSAK";
+        return "GP-OPMDAK";
       }
       public java.lang.String contentButton() {
-        return "GKLQPWSBK";
+        return "GP-OPMDBK";
       }
       public java.lang.String contentButtonSource() {
-        return "GKLQPWSCK";
+        return "GP-OPMDCK";
       }
       public java.lang.String contentButtons() {
-        return "GKLQPWSDK";
+        return "GP-OPMDDK";
       }
       public java.lang.String contentList() {
-        return "GKLQPWSEK";
+        return "GP-OPMDEK";
       }
       public java.lang.String link() {
-        return "GKLQPWSFK";
+        return "GP-OPMDFK";
       }
       public java.lang.String linkBar() {
-        return "GKLQPWSGK";
+        return "GP-OPMDGK";
       }
       public java.lang.String localeBox() {
-        return "GKLQPWSHK";
+        return "GP-OPMDHK";
       }
       public java.lang.String mainMenu() {
-        return "GKLQPWSIK";
+        return "GP-OPMDIK";
       }
       public java.lang.String options() {
-        return "GKLQPWSJK";
+        return "GP-OPMDJK";
       }
       public java.lang.String styleSelectionButton() {
-        return "GKLQPWSKK";
+        return "GP-OPMDKK";
       }
       public java.lang.String styleSelectionChrome() {
-        return "GKLQPWSLK";
+        return "GP-OPMDLK";
       }
       public java.lang.String styleSelectionDark() {
-        return "GKLQPWSMK";
+        return "GP-OPMDMK";
       }
       public java.lang.String styleSelectionStandard() {
-        return "GKLQPWSNK";
+        return "GP-OPMDNK";
       }
       public java.lang.String subtitle() {
-        return "GKLQPWSOK";
+        return "GP-OPMDOK";
       }
       public java.lang.String title() {
-        return "GKLQPWSPK";
+        return "GP-OPMDPK";
       }
       public java.lang.String titleBar() {
-        return "GKLQPWSAL";
+        return "GP-OPMDAL";
       }
     }
     ;

@@ -1,4 +1,4 @@
-// .ui.xml template last modified: 1603611250237
+// .ui.xml template last modified: 1722478530320
 package com.google.gwt.personal.tupracticalpieces.client.content;
 
 import com.google.gwt.core.client.GWT;
@@ -23,7 +23,7 @@ public class AdminMileageEditView_AdminMileageEditViewUiBinderImpl implements Ui
     @Template("Delete Item")
     SafeHtml html2();
      
-    @Template("<table align='center' cellspacing='10'> <tr> <td align='center' class='{0}' colspan='2'>Task Details</td> </tr>   <tr> <td class='{1}'>Supply date:</td> <td> <span id='{2}'></span> </td> </tr>  <tr> <td class='{3}'>Quantity:</td> <td class='{4}'> <span id='{5}'></span> </td> </tr>  <tr> <td class='{6}'>UnitPrice:</td> <td class='{7}'> <span id='{8}'></span> </td> </tr>  <tr> <td class='{9}'>TotalPrice:</td> <td class='{10}'> <span id='{11}'></span> </td> </tr>  <tr> <td class='{12}'>BsMileage:</td> <td class='{13}'> <span id='{14}'></span> </td> </tr>  <tr> <td class='{15}'>TotalMileage:</td> <td class='{16}'> <span id='{17}'></span> </td> </tr>                                  <tr class='{18}'> <td></td> <td align='center'> <span id='{19}'></span> <span id='{20}'></span> </td> </tr>  <tr> <td> <span id='{21}'></span> </td> </tr> </table>")
+    @Template("<table align='center' cellspacing='10'> <tr> <td align='center' class='{0}' colspan='2'>Mileage Details</td> </tr>   <tr> <td class='{1}'>Supply date:</td> <td> <span id='{2}'></span> </td> </tr>  <tr> <td class='{3}'>Quantity:</td> <td class='{4}'> <span id='{5}'></span> </td> </tr>  <tr> <td class='{6}'>UnitPrice:</td> <td class='{7}'> <span id='{8}'></span> </td> </tr>  <tr> <td class='{9}'>TotalPrice:</td> <td class='{10}'> <span id='{11}'></span> </td> </tr>  <tr> <td class='{12}'>BsMileage:</td> <td class='{13}'> <span id='{14}'></span> </td> </tr>  <tr> <td class='{15}'>TotalMileage:</td> <td class='{16}'> <span id='{17}'></span> </td> </tr>                                  <tr class='{18}'> <td></td> <td align='center'> <span id='{19}'></span> <span id='{20}'></span> </td> </tr>  <tr> <td> <span id='{21}'></span> </td> </tr> </table>")
     SafeHtml html3(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8, String arg9, String arg10, String arg11, String arg12, String arg13, String arg14, String arg15, String arg16, String arg17, String arg18, String arg19, String arg20, String arg21);
      
   }

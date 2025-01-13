@@ -20,9 +20,7 @@ import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.view.client.SelectionModel;
 import com.google.gwt.view.client.TreeViewModel;
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesConstants;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageEditView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageReadView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
+//import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwCanvas2d;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwCanvas3d;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwColumn;
@@ -32,12 +30,13 @@ import com.google.gwt.personal.tupracticalpieces.client.content.CwMethod2;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwNotes;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwPreface;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwPrimeNumberFrequencyByModulo;
+import com.google.gwt.personal.tupracticalpieces.client.content.CwUpdate;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwXFrame;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwMashup2;
 import com.google.gwt.personal.tupracticalpieces.client.mobile.MainMenuTreeViewModelMobile.Category;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
-import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
+//import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 
 import java.util.ArrayList;
@@ -70,6 +69,7 @@ public class MainMenuTreeViewModelDesktop implements TreeViewModel {
 //    String subCategoryAdminMileage();
   }
   
+  private CwUpdate cwUpdate;
 
 
   /**
@@ -174,10 +174,14 @@ public class MainMenuTreeViewModelDesktop implements TreeViewModel {
    */
   private final SelectionModel<ContentWidget> selectionModel;
 
+//  public MainMenuTreeViewModelDesktop(TUPracticalPiecesConstants constants,
+//      SelectionModel<ContentWidget> selectionModel, AdminMileageView adminViewMileage) {
   public MainMenuTreeViewModelDesktop(TUPracticalPiecesConstants constants,
-      SelectionModel<ContentWidget> selectionModel, AdminMileageView adminViewMileage) {
-    this.selectionModel = selectionModel;
-    initializeTree(constants, adminViewMileage);
+    SelectionModel<ContentWidget> selectionModel, CwUpdate cwUpdate) {
+	this.cwUpdate = cwUpdate;
+    	this.selectionModel = selectionModel;
+        //initializeTree(constants, adminViewMileage);
+    	initializeTree(constants);
   }
 
   /**
@@ -234,7 +238,9 @@ public class MainMenuTreeViewModelDesktop implements TreeViewModel {
   /**
    * Initialize the top level categories in the tree.
    */
-  private void initializeTree(TUPracticalPiecesConstants constants, AdminMileageView adminViewMileage) {
+  //private void initializeTree(TUPracticalPiecesConstants constants, AdminMileageView adminViewMileage) {
+  private void initializeTree(TUPracticalPiecesConstants constants) {
+  
     List<Category> catList = categories.getList();
 
     // about this page.
@@ -261,45 +267,33 @@ public class MainMenuTreeViewModelDesktop implements TreeViewModel {
               RunAsyncCode.runAsyncCode(CwColumn.class));
       category.addExample(new CwPrimeNumberFrequencyByModulo(constants),
               RunAsyncCode.runAsyncCode(CwColumn.class));
+/* 2024 remove due to reduce charge of ddos
       category.addExample(new CwFrame(constants),
               RunAsyncCode.runAsyncCode(CwFrame.class));
-      }
-
+*/
+    }
 
     // admin.
     {
       Category category = new Category(constants.categoryAdministrative());
       catList.add(category);
 //      
-////      category.addExample(new CwUpdate(constants),
-////              RunAsyncCode.runAsyncCode(CwUpdate.class));
+      category.addExample(cwUpdate,
+              RunAsyncCode.runAsyncCode(CwUpdate.class));
+//      category.addExample(new CwUpdate(constants),
+//              RunAsyncCode.runAsyncCode(CwUpdate.class));
 //      //sub category 
 //      {
 //          Category subcategory = new Category(constants.subCategoryAdminMileage());
 //          catList.add(subcategory);
 //          
 //		  
-//	      adminEditMileage = new AdminMileageEditView(constants);
-//	      subcategory.addExample(adminEditMileage,
-//			        RunAsyncCode.runAsyncCode(AdminMileageEditView.class));
-//	      adminReadMileage = new AdminMileageReadView(constants);
-//	      subcategory.addExample(adminReadMileage,
-//			        RunAsyncCode.runAsyncCode(AdminMileageReadView.class));
 //	    	  
 //	    	  
 //	    	  
 //	      }
 	   
 
-//	   adminViewMileage = new AdminMileageView(constants);
-//	addExample("AdminMileageView", adminViewMileage,
-//        RunAsyncCode.runAsyncCode(AdminMileageView.class), category3);
-//	   category.addExample(adminViewMileage,
-//       RunAsyncCode.runAsyncCode(AdminMileageView.class));
-//      
-//      this.adminViewMileage = adminViewMileage;
-	   category.addExample(adminViewMileage,
-	   		RunAsyncCode.runAsyncCode(AdminMileageView.class));
 		      
       
       category.addExample(new CwXFrame(constants),
@@ -313,7 +307,8 @@ public class MainMenuTreeViewModelDesktop implements TreeViewModel {
   }
 	
 	public ContentWidget getFirstContentWidget() {
-		return contentToken.get("!AdminMileageView");
+//		return contentToken.get("!AdminMileageView");
+		return contentToken.get("!CwPreface");
 	}
 	
 

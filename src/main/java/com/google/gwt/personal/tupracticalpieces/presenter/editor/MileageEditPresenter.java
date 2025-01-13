@@ -30,6 +30,7 @@ import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageRequest;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.DeckLayoutPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.requestfactory.shared.Receiver;
@@ -89,10 +90,11 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
    
 	      this.clientFactory = clientFactory;
 //    clientFactory.getTaskEditView().setPresenter(this);
-    getView().setPresenter(this);
+//    getView().setPresenter(this);
 //    clientFactory.getShell().setWidget(getView().asWidget()); // To display the view is from activities.
-
-  }
+//    clientFactory.getMileageEditView().setPresenter(this);
+      //asWiget();
+}
 
   /**
    * For editing an existing task.
@@ -105,7 +107,11 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
      * for the async fetch
      */
 //    this.taskId = readOnlyTask.getId();
-    this.mileageId = readOnlyMileage.getId();
+	if (readOnlyMileage != null) {
+      this.mileageId = readOnlyMileage.getId();
+	} else {
+	  this.mileageId = null;
+	}
     this.clientFactory = clientFactory;
 //    clientFactory.getTaskEditView().setPresenter(this);
     clientFactory.getMileageEditView().setPresenter(this);
@@ -148,7 +154,7 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
     // Flush the changes into the editable task.
 //    TaskRequest context = (TaskRequest) clientFactory.getTaskEditView().getEditorDriver().flush();
     MileageRequest context = (MileageRequest) clientFactory.getMileageEditView().getEditorDriver().flush();
-
+Window.alert("persisting...");
     /*
      * Create a persist request the first time we try to save this task. If a
      * request already exists, reuse it.
@@ -159,9 +165,10 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
       mileagePersistRequest = context.persist().using(editMileage);
     }
 
+    Window.alert("persisting......fire");
     // Fire the request.
 //    taskPersistRequest.fire(new Receiver<Void>() {
-      mileagePersistRequest.fire(new Receiver<Void>() {
+    mileagePersistRequest.fire(new Receiver<Void>() {
       @Override
       public void onConstraintViolation(Set<ConstraintViolation<?>> violations) {
         handleConstraintViolations(violations);
@@ -169,7 +176,7 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
 
       @Override
       public void onSuccess(Void response) {
-//        editTask = null;
+        //        editTask = null;
         editMileage = null;
 
         // Notify the user that the task was updated.
@@ -181,12 +188,13 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
         ActionEvent.fire(eventBus, ActionNames.MILEAGE_SAVED);
       }
     });
+    Window.alert("persisting......end");
   }
 
 //  public void start(EventBus eventBus) {
   public void start(EventBus eventBus) {
     this.eventBus = eventBus;
-//    getView().setNameViolation(null);
+    getView().setNameViolation(null);
 
     // Prefetch the sounds used in this activity.
     SoundEffects.get().prefetchError();
@@ -195,7 +203,7 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
     // TODO(rjrjr) Ick!
 //    clientFactory.getShell().setAddButtonVisible(false);
 
-    checkLogin();
+//    checkLogin();
     
     
 //    if (taskId == null) {
@@ -284,6 +292,7 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
 //    return clientFactory.getTaskEditView();
     return clientFactory.getMileageEditView();
   }
+  
 
   /**
    * Handle constraint violations.
@@ -293,7 +302,7 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
     getView().getEditorDriver().setConstraintViolations(violations);
 
     // Play a sound.
-    SoundEffects.get().playError();
+    //SoundEffects.get().playError();
   }
 
   /**
@@ -320,6 +329,8 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
   }
 
   private void startCreate() {
+
+    Window.alert("startCreate endtered.");
     isEditing = false;
     getView().setEditing(false);
 //    TaskRequest request = clientFactory.getRequestFactory().taskRequest();
@@ -331,6 +342,8 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
   }
 
   private void startEdit() {
+
+    Window.alert("startCreate startEdit.");
     isEditing = true;
     getView().setEditing(true);
     // Lock the display until the task is loaded.
@@ -386,10 +399,10 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
         });
   }
   
-  private void checkLogin() {
-	  getView().checkLoginAdmin();
-  }
-
+//  private void checkLogin() {
+//	  getView().checkLoginAdmin();
+//  }
+//
 @Override
 public void goTo(Place place) {
 	// TODO Auto-generated method stub
@@ -401,7 +414,13 @@ public void goTo(Place place) {
 public void setName(String goodbyeName) {
 	// TODO Auto-generated method stub
 	
-} 
-  
+}
+//
+//@Override
+//public void start(DeckLayoutPanel container, EventBus eventBus) {
+//	// TODO Auto-generated method stub
+//	
+//} 
+//  
   
 }

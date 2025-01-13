@@ -32,11 +32,14 @@ import com.google.gwt.place.shared.Place;
 //import com.google.gwt.sample.mobilewebapp.presenter.tasklist.TaskListPresenter;
 import com.google.gwt.personal.tupracticalpieces.client.ClientFactory;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPlace;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileagePlace;
+import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPresenter;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPlace;
+import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPresenter;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePresenter;
 import com.google.gwt.personal.tupracticalpieces.client.activity.TUAdminActivity;
+import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
+import com.google.gwt.user.client.Window;
 //import com.google.gwt.personal.tupracticalpieces.presenter.tasklist.TaskListPlace;
 //import com.google.gwt.personal.tupracticalpieces.presenter.tasklist.TaskListPresenter;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
@@ -62,29 +65,72 @@ public class AppActivityMapper implements ActivityMapper {
   public Activity getActivity(final Place place) {
 	//clientFactory.getShell().setWidget();
 	//if (place instanceof TaskListPlace) {
-    if (place instanceof AdminMileagePlace) {
-//	  String token = clientFactory.getApp().getHistoristoryMapper().getToken(place);;
-//	  log.info("MVP activity token:" + token);
-//	  if (token.equals("!AdminMileageView:") ) {
-
-//	  return new AbstractActivity() {
-//            @Override
-//            public void start(AcceptsOneWidget panel, EventBus eventBus) {
-//              AdminMileagePresenter presenter = new AdminMileagePresenter(clientFactory, (AdminMileagePlace) place);
-//              presenter.start(eventBus);
-
-//      clientFactory.getMyAppAdminMileageView().setPresenter(presenter);
-    	
-//      panel.setWidget(presenter);
-//    }
- 
-              
-    	return new TUAdminActivity(clientFactory, (AdminMileagePlace) place);
-                               
-    } else if (place instanceof MileageEditPlace) {     
-    	return new MileageEditActivity(clientFactory, (MileageEditPlace) place);
-    } else if (place instanceof MileageReadPlace) {     
-    	return new MileageReadActivity(clientFactory, (MileageReadPlace) place);
+//    if (place instanceof AdminMileagePlace) {
+////	  String token = clientFactory.getApp().getHistoristoryMapper().getToken(place);;
+////	  log.info("MVP activity token:" + token);
+////	  if (token.equals("!AdminMileageView:") ) {
+//
+////	  return new AbstractActivity() {
+////            @Override
+////            public void start(AcceptsOneWidget panel, EventBus eventBus) {
+////              AdminMileagePresenter presenter = new AdminMileagePresenter(clientFactory, (AdminMileagePlace) place);
+////              presenter.start(eventBus);
+//
+////      clientFactory.getMyAppAdminMileageView().setPresenter(presenter);
+//    	
+////      panel.setWidget(presenter);
+////    }
+// 
+//              
+//    	return new TUAdminActivity(clientFactory, (AdminMileagePlace) place);
+//                               
+//    } else 
+	  
+//	    if (place instanceof TaskListPlace) {
+//	        // The list of tasks.
+//	        return new AbstractActivity() {
+//	          @Override
+//	          public void start(AcceptsOneWidget panel, EventBus eventBus) {
+//	            TaskListPresenter presenter = new TaskListPresenter(clientFactory, (TaskListPlace) place);
+//	            presenter.start(eventBus);
+//	            panel.setWidget(presenter);
+//	          }
+//
+//	          /*
+//	           * Note no call to presenter.stop(). The TaskListViews do that
+//	           * themselves as a side effect of setPresenter.
+//	           */
+//	        };
+//	      }
+	  
+	  
+	if (place instanceof AdminMileagePlace) {
+//			return new MileageEditActivity(clientFactory, (MileageEditPlace) place);
+		return new AbstractActivity() {
+			@Override
+			public void start(AcceptsOneWidget panel, EventBus eventBus) {
+				AdminMileagePresenter presenter = new AdminMileagePresenter(clientFactory, (AdminMileagePlace) place);
+				presenter.start(eventBus);
+				panel.setWidget(presenter);
+			}
+		};
+	}
+	if (place instanceof MileageEditPlace) {
+		//	return new MileageEditActivity(clientFactory, (MileageEditPlace) place);
+		return new AbstractActivity() {
+			@Override
+			public void start(AcceptsOneWidget panel, EventBus eventBus) {
+				MileageEditPresenter presenter = new MileageEditPresenter(clientFactory, ((MileageEditPlace) place).getMileage());
+				presenter.start(eventBus);
+				panel.setWidget(presenter);
+			}
+		};
+//Window.alert("TUAdminActivity to go.");
+		//return new TUAdminActivity(clientFactory, (MileageEditPlace) place);
+		
+	}
+    if (place instanceof MileageReadPlace) {     
+    	return new TUAdminActivity(clientFactory, (MileageEditPlace) place);
     }         
 
             /*

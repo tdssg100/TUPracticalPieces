@@ -35,9 +35,9 @@ import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 //import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /*
 @NamedQueries( {
@@ -92,14 +92,14 @@ public class MileageDataUtils extends HttpServlet {
 
 		//log.info("db init:" + this.getServletConfig().getServletContext().toString());
 		// if genuin appengine then retrun because there is no local db.
-		EMF emf = new EMF();
-		if (emf.get() == null) {
-			
-			log.info("db init fail.");
-			return;
-		}
-		EntityManager cm= emf.get().createEntityManager();
+		EntityManager cm = null;
 		try {
+			EMF emf = new EMF();
+		//if (emf.get() == null) {
+		//	log.info("db init fail.");
+		//	return;
+		//}
+			cm= emf.get().createEntityManager();
 //			tx.begin();
 			//Query query = TaskDataUtils.cm.createQuery("select m from Mileage m where supplyDate='" + id + "'");
 //			Query query = TaskDataUtils.cm.createQuery("select m from Task m where id=" + id); 
@@ -112,12 +112,12 @@ public class MileageDataUtils extends HttpServlet {
 						.setMaxResults(1)
 						.getResultList();
 */
-        log.info("db cache initilized.");
+			log.info("db cache initilized. mileage:" + md.size());
 		} catch (Exception e) { 
 			log.severe("JPA cache init: " + e.toString());				
 		} finally {
+			cm.close();
 		}
-		cm.close();
 	}
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {

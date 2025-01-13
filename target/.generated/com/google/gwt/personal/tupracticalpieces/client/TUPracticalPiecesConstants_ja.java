@@ -530,16 +530,8 @@ public class TUPracticalPiecesConstants_ja implements com.google.gwt.personal.tu
     return "走行距離グラフデータ更新";
   }
   
-  public java.lang.String cwUpdateForbidden() {
-    return "権限がありません.";
-  }
-  
   public java.lang.String cwUpdateName() {
     return "走行距離DB更新";
-  }
-  
-  public java.lang.String cwXFrameName() {
-    return "ニュース位置情報調整";
   }
   
   public java.lang.String cwCommonAdminTitle() {
@@ -564,6 +556,10 @@ public class TUPracticalPiecesConstants_ja implements com.google.gwt.personal.tu
   
   public java.lang.String cwXFrameDescription() {
     return "不適当な位置名称の除去登録。";
+  }
+  
+  public java.lang.String cwXFrameName() {
+    return "ニュース位置情報調整";
   }
   
   public java.lang.String cwFrameAttached() {

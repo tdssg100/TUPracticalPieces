@@ -31,6 +31,7 @@ import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSupe
 //import com.google.gwt.sample.mobilewebapp.shared.MobileWebAppRequestFactory;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageRequestFactory;
 import com.google.web.bindery.event.shared.EventBus;
+import com.google.gwt.personal.tupracticalpieces.client.content.CwUpdate;
 
 /**
  * The factory responsible for instantiating everything interesting in this
@@ -89,7 +90,8 @@ public interface ClientFactory {
    * Get an implementation of {@link TaskListView}.
    */
   //TaskListView getTaskListView();
-  AdminMileageSuperView getMyAppAdminMileageView();
+  //AdminMileageSuperView getMyAppAdminMileageView();
+  CwUpdate getMyAppAdminMileageView();
 
   /**
    * Get the {@link TaskProxyLocalStorage} that stores tasks.

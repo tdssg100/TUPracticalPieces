@@ -42,18 +42,19 @@ public class MileageListUpdateEvent extends GwtEvent<MileageListUpdateEvent.Hand
      * Called when the task list is updated.
      */
     //void onTaskListUpdated(TaskListUpdateEvent event);
-    void onTaskListUpdated(MileageListUpdateEvent event);
+    void onMileageListUpdated(MileageListUpdateEvent event);
   }
 
 //  public static final Type<TaskListUpdateEvent.Handler> TYPE = new Type<TaskListUpdateEvent.Handler>();
   public static final Type<MileageListUpdateEvent.Handler> TYPE = new Type<MileageListUpdateEvent.Handler>();
 
 //  private final List<TaskProxy> tasks;
-  private final List<MileageProxy> tasks;
+  private final List<MileageProxy> mileages;
 
 //  public TaskListUpdateEvent(List<TaskProxy> tasks) {
-  public MileageListUpdateEvent(List<MileageProxy> tasks) {
-    this.tasks = tasks;
+  public MileageListUpdateEvent(List<MileageProxy> mileages) {
+//    this.tasks = tasks;
+    this.mileages = mileages;
   }
 
   @Override
@@ -63,13 +64,14 @@ public class MileageListUpdateEvent extends GwtEvent<MileageListUpdateEvent.Hand
   }
 
 //  public List<TaskProxy> getTasks() {
-  public List<MileageProxy> getTasks() {
-    return tasks;
+  public List<MileageProxy> getMileages() {
+    return mileages;
   }
 
   @Override
 //  protected void dispatch(TaskListUpdateEvent.Handler handler) {
   protected void dispatch(MileageListUpdateEvent.Handler handler) {
-    handler.onTaskListUpdated(this);
+    //handler.onTaskListUpdated(this);
+    handler.onMileageListUpdated(this);
   }
 }

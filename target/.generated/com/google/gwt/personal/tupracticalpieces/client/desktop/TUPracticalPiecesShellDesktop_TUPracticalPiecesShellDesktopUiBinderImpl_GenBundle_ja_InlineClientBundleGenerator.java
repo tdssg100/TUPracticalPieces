@@ -20,61 +20,61 @@ public class TUPracticalPiecesShellDesktop_TUPracticalPiecesShellDesktopUiBinder
         return "style";
       }
       public String getText() {
-        return com.google.gwt.i18n.client.LocaleInfo.getCurrentLocale().isRTL() ? ((".GKLQPWSM{background-color:" + ("#daa")  + ";}.GKLQPWSN{background-color:" + ("#ccf")  + ";}.GKLQPWSDB{padding:" + ("2px"+ " " +"0"+ " " +"2px"+ " " +"22px")  + ";background:" + ("white")  + ";text-align:" + ("left")  + ";}.GKLQPWSCB{font-size:" + ("8pt")  + ";line-height:" + ("10pt")  + ";}.GKLQPWSNB{padding:" + ("0"+ " " +"10px")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GKLQPWSMB{color:" + ("#7b8fae")  + ";font-size:") + (("20pt")  + ";font-weight:" + ("bold")  + ";text-shadow:" + ("#ddd"+ " " +"3px"+ " " +"3px"+ " " +"1px")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"4px"+ " " +"0"+ " " +"0")  + ";}.GKLQPWSLB{color:" + ("#888")  + ";font-size:" + ("16pt")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"6px"+ " " +"0"+ " " +"0")  + ";}.GKLQPWSGB{padding:" + ("6px"+ " " +"0"+ " " +"0"+ " " +"10px")  + ";}.GKLQPWSEB{color:" + ("blue") ) + (";font-size:" + ("8pt")  + ";margin-right:" + ("4px")  + ";}.GKLQPWSHB{width:" + ("36px")  + ";height:" + ("16px")  + ";margin:" + ("3px"+ " " +"10px"+ " " +"0"+ " " +"0")  + ";padding:" + ("0")  + ";}.GKLQPWSKB{background:" + ("#d0e4f6")  + ";}.GKLQPWSIB{background:" + ("#ccc")  + ";}.GKLQPWSJB{background:" + ("#3d3d3d")  + ";}.GKLQPWSFB{background-color:" + ("#d7dde8")  + ";border-left:") + (("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GKLQPWSAB{background-color:" + ("#d7dde8")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("0"+ " " +"10px")  + ";}.GKLQPWSO{margin-left:" + ("20px")  + ";color:" + ("#888")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("20pt")  + ";vertical-align:" + ("middle") ) + (";}.GKLQPWSO:hover{color:" + ("#4b4a4a")  + ";text-decoration:" + ("underline")  + ";}.GKLQPWSP{margin-left:" + ("4px")  + ";}.GKLQPWSBB{font-size:" + ("8pt")  + ";color:" + ("#4b4a4a")  + ";direction:" + ("ltr")  + ";}")) : ((".GKLQPWSM{background-color:" + ("#daa")  + ";}.GKLQPWSN{background-color:" + ("#ccf")  + ";}.GKLQPWSDB{padding:" + ("2px"+ " " +"22px"+ " " +"2px"+ " " +"0")  + ";background:" + ("white")  + ";text-align:" + ("right")  + ";}.GKLQPWSCB{font-size:" + ("8pt")  + ";line-height:" + ("10pt")  + ";}.GKLQPWSNB{padding:" + ("0"+ " " +"10px")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GKLQPWSMB{color:" + ("#7b8fae")  + ";font-size:") + (("20pt")  + ";font-weight:" + ("bold")  + ";text-shadow:" + ("#ddd"+ " " +"3px"+ " " +"3px"+ " " +"1px")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"0"+ " " +"0"+ " " +"4px")  + ";}.GKLQPWSLB{color:" + ("#888")  + ";font-size:" + ("16pt")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"0"+ " " +"0"+ " " +"6px")  + ";}.GKLQPWSGB{padding:" + ("6px"+ " " +"10px"+ " " +"0"+ " " +"0")  + ";}.GKLQPWSEB{color:" + ("blue") ) + (";font-size:" + ("8pt")  + ";margin-left:" + ("4px")  + ";}.GKLQPWSHB{width:" + ("36px")  + ";height:" + ("16px")  + ";margin:" + ("3px"+ " " +"0"+ " " +"0"+ " " +"10px")  + ";padding:" + ("0")  + ";}.GKLQPWSKB{background:" + ("#d0e4f6")  + ";}.GKLQPWSIB{background:" + ("#ccc")  + ";}.GKLQPWSJB{background:" + ("#3d3d3d")  + ";}.GKLQPWSFB{background-color:" + ("#d7dde8")  + ";border-right:") + (("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GKLQPWSAB{background-color:" + ("#d7dde8")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("0"+ " " +"10px")  + ";}.GKLQPWSO{margin-right:" + ("20px")  + ";color:" + ("#888")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("20pt")  + ";vertical-align:" + ("middle") ) + (";}.GKLQPWSO:hover{color:" + ("#4b4a4a")  + ";text-decoration:" + ("underline")  + ";}.GKLQPWSP{margin-right:" + ("4px")  + ";}.GKLQPWSBB{font-size:" + ("8pt")  + ";color:" + ("#4b4a4a")  + ";direction:" + ("ltr")  + ";}"));
+        return com.google.gwt.i18n.client.LocaleInfo.getCurrentLocale().isRTL() ? ((".GP-OPMDM{background-color:" + ("#daa")  + ";}.GP-OPMDN{background-color:" + ("#ccf")  + ";}.GP-OPMDDB{padding:" + ("2px"+ " " +"0"+ " " +"2px"+ " " +"22px")  + ";background:" + ("white")  + ";text-align:" + ("left")  + ";}.GP-OPMDCB{font-size:" + ("8pt")  + ";line-height:" + ("10pt")  + ";}.GP-OPMDNB{padding:" + ("0"+ " " +"10px")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GP-OPMDMB{color:" + ("#7b8fae")  + ";font-size:") + (("20pt")  + ";font-weight:" + ("bold")  + ";text-shadow:" + ("#ddd"+ " " +"3px"+ " " +"3px"+ " " +"1px")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"4px"+ " " +"0"+ " " +"0")  + ";}.GP-OPMDLB{color:" + ("#888")  + ";font-size:" + ("16pt")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"6px"+ " " +"0"+ " " +"0")  + ";}.GP-OPMDGB{padding:" + ("6px"+ " " +"0"+ " " +"0"+ " " +"10px")  + ";}.GP-OPMDEB{color:" + ("blue") ) + (";font-size:" + ("8pt")  + ";margin-right:" + ("4px")  + ";}.GP-OPMDHB{width:" + ("36px")  + ";height:" + ("16px")  + ";margin:" + ("3px"+ " " +"10px"+ " " +"0"+ " " +"0")  + ";padding:" + ("0")  + ";}.GP-OPMDKB{background:" + ("#d0e4f6")  + ";}.GP-OPMDIB{background:" + ("#ccc")  + ";}.GP-OPMDJB{background:" + ("#3d3d3d")  + ";}.GP-OPMDFB{background-color:" + ("#d7dde8")  + ";border-left:") + (("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GP-OPMDAB{background-color:" + ("#d7dde8")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("0"+ " " +"10px")  + ";}.GP-OPMDO{margin-left:" + ("20px")  + ";color:" + ("#888")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("20pt")  + ";vertical-align:" + ("middle") ) + (";}.GP-OPMDO:hover{color:" + ("#4b4a4a")  + ";text-decoration:" + ("underline")  + ";}.GP-OPMDP{margin-left:" + ("4px")  + ";}.GP-OPMDBB{font-size:" + ("8pt")  + ";color:" + ("#4b4a4a")  + ";direction:" + ("ltr")  + ";}")) : ((".GP-OPMDM{background-color:" + ("#daa")  + ";}.GP-OPMDN{background-color:" + ("#ccf")  + ";}.GP-OPMDDB{padding:" + ("2px"+ " " +"22px"+ " " +"2px"+ " " +"0")  + ";background:" + ("white")  + ";text-align:" + ("right")  + ";}.GP-OPMDCB{font-size:" + ("8pt")  + ";line-height:" + ("10pt")  + ";}.GP-OPMDNB{padding:" + ("0"+ " " +"10px")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GP-OPMDMB{color:" + ("#7b8fae")  + ";font-size:") + (("20pt")  + ";font-weight:" + ("bold")  + ";text-shadow:" + ("#ddd"+ " " +"3px"+ " " +"3px"+ " " +"1px")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"0"+ " " +"0"+ " " +"4px")  + ";}.GP-OPMDLB{color:" + ("#888")  + ";font-size:" + ("16pt")  + ";margin:" + ("0")  + ";padding:" + ("0"+ " " +"0"+ " " +"0"+ " " +"6px")  + ";}.GP-OPMDGB{padding:" + ("6px"+ " " +"10px"+ " " +"0"+ " " +"0")  + ";}.GP-OPMDEB{color:" + ("blue") ) + (";font-size:" + ("8pt")  + ";margin-left:" + ("4px")  + ";}.GP-OPMDHB{width:" + ("36px")  + ";height:" + ("16px")  + ";margin:" + ("3px"+ " " +"0"+ " " +"0"+ " " +"10px")  + ";padding:" + ("0")  + ";}.GP-OPMDKB{background:" + ("#d0e4f6")  + ";}.GP-OPMDIB{background:" + ("#ccc")  + ";}.GP-OPMDJB{background:" + ("#3d3d3d")  + ";}.GP-OPMDFB{background-color:" + ("#d7dde8")  + ";border-right:") + (("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";}.GP-OPMDAB{background-color:" + ("#d7dde8")  + ";border-bottom:" + ("1px"+ " " +"solid"+ " " +"#c3c3c3")  + ";padding:" + ("0"+ " " +"10px")  + ";}.GP-OPMDO{margin-right:" + ("20px")  + ";color:" + ("#888")  + ";font-weight:" + ("bold")  + ";cursor:" + ("hand")  + ";cursor:" + ("pointer")  + ";line-height:" + ("20pt")  + ";vertical-align:" + ("middle") ) + (";}.GP-OPMDO:hover{color:" + ("#4b4a4a")  + ";text-decoration:" + ("underline")  + ";}.GP-OPMDP{margin-right:" + ("4px")  + ";}.GP-OPMDBB{font-size:" + ("8pt")  + ";color:" + ("#4b4a4a")  + ";direction:" + ("ltr")  + ";}"));
       }
       public java.lang.String backgroundDocLayoutPanel() {
-        return "GKLQPWSM";
+        return "GP-OPMDM";
       }
       public java.lang.String backgroundSimpleLayoutPanel() {
-        return "GKLQPWSN";
+        return "GP-OPMDN";
       }
       public java.lang.String contentButton() {
-        return "GKLQPWSO";
+        return "GP-OPMDO";
       }
       public java.lang.String contentButtonSource() {
-        return "GKLQPWSP";
+        return "GP-OPMDP";
       }
       public java.lang.String contentButtons() {
-        return "GKLQPWSAB";
+        return "GP-OPMDAB";
       }
       public java.lang.String contentList() {
-        return "GKLQPWSBB";
+        return "GP-OPMDBB";
       }
       public java.lang.String link() {
-        return "GKLQPWSCB";
+        return "GP-OPMDCB";
       }
       public java.lang.String linkBar() {
-        return "GKLQPWSDB";
+        return "GP-OPMDDB";
       }
       public java.lang.String localeBox() {
-        return "GKLQPWSEB";
+        return "GP-OPMDEB";
       }
       public java.lang.String mainMenu() {
-        return "GKLQPWSFB";
+        return "GP-OPMDFB";
       }
       public java.lang.String options() {
-        return "GKLQPWSGB";
+        return "GP-OPMDGB";
       }
       public java.lang.String styleSelectionButton() {
-        return "GKLQPWSHB";
+        return "GP-OPMDHB";
       }
       public java.lang.String styleSelectionChrome() {
-        return "GKLQPWSIB";
+        return "GP-OPMDIB";
       }
       public java.lang.String styleSelectionDark() {
-        return "GKLQPWSJB";
+        return "GP-OPMDJB";
       }
       public java.lang.String styleSelectionStandard() {
-        return "GKLQPWSKB";
+        return "GP-OPMDKB";
       }
       public java.lang.String subtitle() {
-        return "GKLQPWSLB";
+        return "GP-OPMDLB";
       }
       public java.lang.String title() {
-        return "GKLQPWSMB";
+        return "GP-OPMDMB";
       }
       public java.lang.String titleBar() {
-        return "GKLQPWSNB";
+        return "GP-OPMDNB";
       }
     }
     ;

@@ -23,7 +23,7 @@ import com.google.gwt.i18n.client.Constants;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.DialogBox;
+//import com.google.gwt.user.client.ui.DialogBox;
 //import com.google.gwt.user.client.ui.Frame;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -149,19 +149,20 @@ public class CwXFrame extends CwFrame {
    * page content.
    */
   @TUPracticalPiecesData
-  private HorizontalPanel contPanel = new HorizontalPanel();
+  private VerticalPanel contPanel = new VerticalPanel();
   
   /**
    * Issue the api call.
    */
   //@TUPracticalPiecesData
-  private Button excludeButton = new Button("Show");
+  private Button excludeButton = new Button("Exclude");
   
+  private Button showButton = new Button("Show");	//202406
     /**
    * admin authentication 202406
    */
   //@TUPracticalPiecesData
-  public  final DialogBox dialogBox = new DialogBox();
+  public  final DialogBox dialogBox = new DialogBox();	//202406
 
   /**
    * API IFRAME.
@@ -197,13 +198,29 @@ public class CwXFrame extends CwFrame {
   //@TUPracticalPiecesSource
   @Override
   public Widget onInitialize() {
+  
+	showButton.addClickHandler(new ClickHandler() {
+	    	public void onClick(ClickEvent event) {
 	
-	/* 20140501 add admin to scope
-    */
-	super.setAdmin(true);
-	superWidget = super.onInitialize();
-	contPanel.add(superWidget);
+			/* 20140501 add admin to scope
+		    */
+			//super.setAdmin(true);
+			//superWidget = super.onInitialize();
+			setAdmin(true);
+			CwFrame obj = new CwFrame(constants);  //202406 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+			superWidget = obj.onInitialize();
+			contPanel.add(superWidget);
+			showButton.setEnabled(false);
+	    }});
 
+
+
+	showButton.setEnabled(false);
+    showButton.addClickHandler(new ClickHandler() {
+    	public void onClick(ClickEvent event) {
+    		excludeButton.setEnabled(true);
+    }});
+	contPanel.add(showButton);
 //        		//Window.confirm(url); //xxxTODO when restart to update, open this url.
 //    }
 //    
@@ -224,7 +241,7 @@ public class CwXFrame extends CwFrame {
 	ls.checkLoginAdmin(dialogBox, constants.cwCommonAdminTitle(),
 	    constants.cwCommonAdminName(), constants.cwCommonAdminPassword(), 
 	    constants.cwCommonAdminOk(), constants.cwCommonAdminCancel(),
-	    Arrays.asList(excludeButton), Arrays.asList(contentDiv),Window.Location.getHref());
+	    Arrays.asList(showButton), Arrays.asList(contentDiv), Window.Location.getHref());
 	contPanel.add(dialogBox);		    
 	return contPanel;
   }

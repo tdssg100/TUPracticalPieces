@@ -211,7 +211,7 @@ public class Mileage {
 //				Query query = emf.createNamedQuery("select m from Mileage m where id="  + id.toString() );
 //				List<Mileage> md = (List<Mileage>) query.getResultList();
 				List<Mileage> md = emf.createNamedQuery("LookUpMileage")
-						.setParameter("id", id.toString())
+						.setParameter("id", id)
 						.setFirstResult(0)
 						.setMaxResults(1)
 						.getResultList();

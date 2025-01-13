@@ -25,13 +25,12 @@ import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileagePlace;
 //import com.google.gwt.sample.mobilewebapp.shared.TaskProxy;
 
 /**
  * The place in the app that shows and edits details of a task.
  */
-public class MileageEditPlace extends MileagePlace {
+public class MileageEditPlace extends Place {
 
 //  private static final String NO_ID = "create";
     static final String NO_ID = "adminCreate";
@@ -53,7 +52,7 @@ public class MileageEditPlace extends MileagePlace {
    * The tokenizer for this place.
    */
 //  public static class Tokenizer implements PlaceTokenizer<TaskPlace> {
-  @Prefix("adminEdit")
+  //@Prefix("adminEdit")
   public static class Tokenizer implements PlaceTokenizer<MileageEditPlace> {
 
 

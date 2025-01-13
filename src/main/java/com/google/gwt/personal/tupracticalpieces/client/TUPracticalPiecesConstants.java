@@ -17,12 +17,12 @@ package com.google.gwt.personal.tupracticalpieces.client;
 
 //import com.google.gwt.personal.tupracticalpieces.client.MainMenuTreeViewModel.MenuConstants;
 import com.google.gwt.personal.tupracticalpieces.client.desktop.MainMenuTreeViewModelDesktop.MenuConstants;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageEditView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageReadView;
+//import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageEditView;
+//import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageReadView;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwCanvas2d;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwCanvas3d;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwColumn;
-import com.google.gwt.personal.tupracticalpieces.client.content.CwFrame;
+//import com.google.gwt.personal.tupracticalpieces.client.content.CwFrame;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwMethod;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwMethod2;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwNotes;

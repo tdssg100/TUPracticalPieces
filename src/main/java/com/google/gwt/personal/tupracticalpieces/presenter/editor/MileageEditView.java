@@ -22,14 +22,19 @@
 package com.google.gwt.personal.tupracticalpieces.presenter.editor;
 
 import com.google.gwt.editor.client.Editor;
+//import com.google.gwt.event.shared.EventBus;
+import com.google.web.bindery.event.shared.EventBus;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.place.shared.Place;
+import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.gwt.user.client.ui.DeckLayoutPanel;
 //import com.google.gwt.sample.mobilewebapp.shared.TaskProxy;
 //import com.google.gwt.sample.ui.client.PresentsWidgets;
 //import com.google.gwt.personal.ui.client.PresentsWidgets;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
+import com.google.gwt.personal.tupracticalpieces.presenter.list.PresentsWidgets;
 
 /**
  * Implemented by widgets that edit tasks.
@@ -40,8 +45,8 @@ public interface MileageEditView extends Editor<MileageProxy>, IsWidget {
   /**
    * The presenter for this view.
    */
-//  public interface Presenter extends PresentsWidgets {
-	public interface Presenter  {
+  public interface Presenter extends PresentsWidgets {
+//	public interface Presenter  {
     /**
      * Delete the current task or cancel the creation of a task.
      */
@@ -64,7 +69,9 @@ public interface MileageEditView extends Editor<MileageProxy>, IsWidget {
 	String mayStop();
 	
 	void stop();
-   
+//
+//	void start(DeckLayoutPanel container, EventBus eventBus);
+//  
   }
 
   /**
@@ -89,12 +96,12 @@ public interface MileageEditView extends Editor<MileageProxy>, IsWidget {
    */
   void setLocked(boolean locked);
 
-//  /**
-//   * The the violation associated with the name.
-//   * 
-//   * @param message the message to show, or null if no violation
-//   */
-//  void setNameViolation(String message);
+ /**
+  * The the violation associated with the name.
+  * 
+  * @param message the message to show, or null if no violation
+  */
+ void setNameViolation(String message);
 
   /**
    * Set the {@link Presenter} for this view.
@@ -122,7 +129,7 @@ public interface MileageEditView extends Editor<MileageProxy>, IsWidget {
    * 
    * @param tasks the list of tasks
    */
-  void checkLoginAdmin();
+  //void checkLoginAdmin();
 
   
 

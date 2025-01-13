@@ -6,6 +6,7 @@
      <persistence-unit name="TUPPDB" transaction-type="RESOURCE_LOCAL">
         <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
         <class>com.google.gwt.personal.tupracticalpieces.database.Mileage</class>
+        <class>com.google.gwt.personal.tupracticalpieces.database.User</class>
         <exclude-unlisted-classes/>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />

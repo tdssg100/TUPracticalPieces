@@ -25,15 +25,17 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("AED", new CurrencyDataImpl("AED", "DH", 2, "DH", "dh"));
     // アフガニスタン アフガニー (1927–2002)
     result.put("AFA", new CurrencyDataImpl("AFA", "AFA", 130, "AFA", "AFA"));
-    // アフガニー
+    // アフガニスタン アフガニー
     result.put("AFN", new CurrencyDataImpl("AFN", "AFN", 0, "AFN", "Af."));
+    // アルバニア レク (1946–1965)
+    result.put("ALK", new CurrencyDataImpl("ALK", "ALK", 130, "ALK", "ALK"));
     // アルバニア レク
     result.put("ALL", new CurrencyDataImpl("ALL", "ALL", 0, "ALL", "Lek"));
     // アルメニア ドラム
-    result.put("AMD", new CurrencyDataImpl("AMD", "AMD", 0, "AMD", "Dram"));
+    result.put("AMD", new CurrencyDataImpl("AMD", "AMD", 2, "AMD", "Dram"));
     // オランダ領アンティル ギルダー
     result.put("ANG", new CurrencyDataImpl("ANG", "ANG", 2, "ANG", "ANG"));
-    // クワンザ
+    // アンゴラ クワンザ
     result.put("AOA", new CurrencyDataImpl("AOA", "AOA", 2, "AOA", "Kz"));
     // アンゴラ クワンザ (1977–1991)
     result.put("AOK", new CurrencyDataImpl("AOK", "AOK", 130, "AOK", "AOK"));
@@ -43,9 +45,9 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("AOR", new CurrencyDataImpl("AOR", "AOR", 130, "AOR", "AOR"));
     // アルゼンチン アゥストラール
     result.put("ARA", new CurrencyDataImpl("ARA", "ARA", 130, "ARA", "ARA"));
-    // アルゼンチン・ペソ・レイ（1970-1983）
+    // アルゼンチン・ペソ・レイ（1970–1983）
     result.put("ARL", new CurrencyDataImpl("ARL", "ARL", 130, "ARL", "ARL"));
-    // アルゼンチン・ペソ（1881-1970）
+    // アルゼンチン・ペソ（1881–1970）
     result.put("ARM", new CurrencyDataImpl("ARM", "ARM", 130, "ARM", "ARM"));
     // アルゼンチン ペソ (1983–1985)
     result.put("ARP", new CurrencyDataImpl("ARP", "ARP", 130, "ARP", "ARP"));
@@ -54,7 +56,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // オーストリア シリング
     result.put("ATS", new CurrencyDataImpl("ATS", "ATS", 130, "ATS", "ATS"));
     // オーストラリア ドル
-    result.put("AUD", new CurrencyDataImpl("AUD", "AU$", 2, "AU$", "$"));
+    result.put("AUD", new CurrencyDataImpl("AUD", "A$", 2, "AU$", "$"));
     // アルバ ギルダー
     result.put("AWG", new CurrencyDataImpl("AWG", "AWG", 2, "AWG", "Afl."));
     // アゼルバイジャン マナト (1993–2006)
@@ -63,9 +65,9 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("AZN", new CurrencyDataImpl("AZN", "AZN", 2, "AZN", "man."));
     // ボスニア・ヘルツェゴビナ ディナール (1992–1994)
     result.put("BAD", new CurrencyDataImpl("BAD", "BAD", 130, "BAD", "BAD"));
-    // ボスニア マルク (BAM)
+    // ボスニア・ヘルツェゴビナ 兌換マルク (BAM)
     result.put("BAM", new CurrencyDataImpl("BAM", "BAM", 2, "BAM", "KM"));
-    // ボスニア・ヘルツェゴビナ 新ディナール（1994-1997）
+    // ボスニア・ヘルツェゴビナ 新ディナール（1994–1997）
     result.put("BAN", new CurrencyDataImpl("BAN", "BAN", 130, "BAN", "BAN"));
     // バルバドス ドル
     result.put("BBD", new CurrencyDataImpl("BBD", "BBD", 2, "BBD", "$"));
@@ -83,7 +85,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("BGM", new CurrencyDataImpl("BGM", "BGM", 130, "BGM", "BGM"));
     // ブルガリア 新レフ
     result.put("BGN", new CurrencyDataImpl("BGN", "BGN", 2, "BGN", "lev"));
-    // ブルガリア レフ（1879-1952）
+    // ブルガリア レフ（1879–1952）
     result.put("BGO", new CurrencyDataImpl("BGO", "BGO", 130, "BGO", "BGO"));
     // バーレーン ディナール
     result.put("BHD", new CurrencyDataImpl("BHD", "BHD", 3, "BHD", "din"));
@@ -113,7 +115,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("BRN", new CurrencyDataImpl("BRN", "BRN", 130, "BRN", "BRN"));
     // ブラジル クルゼイロ (1993–1994)
     result.put("BRR", new CurrencyDataImpl("BRR", "BRR", 130, "BRR", "BRR"));
-    // ブラジル クルゼイロ（1942-1967）
+    // ブラジル クルゼイロ（1942–1967）
     result.put("BRZ", new CurrencyDataImpl("BRZ", "BRZ", 130, "BRZ", "BRZ"));
     // バハマ ドル
     result.put("BSD", new CurrencyDataImpl("BSD", "BSD", 2, "BSD", "$"));
@@ -126,7 +128,9 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // ベラルーシ 新ルーブル (1994–1999)
     result.put("BYB", new CurrencyDataImpl("BYB", "BYB", 130, "BYB", "BYB"));
     // ベラルーシ ルーブル
-    result.put("BYR", new CurrencyDataImpl("BYR", "BYR", 0, "BYR", "BYR"));
+    result.put("BYN", new CurrencyDataImpl("BYN", "BYN", 2, "BYN", "BYN"));
+    // ベラルーシ ルーブル (2000–2016)
+    result.put("BYR", new CurrencyDataImpl("BYR", "BYR", 128, "BYR", "BYR"));
     // ベリーズ ドル
     result.put("BZD", new CurrencyDataImpl("BZD", "BZD", 2, "BZD", "$"));
     // カナダ ドル
@@ -142,17 +146,21 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // チリ エスクード
     result.put("CLE", new CurrencyDataImpl("CLE", "CLE", 130, "CLE", "CLE"));
     // チリ ウニダ・デ・フォメント (UF)
-    result.put("CLF", new CurrencyDataImpl("CLF", "CLF", 128, "CLF", "CLF"));
+    result.put("CLF", new CurrencyDataImpl("CLF", "CLF", 132, "CLF", "CLF"));
     // チリ ペソ
     result.put("CLP", new CurrencyDataImpl("CLP", "CL$", 0, "CL$", "$"));
+    // 中国人民元(オフショア)
+    result.put("CNH", new CurrencyDataImpl("CNH", "CNH", 130, "CNH", "CNH"));
+    // 中国人民銀行ドル
+    result.put("CNX", new CurrencyDataImpl("CNX", "CNX", 130, "CNX", "CNX"));
     // 中国人民元
     result.put("CNY", new CurrencyDataImpl("CNY", "元", 2, "RMB¥", "¥"));
     // コロンビア ペソ
-    result.put("COP", new CurrencyDataImpl("COP", "COL$", 0, "COL$", "$"));
+    result.put("COP", new CurrencyDataImpl("COP", "COL$", 2, "COL$", "$"));
     // コロンビア レアル （UVR)
     result.put("COU", new CurrencyDataImpl("COU", "COU", 130, "COU", "COU"));
     // コスタリカ コロン
-    result.put("CRC", new CurrencyDataImpl("CRC", "CR₡", 0, "CR₡", "₡"));
+    result.put("CRC", new CurrencyDataImpl("CRC", "CR₡", 2, "CR₡", "₡"));
     // セルビア ディナール (2002–2006)
     result.put("CSD", new CurrencyDataImpl("CSD", "CSD", 130, "CSD", "CSD"));
     // チェコスロバキア コルナ
@@ -201,7 +209,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("EUR", new CurrencyDataImpl("EUR", "€", 2, "€", "€"));
     // フィンランド マルカ
     result.put("FIM", new CurrencyDataImpl("FIM", "FIM", 130, "FIM", "FIM"));
-    // フィジー諸島 ドル
+    // フィジー ドル
     result.put("FJD", new CurrencyDataImpl("FJD", "FJD", 2, "FJD", "$"));
     // フォークランド（マルビナス）諸島 ポンド
     result.put("FKP", new CurrencyDataImpl("FKP", "FKP", 2, "FKP", "£"));
@@ -209,10 +217,10 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("FRF", new CurrencyDataImpl("FRF", "FRF", 130, "FRF", "FRF"));
     // 英国ポンド
     result.put("GBP", new CurrencyDataImpl("GBP", "£", 2, "GB£", "£"));
-    // グルジア クーポン ラリ
+    // ジョージア クーポン ラリ
     result.put("GEK", new CurrencyDataImpl("GEK", "GEK", 130, "GEK", "GEK"));
-    // グルジア ラリ
-    result.put("GEL", new CurrencyDataImpl("GEL", "GEL", 2, "GEL", "GEL"));
+    // ジョージア ラリ
+    result.put("GEL", new CurrencyDataImpl("GEL", "₾", 2, "₾", "GEL"));
     // ガーナ セディ (1979–2007)
     result.put("GHC", new CurrencyDataImpl("GHC", "GHC", 130, "GHC", "GHC"));
     // ガーナ セディ
@@ -236,7 +244,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // ギニアビサウ ペソ
     result.put("GWP", new CurrencyDataImpl("GWP", "GWP", 130, "GWP", "GWP"));
     // ガイアナ ドル
-    result.put("GYD", new CurrencyDataImpl("GYD", "GYD", 0, "GYD", "$"));
+    result.put("GYD", new CurrencyDataImpl("GYD", "GYD", 2, "GYD", "$"));
     // 香港ドル
     result.put("HKD", new CurrencyDataImpl("HKD", "HK$", 2, "HK$", "$"));
     // ホンジュラス レンピラ
@@ -248,13 +256,15 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // ハイチ グールド
     result.put("HTG", new CurrencyDataImpl("HTG", "HTG", 2, "HTG", "HTG"));
     // ハンガリー フォリント
-    result.put("HUF", new CurrencyDataImpl("HUF", "HUF", 0, "HUF", "Ft"));
+    result.put("HUF", new CurrencyDataImpl("HUF", "HUF", 2, "HUF", "Ft"));
     // インドネシア ルピア
-    result.put("IDR", new CurrencyDataImpl("IDR", "IDR", 0, "IDR", "Rp"));
+    result.put("IDR", new CurrencyDataImpl("IDR", "IDR", 2, "IDR", "Rp"));
     // アイリッシュ ポンド
     result.put("IEP", new CurrencyDataImpl("IEP", "IEP", 130, "IEP", "IEP"));
     // イスラエル ポンド
     result.put("ILP", new CurrencyDataImpl("ILP", "ILP", 130, "ILP", "ILP"));
+    // イスラエル シェケル (1980–1985)
+    result.put("ILR", new CurrencyDataImpl("ILR", "ILR", 130, "ILR", "ILR"));
     // イスラエル新シェケル
     result.put("ILS", new CurrencyDataImpl("ILS", "₪", 2, "IL₪", "₪"));
     // インド ルピー
@@ -263,6 +273,8 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("IQD", new CurrencyDataImpl("IQD", "IQD", 0, "IQD", "din"));
     // イラン リアル
     result.put("IRR", new CurrencyDataImpl("IRR", "IRR", 0, "IRR", "Rial"));
+    // アイスランド クローナ (1918–1981)
+    result.put("ISJ", new CurrencyDataImpl("ISJ", "ISJ", 130, "ISJ", "ISJ"));
     // アイスランド クローナ
     result.put("ISK", new CurrencyDataImpl("ISK", "kr", 0, "kr", "kr"));
     // イタリア リラ
@@ -275,20 +287,20 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("JPY", new CurrencyDataImpl("JPY", "￥", 0, "JP¥", "¥"));
     // ケニア シリング
     result.put("KES", new CurrencyDataImpl("KES", "Ksh", 2, "Ksh", "Ksh"));
-    // キルギスタン ソム
+    // キルギス ソム
     result.put("KGS", new CurrencyDataImpl("KGS", "KGS", 2, "KGS", "KGS"));
     // カンボジア リエル
     result.put("KHR", new CurrencyDataImpl("KHR", "KHR", 2, "KHR", "Riel"));
     // コモロ フラン
     result.put("KMF", new CurrencyDataImpl("KMF", "KMF", 0, "KMF", "CF"));
-    // 北朝鮮 ウォン
+    // 北朝鮮ウォン
     result.put("KPW", new CurrencyDataImpl("KPW", "KPW", 0, "KPW", "₩"));
-    // 韓国 ファン（1953-1962）
+    // 韓国 ファン（1953–1962）
     result.put("KRH", new CurrencyDataImpl("KRH", "KRH", 130, "KRH", "KRH"));
-    // 韓国 ウォン（1945-1953）
+    // 韓国 ウォン（1945–1953）
     result.put("KRO", new CurrencyDataImpl("KRO", "KRO", 130, "KRO", "KRO"));
-    // 韓国 ウォン
-    result.put("KRW", new CurrencyDataImpl("KRW", "￦", 0, "KR₩", "₩"));
+    // 韓国ウォン
+    result.put("KRW", new CurrencyDataImpl("KRW", "₩", 0, "KR₩", "₩"));
     // クウェート ディナール
     result.put("KWD", new CurrencyDataImpl("KWD", "KWD", 3, "KWD", "din"));
     // ケイマン諸島 ドル
@@ -306,7 +318,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // レソト ロティ
     result.put("LSL", new CurrencyDataImpl("LSL", "LSL", 2, "LSL", "LSL"));
     // リトアニア リタス
-    result.put("LTL", new CurrencyDataImpl("LTL", "LTL", 2, "LTL", "Lt"));
+    result.put("LTL", new CurrencyDataImpl("LTL", "LTL", 130, "LTL", "Lt"));
     // リトアニア タロナ
     result.put("LTT", new CurrencyDataImpl("LTT", "LTT", 130, "LTT", "LTT"));
     // ルクセンブルク 兌換フラン
@@ -337,25 +349,29 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("MGF", new CurrencyDataImpl("MGF", "MGF", 128, "MGF", "MGF"));
     // マケドニア デナル
     result.put("MKD", new CurrencyDataImpl("MKD", "MKD", 2, "MKD", "din"));
-    // マケドニア ディナール（1992-1993）
+    // マケドニア ディナール（1992–1993）
     result.put("MKN", new CurrencyDataImpl("MKN", "MKN", 130, "MKN", "MKN"));
     // マリ フラン
     result.put("MLF", new CurrencyDataImpl("MLF", "MLF", 130, "MLF", "MLF"));
     // ミャンマー チャット
     result.put("MMK", new CurrencyDataImpl("MMK", "MMK", 0, "MMK", "K"));
     // モンゴル トグログ
-    result.put("MNT", new CurrencyDataImpl("MNT", "MN₮", 0, "MN₮", "₮"));
+    result.put("MNT", new CurrencyDataImpl("MNT", "MN₮", 2, "MN₮", "₮"));
     // マカオ パタカ
     result.put("MOP", new CurrencyDataImpl("MOP", "MOP", 2, "MOP", "MOP"));
+    // モーリタニア ウギア (1973–2017)
+    result.put("MRO", new CurrencyDataImpl("MRO", "MRO", 128, "MRO", "MRO"));
     // モーリタニア ウギア
-    result.put("MRO", new CurrencyDataImpl("MRO", "MRO", 0, "MRO", "MRO"));
+    result.put("MRU", new CurrencyDataImpl("MRU", "MRU", 2, "MRU", "MRU"));
     // マルタ リラ
     result.put("MTL", new CurrencyDataImpl("MTL", "MTL", 130, "MTL", "MTL"));
     // マルタ ポンド
     result.put("MTP", new CurrencyDataImpl("MTP", "MTP", 130, "MTP", "MTP"));
     // モーリシャス ルピー
-    result.put("MUR", new CurrencyDataImpl("MUR", "MUR", 0, "MUR", "Rs"));
-    // モルディブ諸島 ルフィア
+    result.put("MUR", new CurrencyDataImpl("MUR", "MUR", 2, "MUR", "Rs"));
+    // モルディブ諸島 ルピー
+    result.put("MVP", new CurrencyDataImpl("MVP", "MVP", 130, "MVP", "MVP"));
+    // モルディブ ルフィア
     result.put("MVR", new CurrencyDataImpl("MVR", "MVR", 2, "MVR", "MVR"));
     // マラウィ クワチャ
     result.put("MWK", new CurrencyDataImpl("MWK", "MWK", 2, "MWK", "MWK"));
@@ -395,7 +411,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("PAB", new CurrencyDataImpl("PAB", "B/.", 2, "B/.", "B/."));
     // ペルー インティ
     result.put("PEI", new CurrencyDataImpl("PEI", "PEI", 130, "PEI", "PEI"));
-    // ペルー 新ソル
+    // ペルー ソル
     result.put("PEN", new CurrencyDataImpl("PEN", "S/.", 2, "S/.", "S/."));
     // ペルー ソル (1863–1965)
     result.put("PES", new CurrencyDataImpl("PES", "PES", 130, "PES", "PES"));
@@ -404,7 +420,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // フィリピン ペソ
     result.put("PHP", new CurrencyDataImpl("PHP", "PHP", 2, "PHP", "₱"));
     // パキスタン ルピー
-    result.put("PKR", new CurrencyDataImpl("PKR", "PKRs.", 0, "PKRs.", "Rs"));
+    result.put("PKR", new CurrencyDataImpl("PKR", "PKRs.", 2, "PKRs.", "Rs"));
     // ポーランド ズウォティ
     result.put("PLN", new CurrencyDataImpl("PLN", "PLN", 2, "PLN", "zł"));
     // ポーランド ズウォティ (1950–1995)
@@ -445,7 +461,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("SEK", new CurrencyDataImpl("SEK", "kr", 2, "kr", "kr"));
     // シンガポール ドル
     result.put("SGD", new CurrencyDataImpl("SGD", "S$", 2, "S$", "$"));
-    // セントヘレナ島 ポンド
+    // セントヘレナ ポンド
     result.put("SHP", new CurrencyDataImpl("SHP", "SHP", 2, "SHP", "£"));
     // スロベニア トラール
     result.put("SIT", new CurrencyDataImpl("SIT", "SIT", 130, "SIT", "SIT"));
@@ -459,10 +475,12 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("SRD", new CurrencyDataImpl("SRD", "SRD", 2, "SRD", "$"));
     // スリナム ギルダー
     result.put("SRG", new CurrencyDataImpl("SRG", "SRG", 130, "SRG", "SRG"));
-    // 南スーダン・ポンド
+    // 南スーダン ポンド
     result.put("SSP", new CurrencyDataImpl("SSP", "SSP", 2, "SSP", "SSP"));
+    // サントメ・プリンシペ ドブラ (1977–2017)
+    result.put("STD", new CurrencyDataImpl("STD", "STD", 128, "STD", "Db"));
     // サントメ・プリンシペ ドブラ
-    result.put("STD", new CurrencyDataImpl("STD", "STD", 0, "STD", "Db"));
+    result.put("STN", new CurrencyDataImpl("STN", "STN", 2, "STN", "STN"));
     // ソ連 ルーブル
     result.put("SUR", new CurrencyDataImpl("SUR", "SUR", 130, "SUR", "SUR"));
     // エルサルバドル コロン
@@ -472,7 +490,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // スワジランド リランゲニ
     result.put("SZL", new CurrencyDataImpl("SZL", "SZL", 2, "SZL", "SZL"));
     // タイ バーツ
-    result.put("THB", new CurrencyDataImpl("THB", "฿", 2, "THB", "฿"));
+    result.put("THB", new CurrencyDataImpl("THB", "THB", 2, "THB", "฿"));
     // タジキスタン ルーブル
     result.put("TJR", new CurrencyDataImpl("TJR", "TJR", 130, "TJR", "TJR"));
     // タジキスタン ソモニ
@@ -491,12 +509,12 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("TRL", new CurrencyDataImpl("TRL", "TRL", 128, "TRL", "TRL"));
     // 新トルコリラ
     result.put("TRY", new CurrencyDataImpl("TRY", "TL", 2, "YTL", "TL"));
-    // トリニダードトバゴ ドル
+    // トリニダード・トバゴ ドル
     result.put("TTD", new CurrencyDataImpl("TTD", "TTD", 2, "TTD", "$"));
     // 新台湾ドル
     result.put("TWD", new CurrencyDataImpl("TWD", "NT$", 2, "NT$", "NT$"));
     // タンザニア シリング
-    result.put("TZS", new CurrencyDataImpl("TZS", "TZS", 0, "TZS", "TSh"));
+    result.put("TZS", new CurrencyDataImpl("TZS", "TZS", 2, "TZS", "TSh"));
     // ウクライナ グリブナ
     result.put("UAH", new CurrencyDataImpl("UAH", "UAH", 2, "UAH", "₴"));
     // ウクライナ カルボバネツ
@@ -518,20 +536,22 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     // ウルグアイ ペソ
     result.put("UYU", new CurrencyDataImpl("UYU", "UY$", 2, "UY$", "$"));
     // ウズベキスタン スム
-    result.put("UZS", new CurrencyDataImpl("UZS", "UZS", 0, "UZS", "soʼm"));
+    result.put("UZS", new CurrencyDataImpl("UZS", "UZS", 2, "UZS", "soʼm"));
     // ベネズエラ ボリバル (1871–2008)
     result.put("VEB", new CurrencyDataImpl("VEB", "VEB", 130, "VEB", "VEB"));
+    // ベネズエラ ボリバル (2008–2018)
+    result.put("VEF", new CurrencyDataImpl("VEF", "VEF", 130, "VEF", "Bs"));
     // ベネズエラ ボリバル
-    result.put("VEF", new CurrencyDataImpl("VEF", "VEF", 2, "VEF", "Bs"));
+    result.put("VES", new CurrencyDataImpl("VES", "VES", 2, "VES", "VES"));
     // ベトナム ドン
     result.put("VND", new CurrencyDataImpl("VND", "₫", 24, "₫", "₫"));
-    // ベトナム ドン（1978-1985）
+    // ベトナム ドン（1978–1985）
     result.put("VNN", new CurrencyDataImpl("VNN", "VNN", 130, "VNN", "VNN"));
     // バヌアツ バツ
     result.put("VUV", new CurrencyDataImpl("VUV", "VUV", 0, "VUV", "VUV"));
     // サモア タラ
     result.put("WST", new CurrencyDataImpl("WST", "WST", 2, "WST", "WST"));
-    // CFA フラン（BEAC）
+    // 中央アフリカ CFA フラン
     result.put("XAF", new CurrencyDataImpl("XAF", "FCFA", 0, "FCFA", "FCFA"));
     // 銀
     result.put("XAG", new CurrencyDataImpl("XAG", "XAG", 130, "XAG", "XAG"));
@@ -555,7 +575,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("XFO", new CurrencyDataImpl("XFO", "XFO", 130, "XFO", "XFO"));
     // フランス フラン (UIC)
     result.put("XFU", new CurrencyDataImpl("XFU", "XFU", 130, "XFU", "XFU"));
-    // CFA フラン（BCEAO）
+    // 西アフリカ CFA フラン
     result.put("XOF", new CurrencyDataImpl("XOF", "CFA", 0, "CFA", "CFA"));
     // パラジウム
     result.put("XPD", new CurrencyDataImpl("XPD", "XPD", 130, "XPD", "XPD"));
@@ -583,7 +603,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("YUM", new CurrencyDataImpl("YUM", "YUM", 130, "YUM", "YUM"));
     // ユーゴスラビア 兌換ディナール (1990–1992)
     result.put("YUN", new CurrencyDataImpl("YUN", "YUN", 130, "YUN", "YUN"));
-    // ユーゴスラビア 改革ディナール（1992-1993）
+    // ユーゴスラビア 改革ディナール（1992–1993）
     result.put("YUR", new CurrencyDataImpl("YUR", "YUR", 130, "YUR", "YUR"));
     // 南アフリカ ランド (ZAL)
     result.put("ZAL", new CurrencyDataImpl("ZAL", "ZAL", 130, "ZAL", "ZAL"));
@@ -619,15 +639,17 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "AED": [ "AED", "DH", 2, "DH", "dh"],
       // アフガニスタン アフガニー (1927–2002)
       "AFA": [ "AFA", "AFA", 130, "AFA", "AFA"],
-      // アフガニー
+      // アフガニスタン アフガニー
       "AFN": [ "AFN", "AFN", 0, "AFN", "Af."],
+      // アルバニア レク (1946–1965)
+      "ALK": [ "ALK", "ALK", 130, "ALK", "ALK"],
       // アルバニア レク
       "ALL": [ "ALL", "ALL", 0, "ALL", "Lek"],
       // アルメニア ドラム
-      "AMD": [ "AMD", "AMD", 0, "AMD", "Dram"],
+      "AMD": [ "AMD", "AMD", 2, "AMD", "Dram"],
       // オランダ領アンティル ギルダー
       "ANG": [ "ANG", "ANG", 2, "ANG", "ANG"],
-      // クワンザ
+      // アンゴラ クワンザ
       "AOA": [ "AOA", "AOA", 2, "AOA", "Kz"],
       // アンゴラ クワンザ (1977–1991)
       "AOK": [ "AOK", "AOK", 130, "AOK", "AOK"],
@@ -637,9 +659,9 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "AOR": [ "AOR", "AOR", 130, "AOR", "AOR"],
       // アルゼンチン アゥストラール
       "ARA": [ "ARA", "ARA", 130, "ARA", "ARA"],
-      // アルゼンチン・ペソ・レイ（1970-1983）
+      // アルゼンチン・ペソ・レイ（1970–1983）
       "ARL": [ "ARL", "ARL", 130, "ARL", "ARL"],
-      // アルゼンチン・ペソ（1881-1970）
+      // アルゼンチン・ペソ（1881–1970）
       "ARM": [ "ARM", "ARM", 130, "ARM", "ARM"],
       // アルゼンチン ペソ (1983–1985)
       "ARP": [ "ARP", "ARP", 130, "ARP", "ARP"],
@@ -648,7 +670,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // オーストリア シリング
       "ATS": [ "ATS", "ATS", 130, "ATS", "ATS"],
       // オーストラリア ドル
-      "AUD": [ "AUD", "AU$", 2, "AU$", "$"],
+      "AUD": [ "AUD", "A$", 2, "AU$", "$"],
       // アルバ ギルダー
       "AWG": [ "AWG", "AWG", 2, "AWG", "Afl."],
       // アゼルバイジャン マナト (1993–2006)
@@ -657,9 +679,9 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "AZN": [ "AZN", "AZN", 2, "AZN", "man."],
       // ボスニア・ヘルツェゴビナ ディナール (1992–1994)
       "BAD": [ "BAD", "BAD", 130, "BAD", "BAD"],
-      // ボスニア マルク (BAM)
+      // ボスニア・ヘルツェゴビナ 兌換マルク (BAM)
       "BAM": [ "BAM", "BAM", 2, "BAM", "KM"],
-      // ボスニア・ヘルツェゴビナ 新ディナール（1994-1997）
+      // ボスニア・ヘルツェゴビナ 新ディナール（1994–1997）
       "BAN": [ "BAN", "BAN", 130, "BAN", "BAN"],
       // バルバドス ドル
       "BBD": [ "BBD", "BBD", 2, "BBD", "$"],
@@ -677,7 +699,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "BGM": [ "BGM", "BGM", 130, "BGM", "BGM"],
       // ブルガリア 新レフ
       "BGN": [ "BGN", "BGN", 2, "BGN", "lev"],
-      // ブルガリア レフ（1879-1952）
+      // ブルガリア レフ（1879–1952）
       "BGO": [ "BGO", "BGO", 130, "BGO", "BGO"],
       // バーレーン ディナール
       "BHD": [ "BHD", "BHD", 3, "BHD", "din"],
@@ -707,7 +729,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "BRN": [ "BRN", "BRN", 130, "BRN", "BRN"],
       // ブラジル クルゼイロ (1993–1994)
       "BRR": [ "BRR", "BRR", 130, "BRR", "BRR"],
-      // ブラジル クルゼイロ（1942-1967）
+      // ブラジル クルゼイロ（1942–1967）
       "BRZ": [ "BRZ", "BRZ", 130, "BRZ", "BRZ"],
       // バハマ ドル
       "BSD": [ "BSD", "BSD", 2, "BSD", "$"],
@@ -720,7 +742,9 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // ベラルーシ 新ルーブル (1994–1999)
       "BYB": [ "BYB", "BYB", 130, "BYB", "BYB"],
       // ベラルーシ ルーブル
-      "BYR": [ "BYR", "BYR", 0, "BYR", "BYR"],
+      "BYN": [ "BYN", "BYN", 2, "BYN", "BYN"],
+      // ベラルーシ ルーブル (2000–2016)
+      "BYR": [ "BYR", "BYR", 128, "BYR", "BYR"],
       // ベリーズ ドル
       "BZD": [ "BZD", "BZD", 2, "BZD", "$"],
       // カナダ ドル
@@ -736,17 +760,21 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // チリ エスクード
       "CLE": [ "CLE", "CLE", 130, "CLE", "CLE"],
       // チリ ウニダ・デ・フォメント (UF)
-      "CLF": [ "CLF", "CLF", 128, "CLF", "CLF"],
+      "CLF": [ "CLF", "CLF", 132, "CLF", "CLF"],
       // チリ ペソ
       "CLP": [ "CLP", "CL$", 0, "CL$", "$"],
+      // 中国人民元(オフショア)
+      "CNH": [ "CNH", "CNH", 130, "CNH", "CNH"],
+      // 中国人民銀行ドル
+      "CNX": [ "CNX", "CNX", 130, "CNX", "CNX"],
       // 中国人民元
       "CNY": [ "CNY", "元", 2, "RMB¥", "¥"],
       // コロンビア ペソ
-      "COP": [ "COP", "COL$", 0, "COL$", "$"],
+      "COP": [ "COP", "COL$", 2, "COL$", "$"],
       // コロンビア レアル （UVR)
       "COU": [ "COU", "COU", 130, "COU", "COU"],
       // コスタリカ コロン
-      "CRC": [ "CRC", "CR₡", 0, "CR₡", "₡"],
+      "CRC": [ "CRC", "CR₡", 2, "CR₡", "₡"],
       // セルビア ディナール (2002–2006)
       "CSD": [ "CSD", "CSD", 130, "CSD", "CSD"],
       // チェコスロバキア コルナ
@@ -795,7 +823,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "EUR": [ "EUR", "€", 2, "€", "€"],
       // フィンランド マルカ
       "FIM": [ "FIM", "FIM", 130, "FIM", "FIM"],
-      // フィジー諸島 ドル
+      // フィジー ドル
       "FJD": [ "FJD", "FJD", 2, "FJD", "$"],
       // フォークランド（マルビナス）諸島 ポンド
       "FKP": [ "FKP", "FKP", 2, "FKP", "£"],
@@ -803,10 +831,10 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "FRF": [ "FRF", "FRF", 130, "FRF", "FRF"],
       // 英国ポンド
       "GBP": [ "GBP", "£", 2, "GB£", "£"],
-      // グルジア クーポン ラリ
+      // ジョージア クーポン ラリ
       "GEK": [ "GEK", "GEK", 130, "GEK", "GEK"],
-      // グルジア ラリ
-      "GEL": [ "GEL", "GEL", 2, "GEL", "GEL"],
+      // ジョージア ラリ
+      "GEL": [ "GEL", "₾", 2, "₾", "GEL"],
       // ガーナ セディ (1979–2007)
       "GHC": [ "GHC", "GHC", 130, "GHC", "GHC"],
       // ガーナ セディ
@@ -830,7 +858,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // ギニアビサウ ペソ
       "GWP": [ "GWP", "GWP", 130, "GWP", "GWP"],
       // ガイアナ ドル
-      "GYD": [ "GYD", "GYD", 0, "GYD", "$"],
+      "GYD": [ "GYD", "GYD", 2, "GYD", "$"],
       // 香港ドル
       "HKD": [ "HKD", "HK$", 2, "HK$", "$"],
       // ホンジュラス レンピラ
@@ -842,13 +870,15 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // ハイチ グールド
       "HTG": [ "HTG", "HTG", 2, "HTG", "HTG"],
       // ハンガリー フォリント
-      "HUF": [ "HUF", "HUF", 0, "HUF", "Ft"],
+      "HUF": [ "HUF", "HUF", 2, "HUF", "Ft"],
       // インドネシア ルピア
-      "IDR": [ "IDR", "IDR", 0, "IDR", "Rp"],
+      "IDR": [ "IDR", "IDR", 2, "IDR", "Rp"],
       // アイリッシュ ポンド
       "IEP": [ "IEP", "IEP", 130, "IEP", "IEP"],
       // イスラエル ポンド
       "ILP": [ "ILP", "ILP", 130, "ILP", "ILP"],
+      // イスラエル シェケル (1980–1985)
+      "ILR": [ "ILR", "ILR", 130, "ILR", "ILR"],
       // イスラエル新シェケル
       "ILS": [ "ILS", "₪", 2, "IL₪", "₪"],
       // インド ルピー
@@ -857,6 +887,8 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "IQD": [ "IQD", "IQD", 0, "IQD", "din"],
       // イラン リアル
       "IRR": [ "IRR", "IRR", 0, "IRR", "Rial"],
+      // アイスランド クローナ (1918–1981)
+      "ISJ": [ "ISJ", "ISJ", 130, "ISJ", "ISJ"],
       // アイスランド クローナ
       "ISK": [ "ISK", "kr", 0, "kr", "kr"],
       // イタリア リラ
@@ -869,20 +901,20 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "JPY": [ "JPY", "￥", 0, "JP¥", "¥"],
       // ケニア シリング
       "KES": [ "KES", "Ksh", 2, "Ksh", "Ksh"],
-      // キルギスタン ソム
+      // キルギス ソム
       "KGS": [ "KGS", "KGS", 2, "KGS", "KGS"],
       // カンボジア リエル
       "KHR": [ "KHR", "KHR", 2, "KHR", "Riel"],
       // コモロ フラン
       "KMF": [ "KMF", "KMF", 0, "KMF", "CF"],
-      // 北朝鮮 ウォン
+      // 北朝鮮ウォン
       "KPW": [ "KPW", "KPW", 0, "KPW", "₩"],
-      // 韓国 ファン（1953-1962）
+      // 韓国 ファン（1953–1962）
       "KRH": [ "KRH", "KRH", 130, "KRH", "KRH"],
-      // 韓国 ウォン（1945-1953）
+      // 韓国 ウォン（1945–1953）
       "KRO": [ "KRO", "KRO", 130, "KRO", "KRO"],
-      // 韓国 ウォン
-      "KRW": [ "KRW", "￦", 0, "KR₩", "₩"],
+      // 韓国ウォン
+      "KRW": [ "KRW", "₩", 0, "KR₩", "₩"],
       // クウェート ディナール
       "KWD": [ "KWD", "KWD", 3, "KWD", "din"],
       // ケイマン諸島 ドル
@@ -900,7 +932,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // レソト ロティ
       "LSL": [ "LSL", "LSL", 2, "LSL", "LSL"],
       // リトアニア リタス
-      "LTL": [ "LTL", "LTL", 2, "LTL", "Lt"],
+      "LTL": [ "LTL", "LTL", 130, "LTL", "Lt"],
       // リトアニア タロナ
       "LTT": [ "LTT", "LTT", 130, "LTT", "LTT"],
       // ルクセンブルク 兌換フラン
@@ -931,25 +963,29 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "MGF": [ "MGF", "MGF", 128, "MGF", "MGF"],
       // マケドニア デナル
       "MKD": [ "MKD", "MKD", 2, "MKD", "din"],
-      // マケドニア ディナール（1992-1993）
+      // マケドニア ディナール（1992–1993）
       "MKN": [ "MKN", "MKN", 130, "MKN", "MKN"],
       // マリ フラン
       "MLF": [ "MLF", "MLF", 130, "MLF", "MLF"],
       // ミャンマー チャット
       "MMK": [ "MMK", "MMK", 0, "MMK", "K"],
       // モンゴル トグログ
-      "MNT": [ "MNT", "MN₮", 0, "MN₮", "₮"],
+      "MNT": [ "MNT", "MN₮", 2, "MN₮", "₮"],
       // マカオ パタカ
       "MOP": [ "MOP", "MOP", 2, "MOP", "MOP"],
+      // モーリタニア ウギア (1973–2017)
+      "MRO": [ "MRO", "MRO", 128, "MRO", "MRO"],
       // モーリタニア ウギア
-      "MRO": [ "MRO", "MRO", 0, "MRO", "MRO"],
+      "MRU": [ "MRU", "MRU", 2, "MRU", "MRU"],
       // マルタ リラ
       "MTL": [ "MTL", "MTL", 130, "MTL", "MTL"],
       // マルタ ポンド
       "MTP": [ "MTP", "MTP", 130, "MTP", "MTP"],
       // モーリシャス ルピー
-      "MUR": [ "MUR", "MUR", 0, "MUR", "Rs"],
-      // モルディブ諸島 ルフィア
+      "MUR": [ "MUR", "MUR", 2, "MUR", "Rs"],
+      // モルディブ諸島 ルピー
+      "MVP": [ "MVP", "MVP", 130, "MVP", "MVP"],
+      // モルディブ ルフィア
       "MVR": [ "MVR", "MVR", 2, "MVR", "MVR"],
       // マラウィ クワチャ
       "MWK": [ "MWK", "MWK", 2, "MWK", "MWK"],
@@ -989,7 +1025,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "PAB": [ "PAB", "B/.", 2, "B/.", "B/."],
       // ペルー インティ
       "PEI": [ "PEI", "PEI", 130, "PEI", "PEI"],
-      // ペルー 新ソル
+      // ペルー ソル
       "PEN": [ "PEN", "S/.", 2, "S/.", "S/."],
       // ペルー ソル (1863–1965)
       "PES": [ "PES", "PES", 130, "PES", "PES"],
@@ -998,7 +1034,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // フィリピン ペソ
       "PHP": [ "PHP", "PHP", 2, "PHP", "₱"],
       // パキスタン ルピー
-      "PKR": [ "PKR", "PKRs.", 0, "PKRs.", "Rs"],
+      "PKR": [ "PKR", "PKRs.", 2, "PKRs.", "Rs"],
       // ポーランド ズウォティ
       "PLN": [ "PLN", "PLN", 2, "PLN", "zł"],
       // ポーランド ズウォティ (1950–1995)
@@ -1039,7 +1075,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "SEK": [ "SEK", "kr", 2, "kr", "kr"],
       // シンガポール ドル
       "SGD": [ "SGD", "S$", 2, "S$", "$"],
-      // セントヘレナ島 ポンド
+      // セントヘレナ ポンド
       "SHP": [ "SHP", "SHP", 2, "SHP", "£"],
       // スロベニア トラール
       "SIT": [ "SIT", "SIT", 130, "SIT", "SIT"],
@@ -1053,10 +1089,12 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "SRD": [ "SRD", "SRD", 2, "SRD", "$"],
       // スリナム ギルダー
       "SRG": [ "SRG", "SRG", 130, "SRG", "SRG"],
-      // 南スーダン・ポンド
+      // 南スーダン ポンド
       "SSP": [ "SSP", "SSP", 2, "SSP", "SSP"],
+      // サントメ・プリンシペ ドブラ (1977–2017)
+      "STD": [ "STD", "STD", 128, "STD", "Db"],
       // サントメ・プリンシペ ドブラ
-      "STD": [ "STD", "STD", 0, "STD", "Db"],
+      "STN": [ "STN", "STN", 2, "STN", "STN"],
       // ソ連 ルーブル
       "SUR": [ "SUR", "SUR", 130, "SUR", "SUR"],
       // エルサルバドル コロン
@@ -1066,7 +1104,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // スワジランド リランゲニ
       "SZL": [ "SZL", "SZL", 2, "SZL", "SZL"],
       // タイ バーツ
-      "THB": [ "THB", "฿", 2, "THB", "฿"],
+      "THB": [ "THB", "THB", 2, "THB", "฿"],
       // タジキスタン ルーブル
       "TJR": [ "TJR", "TJR", 130, "TJR", "TJR"],
       // タジキスタン ソモニ
@@ -1085,12 +1123,12 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "TRL": [ "TRL", "TRL", 128, "TRL", "TRL"],
       // 新トルコリラ
       "TRY": [ "TRY", "TL", 2, "YTL", "TL"],
-      // トリニダードトバゴ ドル
+      // トリニダード・トバゴ ドル
       "TTD": [ "TTD", "TTD", 2, "TTD", "$"],
       // 新台湾ドル
       "TWD": [ "TWD", "NT$", 2, "NT$", "NT$"],
       // タンザニア シリング
-      "TZS": [ "TZS", "TZS", 0, "TZS", "TSh"],
+      "TZS": [ "TZS", "TZS", 2, "TZS", "TSh"],
       // ウクライナ グリブナ
       "UAH": [ "UAH", "UAH", 2, "UAH", "₴"],
       // ウクライナ カルボバネツ
@@ -1112,20 +1150,22 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       // ウルグアイ ペソ
       "UYU": [ "UYU", "UY$", 2, "UY$", "$"],
       // ウズベキスタン スム
-      "UZS": [ "UZS", "UZS", 0, "UZS", "soʼm"],
+      "UZS": [ "UZS", "UZS", 2, "UZS", "soʼm"],
       // ベネズエラ ボリバル (1871–2008)
       "VEB": [ "VEB", "VEB", 130, "VEB", "VEB"],
+      // ベネズエラ ボリバル (2008–2018)
+      "VEF": [ "VEF", "VEF", 130, "VEF", "Bs"],
       // ベネズエラ ボリバル
-      "VEF": [ "VEF", "VEF", 2, "VEF", "Bs"],
+      "VES": [ "VES", "VES", 2, "VES", "VES"],
       // ベトナム ドン
       "VND": [ "VND", "₫", 24, "₫", "₫"],
-      // ベトナム ドン（1978-1985）
+      // ベトナム ドン（1978–1985）
       "VNN": [ "VNN", "VNN", 130, "VNN", "VNN"],
       // バヌアツ バツ
       "VUV": [ "VUV", "VUV", 0, "VUV", "VUV"],
       // サモア タラ
       "WST": [ "WST", "WST", 2, "WST", "WST"],
-      // CFA フラン（BEAC）
+      // 中央アフリカ CFA フラン
       "XAF": [ "XAF", "FCFA", 0, "FCFA", "FCFA"],
       // 銀
       "XAG": [ "XAG", "XAG", 130, "XAG", "XAG"],
@@ -1149,7 +1189,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "XFO": [ "XFO", "XFO", 130, "XFO", "XFO"],
       // フランス フラン (UIC)
       "XFU": [ "XFU", "XFU", 130, "XFU", "XFU"],
-      // CFA フラン（BCEAO）
+      // 西アフリカ CFA フラン
       "XOF": [ "XOF", "CFA", 0, "CFA", "CFA"],
       // パラジウム
       "XPD": [ "XPD", "XPD", 130, "XPD", "XPD"],
@@ -1177,7 +1217,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "YUM": [ "YUM", "YUM", 130, "YUM", "YUM"],
       // ユーゴスラビア 兌換ディナール (1990–1992)
       "YUN": [ "YUN", "YUN", 130, "YUN", "YUN"],
-      // ユーゴスラビア 改革ディナール（1992-1993）
+      // ユーゴスラビア 改革ディナール（1992–1993）
       "YUR": [ "YUR", "YUR", 130, "YUR", "YUR"],
       // 南アフリカ ランド (ZAL)
       "ZAL": [ "ZAL", "ZAL", 130, "ZAL", "ZAL"],
@@ -1206,17 +1246,18 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("ADP", "アンドラ ペセタ");
     result.put("AED", "アラブ首長国連邦ディルハム");
     result.put("AFA", "アフガニスタン アフガニー (1927–2002)");
-    result.put("AFN", "アフガニー");
+    result.put("AFN", "アフガニスタン アフガニー");
+    result.put("ALK", "アルバニア レク (1946–1965)");
     result.put("ALL", "アルバニア レク");
     result.put("AMD", "アルメニア ドラム");
     result.put("ANG", "オランダ領アンティル ギルダー");
-    result.put("AOA", "クワンザ");
+    result.put("AOA", "アンゴラ クワンザ");
     result.put("AOK", "アンゴラ クワンザ (1977–1991)");
     result.put("AON", "アンゴラ 新クワンザ (1990–2000)");
     result.put("AOR", "アンゴラ 旧クワンザ (1995–1999)");
     result.put("ARA", "アルゼンチン アゥストラール");
-    result.put("ARL", "アルゼンチン・ペソ・レイ（1970-1983）");
-    result.put("ARM", "アルゼンチン・ペソ（1881-1970）");
+    result.put("ARL", "アルゼンチン・ペソ・レイ（1970–1983）");
+    result.put("ARM", "アルゼンチン・ペソ（1881–1970）");
     result.put("ARP", "アルゼンチン ペソ (1983–1985)");
     result.put("ARS", "アルゼンチン ペソ");
     result.put("ATS", "オーストリア シリング");
@@ -1225,8 +1266,8 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("AZM", "アゼルバイジャン マナト (1993–2006)");
     result.put("AZN", "アゼルバイジャン マナト");
     result.put("BAD", "ボスニア・ヘルツェゴビナ ディナール (1992–1994)");
-    result.put("BAM", "ボスニア マルク (BAM)");
-    result.put("BAN", "ボスニア・ヘルツェゴビナ 新ディナール（1994-1997）");
+    result.put("BAM", "ボスニア・ヘルツェゴビナ 兌換マルク (BAM)");
+    result.put("BAN", "ボスニア・ヘルツェゴビナ 新ディナール（1994–1997）");
     result.put("BBD", "バルバドス ドル");
     result.put("BDT", "バングラデシュ タカ");
     result.put("BEC", "ベルギー フラン (BEC)");
@@ -1235,7 +1276,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("BGL", "ブルガリア レフ");
     result.put("BGM", "ブルガリア社会主義 レフ");
     result.put("BGN", "ブルガリア 新レフ");
-    result.put("BGO", "ブルガリア レフ（1879-1952）");
+    result.put("BGO", "ブルガリア レフ（1879–1952）");
     result.put("BHD", "バーレーン ディナール");
     result.put("BIF", "ブルンジ フラン");
     result.put("BMD", "バミューダ ドル");
@@ -1250,13 +1291,14 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("BRL", "ブラジル レアル");
     result.put("BRN", "ブラジル 新クルザード (1989–1990)");
     result.put("BRR", "ブラジル クルゼイロ (1993–1994)");
-    result.put("BRZ", "ブラジル クルゼイロ（1942-1967）");
+    result.put("BRZ", "ブラジル クルゼイロ（1942–1967）");
     result.put("BSD", "バハマ ドル");
     result.put("BTN", "ブータン ニュルタム");
     result.put("BUK", "ビルマ チャット");
     result.put("BWP", "ボツワナ プラ");
     result.put("BYB", "ベラルーシ 新ルーブル (1994–1999)");
-    result.put("BYR", "ベラルーシ ルーブル");
+    result.put("BYN", "ベラルーシ ルーブル");
+    result.put("BYR", "ベラルーシ ルーブル (2000–2016)");
     result.put("BZD", "ベリーズ ドル");
     result.put("CAD", "カナダ ドル");
     result.put("CDF", "コンゴ フラン");
@@ -1266,6 +1308,8 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("CLE", "チリ エスクード");
     result.put("CLF", "チリ ウニダ・デ・フォメント (UF)");
     result.put("CLP", "チリ ペソ");
+    result.put("CNH", "中国人民元(オフショア)");
+    result.put("CNX", "中国人民銀行ドル");
     result.put("CNY", "中国人民元");
     result.put("COP", "コロンビア ペソ");
     result.put("COU", "コロンビア レアル （UVR)");
@@ -1294,12 +1338,12 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("ETB", "エチオピア ブル");
     result.put("EUR", "ユーロ");
     result.put("FIM", "フィンランド マルカ");
-    result.put("FJD", "フィジー諸島 ドル");
+    result.put("FJD", "フィジー ドル");
     result.put("FKP", "フォークランド（マルビナス）諸島 ポンド");
     result.put("FRF", "フランス フラン");
     result.put("GBP", "英国ポンド");
-    result.put("GEK", "グルジア クーポン ラリ");
-    result.put("GEL", "グルジア ラリ");
+    result.put("GEK", "ジョージア クーポン ラリ");
+    result.put("GEL", "ジョージア ラリ");
     result.put("GHC", "ガーナ セディ (1979–2007)");
     result.put("GHS", "ガーナ セディ");
     result.put("GIP", "ジブラルタル ポンド");
@@ -1321,23 +1365,25 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("IDR", "インドネシア ルピア");
     result.put("IEP", "アイリッシュ ポンド");
     result.put("ILP", "イスラエル ポンド");
+    result.put("ILR", "イスラエル シェケル (1980–1985)");
     result.put("ILS", "イスラエル新シェケル");
     result.put("INR", "インド ルピー");
     result.put("IQD", "イラク ディナール");
     result.put("IRR", "イラン リアル");
+    result.put("ISJ", "アイスランド クローナ (1918–1981)");
     result.put("ISK", "アイスランド クローナ");
     result.put("ITL", "イタリア リラ");
     result.put("JMD", "ジャマイカ ドル");
     result.put("JOD", "ヨルダン ディナール");
     result.put("JPY", "日本円");
     result.put("KES", "ケニア シリング");
-    result.put("KGS", "キルギスタン ソム");
+    result.put("KGS", "キルギス ソム");
     result.put("KHR", "カンボジア リエル");
     result.put("KMF", "コモロ フラン");
-    result.put("KPW", "北朝鮮 ウォン");
-    result.put("KRH", "韓国 ファン（1953-1962）");
-    result.put("KRO", "韓国 ウォン（1945-1953）");
-    result.put("KRW", "韓国 ウォン");
+    result.put("KPW", "北朝鮮ウォン");
+    result.put("KRH", "韓国 ファン（1953–1962）");
+    result.put("KRO", "韓国 ウォン（1945–1953）");
+    result.put("KRW", "韓国ウォン");
     result.put("KWD", "クウェート ディナール");
     result.put("KYD", "ケイマン諸島 ドル");
     result.put("KZT", "カザフスタン テンゲ");
@@ -1362,16 +1408,18 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("MGA", "マダガスカル アリアリ");
     result.put("MGF", "マラガシ フラン");
     result.put("MKD", "マケドニア デナル");
-    result.put("MKN", "マケドニア ディナール（1992-1993）");
+    result.put("MKN", "マケドニア ディナール（1992–1993）");
     result.put("MLF", "マリ フラン");
     result.put("MMK", "ミャンマー チャット");
     result.put("MNT", "モンゴル トグログ");
     result.put("MOP", "マカオ パタカ");
-    result.put("MRO", "モーリタニア ウギア");
+    result.put("MRO", "モーリタニア ウギア (1973–2017)");
+    result.put("MRU", "モーリタニア ウギア");
     result.put("MTL", "マルタ リラ");
     result.put("MTP", "マルタ ポンド");
     result.put("MUR", "モーリシャス ルピー");
-    result.put("MVR", "モルディブ諸島 ルフィア");
+    result.put("MVP", "モルディブ諸島 ルピー");
+    result.put("MVR", "モルディブ ルフィア");
     result.put("MWK", "マラウィ クワチャ");
     result.put("MXN", "メキシコ ペソ");
     result.put("MXP", "メキシコ ペソ (1861–1992)");
@@ -1391,7 +1439,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("OMR", "オマーン リアル");
     result.put("PAB", "パナマ バルボア");
     result.put("PEI", "ペルー インティ");
-    result.put("PEN", "ペルー 新ソル");
+    result.put("PEN", "ペルー ソル");
     result.put("PES", "ペルー ソル (1863–1965)");
     result.put("PGK", "パプアニューギニア キナ");
     result.put("PHP", "フィリピン ペソ");
@@ -1416,15 +1464,16 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("SDP", "スーダン ポンド (1957–1998)");
     result.put("SEK", "スウェーデン クローナ");
     result.put("SGD", "シンガポール ドル");
-    result.put("SHP", "セントヘレナ島 ポンド");
+    result.put("SHP", "セントヘレナ ポンド");
     result.put("SIT", "スロベニア トラール");
     result.put("SKK", "スロバキア コルナ");
     result.put("SLL", "シエラレオネ レオン");
     result.put("SOS", "ソマリア シリング");
     result.put("SRD", "スリナム ドル");
     result.put("SRG", "スリナム ギルダー");
-    result.put("SSP", "南スーダン・ポンド");
-    result.put("STD", "サントメ・プリンシペ ドブラ");
+    result.put("SSP", "南スーダン ポンド");
+    result.put("STD", "サントメ・プリンシペ ドブラ (1977–2017)");
+    result.put("STN", "サントメ・プリンシペ ドブラ");
     result.put("SUR", "ソ連 ルーブル");
     result.put("SVC", "エルサルバドル コロン");
     result.put("SYP", "シリア ポンド");
@@ -1439,7 +1488,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("TPE", "ティモール エスクード");
     result.put("TRL", "トルコ リラ (1922–2005)");
     result.put("TRY", "新トルコリラ");
-    result.put("TTD", "トリニダードトバゴ ドル");
+    result.put("TTD", "トリニダード・トバゴ ドル");
     result.put("TWD", "新台湾ドル");
     result.put("TZS", "タンザニア シリング");
     result.put("UAH", "ウクライナ グリブナ");
@@ -1454,12 +1503,13 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("UYU", "ウルグアイ ペソ");
     result.put("UZS", "ウズベキスタン スム");
     result.put("VEB", "ベネズエラ ボリバル (1871–2008)");
-    result.put("VEF", "ベネズエラ ボリバル");
+    result.put("VEF", "ベネズエラ ボリバル (2008–2018)");
+    result.put("VES", "ベネズエラ ボリバル");
     result.put("VND", "ベトナム ドン");
-    result.put("VNN", "ベトナム ドン（1978-1985）");
+    result.put("VNN", "ベトナム ドン（1978–1985）");
     result.put("VUV", "バヌアツ バツ");
     result.put("WST", "サモア タラ");
-    result.put("XAF", "CFA フラン（BEAC）");
+    result.put("XAF", "中央アフリカ CFA フラン");
     result.put("XAG", "銀");
     result.put("XAU", "金");
     result.put("XBA", "ヨーロッパ混合単位 (EURCO)");
@@ -1471,7 +1521,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("XEU", "ヨーロッパ通貨単位");
     result.put("XFO", "フランス金フラン");
     result.put("XFU", "フランス フラン (UIC)");
-    result.put("XOF", "CFA フラン（BCEAO）");
+    result.put("XOF", "西アフリカ CFA フラン");
     result.put("XPD", "パラジウム");
     result.put("XPF", "CFP フラン");
     result.put("XPT", "プラチナ");
@@ -1485,7 +1535,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
     result.put("YUD", "ユーゴスラビア ハード・ディナール (1966–1990)");
     result.put("YUM", "ユーゴスラビア ノビ・ディナール (1994–2002)");
     result.put("YUN", "ユーゴスラビア 兌換ディナール (1990–1992)");
-    result.put("YUR", "ユーゴスラビア 改革ディナール（1992-1993）");
+    result.put("YUR", "ユーゴスラビア 改革ディナール（1992–1993）");
     result.put("ZAL", "南アフリカ ランド (ZAL)");
     result.put("ZAR", "南アフリカ ランド");
     result.put("ZMK", "ザンビア クワチャ (1968–2012)");
@@ -1508,17 +1558,18 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "ADP": "アンドラ ペセタ",
       "AED": "アラブ首長国連邦ディルハム",
       "AFA": "アフガニスタン アフガニー (1927–2002)",
-      "AFN": "アフガニー",
+      "AFN": "アフガニスタン アフガニー",
+      "ALK": "アルバニア レク (1946–1965)",
       "ALL": "アルバニア レク",
       "AMD": "アルメニア ドラム",
       "ANG": "オランダ領アンティル ギルダー",
-      "AOA": "クワンザ",
+      "AOA": "アンゴラ クワンザ",
       "AOK": "アンゴラ クワンザ (1977–1991)",
       "AON": "アンゴラ 新クワンザ (1990–2000)",
       "AOR": "アンゴラ 旧クワンザ (1995–1999)",
       "ARA": "アルゼンチン アゥストラール",
-      "ARL": "アルゼンチン・ペソ・レイ（1970-1983）",
-      "ARM": "アルゼンチン・ペソ（1881-1970）",
+      "ARL": "アルゼンチン・ペソ・レイ（1970–1983）",
+      "ARM": "アルゼンチン・ペソ（1881–1970）",
       "ARP": "アルゼンチン ペソ (1983–1985)",
       "ARS": "アルゼンチン ペソ",
       "ATS": "オーストリア シリング",
@@ -1527,8 +1578,8 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "AZM": "アゼルバイジャン マナト (1993–2006)",
       "AZN": "アゼルバイジャン マナト",
       "BAD": "ボスニア・ヘルツェゴビナ ディナール (1992–1994)",
-      "BAM": "ボスニア マルク (BAM)",
-      "BAN": "ボスニア・ヘルツェゴビナ 新ディナール（1994-1997）",
+      "BAM": "ボスニア・ヘルツェゴビナ 兌換マルク (BAM)",
+      "BAN": "ボスニア・ヘルツェゴビナ 新ディナール（1994–1997）",
       "BBD": "バルバドス ドル",
       "BDT": "バングラデシュ タカ",
       "BEC": "ベルギー フラン (BEC)",
@@ -1537,7 +1588,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "BGL": "ブルガリア レフ",
       "BGM": "ブルガリア社会主義 レフ",
       "BGN": "ブルガリア 新レフ",
-      "BGO": "ブルガリア レフ（1879-1952）",
+      "BGO": "ブルガリア レフ（1879–1952）",
       "BHD": "バーレーン ディナール",
       "BIF": "ブルンジ フラン",
       "BMD": "バミューダ ドル",
@@ -1552,13 +1603,14 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "BRL": "ブラジル レアル",
       "BRN": "ブラジル 新クルザード (1989–1990)",
       "BRR": "ブラジル クルゼイロ (1993–1994)",
-      "BRZ": "ブラジル クルゼイロ（1942-1967）",
+      "BRZ": "ブラジル クルゼイロ（1942–1967）",
       "BSD": "バハマ ドル",
       "BTN": "ブータン ニュルタム",
       "BUK": "ビルマ チャット",
       "BWP": "ボツワナ プラ",
       "BYB": "ベラルーシ 新ルーブル (1994–1999)",
-      "BYR": "ベラルーシ ルーブル",
+      "BYN": "ベラルーシ ルーブル",
+      "BYR": "ベラルーシ ルーブル (2000–2016)",
       "BZD": "ベリーズ ドル",
       "CAD": "カナダ ドル",
       "CDF": "コンゴ フラン",
@@ -1568,6 +1620,8 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "CLE": "チリ エスクード",
       "CLF": "チリ ウニダ・デ・フォメント (UF)",
       "CLP": "チリ ペソ",
+      "CNH": "中国人民元(オフショア)",
+      "CNX": "中国人民銀行ドル",
       "CNY": "中国人民元",
       "COP": "コロンビア ペソ",
       "COU": "コロンビア レアル （UVR)",
@@ -1596,12 +1650,12 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "ETB": "エチオピア ブル",
       "EUR": "ユーロ",
       "FIM": "フィンランド マルカ",
-      "FJD": "フィジー諸島 ドル",
+      "FJD": "フィジー ドル",
       "FKP": "フォークランド（マルビナス）諸島 ポンド",
       "FRF": "フランス フラン",
       "GBP": "英国ポンド",
-      "GEK": "グルジア クーポン ラリ",
-      "GEL": "グルジア ラリ",
+      "GEK": "ジョージア クーポン ラリ",
+      "GEL": "ジョージア ラリ",
       "GHC": "ガーナ セディ (1979–2007)",
       "GHS": "ガーナ セディ",
       "GIP": "ジブラルタル ポンド",
@@ -1623,23 +1677,25 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "IDR": "インドネシア ルピア",
       "IEP": "アイリッシュ ポンド",
       "ILP": "イスラエル ポンド",
+      "ILR": "イスラエル シェケル (1980–1985)",
       "ILS": "イスラエル新シェケル",
       "INR": "インド ルピー",
       "IQD": "イラク ディナール",
       "IRR": "イラン リアル",
+      "ISJ": "アイスランド クローナ (1918–1981)",
       "ISK": "アイスランド クローナ",
       "ITL": "イタリア リラ",
       "JMD": "ジャマイカ ドル",
       "JOD": "ヨルダン ディナール",
       "JPY": "日本円",
       "KES": "ケニア シリング",
-      "KGS": "キルギスタン ソム",
+      "KGS": "キルギス ソム",
       "KHR": "カンボジア リエル",
       "KMF": "コモロ フラン",
-      "KPW": "北朝鮮 ウォン",
-      "KRH": "韓国 ファン（1953-1962）",
-      "KRO": "韓国 ウォン（1945-1953）",
-      "KRW": "韓国 ウォン",
+      "KPW": "北朝鮮ウォン",
+      "KRH": "韓国 ファン（1953–1962）",
+      "KRO": "韓国 ウォン（1945–1953）",
+      "KRW": "韓国ウォン",
       "KWD": "クウェート ディナール",
       "KYD": "ケイマン諸島 ドル",
       "KZT": "カザフスタン テンゲ",
@@ -1664,16 +1720,18 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "MGA": "マダガスカル アリアリ",
       "MGF": "マラガシ フラン",
       "MKD": "マケドニア デナル",
-      "MKN": "マケドニア ディナール（1992-1993）",
+      "MKN": "マケドニア ディナール（1992–1993）",
       "MLF": "マリ フラン",
       "MMK": "ミャンマー チャット",
       "MNT": "モンゴル トグログ",
       "MOP": "マカオ パタカ",
-      "MRO": "モーリタニア ウギア",
+      "MRO": "モーリタニア ウギア (1973–2017)",
+      "MRU": "モーリタニア ウギア",
       "MTL": "マルタ リラ",
       "MTP": "マルタ ポンド",
       "MUR": "モーリシャス ルピー",
-      "MVR": "モルディブ諸島 ルフィア",
+      "MVP": "モルディブ諸島 ルピー",
+      "MVR": "モルディブ ルフィア",
       "MWK": "マラウィ クワチャ",
       "MXN": "メキシコ ペソ",
       "MXP": "メキシコ ペソ (1861–1992)",
@@ -1693,7 +1751,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "OMR": "オマーン リアル",
       "PAB": "パナマ バルボア",
       "PEI": "ペルー インティ",
-      "PEN": "ペルー 新ソル",
+      "PEN": "ペルー ソル",
       "PES": "ペルー ソル (1863–1965)",
       "PGK": "パプアニューギニア キナ",
       "PHP": "フィリピン ペソ",
@@ -1718,15 +1776,16 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "SDP": "スーダン ポンド (1957–1998)",
       "SEK": "スウェーデン クローナ",
       "SGD": "シンガポール ドル",
-      "SHP": "セントヘレナ島 ポンド",
+      "SHP": "セントヘレナ ポンド",
       "SIT": "スロベニア トラール",
       "SKK": "スロバキア コルナ",
       "SLL": "シエラレオネ レオン",
       "SOS": "ソマリア シリング",
       "SRD": "スリナム ドル",
       "SRG": "スリナム ギルダー",
-      "SSP": "南スーダン・ポンド",
-      "STD": "サントメ・プリンシペ ドブラ",
+      "SSP": "南スーダン ポンド",
+      "STD": "サントメ・プリンシペ ドブラ (1977–2017)",
+      "STN": "サントメ・プリンシペ ドブラ",
       "SUR": "ソ連 ルーブル",
       "SVC": "エルサルバドル コロン",
       "SYP": "シリア ポンド",
@@ -1741,7 +1800,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "TPE": "ティモール エスクード",
       "TRL": "トルコ リラ (1922–2005)",
       "TRY": "新トルコリラ",
-      "TTD": "トリニダードトバゴ ドル",
+      "TTD": "トリニダード・トバゴ ドル",
       "TWD": "新台湾ドル",
       "TZS": "タンザニア シリング",
       "UAH": "ウクライナ グリブナ",
@@ -1756,12 +1815,13 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "UYU": "ウルグアイ ペソ",
       "UZS": "ウズベキスタン スム",
       "VEB": "ベネズエラ ボリバル (1871–2008)",
-      "VEF": "ベネズエラ ボリバル",
+      "VEF": "ベネズエラ ボリバル (2008–2018)",
+      "VES": "ベネズエラ ボリバル",
       "VND": "ベトナム ドン",
-      "VNN": "ベトナム ドン（1978-1985）",
+      "VNN": "ベトナム ドン（1978–1985）",
       "VUV": "バヌアツ バツ",
       "WST": "サモア タラ",
-      "XAF": "CFA フラン（BEAC）",
+      "XAF": "中央アフリカ CFA フラン",
       "XAG": "銀",
       "XAU": "金",
       "XBA": "ヨーロッパ混合単位 (EURCO)",
@@ -1773,7 +1833,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "XEU": "ヨーロッパ通貨単位",
       "XFO": "フランス金フラン",
       "XFU": "フランス フラン (UIC)",
-      "XOF": "CFA フラン（BCEAO）",
+      "XOF": "西アフリカ CFA フラン",
       "XPD": "パラジウム",
       "XPF": "CFP フラン",
       "XPT": "プラチナ",
@@ -1787,7 +1847,7 @@ public class CurrencyList_ja extends com.google.gwt.i18n.client.CurrencyList_ {
       "YUD": "ユーゴスラビア ハード・ディナール (1966–1990)",
       "YUM": "ユーゴスラビア ノビ・ディナール (1994–2002)",
       "YUN": "ユーゴスラビア 兌換ディナール (1990–1992)",
-      "YUR": "ユーゴスラビア 改革ディナール（1992-1993）",
+      "YUR": "ユーゴスラビア 改革ディナール（1992–1993）",
       "ZAL": "南アフリカ ランド (ZAL)",
       "ZAR": "南アフリカ ランド",
       "ZMK": "ザンビア クワチャ (1968–2012)",

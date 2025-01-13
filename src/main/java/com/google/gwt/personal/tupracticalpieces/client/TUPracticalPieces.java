@@ -110,7 +110,7 @@ public class TUPracticalPieces implements EntryPoint {
 //  public static final TUPracticalPiecesResources images = GWT.create(TUPracticalPiecesResources.class);
 //
 	// Initialize the constants.
-  public static final TUPracticalPiecesConstants constants = GWT.create(TUPracticalPiecesConstants.class);
+  //public static final TUPracticalPiecesConstants constants = GWT.create(TUPracticalPiecesConstants.class);
 
 //  /**
 //   * The main application shell.
@@ -132,7 +132,7 @@ public class TUPracticalPieces implements EntryPoint {
 	MGWT.applySettings(MGWTSettings.getAppSetting());
 	*/
 	// Generate the source code and css for the examples
-    GWT.create(GeneratorInfo.class);
+//    GWT.create(GeneratorInfo.class);	202406
 
 //    // Inject global styles.
 //    injectThemeStyleSheet();

@@ -1,1 +1,0 @@
-$wnd.tupracticalpieces.runAsyncCallback9('Qwb(272,31,hIc);_.Uh=function NLb(){return HLb(this)};Qwb(466,1,lJc);_.Wb=function bMb(){Xyb(this.b,this.a.Uh())};Qwb(324,272,hIc);_.Uh=function lNb(){return iNb(this)};dxc(Qh)(9);\n//# sourceURL=tupracticalpieces-9.js\n')

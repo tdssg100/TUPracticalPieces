@@ -80,7 +80,7 @@ import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPla
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
-
+import com.google.gwt.i18n.client.Constants;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -96,14 +96,13 @@ import java.util.Set;
  */
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPieces;
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesShell;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageEditView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageReadView;
-import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
+//import com.google.gwt.personal.tupracticalpieces.client.content.AdminMileageView;
 import com.google.gwt.personal.tupracticalpieces.client.desktop.MainMenuTreeViewModelDesktop;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.google.gwt.personal.tupracticalpieces.client.ContentWidget;
+import com.google.gwt.personal.tupracticalpieces.client.content.CwUpdate;
 //public class TUPracticalPiecesShell extends ResizeComposite {
 public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUPracticalPiecesShell {
 
@@ -162,7 +161,7 @@ public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUP
 
 
   
-  private AdminMileageSuperView adminViewMileage;
+//  private AdminMileageSuperView adminViewMileage;
 //  private MileageEditView adminEditMileage;
 //  private MileageReadView adminReadMileage;
   
@@ -383,18 +382,21 @@ public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUP
 //	      TaskReadView taskReadView) {
 //	public TUPracticalPiecesShellDesktop(EventBus bus, final PlaceController placeController,MainMenuTreeViewModel treeModel) {
 //	public TUPracticalPiecesShellMobile(EventBus bus, final PlaceController placeController) {
-	public TUPracticalPiecesShellMobile(final PlaceController placeController, MileageEditView mileageEditView, MileageReadView mileageReadView) {
+//	public TUPracticalPiecesShellMobile(final PlaceController placeController, MileageEditView mileageEditView, MileageReadView mileageReadView) {
+	public TUPracticalPiecesShellMobile(final PlaceController placeController, MileageEditView mileageEditView, MileageReadView mileageReadView, CwUpdate cwUpdate, TUPracticalPiecesConstants constants) {
 	    // Inject global styles.
 	    injectThemeStyleSheet();
 	    images.css().ensureInjected();
 
 	    
 		//final MainMenuTreeViewModel treeModel = new MainMenuTreeViewModel(
-		AdminMileageView adminViewMileageList = new AdminMileageView(TUPracticalPieces.constants);
+//		AdminMileageView adminViewMileageList = new AdminMileageView(TUPracticalPieces.constants);
 
+//		final MainMenuTreeViewModelMobile treeModel = new MainMenuTreeViewModelMobile(
+//				TUPracticalPieces.constants, selectionModel, adminViewMileageList);
 		final MainMenuTreeViewModelMobile treeModel = new MainMenuTreeViewModelMobile(
-				TUPracticalPieces.constants, selectionModel, adminViewMileageList);
-		adminViewMileage = adminViewMileageList;
+				constants, selectionModel, cwUpdate);
+//		adminViewMileage = adminViewMileageList;
 		Set<ContentWidget> contentWidgets = treeModel.getAllContentWidgets();
 //		adminEditMileage = treeModel.getAdminMaileageEditView();
 	    
@@ -630,14 +632,16 @@ public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUP
 	      public void onValueChange(ValueChangeEvent<String> event) {
 	        // Get the content widget associated with the history token.
 		    	// transit to app
-			    if (("!AdminM".equals(event.getValue().substring(0,7))) ||
-				    	("adminL".equals(event.getValue().substring(0,6)))) {
-//		    	if ("!AdminM".equals(event.getValue().substring(0,7))) {
-		    		placeController.goTo(new AdminMileagePlace(true));
-		    		// nothing 
-		    		return;
-		    	}
+//			    if (("!AdminM".equals(event.getValue().substring(0,7))) ||
+//				    	("adminL".equals(event.getValue().substring(0,6)))) {
+////		    	if ("!AdminM".equals(event.getValue().substring(0,7))) {
+//		    		placeController.goTo(new AdminMileagePlace(true));
+//		    		// nothing 
+//		    		return;
+//		    	}
 		    	// transit to app
+
+/*
 		    	if ("adminEdit".equals(event.getValue().substring(0,9))) {
 		    		String token = event.getValue();
 		    		if (token.equals("adminEdit:adminCreate")) {
@@ -656,7 +660,9 @@ public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUP
 			    	// do nothing
 			    	return;
 		    	}
-		    	
+ */          
+
+ 
 		    	
 	        ContentWidget contentWidget = treeModel.getContentWidgetForToken(
 	            event.getValue());
@@ -735,11 +741,11 @@ public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUP
 
 	    
 	    contentContainer.add(contentPanel);
-	    contentContainer.add(adminViewMileage);
-	    contentContainer.add(mileageReadView);
+//	    contentContainer.add(adminViewMileage);
+	    contentContainer.add(mileageReadView); 
 	    contentContainer.add(mileageEditView);
         contentContainer.setWidget(contentPanel);
-	    contentContainer.setAnimationDuration(500);
+	    contentContainer.setAnimationDuration(100);
 	    
 	    
 	    
@@ -1069,9 +1075,9 @@ public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUP
     linkElem.setHref(modulePath + styleSheet);
     getHeadElement().appendChild(linkElem);
   }
-  public AdminMileageSuperView getAdminMileageView() {
-	  return adminViewMileage;
-  }
+//  public AdminMileageSuperView getAdminMileageView() {
+//	  return adminViewMileage;
+//  }
 //  public MileageEditView getAdminMileageEditView() {
 //	  return adminEditMileage;
 //  }

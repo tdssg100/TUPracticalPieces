@@ -25,13 +25,13 @@ import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileagePlace;
+//import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileagePlace;
 //import com.google.gwt.sample.mobilewebapp.shared.TaskProxy;
 
 /**
  * The place in the app that shows and edits details of a task.
  */
-public class MileageReadPlace extends MileagePlace {
+public class MileageReadPlace extends Place {
     private String mileageReadName;
 
 //  private final TaskProxy task;
