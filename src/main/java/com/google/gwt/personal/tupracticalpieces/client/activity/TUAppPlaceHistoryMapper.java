@@ -25,6 +25,7 @@ import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.gwt.place.shared.WithTokenizers;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
 import com.google.gwt.place.shared.Place;
+import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPlace;
 
 /**
  * This interface is the hub of your application's navigation system. It links
@@ -38,6 +39,6 @@ import com.google.gwt.place.shared.Place;
  */
 //@WithTokenizers({TaskListPlace.Tokenizer.class, TaskPlace.Tokenizer.class})
 //@WithTokenizers({AdminMileagePlace.Tokenizer.class, MileagePlace.Tokenizer.class})
-@WithTokenizers({AdminMileagePlace.Tokenizer.class})
+@WithTokenizers({AdminMileagePlace.Tokenizer.class, MileageEditPlace.Tokenizer.class})
 public interface TUAppPlaceHistoryMapper extends PlaceHistoryMapper {
 }

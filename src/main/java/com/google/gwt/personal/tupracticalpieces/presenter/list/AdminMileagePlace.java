@@ -49,7 +49,8 @@ public class AdminMileagePlace extends Place {
 //@Prefix("tl")
       //@Prefix("adminList")
         //public static class Tokenizer implements PlaceTokenizer<TaskListPlace> {
-@Prefix("!AdminMileageView")
+//@Prefix("!AdminMileageView")
+  @Prefix("ml")
   public static class Tokenizer implements PlaceTokenizer<AdminMileagePlace> {
 
 //    public TaskListPlace getPlace(String token) {
@@ -64,7 +65,7 @@ public class AdminMileagePlace extends Place {
       }
 
     public String getToken(AdminMileagePlace place) {
-        return "!AdminMileageView";
+        return "";
       }
   
   }

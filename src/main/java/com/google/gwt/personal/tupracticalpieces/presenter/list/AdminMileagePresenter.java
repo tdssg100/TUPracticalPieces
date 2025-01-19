@@ -108,53 +108,14 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
 	    
 	    //Button btn;
 	    
-	    
+	    // Show
 	    //btn = clientFactory.getMyAppAdminMileageView().getShowButton();
 	    clientFactory.getMyAppAdminMileageView().getShowButton().addClickHandler(new ClickHandler() {
 		  public void onClick(ClickEvent event) {
-//Window.alert("Show button clicked");
-		    clientFactory.getMyAppAdminMileageView().getShowButton().setEnabled(false);
-		    //presenter.refreshMileageList();
-                  RequestTransport requestTransport = new DefaultRequestTransport();
-                  clientFactory.getRequestFactory().initialize(eventBus, requestTransport);
-                  clientFactory.getRequestFactory().mileageRequest().findAllMileages().fire(
-		    new Receiver<List<MileageProxy>>() {
-		      @Override
-		      public void onFailure(ServerFailure error) {
-		      	Window.alert("rf mileage fail" + error.toString());
-		        // ignore
-		      }
+        refleshList();
+      }});
 
-		      @Override
-		      public void onSuccess(List<MileageProxy> response) {
-		        // Early exit if this activity has already been canceled.
-		        //if (eventBus == null) {
-		        //  return;
-		        //}
-
-		        // Display the tasks in the view.
-		        if (response == null) {
-		          response = Collections.<MileageProxy> emptyList();
-		        }
-		        //Window.alert("mileage:" + response.size());
-//            Window.alert("Show button clicked before setMileages");            
-		        setMileages(response);
-//            Window.alert("Show button clicked after setMileages");
-		        // save the response to storage
-		        //clientFactory.getTaskProxyLocalStorage().setTasks(response);
-
-		        // Restart the timer.
-		        //refreshTimer.schedule(REFRESH_DELAY);
-		      }
-		    });	
-		 
-          clientFactory.getMyAppAdminMileageView().getEditButton().setEnabled(true);
-          clientFactory.getMyAppAdminMileageView().getDeleteButton().setEnabled(true);
-          clientFactory.getMyAppAdminMileageView().getInsertButton().setEnabled(true);
-		  //gridPanel.setVisible(true);
-    
-	    }});
-
+      // Edit
 	    //btn = clientFactory.getMyAppAdminMileageView().getEditButton();
 	    clientFactory.getMyAppAdminMileageView().getEditButton().addClickHandler(new ClickHandler() {
 			@Override
@@ -165,16 +126,49 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
           Window.confirm("Select a row.");
           return;
         }
+
+        clientFactory.getMyAppAdminMileageView().getShowButton().setEnabled(true);
+        clientFactory.getMyAppAdminMileageView().getEditButton().setEnabled(false);
+        clientFactory.getMyAppAdminMileageView().getDeleteButton().setEnabled(false);
+        clientFactory.getMyAppAdminMileageView().getInsertButton().setEnabled(false);
+        getView().clearList();
 				editMileage(clientFactory.getMyAppAdminMileageView().getSelected());
 			}
 	    });
 
+      // Delete
+	    clientFactory.getMyAppAdminMileageView().getDeleteButton().addClickHandler(new ClickHandler() {
+        @Override
+          public void onClick(ClickEvent event) {
+  
+  
+          if (clientFactory.getMyAppAdminMileageView().getSelected()== null) {
+            Window.confirm("Select a row.");
+            return;
+          }
+  
+          clientFactory.getMyAppAdminMileageView().getShowButton().setEnabled(true);
+          clientFactory.getMyAppAdminMileageView().getEditButton().setEnabled(false);
+          clientFactory.getMyAppAdminMileageView().getDeleteButton().setEnabled(false);
+          clientFactory.getMyAppAdminMileageView().getInsertButton().setEnabled(false);
+          getView().clearList();
+          deleteMileageFromList(clientFactory.getMyAppAdminMileageView().getSelected());
+        }
+        });
+  
+
+
 	    	    
-	    
+	    // Insert
 	    //btn = clientFactory.getMyAppAdminMileageView().getInsertButton();
       clientFactory.getMyAppAdminMileageView().getInsertButton().addClickHandler(new ClickHandler() {
 				@Override
 			    public void onClick(ClickEvent event) {
+                clientFactory.getMyAppAdminMileageView().getShowButton().setEnabled(true);
+                clientFactory.getMyAppAdminMileageView().getEditButton().setEnabled(false);
+                clientFactory.getMyAppAdminMileageView().getDeleteButton().setEnabled(false);
+                clientFactory.getMyAppAdminMileageView().getInsertButton().setEnabled(false);
+                getView().clearList();
 				        addMileage();
 			    }
 		});    
@@ -210,43 +204,55 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
   
   @Override
   public void editMileage(MileageProxy selected) {
-	  clientFactory.getPlaceController().goTo(new MileageEditPlace(selected.getId(), "adminEdit:" + selected.getId()));
-//Window.alert("edit mileage :" + selected.getId());
+	  //clientFactory.getPlaceController().goTo(new MileageEditPlace(selected.getId(), "adminEdit:" + selected.getId()));
+// Window.alert("On show edit mileage :" + selected.getId());
       eventBus.fireEvent(new ShowMileageEvent(selected));
-//      eventBus.fireEvent(new MileageEditEvent(selected));
+      eventBus.fireEvent(new MileageEditEvent(selected));
 	  
   }
  
-  //@Override
+  @Override
   //public void addMileage(Place place) {
   public void addMileage() {
-    // Go into edit mode when clicking AddCouldSQL.
-//    eventBus.fireEvent(new MileageEditEvent(null));
-
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	  
-//	  
-//    clientFactory.getPlaceController().goTo(new MileagePlace(null, null));
-	  
-//	  clientFactory.getPlaceController().goTo(new MileageEditPlace(null, "adminCreate"));
-
-	  //	  ActionEvent.fire(eventBus, ActionNames.ADD_MILEAGE);
-//  clientFactory.getPlaceController().goTo(MileagePlace.getMileageCreatePlace());
-//    clientFactory.getPlaceController().goTo(place);
-//    goTo(MileagePlace.getMileageCreatePlace(null, Collections.<MileageProxy> emptyList()));
-//    Window.alert("addMileage to go to getMileageCreatePlace in Presenter.");
-    //goTo(MileagePlace.getMileageCreatePlace());
-    //gotTo(new MileageEditPlace().createMileageEditPlace(null, null));
-    //gotTo(new Place("adminEdit:adminCreate"));
-	  clientFactory.getPlaceController().goTo(new MileageEditPlace(null, "adminCeate"));
-    eventBus.fireEvent(new ShowMileageEvent(null));
+	  //clientFactory.getPlaceController().goTo(new MileageEditPlace(null, "adminCeate"));
+    //eventBus.fireEvent(new ShowMileageEvent(null));
+    ActionEvent.fire(eventBus, ActionNames.ADD_MILEAGE);
 //		    MileageEditView mileageEditView = clientFactory.getMileageEditView();
 //		    mileageEditView.asWidget();
 //		    container.setWidget(contentPanel);
 //		    container.setAnimationDuration(500);
   }
   
-  
+  @Override
+  public void deleteMileageFromList(MileageProxy selected) {
+    final MileageProxy toDelete = selected;
+//    clientFactory.getRequestFactory().taskRequest().remove().using(toDelete).fire(
+    clientFactory.getRequestFactory().mileageRequest().remove().using(toDelete).fire(
+        new Receiver<Void>() {
+          @Override
+          public void onFailure(ServerFailure error) {
+//            Window.alert("An error occurred on the server while deleting this task: \"."
+            Window.alert("An error occurred on the server while deleting this mileage: \"."
+                + error.getMessage() + "\".");
+          }
 
+          @Override
+          public void onSuccess(Void response) {
+//            onTaskDeleted();
+            onMileageDeletedFromList();
+          }
+        });
+  }
+  
+  private void onMileageDeletedFromList() {
+    // Notify the user that the task was deleted.
+    //notify("Mileage Deleted");
+    //notify("Task Deleted");
+
+    // Return to the task list.
+//    ActionEvent.fire(eventBus, ActionNames.TASK_SAVED);
+    ActionEvent.fire(eventBus, ActionNames.MILEAGE_SAVED);
+  }
   @Override
   public void start(EventBus eventBus) {
     this.eventBus = eventBus;
@@ -400,10 +406,57 @@ public class AdminMileagePresenter implements AdminMileageSuperView.Presenter {
  public void goTo(Place place) {
 	// TODO Auto-generated method stub
 	clientFactory.getPlaceController().goTo(place);
-	
+ }
+  
+  @Override
+  public void refleshList() {
+    //Window.alert("Show button clicked");
+    clientFactory.getMyAppAdminMileageView().getShowButton().setEnabled(false);
+    //presenter.refreshMileageList();
+              RequestTransport requestTransport = new DefaultRequestTransport();
+              clientFactory.getRequestFactory().initialize(eventBus, requestTransport);
+              clientFactory.getRequestFactory().mileageRequest().findAllMileages().fire(
+    new Receiver<List<MileageProxy>>() {
+      @Override
+      public void onFailure(ServerFailure error) {
+        Window.alert("rf mileage fail" + error.toString());
+        // ignore
+      }
+
+      @Override
+      public void onSuccess(List<MileageProxy> response) {
+        // Early exit if this activity has already been canceled.
+        //if (eventBus == null) {
+        //  return;
+        //}
+
+        // Display the tasks in the view.
+        if (response == null) {
+          response = Collections.<MileageProxy> emptyList();
+        }
+        //Window.alert("mileage:" + response.size());
+//            Window.alert("Show button clicked before setMileages");            
+        setMileages(response);
+//            Window.alert("Show button clicked after setMileages");
+        // save the response to storage
+        //clientFactory.getTaskProxyLocalStorage().setTasks(response);
+
+        // Restart the timer.
+        //refreshTimer.schedule(REFRESH_DELAY);
+      }
+    });	
+ 
+      clientFactory.getMyAppAdminMileageView().getEditButton().setEnabled(true);
+      clientFactory.getMyAppAdminMileageView().getDeleteButton().setEnabled(true);
+      clientFactory.getMyAppAdminMileageView().getInsertButton().setEnabled(true);
+  //gridPanel.setVisible(true);
+
+
+  }
+
 }
 
 
 
 
-}
+

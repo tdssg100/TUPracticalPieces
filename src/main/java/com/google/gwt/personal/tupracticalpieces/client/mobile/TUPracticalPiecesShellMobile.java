@@ -76,8 +76,8 @@ import com.google.gwt.personal.tupracticalpieces.client.mobile.MainMenuTreeViewM
 //import com.google.gwt.personal.tupracticalpieces.client.Category;
 import com.google.gwt.personal.tupracticalpieces.client.mobile.TUPracticalPiecesResourcesMobile;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPlace;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
+// import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPlace;
+// import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
 import com.google.gwt.i18n.client.Constants;
@@ -383,7 +383,8 @@ public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUP
 //	public TUPracticalPiecesShellDesktop(EventBus bus, final PlaceController placeController,MainMenuTreeViewModel treeModel) {
 //	public TUPracticalPiecesShellMobile(EventBus bus, final PlaceController placeController) {
 //	public TUPracticalPiecesShellMobile(final PlaceController placeController, MileageEditView mileageEditView, MileageReadView mileageReadView) {
-	public TUPracticalPiecesShellMobile(final PlaceController placeController, MileageEditView mileageEditView, MileageReadView mileageReadView, CwUpdate cwUpdate, TUPracticalPiecesConstants constants) {
+//	public TUPracticalPiecesShellMobile(final PlaceController placeController, MileageEditView mileageEditView, MileageReadView mileageReadView, CwUpdate cwUpdate, TUPracticalPiecesConstants constants) {
+    public TUPracticalPiecesShellMobile(final PlaceController placeController, MileageEditView mileageEditView, CwUpdate cwUpdate, TUPracticalPiecesConstants constants) {
 	    // Inject global styles.
 	    injectThemeStyleSheet();
 	    images.css().ensureInjected();
@@ -742,7 +743,7 @@ public class TUPracticalPiecesShellMobile extends ResizeComposite implements TUP
 	    
 	    contentContainer.add(contentPanel);
 //	    contentContainer.add(adminViewMileage);
-	    contentContainer.add(mileageReadView); 
+//	    contentContainer.add(mileageReadView); 
 	    contentContainer.add(mileageEditView);
         contentContainer.setWidget(contentPanel);
 	    contentContainer.setAnimationDuration(100);

@@ -35,7 +35,7 @@ import com.google.gwt.personal.tupracticalpieces.client.content.CwXFrame;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwMashup2;
 import com.google.gwt.personal.tupracticalpieces.client.mobile.MainMenuTreeViewModelMobile.Category;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
+//import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
 //import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 

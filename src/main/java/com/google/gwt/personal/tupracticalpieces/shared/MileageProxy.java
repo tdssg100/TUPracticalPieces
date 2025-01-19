@@ -54,6 +54,8 @@ public interface MileageProxy extends EntityProxy {
 //
 //  void setNotes(String notes);
 //}
+    Long getId();
+	
 	String getSupplyDate();
 
 	BigDecimal getQuantity();
@@ -67,7 +69,7 @@ public interface MileageProxy extends EntityProxy {
 	BigDecimal getTotalMileage();
 
 //	Date getId();
-	Long getId();
+
 //	String getId();
 
     void setSupplyDate(String supplyDate);

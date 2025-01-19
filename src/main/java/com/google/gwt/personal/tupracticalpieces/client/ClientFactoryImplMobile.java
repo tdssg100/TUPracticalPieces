@@ -62,7 +62,7 @@ import com.google.gwt.personal.tupracticalpieces.client.desktop.TUPracticalPiece
 //import com.google.gwt.personal.tupracticalpieces.client.desktop.DesktopTaskReadView;
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesShell;
 import com.google.gwt.personal.tupracticalpieces.client.mobile.MileageEditViewMobile;
-import com.google.gwt.personal.tupracticalpieces.client.mobile.MileageReadViewMobile;
+// import com.google.gwt.personal.tupracticalpieces.client.mobile.MileageReadViewMobile;
 import com.google.gwt.personal.tupracticalpieces.client.mobile.TUPracticalPiecesShellMobile;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageRequestFactory;
 import com.google.gwt.personal.tupracticalpieces.client.content.CwUpdate;
@@ -89,7 +89,7 @@ import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 
 import com.google.gwt.personal.tupracticalpieces.generator.TUPracticalPiecesGenerator;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
+//import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
 import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesConstants;
 /**
@@ -122,7 +122,7 @@ class ClientFactoryImplMobile implements ClientFactory {
 //  private MileageEditView myAppAdminMileageEdit;
 //  private MileageReadView myAppAdminMileageRead;
   private MileageEditView mileageEditView;
-  private MileageReadView mileageReadView;
+//  private MileageReadView mileageReadView;
 //  private CwUpdate cwUpdate;
 
   private final TUAppPlaceHistoryMapper historyMapper = GWT.create(TUAppPlaceHistoryMapper.class);
@@ -228,13 +228,13 @@ class ClientFactoryImplMobile implements ClientFactory {
 	}
 	return mileageEditView;
   }
-  public MileageReadView getMileageReadView() {
+/*   public MileageReadView getMileageReadView() {
 //    return myAppAdminMileageRead;
 		if (mileageReadView == null) {
 			mileageReadView = createMileageReadView();
 		}
 		return mileageReadView;
-  }
+  } */
   public CwUpdate getMyAppAdminMileageView() {
 	if (myAppAdminMileageView == null) {
 		myAppAdminMileageView = createCwUpdate();
@@ -254,11 +254,11 @@ class ClientFactoryImplMobile implements ClientFactory {
   * Create a {@link MileageListView}.
   * 
   * @return a new {@link MileageListView}
-  */
+
   protected MileageReadView createMileageReadView() {
    return new MileageReadViewMobile();
   }
-
+  */
   
 protected CwUpdate createCwUpdate() {
 //	 return new CwUpdate(TUPracticalPieces.constants);
@@ -346,7 +346,8 @@ protected CwUpdate createCwUpdate() {
 //      return new TUPracticalPiecesShellMobile(eventBus, placeController);
 //      return new TUPracticalPiecesShellMobile();
 //	  TUPracticalPiecesShellMobile tmp = new TUPracticalPiecesShellMobile(eventBus, placeController);
-	  TUPracticalPiecesShellMobile tmp = new TUPracticalPiecesShellMobile(placeController, getMileageEditView(), getMileageReadView(), getMyAppAdminMileageView(), constants);
+//	  TUPracticalPiecesShellMobile tmp = new TUPracticalPiecesShellMobile(placeController, getMileageEditView(), getMileageReadView(), getMyAppAdminMileageView(), constants);
+	  TUPracticalPiecesShellMobile tmp = new TUPracticalPiecesShellMobile(placeController, getMileageEditView(), getMyAppAdminMileageView(), constants);
 //	  myAppAdminMileageView = tmp.getAdminMileageView();
 //	  myAppAdminMileageEdit = tmp.getAdminMileageEditView();
 //	  myAppAdminMileageRead = tmp.getAdminMileageReadView();

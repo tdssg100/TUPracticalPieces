@@ -1,8 +1,8 @@
 package com.google.gwt.personal.tupracticalpieces.database;
 
 import javax.annotation.Generated;
-import javax.persistence.metamodel.SingularAttribute;
-import javax.persistence.metamodel.StaticMetamodel;
+import jakarta.persistence.metamodel.SingularAttribute;
+import jakarta.persistence.metamodel.StaticMetamodel;
 
 @Generated(value="Dali", date="2024-07-07T14:57:06.580+0900")
 @StaticMetamodel(User.class)

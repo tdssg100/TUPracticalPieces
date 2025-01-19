@@ -54,6 +54,7 @@ public interface AdminMileageSuperView extends IsWidget {
     //public void addMileage(Place place);
     public void addMileage();
     
+    public void deleteMileageFromList(MileageProxy selected);
 //    public void refreshMileageList();
     
     public void goTo(Place place);
@@ -61,6 +62,8 @@ public interface AdminMileageSuperView extends IsWidget {
 //    public void start(EventBus eventBus);
     
 //    public void stop();
+    public void refleshList();
+    
 
   }
 

@@ -23,7 +23,7 @@ package com.google.gwt.personal.tupracticalpieces.shared;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Id;
+import jakarta.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import com.google.web.bindery.requestfactory.shared.EntityProxyId;

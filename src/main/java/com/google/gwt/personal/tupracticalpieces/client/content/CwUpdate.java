@@ -51,6 +51,7 @@ import com.google.gwt.personal.tupracticalpieces.client.TUPracticalPiecesAnnotat
 //import com.google.gwt.personal.tupracticalpieces.client.common.ResultFetch;
 //import com.google.gwt.personal.tupracticalpieces.shared.UserProxy;
 import com.google.gwt.personal.tupracticalpieces.client.event.MileageEditEvent;
+import com.google.gwt.personal.tupracticalpieces.database.Mileage;
 //import com.google.gwt.view.client.ListDataProvider;
 //import com.google.gwt.view.client.NoSelectionModel;
 import com.google.gwt.view.client.SelectionChangeEvent;
@@ -643,5 +644,9 @@ public class CwUpdate extends ContentWidget implements AdminMileageSuperView {
 	return selected;
   }
   
+  public void clearList() {
+    mileageList.setVisibleRangeAndClearData(mileageList.getVisibleRange(), true);
+  }
+
 }
 

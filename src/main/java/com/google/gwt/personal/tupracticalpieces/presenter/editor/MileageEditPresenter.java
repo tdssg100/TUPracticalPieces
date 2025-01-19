@@ -89,6 +89,7 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
 	      this.mileageId = null;
    
 	      this.clientFactory = clientFactory;
+        clientFactory.getMileageEditView().setPresenter(this);
 //    clientFactory.getTaskEditView().setPresenter(this);
 //    getView().setPresenter(this);
 //    clientFactory.getShell().setWidget(getView().asWidget()); // To display the view is from activities.
@@ -154,7 +155,7 @@ public class MileageEditPresenter implements MileageEditView.Presenter {
     // Flush the changes into the editable task.
 //    TaskRequest context = (TaskRequest) clientFactory.getTaskEditView().getEditorDriver().flush();
     MileageRequest context = (MileageRequest) clientFactory.getMileageEditView().getEditorDriver().flush();
-Window.alert("persisting...");
+//Window.alert("persisting...");
     /*
      * Create a persist request the first time we try to save this task. If a
      * request already exists, reuse it.
@@ -165,7 +166,7 @@ Window.alert("persisting...");
       mileagePersistRequest = context.persist().using(editMileage);
     }
 
-    Window.alert("persisting......fire");
+ //   Window.alert("persisting......fire");
     // Fire the request.
 //    taskPersistRequest.fire(new Receiver<Void>() {
     mileagePersistRequest.fire(new Receiver<Void>() {
@@ -188,12 +189,13 @@ Window.alert("persisting...");
         ActionEvent.fire(eventBus, ActionNames.MILEAGE_SAVED);
       }
     });
-    Window.alert("persisting......end");
+ //   Window.alert("persisting......end");
   }
 
 //  public void start(EventBus eventBus) {
   public void start(EventBus eventBus) {
-    this.eventBus = eventBus;
+// Window.alert("MileageEditPresenter start...");
+ this.eventBus = eventBus;
     getView().setNameViolation(null);
 
     // Prefetch the sounds used in this activity.
@@ -208,9 +210,9 @@ Window.alert("persisting...");
     
 //    if (taskId == null) {
     if (mileageId == null) {
-      startCreate();
+      startCreateEditor();
     } else {
-      startEdit();
+      startEditEditor();
     }
     
     
@@ -321,16 +323,19 @@ Window.alert("persisting...");
 //  private void onTaskDeleted() {
   private void onMileageDeleted() {
     // Notify the user that the task was deleted.
-    notify("Task Deleted");
+    notify("Mileage Deleted");
+    //notify("Task Deleted");
 
     // Return to the task list.
 //    ActionEvent.fire(eventBus, ActionNames.TASK_SAVED);
     ActionEvent.fire(eventBus, ActionNames.MILEAGE_SAVED);
   }
 
-  private void startCreate() {
 
-    Window.alert("startCreate endtered.");
+
+  private void startCreateEditor() {
+
+    // Window.alert("startCreate endtered.");
     isEditing = false;
     getView().setEditing(false);
 //    TaskRequest request = clientFactory.getRequestFactory().taskRequest();
@@ -341,9 +346,9 @@ Window.alert("persisting...");
     getView().getEditorDriver().edit(editMileage, request);
   }
 
-  private void startEdit() {
+  private void startEditEditor() {
 
-    Window.alert("startCreate startEdit.");
+    // Window.alert("startEditEditor.");
     isEditing = true;
     getView().setEditing(true);
     // Lock the display until the task is loaded.
@@ -393,7 +398,7 @@ Window.alert("persisting...");
 //            getView().getEditorDriver().edit(response,
 //                clientFactory.getRequestFactory().taskRequest());
             getView().getEditorDriver().edit(response,
-            clientFactory.getRequestFactory().mileageRequest());
+              clientFactory.getRequestFactory().mileageRequest());
             getView().setLocked(false);
           }
         });

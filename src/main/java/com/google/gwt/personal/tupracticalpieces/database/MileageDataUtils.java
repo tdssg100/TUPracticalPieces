@@ -28,13 +28,13 @@ import java.util.Properties;
 //import com.google.gwt.personal.tupracticalpieces.database.EMF;
 //import com.google.gwt.personal.tupracticalpieces.database.Mileage;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-//import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
-//import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+//import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
+import jakarta.persistence.PersistenceContext;
+//import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -65,8 +65,8 @@ public class MileageDataUtils extends HttpServlet {
 	//private static Properties prop = new Properties();
 
 	/*
-	 * prop.setProperty("javax.persistence.jdbc.user","viewer");
-	 * prop.setProperty("javax.persistence.jdbc.password","viewer15963");
+	 * prop.setProperty("jakarta.persistence.jdbc.user","viewer");
+	 * prop.setProperty("jakarta.persistence.jdbc.password","viewer15963");
 	 */
 	/*
 	private MileageDataUtils() {
@@ -522,8 +522,8 @@ public class MileageDataUtils extends HttpServlet {
 	//private static Properties prop = new Properties();
 
 
- * prop.setProperty("javax.persistence.jdbc.user","viewer");
- * prop.setProperty("javax.persistence.jdbc.password","viewer15963");
+ * prop.setProperty("jakarta.persistence.jdbc.user","viewer");
+ * prop.setProperty("jakarta.persistence.jdbc.password","viewer15963");
 
 
 	private MileageDataUtils() {

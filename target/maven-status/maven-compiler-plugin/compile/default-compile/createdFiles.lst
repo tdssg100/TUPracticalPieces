@@ -8,7 +8,6 @@ com/google/gwt/personal/tupracticalpieces/client/desktop/TUPracticalPiecesShellD
 com/google/gwt/personal/tupracticalpieces/client/common/LoginState$1.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwFrame$CwConstants.class
 com/google/gwt/personal/tupracticalpieces/database/MileageDataUtils.class
-com/google/gwt/personal/tupracticalpieces/client/desktop/MileageReadViewDesktop.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas3d.class
 com/google/gwt/personal/gaerequest/shared/GaeHelper.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwMethod2$CwConstants.class
@@ -22,6 +21,7 @@ com/google/gwt/personal/tupracticalpieces/client/mobile/MainMenuTreeViewModelMob
 com/google/gwt/personal/tupracticalpieces/client/App$5.class
 com/google/gwt/personal/tupracticalpieces/client/ContentWidget$5.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas2d$8.class
+com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileagePresenter$4.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwPrimeNumberFrequencyByModulo$10.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwUpdate$1.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/MileageEditViewMobile$1.class
@@ -32,11 +32,8 @@ com/google/gwt/personal/tupracticalpieces/client/ui/DateButton$1.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/MileageEditViewMobile$AdminMileageEditViewUiBinder.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwFrame$4.class
 com/google/gwt/personal/tupracticalpieces/client/desktop/MileageEditViewDesktop$AdminMileageEditViewUiBinder.class
-com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadView$Presenter.class
 com/google/gwt/personal/tupracticalpieces/server/NewsCountExcludeTransitServlet$SimpleCache.class
-com/google/gwt/personal/tupracticalpieces/client/mobile/MileageReadViewMobile$EditorDriver.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesShellMobile$2.class
-com/google/gwt/personal/tupracticalpieces/client/desktop/MileageReadViewDesktop$AdminMileageReadViewUiBinder.class
 com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileagePlace.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwXFrame$2.class
 com/google/gwt/personal/tupracticalpieces/server/HotSpotListTransitServlet$SimpleCache.class
@@ -82,7 +79,6 @@ com/google/gwt/personal/tupracticalpieces/client/content/CwPrimeNumberFrequencyB
 com/google/gwt/personal/tupracticalpieces/client/ContentWidget$1.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas2d$4.class
 com/google/gwt/personal/tupracticalpieces/shared/UserProxy.class
-com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadView.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwFrame$5.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesShellMobile$10.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwColumn$CwConstants.class
@@ -103,7 +99,6 @@ com/google/gwt/personal/tupracticalpieces/client/content/CwUpdate.class
 com/google/gwt/personal/tupracticalpieces/shared/MileageRequestFactory.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwXFrame.class
 com/google/gwt/personal/tupracticalpieces/shared/MileageProxyImpl.class
-com/google/gwt/personal/tupracticalpieces/client/mobile/MileageReadViewMobile$1.class
 com/google/gwt/personal/tupracticalpieces/client/ClientFactory.class
 com/google/gwt/personal/tupracticalpieces/shared/MileageProxy.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwFrame$6.class
@@ -118,8 +113,6 @@ com/google/gwt/personal/tupracticalpieces/client/activity/AppActivityMapper.clas
 com/google/gwt/personal/tupracticalpieces/client/common/AdminTask.class
 com/google/gwt/personal/tupracticalpieces/client/ContentWidget$3.class
 com/google/gwt/personal/tupracticalpieces/client/event/MileageListUpdateEvent.class
-com/google/gwt/personal/tupracticalpieces/client/activity/TUAdminActivity$1.class
-com/google/gwt/personal/tupracticalpieces/client/mobile/MileageReadViewMobile.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwPrimeNumberFrequencyByModulo$6.class
 com/google/gwt/personal/tupracticalpieces/client/desktop/TUPracticalPiecesShellDesktop.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwNotes$1.class
@@ -134,6 +127,7 @@ com/google/gwt/personal/tupracticalpieces/client/TUPracticalPiecesAnnotations.cl
 com/google/gwt/personal/tupracticalpieces/client/mobile/MainMenuTreeViewModelMobile$ContentWidgetCell.class
 com/google/gwt/personal/tupracticalpieces/client/desktop/MileageEditViewDesktop.class
 com/google/gwt/personal/tupracticalpieces/client/common/AdminSvc.class
+com/google/gwt/personal/tupracticalpieces/client/activity/AppActivityMapper$3.class
 com/google/gwt/personal/tupracticalpieces/client/desktop/MainMenuTreeViewModelDesktop.class
 com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditView$Presenter.class
 com/google/gwt/personal/gaerequest/client/GaeAuthRequestTransport$1.class
@@ -149,10 +143,8 @@ com/google/gwt/personal/tupracticalpieces/client/common/ResultSvc.class
 com/google/gwt/personal/tupracticalpieces/client/common/LoginState$4.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwMethod.class
 com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileagePresenter.class
-com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadPlace$Tokenizer.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwPrimeNumberFrequencyByModulo$8.class
 com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditPlace.class
-com/google/gwt/personal/tupracticalpieces/client/desktop/MileageReadViewDesktop$EditorDriver.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesShellMobile$5.class
 com/google/gwt/personal/tupracticalpieces/client/TUPracticalPiecesAnnotations$TUPracticalPiecesStyle.class
 com/google/gwt/personal/tupracticalpieces/client/common/AdminSvcAsync.class
@@ -162,7 +154,6 @@ com/google/gwt/personal/tupracticalpieces/client/ui/DecimalRenderer.class
 com/google/gwt/personal/tupracticalpieces/client/ContentWidgetView.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas2d$5.class
 com/google/gwt/personal/tupracticalpieces/presenter/list/PresentsWidgets.class
-com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileagePresenter$1$1.class
 com/google/gwt/personal/tupracticalpieces/client/ContentWidget$2.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwMethod$CwConstants.class
 com/google/gwt/personal/tupracticalpieces/client/common/LoginState.class
@@ -177,7 +168,6 @@ com/google/gwt/personal/tupracticalpieces/client/desktop/TUPracticalPiecesResour
 com/google/gwt/personal/tupracticalpieces/client/content/CwPrimeNumberFrequencyByModulo$2.class
 com/google/gwt/personal/tupracticalpieces/client/desktop/TUPracticalPiecesShellDesktop$3.class
 com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditPresenter.class
-com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadPlace.class
 com/google/gwt/personal/tupracticalpieces/generator/TUPracticalPiecesGenerator.class
 com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditPresenter$3.class
 com/google/gwt/personal/tupracticalpieces/client/ui/DateButton.class
@@ -189,7 +179,6 @@ com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditView.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesShellMobile.class
 com/google/gwt/personal/gaerequest/server/GaeAuthFilter.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwFrame$2.class
-com/google/gwt/personal/tupracticalpieces/client/desktop/MileageReadViewDesktop$1.class
 com/google/gwt/personal/tupracticalpieces/client/content/MileageWidget$1.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwPrimeNumberFrequencyByModulo$3.class
 com/google/gwt/personal/ui/client/PresentsWidgets.class
@@ -205,11 +194,10 @@ com/google/gwt/personal/tupracticalpieces/client/common/ResultFetch.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwPrimeNumberFrequencyByModulo$9.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesShellMobile$1.class
 com/google/gwt/personal/tupracticalpieces/shared/MileageRequestFactoryDeobfuscatorBuilder.class
-com/google/gwt/personal/tupracticalpieces/client/mobile/MileageReadViewMobile$AdminMileageReadViewUiBinder.class
+com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileagePresenter$5.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesShellMobile$CustomCallback.class
 com/google/gwt/personal/tupracticalpieces/client/App$4.class
 com/google/gwt/personal/tupracticalpieces/client/desktop/MileageEditViewDesktop$1.class
-com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadPresenter$1.class
 com/google/gwt/personal/tupracticalpieces/client/event/ActionEvent$Handler.class
 com/google/gwt/personal/tupracticalpieces/client/ClientFactoryImpl.class
 com/google/gwt/personal/tupracticalpieces/client/App$1.class
@@ -237,7 +225,6 @@ com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas2d$2.class
 com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditPlace$Tokenizer.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/MileageEditViewMobile.class
 com/google/gwt/personal/tupracticalpieces/client/content/MileageWidget.class
-com/google/gwt/personal/tupracticalpieces/client/activity/TUAdminActivity.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas2d$CwConstants.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas3d$4.class
 com/google/gwt/personal/tupracticalpieces/server/AdminTaskImpl.class
@@ -252,9 +239,9 @@ com/google/gwt/personal/tupracticalpieces/client/ContentWidget$Callback.class
 com/google/gwt/personal/tupracticalpieces/server/SurveillanceCameraProxyServlet.class
 com/google/gwt/personal/tupracticalpieces/database/Mileage.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwCanvas2d$1.class
+com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileagePresenter$6.class
 com/google/gwt/personal/tupracticalpieces/client/common/LoginState$2.class
 com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesShellMobile$4.class
 com/google/gwt/personal/tupracticalpieces/client/desktop/TUPracticalPiecesShellDesktop$CustomCallback.class
-com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadPresenter.class
 com/google/gwt/personal/tupracticalpieces/client/content/CwXFrame$CwConstants.class
 com/google/gwt/personal/tupracticalpieces/client/event/MileageEditEvent$Handler.class

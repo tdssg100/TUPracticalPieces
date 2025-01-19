@@ -7,28 +7,29 @@ import java.util.List;
 import java.util.Locale;
 import java.util.logging.Logger;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.persistence.Convert;
-import javax.persistence.Converter;
-import javax.persistence.EntityManager;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-//import javax.persistence.EntityTransaction;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.NamedQueries;
-import javax.persistence.AttributeConverter;
-import javax.persistence.Basic;
-import javax.persistence.Table;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
+import jakarta.persistence.Converter;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+//import jakarta.persistence.EntityTransaction;
+//import jakarta.persistence.GeneratedValue;
+//import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Basic;
+import jakarta.persistence.Table;
+import jakarta.persistence.Table;
 import javax.validation.constraints.Digits;
 //import javax.transaction.Transactional;
 import javax.validation.constraints.NotNull;
-import javax.persistence.Query;
+import jakarta.persistence.Query;
 import java.sql.Date;
 
 //import com.google.gwt.personal.tupracticalpieces.server.domain.EMF;
@@ -232,19 +233,22 @@ public class Mileage {
 	  /**
 	   * Persist this object in the data store.
 	   */
-//	  public void persist()  throws Exception {
-	  public void persist() {
-			//EntityManager cm = EMF.get().createEntityManager();
-//			EntityTransaction tx = MileageDataUtils.cm.getTransaction();
-//			tx.begin();
-		    EntityManager emf = EMF.get().createEntityManager();
+	  public void persist()  throws Exception {
+//	  public void persist() {
+			EntityManager emf = EMF.get().createEntityManager();
+			//EntityTransaction tx = MileageDataUtils.cm.getTransaction();
+			EntityTransaction tx = emf.getTransaction();
+			tx.begin();
+		    //EntityManager emf = EMF.get().createEntityManager();
+
 			try {
 //				MileageDataUtils.cm.persist(this);
-				emf.persist(this);
-//				tx.commit();
+//				emf.persist(this);
+				emf.merge(this);
+				tx.commit();
 			} catch (IllegalArgumentException e) {
-//				tx.rollback();
-				//e.printStackTrace();
+				tx.rollback();
+				e.printStackTrace();
 				log.severe("JPA persist error: " + e.toString());
 				//} finally {
 				//	cm.close();
@@ -252,25 +256,26 @@ public class Mileage {
 			} finally {
 				emf.close();
 			}
-	  }
+
+		}
 	  /**
 	   * Remove this object in the data store.
 	   */
-//	  public void remove()  throws Exception {
-	  public void remove() {
-			//EntityManager cm = EMF.get().createEntityManager();
-//			EntityTransaction tx = MileageDataUtils.cm.getTransaction();
-//			tx.begin();
-		    EntityManager emf = EMF.get().createEntityManager();
+	  public void remove()  throws Exception {
+//	  public void remove() {
+			EntityManager emf = EMF.get().createEntityManager();
+			EntityTransaction tx = emf.getTransaction();
+			tx.begin();
+		    //EntityManager emf = EMF.get().createEntityManager();
 			try {
 //				MileageDataUtils.cm.remove(this);
 //				emf.remove(this);
 				Mileage attached = emf.find(Mileage.class, this.id);
 				emf.remove(attached);
-//				tx.commit();
+				tx.commit();
 			} catch (IllegalArgumentException e) {
-//				tx.rollback();
-				//e.printStackTrace();
+				tx.rollback();
+				e.printStackTrace();
 				log.severe("JPA remove SQL error: " + e.toString());
 				//} finally {
 				//	cm.close();
@@ -278,7 +283,13 @@ public class Mileage {
 			} finally {
 				emf.close();
 			}
-	  }
+ 
+ /*
+		Mileage attached = emf.find(Mileage.class, this.id);
+		emf.remove(attached);
+		emf.flush();
+*/
+		}
 	  /**
 	   * Find all tasks for the current user.
 	   */

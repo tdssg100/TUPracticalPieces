@@ -21,11 +21,14 @@
 //package com.google.gwt.sample.mobilewebapp.presenter.task;
 package com.google.gwt.personal.tupracticalpieces.presenter.editor;
 
+
+
 import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
 //import com.google.gwt.sample.mobilewebapp.shared.TaskProxy;
+import com.google.gwt.user.client.Window;
 
 /**
  * The place in the app that shows and edits details of a task.
@@ -33,36 +36,40 @@ import com.google.gwt.place.shared.Prefix;
 public class MileageEditPlace extends Place {
 
 //  private static final String NO_ID = "create";
-    static final String NO_ID = "adminCreate";
+    static final String NO_ID = "mileedit";
     
 	private String mileageEditName;
 
-    public MileageEditPlace(Long mileageId, String token) {
-		this.mileage = null;
+    public MileageEditPlace(Long mileageId, String  token) {
 		this.mileageId = mileageId;
-        this.mileageEditName = token;
+    //this.mileage = mileage;
+    this.mileageEditName = token;
     }
 
-    public String getHelloName() {
+/*     public String getHelloName() {
         return mileageEditName;
     }
-
+ */
 
   /**
    * The tokenizer for this place.
    */
 //  public static class Tokenizer implements PlaceTokenizer<TaskPlace> {
   //@Prefix("adminEdit")
+  @Prefix("mileedit")
   public static class Tokenizer implements PlaceTokenizer<MileageEditPlace> {
 
 
 //    public TaskPlace getPlace(String token) {
     public MileageEditPlace getPlace(String token) {
+      //return new MileageEditPlace(this.mileageId, this.mileage);
       try {
         // Parse the task ID from the URL.
 //        Long taskId = Long.parseLong(token);
+// Window.alert("tokennizer toString start");
         Long mileageId = Long.parseLong(token);
 //        return new TaskPlace(taskId, null);
+// Window.alert("tokennizer toString end");
         return new MileageEditPlace(mileageId, token);
       } catch (NumberFormatException e) {
         // If the ID cannot be parsed, assume we are creating a task.
@@ -70,13 +77,13 @@ public class MileageEditPlace extends Place {
         return MileageEditPlace.getMileageCreatePlace();
       }
     }
-
+ 
 //    public String getToken(TaskPlace place) {
     public String getToken(MileageEditPlace place) {
 //      Long taskId = place.getTaskId();
 //      return (taskId == null) ? NO_ID : taskId.toString();
       Long mileageId = place.getMileageId();
-      return ((mileageId == null) ? NO_ID : mileageId.toString());
+      return ((mileageId == null) ? NO_ID : NO_ID + mileageId.toString());
     }
   }
 
@@ -95,9 +102,10 @@ public class MileageEditPlace extends Place {
    * @return the place
    */
 //  public static TaskPlace createTaskEditPlace(Long taskId, TaskProxy task) {
-  public static MileageEditPlace createMileageEditPlace(Long mileageId, MileageProxy mileage) {
+  public static MileageEditPlace createMileageEditPlace(Long mileageId) {
 //    return new TaskPlace(taskId, task);
-	    return new MileageEditPlace(mileageId, mileage);
+// Window.alert("createMileageEditPlace entered.");
+      return new MileageEditPlace(mileageId, NO_ID + mileageId.toString());
   }
 
   /**
@@ -108,16 +116,18 @@ public class MileageEditPlace extends Place {
    */
 //  public static TaskPlace getTaskCreatePlace() {
   public static MileageEditPlace getMileageCreatePlace() {
+    // Window.alert("getMileageCreatePlace entered.");
     if (singleton == null) {
 //      singleton = new TaskPlace(null, null);
-        singleton = new MileageEditPlace(Long.parseLong(NO_ID), NO_ID);
-    }
+        singleton = new MileageEditPlace(null, NO_ID);
+        Window.alert("MileageEditPlace constructor entered.");
+      }
     return singleton;
   }
 
 //  private final TaskProxy task;
 //  private final Long taskId;
-  private final MileageProxy mileage;
+//  private final MileageProxy mileage;
   private final Long mileageId;
 
   /**
@@ -128,11 +138,11 @@ public class MileageEditPlace extends Place {
    */
 //  private TaskPlace(Long taskId, TaskProxy task) {
   // @@@@@@@@@@@@@@@@@@@ need MileageProxy ?
-  public MileageEditPlace(Long mileageId, MileageProxy mileage) {
+  public MileageEditPlace(Long mileageId) {
 //    this.taskId = taskId;
 //    this.task = task;
-	this.mileageId = mileageId;
-	this.mileage = mileage;
+  	this.mileageId = mileageId;
+	  this.mileageEditName = NO_ID + mileageId.toString();
   }
 
   /**
@@ -141,11 +151,11 @@ public class MileageEditPlace extends Place {
    * @return the task to edit, or null if not available
    */
 //  public TaskProxy getTask() {
-  public MileageProxy getMileage() {
+/*   public MileageProxy getMileage() {
 //    return task;
     return mileage;
   }
-
+ */
   /**
    * Get the ID of the task to edit.
    * 

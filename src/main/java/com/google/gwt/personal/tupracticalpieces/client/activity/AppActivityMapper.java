@@ -33,12 +33,13 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.personal.tupracticalpieces.client.ClientFactory;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPlace;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPresenter;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPlace;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPresenter;
+// import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPlace;
+// import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPresenter;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePresenter;
-import com.google.gwt.personal.tupracticalpieces.client.activity.TUAdminActivity;
+//import com.google.gwt.personal.tupracticalpieces.client.activity.TUAdminActivity;
 import com.google.gwt.personal.tupracticalpieces.shared.MileageProxy;
+import com.google.gwt.personal.ui.client.PresentsWidgets;
 import com.google.gwt.user.client.Window;
 //import com.google.gwt.personal.tupracticalpieces.presenter.tasklist.TaskListPlace;
 //import com.google.gwt.personal.tupracticalpieces.presenter.tasklist.TaskListPresenter;
@@ -60,6 +61,7 @@ public class AppActivityMapper implements ActivityMapper {
     super();
     this.clientFactory = clientFactory;
   }
+  
 
   @Override
   public Activity getActivity(final Place place) {
@@ -102,10 +104,12 @@ public class AppActivityMapper implements ActivityMapper {
 //	           */
 //	        };
 //	      }
+// Window.alert("AppActivityMapper entered. ");
 	  
 	  
 	if (place instanceof AdminMileagePlace) {
-//			return new MileageEditActivity(clientFactory, (MileageEditPlace) place);
+// Window.alert("AppActivityMapper entered. AdminMileagePresenter to go.");
+		//			return new MileageEditActivity(clientFactory, (MileageEditPlace) place);
 		return new AbstractActivity() {
 			@Override
 			public void start(AcceptsOneWidget panel, EventBus eventBus) {
@@ -117,21 +121,39 @@ public class AppActivityMapper implements ActivityMapper {
 	}
 	if (place instanceof MileageEditPlace) {
 		//	return new MileageEditActivity(clientFactory, (MileageEditPlace) place);
-		return new AbstractActivity() {
-			@Override
-			public void start(AcceptsOneWidget panel, EventBus eventBus) {
-				MileageEditPresenter presenter = new MileageEditPresenter(clientFactory, ((MileageEditPlace) place).getMileage());
-				presenter.start(eventBus);
-				panel.setWidget(presenter);
-			}
-		};
-//Window.alert("TUAdminActivity to go.");
-		//return new TUAdminActivity(clientFactory, (MileageEditPlace) place);
-		
+// Window.alert("MileageEditPresenter entered. TUAdminActivity to go.");
+		if (((MileageEditPlace)place).getMileageId() == null) {
+			return new AbstractActivity() {
+				@Override
+				public void start(AcceptsOneWidget panel, EventBus eventBus) {
+					MileageEditPresenter presenter = new MileageEditPresenter(clientFactory);
+					presenter.start(eventBus);
+					panel.setWidget(presenter);
+				}
+			};
+		} else {
+			return new AbstractActivity() {
+				@Override
+				public void start(AcceptsOneWidget panel, EventBus eventBus) {
+					MileageEditPresenter presenter = new MileageEditPresenter(clientFactory, clientFactory.getMyAppAdminMileageView().getSelected());
+// Window.alert("MileageEditPresenter start. starCreate");	      
+					presenter.start(eventBus);
+					panel.setWidget(presenter);
+				}
+			};
+
+		}
 	}
-    if (place instanceof MileageReadPlace) {     
-    	return new TUAdminActivity(clientFactory, (MileageEditPlace) place);
-    }         
+/* 	if (place instanceof MileageEditPlace) {
+		//	return new MileageEditActivity(clientFactory, (MileageEditPlace) place);
+Window.alert("AppActivityMapper entered. TUAdminActivity to go.");
+		return new TUAdminActivity(clientFactory,  (MileageEditPlace) place);
+		
+	} */
+
+    // if (place instanceof MileageReadPlace) {     
+    // 	return new TUAdminActivity(clientFactory,  place);
+    // }         
 
             /*
              * Note no call to presenter.stop(). The TaskListViews do that

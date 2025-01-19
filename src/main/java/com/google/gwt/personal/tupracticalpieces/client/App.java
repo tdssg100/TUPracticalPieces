@@ -140,7 +140,9 @@ public class App {
 		ActionEvent.register(eventBus, ActionNames.ADD_MILEAGE, new ActionEvent.Handler() {
 			@Override
 			public void onAction(ActionEvent event) {
-				History.newItem("adminEdit:adminCreate");
+// Window.alert("ADD_MILEAGE entered.");
+				History.newItem("mileedit");
+// Window.alert("History ended.");
 				placeController.goTo(MileageEditPlace.getMileageCreatePlace());
 			}
 		});
@@ -156,11 +158,14 @@ public class App {
 		eventBus.addHandler(ShowMileageEvent.TYPE, new ShowMileageEvent.Handler() {
 			@Override
 			public void onShowMileage(ShowMileageEvent event) {
+// Window.alert("onShowMileage entered.");
 				MileageProxy mileage = event.getMileage();
-				History.newItem("adminEdit:" + mileage.getId()); // TODO
-//		
-//Window.alert("createMileageEditPlace to go.");																			// @@@@@@@
-				placeController.goTo(MileageEditPlace.createMileageEditPlace(mileage.getId(), mileage));
+// Window.alert("event getMileage.");
+				History.newItem("mileedit" + mileage.getId()); // TODO
+// Window.alert("History ended.");
+				//		
+// Window.alert("createMileageEditPlace to go.");																			// @@@@@@@
+				placeController.goTo(MileageEditPlace.createMileageEditPlace(mileage.getId()));
 			}
 		});
 		//
@@ -224,10 +229,10 @@ public class App {
 					e = ((UmbrellaException) e).getCauses().iterator().next();
 				}
 
-				msg += "[" + e.getClass() + "]";
-				msg += e.getMessage() + "+";
+//				msg += "[" + e.getClass() + "]";
+//				msg += e.getMessage() + "+";
 				if (msg == null) {
-					msg = "[" + e.getClass() + "]";
+					msg = "<" + e.getClass() + ">";
 					msg += e.toString();
 				}
 //				String message = e.getMessage();
@@ -236,7 +241,7 @@ public class App {
 //				}
 				// log.log(Level.SEVERE, "Uncaught exception", e);
 //				Window.alert("An unexpected error occurred: " + message);
-				Window.alert("An unexpected error occurred: " + msg);
+				// Window.alert("An unexpected error occurred: " + msg);
 			}
 		});
 		//

@@ -73,8 +73,8 @@ import com.google.gwt.personal.tupracticalpieces.client.desktop.MainMenuTreeView
 import com.google.gwt.personal.tupracticalpieces.client.desktop.TUPracticalPiecesResourcesDesktop;
 //import com.google.gwt.personal.tupracticalpieces.client.event.MileageListEvent;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPlace;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
+// import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadPlace;
+// import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
 //import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
 import com.google.gwt.i18n.client.Constants;
@@ -356,7 +356,8 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 //	public TUPracticalPiecesShellDesktop(EventBus bus, final PlaceController placeController) {
 //	public TUPracticalPiecesShellDesktop(final EventBus eventBus, 
 //			PlaceController placeController) {
-  public TUPracticalPiecesShellDesktop(final PlaceController placeController, MileageReadView mileageReadView, MileageEditView mileageEditView, CwUpdate cwUpdate, TUPracticalPiecesConstants constants) {
+//  public TUPracticalPiecesShellDesktop(final PlaceController placeController, MileageReadView mileageReadView, MileageEditView mileageEditView, CwUpdate cwUpdate, TUPracticalPiecesConstants constants) {
+  public TUPracticalPiecesShellDesktop(final PlaceController placeController, MileageEditView mileageEditView, CwUpdate cwUpdate, TUPracticalPiecesConstants constants) {
  
 		 
 		// Create the application shell.
@@ -771,7 +772,7 @@ public class TUPracticalPiecesShellDesktop extends ResizeComposite implements TU
 	    
 	    contentContainer.add(contentPanel);
 //	    contentContainer.add(adminViewMileage);
-	    contentContainer.add(mileageReadView); 
+//	    contentContainer.add(mileageReadView); 
 	    contentContainer.add(mileageEditView);
 	    
 //	    content = treeModel.getFirstContentWidget();

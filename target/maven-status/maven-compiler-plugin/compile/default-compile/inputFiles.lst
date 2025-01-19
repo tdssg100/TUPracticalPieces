@@ -17,7 +17,6 @@
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/TUPracticalPiecesConstants.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/TUPracticalPiecesShell.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/activity/AppActivityMapper.java
-/home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/activity/TUAdminActivity.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/activity/TUAppPlaceHistoryMapper.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/common/AdminSvc.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/common/AdminSvcAsync.java
@@ -41,7 +40,6 @@
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/content/MileageWidget.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/desktop/MainMenuTreeViewModelDesktop.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/desktop/MileageEditViewDesktop.java
-/home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/desktop/MileageReadViewDesktop.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/desktop/TUPracticalPiecesResourcesDesktop.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/desktop/TUPracticalPiecesShellDesktop.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/event/ActionEvent.java
@@ -51,7 +49,6 @@
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/event/ShowMileageEvent.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/mobile/MainMenuTreeViewModelMobile.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/mobile/MileageEditViewMobile.java
-/home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/mobile/MileageReadViewMobile.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesResourcesMobile.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/mobile/TUPracticalPiecesShellMobile.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/client/ui/DateButton.java
@@ -68,9 +65,6 @@
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditPlace.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditPresenter.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageEditView.java
-/home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadPlace.java
-/home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadPresenter.java
-/home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/editor/MileageReadView.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileagePlace.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileagePresenter.java
 /home/tad/wkTUP2023/TUPracticalPieces/src/main/java/com/google/gwt/personal/tupracticalpieces/presenter/list/AdminMileageSuperView.java

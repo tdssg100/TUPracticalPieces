@@ -9,10 +9,10 @@
         <class>com.google.gwt.personal.tupracticalpieces.database.User</class>
         <exclude-unlisted-classes/>
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dfalse" />
-            <property name="javax.persistence.jdbc.user" value="tad" />
-            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dfalse" />
+            <property name="jakarta.persistence.jdbc.user" value="tad" />
+            <property name="jakarta.persistence.jdbc.password" value="identmysql555" />
             <property name="datanucleus.identifier.case" value="MixedCase"/>
     		<property name="datanucleus.validation.mode" value="none" />
     		<property name="datanucleus.schema.autoCreateAll" value="true"/>
@@ -81,47 +81,47 @@
             <!-- property name=""eclipselink.target-database" value="Oracle" / -->
 
 		<!-- 
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL=true" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL=true&requireSSL=true&verifyServerCertificate=true&clientCertificateKeyStoreUrl=keystore&clientCertificateKeyStorePassword=passphrasetukeytoolclient*25&trustCertificateKeyStoreUrl=truststore&trustCertificateKeyStorePassword=passphrasetukeytool*25" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dtrue%26requireSSL%3Dtrue%26verifyServerCertificate%3Dtrue%26clientCertificateKeyStoreUrl%3Dkeystore%26clientCertificateKeyStorePassword%3Dpassphrasetukeytoolclient%2A25%26trustCertificateKeyStoreUrl%3Dtruststore%26trustCertificateKeyStorePassword%3Dpassphrasetukeytool%2A25" />
-            <property name="javax.persistence.jdbc.user" value="tom" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL=true" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL=true&requireSSL=true&verifyServerCertificate=true&clientCertificateKeyStoreUrl=keystore&clientCertificateKeyStorePassword=passphrasetukeytoolclient*25&trustCertificateKeyStoreUrl=truststore&trustCertificateKeyStorePassword=passphrasetukeytool*25" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dtrue%26requireSSL%3Dtrue%26verifyServerCertificate%3Dtrue%26clientCertificateKeyStoreUrl%3Dkeystore%26clientCertificateKeyStorePassword%3Dpassphrasetukeytoolclient%2A25%26trustCertificateKeyStoreUrl%3Dtruststore%26trustCertificateKeyStorePassword%3Dpassphrasetukeytool%2A25" />
+            <property name="jakarta.persistence.jdbc.user" value="tom" />
 		-->
 		<!-- debug mode SSL
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dtrue" />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dtrue" />
+            <property name="jakarta.persistence.jdbc.user" value="root" />
+            <property name="jakarta.persistence.jdbc.password" value="identmysql555" />
 		 -->
  		<!-- Release mode. NG Once connect !!! from an authorize app engine, no password -> NG
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://address=(protocol=tcp)(host=2001:4860:4864:1:7f5d:a9a0:cf60:4014)(port=3306)/Trifle?useSSL%3Dfalse"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://173.194.246.106/Trifle?useSSL%3Dfalse"/>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://address=(protocol=tcp)(host=2001:4860:4864:1:7f5d:a9a0:cf60:4014)(port=3306)/Trifle?useSSL%3Dfalse"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://173.194.246.106/Trifle?useSSL%3Dfalse"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 		com.mysql.jdbc.GoogleDriver
-            <property name="javax.persistence.jdbc.url" value="jdbc:google:mysql://accumulatio2/Trifle?user=root&amp;password=identmysql5656"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://130.211.201.236/Trifle?useSSL%3Dfalse"/>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />		
-            <property name="javax.persistence.jdbc.driver" value="com.google.cloud.sql.jdbc.Driver" />		
-            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulatio2/Trifle?useSSL%3Dfalse"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:google:mysql://accumulatio2/Trifle?user=root&amp;password=identmysql5656"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://130.211.201.236/Trifle?useSSL%3Dfalse"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />		
+            <property name="jakarta.persistence.jdbc.driver" value="com.google.cloud.sql.jdbc.Driver" />		
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulatio2/Trifle?useSSL%3Dfalse"/>
 		 -->
 		 
 		 
 		 
-<!--             <property name="javax.persistence.jdbc.url" value="jdbc:google:mysql://accumulatio2/Trifle?user=root&amp;password=identmysql5656"/> -->
-<!--             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://130.211.201.236/Trifle"/> -->
+<!--             <property name="jakarta.persistence.jdbc.url" value="jdbc:google:mysql://accumulatio2/Trifle?user=root&amp;password=identmysql5656"/> -->
+<!--             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://130.211.201.236/Trifle"/> -->
 
 
 	    <!-- Debug mode 
 		
 		
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.3.3:3306/Trifle" />
-            <property name="javax.persistence.jdbc.user" value="tad" />
-            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://192.168.3.3:3306/Trifle" />
+            <property name="jakarta.persistence.jdbc.user" value="tad" />
+            <property name="jakarta.persistence.jdbc.password" value="identmysql555" />
 		-->
 
 
 	    <!-- Release mode from 201702
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://52.193.61.161:3306/Trifle" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://52.193.61.161:3306/Trifle" />
 		-->
 		
 		
@@ -133,10 +133,10 @@
 		  
 		  
 		  
-<!--             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.GoogleDriver" /> -->
-<!--             <property name="javax.persistence.jdbc.url" value="jdbc:google:mysql://tupracticalpieces:us-central1:accumulatio2/Trifle?useSSL%3Dfalse"/> -->
-<!--             <property name="javax.persistence.jdbc.user" value="root" /> -->
-<!--             <property name="javax.persistence.jdbc.password" value="identmysql5656" /> -->
+<!--             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.GoogleDriver" /> -->
+<!--             <property name="jakarta.persistence.jdbc.url" value="jdbc:google:mysql://tupracticalpieces:us-central1:accumulatio2/Trifle?useSSL%3Dfalse"/> -->
+<!--             <property name="jakarta.persistence.jdbc.user" value="root" /> -->
+<!--             <property name="jakarta.persistence.jdbc.password" value="identmysql5656" /> -->
 
 
 
@@ -147,25 +147,25 @@
 		
         <!-- 
         
-            <property name="javax.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
-            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
+            <property name="jakarta.persistence.jdbc.user" value="root" />
          -->
         <!-- 
-            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+            <property name="jakarta.persistence.jdbc.password" value="identmysql555" />
          -->
  		<!-- !!!!OK!!!  Release mode OK -> NG -> OK == from an authorize app engine, no password 
-            <property name="javax.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
-            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
+            <property name="jakarta.persistence.jdbc.user" value="root" />
  		 -->
             <!-- 
-            <property name="javax.persistence.jdbc.password" value="identmysql555" />
+            <property name="jakarta.persistence.jdbc.password" value="identmysql555" />
              -->
             <!-- 
-            <property name="javax.persistence.jdbc.password" value="identmysql555" />
-            <property name="javax.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle?useSSL=true"/>
+            <property name="jakarta.persistence.jdbc.password" value="identmysql555" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.google.appengine.api.rdbms.AppEngineDriver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle?useSSL=true"/>
  			-->
 	    <!-- EclipseLink -->
             <!-- Configure connection pool.             <property name="eclipselink.connection-pool.default.initial" value="1" />
@@ -177,9 +177,9 @@
             -->
             <!-- Configure 2nd database connection pool. -->
             <!-- 
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.GoogleDriver" />
-            <property name="javax.persistence.jdbc.driver" value="com.google.cloud.sql.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.GoogleDriver" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.google.cloud.sql.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:google:rdbms://tupracticalpieces:accumulation/Trifle"/>
              -->
             
             
@@ -195,14 +195,14 @@
             -->
             <!-- 
             <property name="datanucleus.ConnectionURL" value="appengine"/>
-            <property name="javax.persistence.query.timeout" value="8000" />
+            <property name="jakarta.persistence.query.timeout" value="8000" />
             <property name="datanucleus.datastoreWriteTimeout" value="15000" />
              -->
 <!-- 
-            <property name="javax.persistence.jdbc.user" value="alice" />
-            <property name="javax.persistence.jdbc.password" value="mysqlident" />
+            <property name="jakarta.persistence.jdbc.user" value="alice" />
+            <property name="jakarta.persistence.jdbc.password" value="mysqlident" />
 
-            <property name="javax.persistence.jdbc.key" value="AIzaSyA57wUXVj9I50lqF4bPrzNQrmJ6SH5nY0Q" />
+            <property name="jakarta.persistence.jdbc.key" value="AIzaSyA57wUXVj9I50lqF4bPrzNQrmJ6SH5nY0Q" />
 
  -->
  

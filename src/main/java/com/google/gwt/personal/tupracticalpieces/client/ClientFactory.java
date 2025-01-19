@@ -23,8 +23,8 @@ package com.google.gwt.personal.tupracticalpieces.client;
 
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditView;
-import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
-import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
+//import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageReadView;
+//import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileageSuperView;
 //import com.google.gwt.sample.mobilewebapp.presenter.task.TaskEditView;
 //import com.google.gwt.sample.mobilewebapp.presenter.task.TaskReadView;
 //import com.google.gwt.sample.mobilewebapp.presenter.tasklist.TaskListView;
@@ -84,7 +84,7 @@ public interface ClientFactory {
   //TaskEditView getTaskEditView();
   MileageEditView getMileageEditView();
   //TaskReadView getTaskReadView();
-  MileageReadView getMileageReadView();
+  //MileageReadView getMileageReadView();
 
   /**
    * Get an implementation of {@link TaskListView}.
