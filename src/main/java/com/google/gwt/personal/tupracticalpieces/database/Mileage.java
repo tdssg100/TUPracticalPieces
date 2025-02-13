@@ -24,8 +24,6 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Basic;
-import jakarta.persistence.Table;
-import jakarta.persistence.Table;
 import javax.validation.constraints.Digits;
 //import javax.transaction.Transactional;
 import javax.validation.constraints.NotNull;

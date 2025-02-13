@@ -21,7 +21,7 @@ import jakarta.persistence.Basic;
 import jakarta.persistence.Table;
 import jakarta.persistence.Table;
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.Query;
 import java.sql.Date;
 

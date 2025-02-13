@@ -1,0 +1,1559 @@
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: /home/tad/apache-maven-3.9.9
+Java version: 11.0.23, vendor: Oracle Corporation, runtime: /usr/java/jdk-11.0.23
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.8.0-51-generic", arch: "amd64", family: "unix"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.graph < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.util < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.event.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Created adapter factory; available factories [file-lock, rwlock-local, semaphore-local, noop]; available name mappers [discriminating, file-gav, file-hgav, file-static, gav, static]
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from /home/tad/apache-maven-3.9.9/conf/settings.xml
+[DEBUG] Reading user settings from /home/tad/.m2/settings.xml
+[DEBUG] Reading global toolchains from /home/tad/apache-maven-3.9.9/conf/toolchains.xml
+[DEBUG] Reading user toolchains from /home/tad/.m2/toolchains.xml
+[DEBUG] Using local repository at /home/tad/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/tad/.m2/repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:war:6.0.0-SNAPSHOT: (none)
+[DEBUG] Looking up lifecycle mappings for packaging war from ClassRealm[plexus.core, parent: null]
+[DEBUG] Creating adapter using nameMapper 'gav' and factory 'rwlock-local'
+[WARNING] The project com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:war:6.0.0-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[DEBUG] Resolving plugin prefix jetty from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for apache.snapshots (http://repository.apache.org/snapshots).
+[DEBUG] Resolved plugin prefix jetty to org.eclipse.jetty:jetty-maven-plugin from POM com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:war:6.0.0-SNAPSHOT
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:war:6.0.0-SNAPSHOT
+[DEBUG] Tasks:   [jetty:run]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] ----< com.google.gwt.personal.tupracticalpieces:TUPracticalPieces >-----
+[INFO] Building TUPracticalPieces Maven Webapp 6.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[DEBUG] Resolving plugin prefix jetty from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix jetty to org.eclipse.jetty:jetty-maven-plugin from POM com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:war:6.0.0-SNAPSHOT
+[WARNING] Parameter 'reload' is unknown for plugin 'jetty-maven-plugin:11.0.24:run (default-cli)'
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [test]
+[DEBUG] Repositories (dependencies): [central (https://repo1.maven.org/maven2/, default, releases+snapshots), sonatype-google-releases (https://oss.sonatype.org/service/local/repositories/google-releases/content, default, releases+snapshots), sonatype (https://www.eclipse.org/jetty, default, releases), lifecycle-mapping (https://mvnrepository.com/artifact/org.eclipse.m2e/lifecycle-mapping, default, releases), opennms (https://repo.opennms.org/maven2/, default, releases+snapshots)]
+[DEBUG] Repositories (plugins)     : [maven-default-http-blocker (http://0.0.0.0/, default, releases+snapshots, blocked), central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] --- init fork of com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT for org.eclipse.jetty:jetty-maven-plugin:11.0.24:run (default-cli) ---
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, test]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.7:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <annotationProcessorPathsUseDepMgmt default-value="false"/>
+  <annotationProcessors>
+    <annotationProcessor>com.google.web.bindery.requestfactory.apt.RfValidator</annotationProcessor>
+  </annotationProcessors>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>$(maven.compiler.source)</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <excludes></excludes>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">false</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <fileExtensions default-value="class,jar"/>
+  <forceJavacCompilerUse default-value="false">true</forceJavacCompilerUse>
+  <forceLegacyJavacApi default-value="false">${maven.compiler.forceLegacyJavacApi}</forceLegacyJavacApi>
+  <fork default-value="false">false</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}">${maven.compiler.outputDirectory}</outputDirectory>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <proc>${maven.compiler.proc}</proc>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <release>11</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="true">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">11</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">11</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">ture</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.7:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip>${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.13.0:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <annotationProcessorPathsUseDepMgmt default-value="false"/>
+  <annotationProcessors>
+    <annotationProcessor>com.google.web.bindery.requestfactory.apt.RfValidator</annotationProcessor>
+  </annotationProcessors>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>$(maven.compiler.source)</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac-test"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">false</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <fileExtensions default-value="class,jar"/>
+  <forceJavacCompilerUse default-value="false">true</forceJavacCompilerUse>
+  <forceLegacyJavacApi default-value="false">${maven.compiler.forceLegacyJavacApi}</forceLegacyJavacApi>
+  <fork default-value="false">false</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <proc>${maven.compiler.proc}</proc>
+  <project default-value="${project}"/>
+  <release>11</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="true">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">11</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">11</target>
+  <testPath default-value="${project.testClasspathElements}"/>
+  <testRelease>${maven.compiler.testRelease}</testRelease>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <useModulePath default-value="true"/>
+  <verbose default-value="false">ture</verbose>
+</configuration>
+[DEBUG] --- exit fork of com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT for org.eclipse.jetty:jetty-maven-plugin:11.0.24:run (default-cli) ---
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.jetty:jetty-maven-plugin:11.0.24:run (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <deployMode default-value="EMBED">${jetty.deployMode}</deployMode>
+  <execution default-value="${mojoExecution}"/>
+  <forkWebXml default-value="${project.build.directory}/fork-web.xml"/>
+  <jettyOptions>${jetty.options}</jettyOptions>
+  <jettyXmls>/home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty.xml,/home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-ssl-context.xml,/home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-ssl.xml,/home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-https.xml</jettyXmls>
+  <jvmArgs>${jetty.jvmArgs}</jvmArgs>
+  <maxChildStartCheckMs default-value="200"/>
+  <maxChildStartChecks default-value="10"/>
+  <plugin default-value="${plugin}"/>
+  <pluginArtifacts default-value="${plugin.artifacts}"/>
+  <project default-value="${project}"/>
+  <projectArtifacts default-value="${project.artifacts}"/>
+  <reactorProjects default-value="${reactorProjects}"/>
+  <remoteRepositories default-value="${project.remoteArtifactRepositories}"/>
+  <scan default-value="-1">${jetty.scan}</scan>
+  <session default-value="${session}"/>
+  <skip default-value="false">${jetty.skip}</skip>
+  <systemPropertiesFile>${jetty.systemPropertiesFile}</systemPropertiesFile>
+  <target default-value="${project.build.directory}"/>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <useProvidedScope default-value="false"/>
+  <useTestScope default-value="false"/>
+  <webApp>
+    <contextPath>/</contextPath>
+    <descriptor>/home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/web.xml</descriptor>
+    <defaultsDescriptor>/home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/webdefault.xml</defaultsDescriptor>
+  </webApp>
+  <webAppSourceDirectory default-value="${project.basedir}/src/main/webapp">/home/tad/wkTUP2023/TUPracticalPieces/target\TUPracticalPieces-6.0.0-SNAPSHOT</webAppSourceDirectory>
+  <webXml default-value="${project.baseDir}/src/main/webapp/WEB-INF/web.xml"/>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] >>> jetty:11.0.24:run (default-cli) > test-compile @ TUPracticalPieces >>>
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for apache.snapshots (http://people.apache.org/repo/m2-snapshot-repository).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for glassfish-repository (http://download.java.net/maven/glassfish).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for ow2-snapshot (http://repository.ow2.org/nexus/content/repositories/snapshots).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for jboss-public-repository-group (http://repository.jboss.org/nexus/content/groups/public).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=4289012, ConflictMarker.markTime=3127075, ConflictMarker.nodeCount=573, ConflictIdSorter.graphTime=1468872, ConflictIdSorter.topsortTime=2681470, ConflictIdSorter.conflictIdCount=162, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=27991140, ConflictResolver.conflictItemCount=320, DfDependencyCollector.collectTime=1422049184, DfDependencyCollector.transformTime=42811482}
+[DEBUG] com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:war:6.0.0-SNAPSHOT
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.9.6:provided
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.9.6:compile
+[DEBUG]          org.apache.commons:commons-lang3:jar:3.12.0:compile
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile
+[DEBUG]          javax.annotation:javax.annotation-api:jar:1.2:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:3.5.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.7.0:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.9.9:provided
+[DEBUG]       org.apache.maven:maven-settings:jar:3.9.9:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.9.9:provided
+[DEBUG]          org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:provided
+[DEBUG]             org.codehaus.plexus:plexus-cipher:jar:2.0:provided
+[DEBUG]       org.apache.maven:maven-builder-support:jar:3.9.9:provided
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.9.9:provided
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.9.9:provided
+[DEBUG]       org.apache.maven:maven-resolver-provider:jar:3.9.9:provided
+[DEBUG]       org.apache.maven.resolver:maven-resolver-impl:jar:1.9.22:provided
+[DEBUG]          org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.22:provided
+[DEBUG]       org.apache.maven.resolver:maven-resolver-api:jar:1.9.22:compile
+[DEBUG]       org.apache.maven.resolver:maven-resolver-spi:jar:1.9.22:provided
+[DEBUG]       org.apache.maven.resolver:maven-resolver-util:jar:1.9.22:provided
+[DEBUG]       org.apache.maven.shared:maven-shared-utils:jar:3.4.2:provided
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M3:compile
+[DEBUG]       com.google.inject:guice:jar:5.1.0:provided
+[DEBUG]          aopalliance:aopalliance:jar:1.0:provided
+[DEBUG]       com.google.guava:guava:jar:31.1-jre:provided (version managed from 33.2.1-jre)
+[DEBUG]       com.google.guava:failureaccess:jar:1.0.2:provided
+[DEBUG]       javax.inject:javax.inject:jar:1:provided
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.27:provided
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.9.9:provided
+[DEBUG]    jakarta.annotation:jakarta.annotation-api:jar:3.0.0:compile
+[DEBUG]    org.gwtproject:gwt-servlet-jakarta:jar:2.12.1:compile
+[DEBUG]    org.gwtproject:gwt-codeserver:jar:2.12.1:provided
+[DEBUG]    org.gwtproject:gwt-user:jar:2.12.1:provided
+[DEBUG]       com.google.jsinterop:jsinterop-annotations:jar:2.0.0:provided
+[DEBUG]       javax.validation:validation-api:jar:1.0.0.GA:compile
+[DEBUG]       javax.validation:validation-api:jar:sources:1.0.0.GA:provided
+[DEBUG]       javax.servlet:javax.servlet-api:jar:3.1.0:provided
+[DEBUG]       org.w3c.css:sac:jar:1.3:provided
+[DEBUG]    org.gwtproject:gwt-dev:jar:2.12.1:provided
+[DEBUG]       com.google.code.findbugs:jsr305:jar:1.3.9:provided
+[DEBUG]       com.google.code.gson:gson:jar:2.10:provided (version managed from 2.6.2)
+[DEBUG]       org.ow2.asm:asm:jar:9.6:compile
+[DEBUG]       org.ow2.asm:asm-util:jar:9.6:provided
+[DEBUG]          org.ow2.asm:asm-tree:jar:9.6:compile
+[DEBUG]          org.ow2.asm:asm-analysis:jar:9.6:provided
+[DEBUG]       org.ow2.asm:asm-commons:jar:9.6:compile
+[DEBUG]       colt:colt:jar:1.2.0:provided
+[DEBUG]       commons-collections:commons-collections:jar:3.2.2:provided
+[DEBUG]       commons-io:commons-io:jar:2.4:provided
+[DEBUG]       com.ibm.icu:icu4j:jar:63.1:provided
+[DEBUG]       tapestry:tapestry:jar:4.0.2:provided
+[DEBUG]       net.sourceforge.htmlunit:htmlunit:jar:2.55.0:provided
+[DEBUG]          xalan:xalan:jar:2.7.2:provided
+[DEBUG]             xalan:serializer:jar:2.7.2:provided
+[DEBUG]          org.apache.commons:commons-text:jar:1.9:provided
+[DEBUG]          org.apache.httpcomponents:httpmime:jar:4.5.13:provided
+[DEBUG]          net.sourceforge.htmlunit:htmlunit-core-js:jar:2.55.0:provided
+[DEBUG]          net.sourceforge.htmlunit:neko-htmlunit:jar:2.55.0:provided
+[DEBUG]          net.sourceforge.htmlunit:htmlunit-cssparser:jar:1.10.0:provided
+[DEBUG]          commons-logging:commons-logging:jar:1.2:compile
+[DEBUG]          commons-net:commons-net:jar:3.8.0:provided
+[DEBUG]          org.brotli:dec:jar:0.1.2:provided
+[DEBUG]          com.shapesecurity:salvation2:jar:3.0.0:provided
+[DEBUG]          org.eclipse.jetty.websocket:websocket-client:jar:9.4.44.v20210927:provided
+[DEBUG]             org.eclipse.jetty.websocket:websocket-common:jar:9.4.44.v20210927:provided
+[DEBUG]                org.eclipse.jetty.websocket:websocket-api:jar:9.4.44.v20210927:provided
+[DEBUG]    org.gwtproject.web.bindery:requestfactory-server-jakarta:jar:2.12.1:compile
+[DEBUG]    com.google.gwt.inject:gin:jar:2.1.2:provided
+[DEBUG]       com.google.inject.extensions:guice-assistedinject:jar:3.0:provided
+[DEBUG]    jakarta.inject:jakarta.inject-api:jar:2.0.1:compile
+[DEBUG]    jakarta.servlet:jakarta.servlet-api:jar:5.0.0:provided
+[DEBUG]    jakarta.validation:jakarta.validation-api:jar:3.1.0:compile
+[DEBUG]    org.slf4j:slf4j-api:jar:2.0.6:compile
+[DEBUG]    org.slf4j:slf4j-reload4j:jar:2.0.6:test
+[DEBUG]       ch.qos.reload4j:reload4j:jar:1.2.22:test
+[DEBUG]    org.hibernate:hibernate-validator:jar:5.4.3.Final:compile
+[DEBUG]       org.jboss.logging:jboss-logging:jar:3.3.0.Final:compile
+[DEBUG]       com.fasterxml:classmate:jar:1.3.1:compile
+[DEBUG]    jakarta.persistence:jakarta.persistence-api:jar:3.0.0:compile
+[DEBUG]    org.eclipse.persistence:org.eclipse.persistence.jpa:jar:3.0.0:compile
+[DEBUG]       org.eclipse.persistence:org.eclipse.persistence.asm:jar:3.0.0:compile
+[DEBUG]       org.eclipse.persistence:org.eclipse.persistence.core:jar:3.0.0:compile
+[DEBUG]       org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:jar:3.0.0:compile
+[DEBUG]    org.eclipse.persistence:eclipselink:jar:3.0.0:compile
+[DEBUG]    mysql:mysql-connector-java:jar:8.0.30:compile
+[DEBUG]       com.google.protobuf:protobuf-java:jar:3.21.10:compile (version managed from 3.19.4)
+[DEBUG]    org.apache.pulsar:pulsar-client-messagecrypto-bc:jar:3.3.0:compile
+[DEBUG]    xerces:xercesImpl:jar:2.11.0:compile
+[DEBUG]       xml-apis:xml-apis:jar:1.4.01:compile
+[DEBUG]    org.json:json:jar:20240303:compile
+[DEBUG]    org.eclipse.jetty:jetty-maven-plugin:jar:11.0.24:compile
+[DEBUG]       jakarta.transaction:jakarta.transaction-api:jar:2.0.0:compile
+[DEBUG]       org.apache.maven.plugin-tools:maven-plugin-tools-api:jar:3.13.1:compile
+[DEBUG]          org.apache.maven.reporting:maven-reporting-api:jar:3.1.1:compile
+[DEBUG]             org.apache.maven.doxia:doxia-sink-api:jar:1.11.1:compile
+[DEBUG]                org.apache.maven.doxia:doxia-logging-api:jar:1.11.1:compile
+[DEBUG]          org.apache.httpcomponents:httpclient:jar:4.5.14:compile
+[DEBUG]          org.apache.httpcomponents:httpcore:jar:4.4.16:compile
+[DEBUG]          org.apache.maven.wagon:wagon-provider-api:jar:3.5.3:compile
+[DEBUG]          org.codehaus.plexus:plexus-java:jar:1.2.0:compile
+[DEBUG]             com.thoughtworks.qdox:qdox:jar:2.0.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-xml:jar:4.0.4:compile
+[DEBUG]          org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-9:compile
+[DEBUG]             org.apache.maven:maven-api-xml:jar:4.0.0-alpha-9:compile
+[DEBUG]                org.apache.maven:maven-api-meta:jar:4.0.0-alpha-9:compile
+[DEBUG]             com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile
+[DEBUG]                org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
+[DEBUG]       org.eclipse.jetty:apache-jsp:jar:11.0.24:compile
+[DEBUG]          org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:compile
+[DEBUG]       org.eclipse.jetty:glassfish-jstl:jar:11.0.24:compile
+[DEBUG]          jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0:compile
+[DEBUG]             jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.0:compile
+[DEBUG]                com.sun.activation:jakarta.activation:jar:2.0.0:compile
+[DEBUG]          org.glassfish.web:jakarta.servlet.jsp.jstl:jar:2.0.0:compile
+[DEBUG]       org.eclipse.jetty:jetty-annotations:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-client:jar:11.0.24:compile
+[DEBUG]          org.eclipse.jetty:jetty-alpn-client:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-http:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-io:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-jaas:jar:11.0.24:compile
+[DEBUG]          org.apache.directory.api:api-asn1-api:jar:2.1.6:compile
+[DEBUG]             org.apache.directory.api:api-i18n:jar:2.1.6:compile
+[DEBUG]          org.apache.directory.api:api-ldap-model:jar:2.1.6:compile
+[DEBUG]             org.apache.directory.api:api-asn1-ber:jar:2.1.6:compile
+[DEBUG]             org.apache.mina:mina-core:jar:2.2.3:compile
+[DEBUG]             org.apache.servicemix.bundles:org.apache.servicemix.bundles.antlr:jar:2.7.7_5:compile
+[DEBUG]             org.apache.commons:commons-collections4:jar:4.4:compile
+[DEBUG]             com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile
+[DEBUG]          org.apache.directory.api:api-util:jar:2.1.6:compile
+[DEBUG]          org.eclipse.jetty:jetty-security:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-jmx:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-jndi:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-plus:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-quickstart:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-server:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-servlet:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-util:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-webapp:jar:11.0.24:compile
+[DEBUG]          org.eclipse.jetty:jetty-xml:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty.websocket:websocket-jakarta-server:jar:11.0.24:compile
+[DEBUG]          org.eclipse.jetty.toolchain:jetty-jakarta-websocket-api:jar:2.0.0:compile
+[DEBUG]          org.eclipse.jetty.websocket:websocket-jakarta-client:jar:11.0.24:compile
+[DEBUG]             org.eclipse.jetty.websocket:websocket-core-client:jar:11.0.24:compile
+[DEBUG]             org.eclipse.jetty.websocket:websocket-jakarta-common:jar:11.0.24:compile
+[DEBUG]          org.eclipse.jetty.websocket:websocket-servlet:jar:11.0.24:compile
+[DEBUG]             org.eclipse.jetty.websocket:websocket-core-server:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty.websocket:websocket-jetty-server:jar:11.0.24:compile
+[DEBUG]          org.eclipse.jetty.websocket:websocket-jetty-api:jar:11.0.24:compile
+[DEBUG]          org.eclipse.jetty.websocket:websocket-jetty-common:jar:11.0.24:compile
+[DEBUG]             org.eclipse.jetty.websocket:websocket-core-common:jar:11.0.24:compile
+[DEBUG]    commons-codec:commons-codec:jar:1.10:compile
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ TUPracticalPieces ---
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for snapshots (http://snapshots.maven.codehaus.org/maven2).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for central (http://repo1.maven.org/maven2).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for codehaus.snapshots (http://snapshots.repository.codehaus.org).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=748753, ConflictMarker.markTime=123856, ConflictMarker.nodeCount=143, ConflictIdSorter.graphTime=159175, ConflictIdSorter.topsortTime=47551, ConflictIdSorter.conflictIdCount=36, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1402565, ConflictResolver.conflictItemCount=88, DfDependencyCollector.collectTime=164152048, DfDependencyCollector.transformTime=2517771}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:2.7
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.2.1:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.2.1:compile
+[DEBUG]          backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.2.1:compile
+[DEBUG]       org.slf4j:slf4j-jdk14:jar:1.5.6:runtime
+[DEBUG]          org.slf4j:slf4j-api:jar:1.5.6:runtime
+[DEBUG]       org.slf4j:jcl-over-slf4j:jar:1.5.6:runtime
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.2.1:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.1:compile
+[DEBUG]          org.apache.maven.doxia:doxia-logging-api:jar:1.1:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.2.1:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.2:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.2.1:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:2.2.1:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.2.1:compile
+[DEBUG]    org.apache.maven:maven-monitor:jar:2.2.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.15:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:1.2:compile
+[DEBUG]       org.apache.maven.shared:maven-shared-utils:jar:0.3:compile
+[DEBUG]          com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.19:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.7
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.7
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.7
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:2.7
+[DEBUG]   Included: backport-util-concurrent:backport-util-concurrent:jar:3.1
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.slf4j:slf4j-jdk14:jar:1.5.6
+[DEBUG]   Included: org.slf4j:jcl-over-slf4j:jar:1.5.6
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.2.1
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.1
+[DEBUG]   Included: org.apache.maven.doxia:doxia-logging-api:jar:1.1
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.15
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:1.2
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:0.3
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.19
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-resources-plugin:2.7:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.7, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-resources-plugin:2.7:resources:default-resources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT @ /home/tad/wkTUP2023/TUPracticalPieces/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /home/tad/wkTUP2023/TUPracticalPieces/src/main/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@733c464f
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {env.TERM=xterm-256color, java.specification.version=11, gwt.extraJvmArgs=-Xmx1536m -Xss2560k, sun.cpu.isalist=, sun.arch.data.model=64, java.vendor.url=https://openjdk.java.net/, env.DEBUGINFOD_URLS=https://debuginfod.ubuntu.com , sun.boot.library.path=/usr/java/jdk-11.0.23/lib, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X jetty:run, jdk.debug=release, maven.version=3.9.9, java.specification.vendor=Oracle Corporation, java.version.date=2024-04-16, java.home=/usr/java/jdk-11.0.23, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.23+7-LTS-222, env.PATH=/usr/java/jdk-11.0.23/bin:/home/tad/apache-maven-3.9.9/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:, file.encoding=UTF-8, env.LC_IDENTIFICATION=en_US.UTF-8, env.LC_NUMERIC=en_US.UTF-8, java.vendor.version=18.9, env._=/home/tad/apache-maven-3.9.9/bin/mvn, env.XDG_SESSION_DESKTOP=ubuntu, env.SHLVL=1, java.io.tmpdir=/tmp, env.GSM_SKIP_SSH_AGENT_WORKAROUND=true, java.version=11.0.23, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.print.PSPrinterJob, env.GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/604df9a9_7f3f_4395_940a_f7c2548efafe, java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor=Oracle Corporation, env.IM_CONFIG_PHASE=1, java.specification.maintenance.version=2, classworlds.conf=/home/tad/apache-maven-3.9.9/bin/m2.conf, sun.io.unicode.encoding=UnicodeLittle, env.XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.ZLVY02, sun.desktop=gnome, env.SESSION_MANAGER=local/tad-Inspiron-660:@/tmp/.ICE-unix/2717999,unix/tad-Inspiron-660:/tmp/.ICE-unix/2717999, env.LANG=en_US.UTF-8, env.LC_MONETARY=en_US.UTF-8, env.XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop, user.timezone=, os.name=Linux, java.vm.specification.version=11, env.DISPLAY=:0, user.home=/home/tad, maven.compiler.compilerId=javac, env.COLORTERM=truecolor, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, env.LANGUAGE=en, env.DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus, path.separator=:, env.GNOME_TERMINAL_SERVICE=:1.134, os.version=6.8.0-51-generic, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.LC_ADDRESS=en_US.UTF-8, env.SHELL=/bin/bash, env.LESSCLOSE=/usr/bin/lesspipe %s %s, env.GTK_MODULES=gail:atk-bridge, env.VTE_VERSION=7600, env.USERNAME=tad, os.arch=amd64, maven.multiModuleProjectDirectory=/home/tad/wkTUP2023/TUPracticalPieces, env.DESKTOP_SESSION=ubuntu, env.MAVEN_PROJECTBASEDIR=/home/tad/wkTUP2023/TUPracticalPieces, java.vm.info=mixed mode, env.SYSTEMD_EXEC_PID=2718031, env.USER=tad, java.class.version=55.0, awt.toolkit=sun.awt.X11.XToolkit, sun.jnu.encoding=UTF-8, env.GNOME_SETUP_DISPLAY=:1, datanucleus.version=6.0.0-release, maven.build.version=Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937), env.PAPERSIZE=letter, env.MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=, maven.home=/home/tad/apache-maven-3.9.9, gwtVersion=2.12.1, env.JAVA_HOME=/usr/java/jdk-11.0.23, env.GDMSESSION=ubuntu, file.separator=/, java.vm.compressedOopsMode=32-bit, line.separator=
+, env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated, env.LC_TELEPHONE=en_US.UTF-8, user.name=tad, env.LC_TIME=en_US.UTF-8, env.LOGNAME=tad, env.SSH_AUTH_SOCK=/run/user/1000/keyring/ssh, env.XDG_RUNTIME_DIR=/run/user/1000, env.XMODIFIERS=@im=ibus, project.reporting.outputEncoding=UTF-8, sun.os.patch.level=unknown, env.XDG_SESSION_TYPE=wayland, library.jansi.path=/home/tad/apache-maven-3.9.9/lib/jansi-native, env.XDG_SESSION_CLASS=user, env.LC_MEASUREMENT=en_US.UTF-8, env.OLDPWD=/home/tad/wkTUP2023/TUPracticalPieces, env.PWD=/home/tad/wkTUP2023/TUPracticalPieces, env.LESSOPEN=| /usr/bin/lesspipe %s, env.LC_NAME=en_US.UTF-8, java.class.path=/home/tad/apache-maven-3.9.9/boot/plexus-classworlds-2.8.0.jar, env.HOME=/home/tad, env.QT_IM_MODULE=ibus, java.vm.vendor=Oracle Corporation, maven.conf=/home/tad/apache-maven-3.9.9/conf, sun.java.launcher=SUN_STANDARD, user.country=US, env.QT_ACCESSIBILITY=1, sun.cpu.endian=little, user.language=en, env.WAYLAND_DISPLAY=wayland-0, gwtVersionSuffixGoogle=, jettyVersion=11.0.24, env.LC_PAPER=en_US.UTF-8, env.XDG_MENU_PREFIX=gnome-, maven.compiler.showDeprecation=true, java.runtime.name=Java(TM) SE Runtime Environment, project.build.sourceEncoding=UTF-8, env.MAVEN_CMD_LINE_ARGS= -X jetty:run, java.vendor.url.bug=https://bugreport.java.com/bugreport/, env.XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg, user.dir=/home/tad/wkTUP2023/TUPracticalPieces, env.MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure, env.XDG_CURRENT_DESKTOP=ubuntu:GNOME, gwtVersionSuffixMojo=, java.vm.version=11.0.23+7-LTS-222, env.GNOME_SHELL_SESSION_MODE=ubuntu}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /home/tad/wkTUP2023/TUPracticalPieces/src/main/resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 2 resources
+[DEBUG] file log4j.properties has a filtered file extension
+[DEBUG] copy /home/tad/wkTUP2023/TUPracticalPieces/src/main/resources/log4j.properties to /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/classes/log4j.properties
+[DEBUG] file persistence.xml has a filtered file extension
+[DEBUG] copy /home/tad/wkTUP2023/TUPracticalPieces/src/main/resources/META-INF/persistence.xml to /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ TUPracticalPieces ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=31499, ConflictMarker.markTime=26647, ConflictMarker.nodeCount=23, ConflictIdSorter.graphTime=32675, ConflictIdSorter.topsortTime=25006, ConflictIdSorter.conflictIdCount=15, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=461452, ConflictResolver.conflictItemCount=23, DfDependencyCollector.collectTime=25342596, DfDependencyCollector.transformTime=603349}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.13.0
+[DEBUG]    javax.validation:validation-api:jar:2.0.0.Final:runtime
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile
+[DEBUG]       org.slf4j:slf4j-api:jar:1.7.36:compile
+[DEBUG]       commons-io:commons-io:jar:2.11.0:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-java:jar:1.2.0:compile
+[DEBUG]       org.ow2.asm:asm:jar:9.6:compile
+[DEBUG]       com.thoughtworks.qdox:qdox:jar:2.0.3:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.15.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.15.0:compile
+[DEBUG]       javax.inject:javax.inject:jar:1:compile
+[DEBUG]       org.codehaus.plexus:plexus-xml:jar:3.0.0:compile (version managed from default)
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.15.0:runtime
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:4.0.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.13.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.13.0
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.13.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.13.0
+[DEBUG]   Included: javax.validation:validation-api:jar:2.0.0.Final
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.4.2
+[DEBUG]   Included: commons-io:commons-io:jar:2.11.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-java:jar:1.2.0
+[DEBUG]   Included: org.ow2.asm:asm:jar:9.6
+[DEBUG]   Included: com.thoughtworks.qdox:qdox:jar:2.0.3
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.15.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.15.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-xml:jar:3.0.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.15.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:4.0.0
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.13.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is automatically retrieved.
+[WARNING]  Parameter 'forceJavacCompilerUse' (user property 'maven.compiler.forceJavacCompilerUse') is deprecated: Use forceLegacyJavacApi instead
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile:default-compile' with basic configurator -->
+[DEBUG]   (f) annotationProcessorPathsUseDepMgmt = false
+[DEBUG]   (f) annotationProcessors = [com.google.web.bindery.requestfactory.apt.RfValidator]
+[DEBUG]   (f) basedir = /home/tad/wkTUP2023/TUPracticalPieces
+[DEBUG]   (f) buildDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target
+[DEBUG]   (f) compilePath = [/home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/classes, /home/tad/.m2/repository/org/apache/maven/maven-plugin-api/3.9.6/maven-plugin-api-3.9.6.jar, /home/tad/.m2/repository/org/apache/maven/maven-artifact/3.9.6/maven-artifact-3.9.6.jar, /home/tad/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar, /home/tad/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M2/org.eclipse.sisu.plexus-0.9.0.M2.jar, /home/tad/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.7.0/plexus-classworlds-2.7.0.jar, /home/tad/.m2/repository/org/apache/maven/maven-core/3.9.9/maven-core-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-settings/3.9.9/maven-settings-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-settings-builder/3.9.9/maven-settings-builder-3.9.9.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-cipher/2.0/plexus-cipher-2.0.jar, /home/tad/.m2/repository/org/apache/maven/maven-builder-support/3.9.9/maven-builder-support-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-repository-metadata/3.9.9/maven-repository-metadata-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-model-builder/3.9.9/maven-model-builder-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-resolver-provider/3.9.9/maven-resolver-provider-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-impl/1.9.22/maven-resolver-impl-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-named-locks/1.9.22/maven-resolver-named-locks-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-api/1.9.22/maven-resolver-api-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-spi/1.9.22/maven-resolver-spi-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.9.22/maven-resolver-util-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar, /home/tad/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.jar, /home/tad/.m2/repository/com/google/inject/guice/5.1.0/guice-5.1.0.jar, /home/tad/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, /home/tad/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar, /home/tad/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar, /home/tad/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.27/plexus-interpolation-1.27.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar, /home/tad/.m2/repository/org/apache/maven/maven-model/3.9.9/maven-model-3.9.9.jar, /home/tad/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar, /home/tad/.m2/repository/org/gwtproject/gwt-servlet-jakarta/2.12.1/gwt-servlet-jakarta-2.12.1.jar, /home/tad/.m2/repository/org/gwtproject/gwt-codeserver/2.12.1/gwt-codeserver-2.12.1.jar, /home/tad/.m2/repository/org/gwtproject/gwt-user/2.12.1/gwt-user-2.12.1.jar, /home/tad/.m2/repository/com/google/jsinterop/jsinterop-annotations/2.0.0/jsinterop-annotations-2.0.0.jar, /home/tad/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar, /home/tad/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar, /home/tad/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar, /home/tad/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar, /home/tad/.m2/repository/org/gwtproject/gwt-dev/2.12.1/gwt-dev-2.12.1.jar, /home/tad/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar, /home/tad/.m2/repository/com/google/code/gson/gson/2.10/gson-2.10.jar, /home/tad/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar, /home/tad/.m2/repository/org/ow2/asm/asm-util/9.6/asm-util-9.6.jar, /home/tad/.m2/repository/org/ow2/asm/asm-tree/9.6/asm-tree-9.6.jar, /home/tad/.m2/repository/org/ow2/asm/asm-analysis/9.6/asm-analysis-9.6.jar, /home/tad/.m2/repository/org/ow2/asm/asm-commons/9.6/asm-commons-9.6.jar, /home/tad/.m2/repository/colt/colt/1.2.0/colt-1.2.0.jar, /home/tad/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar, /home/tad/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar, /home/tad/.m2/repository/com/ibm/icu/icu4j/63.1/icu4j-63.1.jar, /home/tad/.m2/repository/tapestry/tapestry/4.0.2/tapestry-4.0.2.jar, /home/tad/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.55.0/htmlunit-2.55.0.jar, /home/tad/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar, /home/tad/.m2/repository/xalan/serializer/2.7.2/serializer-2.7.2.jar, /home/tad/.m2/repository/org/apache/commons/commons-text/1.9/commons-text-1.9.jar, /home/tad/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar, /home/tad/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.55.0/htmlunit-core-js-2.55.0.jar, /home/tad/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.55.0/neko-htmlunit-2.55.0.jar, /home/tad/.m2/repository/net/sourceforge/htmlunit/htmlunit-cssparser/1.10.0/htmlunit-cssparser-1.10.0.jar, /home/tad/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar, /home/tad/.m2/repository/commons-net/commons-net/3.8.0/commons-net-3.8.0.jar, /home/tad/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar, /home/tad/.m2/repository/com/shapesecurity/salvation2/3.0.0/salvation2-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.4.44.v20210927/websocket-client-9.4.44.v20210927.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.4.44.v20210927/websocket-common-9.4.44.v20210927.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.4.44.v20210927/websocket-api-9.4.44.v20210927.jar, /home/tad/.m2/repository/org/gwtproject/web/bindery/requestfactory-server-jakarta/2.12.1/requestfactory-server-jakarta-2.12.1.jar, /home/tad/.m2/repository/com/google/gwt/inject/gin/2.1.2/gin-2.1.2.jar, /home/tad/.m2/repository/com/google/inject/extensions/guice-assistedinject/3.0/guice-assistedinject-3.0.jar, /home/tad/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar, /home/tad/.m2/repository/jakarta/servlet/jakarta.servlet-api/5.0.0/jakarta.servlet-api-5.0.0.jar, /home/tad/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.0/jakarta.validation-api-3.1.0.jar, /home/tad/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar, /home/tad/.m2/repository/org/hibernate/hibernate-validator/5.4.3.Final/hibernate-validator-5.4.3.Final.jar, /home/tad/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, /home/tad/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar, /home/tad/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa/3.0.0/org.eclipse.persistence.jpa-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.asm/3.0.0/org.eclipse.persistence.asm-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.core/3.0.0/org.eclipse.persistence.core-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa.jpql/3.0.0/org.eclipse.persistence.jpa.jpql-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/eclipselink/3.0.0/eclipselink-3.0.0.jar, /home/tad/.m2/repository/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar, /home/tad/.m2/repository/com/google/protobuf/protobuf-java/3.21.10/protobuf-java-3.21.10.jar, /home/tad/.m2/repository/org/apache/pulsar/pulsar-client-messagecrypto-bc/3.3.0/pulsar-client-messagecrypto-bc-3.3.0.jar, /home/tad/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar, /home/tad/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar, /home/tad/.m2/repository/org/json/json/20240303/json-20240303.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-maven-plugin/11.0.24/jetty-maven-plugin-11.0.24.jar, /home/tad/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar, /home/tad/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-tools-api/3.13.1/maven-plugin-tools-api-3.13.1.jar, /home/tad/.m2/repository/org/apache/maven/reporting/maven-reporting-api/3.1.1/maven-reporting-api-3.1.1.jar, /home/tad/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.11.1/doxia-sink-api-1.11.1.jar, /home/tad/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.11.1/doxia-logging-api-1.11.1.jar, /home/tad/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar, /home/tad/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar, /home/tad/.m2/repository/org/apache/maven/wagon/wagon-provider-api/3.5.3/wagon-provider-api-3.5.3.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar, /home/tad/.m2/repository/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.4/plexus-xml-4.0.4.jar, /home/tad/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-9/maven-xml-impl-4.0.0-alpha-9.jar, /home/tad/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-9/maven-api-xml-4.0.0-alpha-9.jar, /home/tad/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-9/maven-api-meta-4.0.0-alpha-9.jar, /home/tad/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar, /home/tad/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar, /home/tad/.m2/repository/org/eclipse/jetty/apache-jsp/11.0.24/apache-jsp-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-servlet-api/5.0.2/jetty-jakarta-servlet-api-5.0.2.jar, /home/tad/.m2/repository/org/eclipse/jetty/glassfish-jstl/11.0.24/glassfish-jstl-11.0.24.jar, /home/tad/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/2.0.0/jakarta.servlet.jsp.jstl-api-2.0.0.jar, /home/tad/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.0/jakarta.xml.bind-api-3.0.0.jar, /home/tad/.m2/repository/com/sun/activation/jakarta.activation/2.0.0/jakarta.activation-2.0.0.jar, /home/tad/.m2/repository/org/glassfish/web/jakarta.servlet.jsp.jstl/2.0.0/jakarta.servlet.jsp.jstl-2.0.0.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-annotations/11.0.24/jetty-annotations-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-client/11.0.24/jetty-client-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-alpn-client/11.0.24/jetty-alpn-client-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-http/11.0.24/jetty-http-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-io/11.0.24/jetty-io-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-jaas/11.0.24/jetty-jaas-11.0.24.jar, /home/tad/.m2/repository/org/apache/directory/api/api-asn1-api/2.1.6/api-asn1-api-2.1.6.jar, /home/tad/.m2/repository/org/apache/directory/api/api-i18n/2.1.6/api-i18n-2.1.6.jar, /home/tad/.m2/repository/org/apache/directory/api/api-ldap-model/2.1.6/api-ldap-model-2.1.6.jar, /home/tad/.m2/repository/org/apache/directory/api/api-asn1-ber/2.1.6/api-asn1-ber-2.1.6.jar, /home/tad/.m2/repository/org/apache/mina/mina-core/2.2.3/mina-core-2.2.3.jar, /home/tad/.m2/repository/org/apache/servicemix/bundles/org.apache.servicemix.bundles.antlr/2.7.7_5/org.apache.servicemix.bundles.antlr-2.7.7_5.jar, /home/tad/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar, /home/tad/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.9.3/caffeine-2.9.3.jar, /home/tad/.m2/repository/org/apache/directory/api/api-util/2.1.6/api-util-2.1.6.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-security/11.0.24/jetty-security-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-jmx/11.0.24/jetty-jmx-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-jndi/11.0.24/jetty-jndi-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-plus/11.0.24/jetty-plus-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-quickstart/11.0.24/jetty-quickstart-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-server/11.0.24/jetty-server-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-servlet/11.0.24/jetty-servlet-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-util/11.0.24/jetty-util-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-webapp/11.0.24/jetty-webapp-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-xml/11.0.24/jetty-xml-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-server/11.0.24/websocket-jakarta-server-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-websocket-api/2.0.0/jetty-jakarta-websocket-api-2.0.0.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-client/11.0.24/websocket-jakarta-client-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-client/11.0.24/websocket-core-client-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-common/11.0.24/websocket-jakarta-common-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-servlet/11.0.24/websocket-servlet-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-server/11.0.24/websocket-core-server-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-server/11.0.24/websocket-jetty-server-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-api/11.0.24/websocket-jetty-api-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-common/11.0.24/websocket-jetty-common-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-common/11.0.24/websocket-core-common-11.0.24.jar, /home/tad/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar]
+[DEBUG]   (f) compileSourceRoots = [/home/tad/wkTUP2023/TUPracticalPieces/src/main/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) compilerVersion = $(maven.compiler.source)
+[DEBUG]   (f) createMissingPackageInfoClass = true
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) debugFileName = javac
+[DEBUG]   (f) enablePreview = false
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) excludes = []
+[DEBUG]   (f) failOnError = false
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) fileExtensions = [jar, class]
+[DEBUG]   (f) forceJavacCompilerUse = true
+[DEBUG]   (f) forceLegacyJavacApi = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/generated-sources/annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT @ /home/tad/wkTUP2023/TUPracticalPieces/pom.xml
+[DEBUG]   (f) projectArtifact = com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:war:6.0.0-SNAPSHOT
+[DEBUG]   (s) release = 11
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@733c464f
+[DEBUG]   (f) showCompilationChanges = false
+[DEBUG]   (f) showDeprecation = true
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 11
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 11
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding /home/tad/wkTUP2023/TUPracticalPieces/target/generated-sources/annotations to compile source roots:
+  /home/tad/wkTUP2023/TUPracticalPieces/src/main/java
+[DEBUG] New compile source roots:
+  /home/tad/wkTUP2023/TUPracticalPieces/src/main/java
+  /home/tad/wkTUP2023/TUPracticalPieces/target/generated-sources/annotations
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ TUPracticalPieces ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-resources-plugin:2.7:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.7, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-resources-plugin:2.7:testResources:default-testResources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT @ /home/tad/wkTUP2023/TUPracticalPieces/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /home/tad/wkTUP2023/TUPracticalPieces/src/test/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@733c464f
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {env.TERM=xterm-256color, java.specification.version=11, gwt.extraJvmArgs=-Xmx1536m -Xss2560k, sun.cpu.isalist=, sun.arch.data.model=64, java.vendor.url=https://openjdk.java.net/, env.DEBUGINFOD_URLS=https://debuginfod.ubuntu.com , sun.boot.library.path=/usr/java/jdk-11.0.23/lib, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X jetty:run, jdk.debug=release, maven.version=3.9.9, java.specification.vendor=Oracle Corporation, java.version.date=2024-04-16, java.home=/usr/java/jdk-11.0.23, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.23+7-LTS-222, env.PATH=/usr/java/jdk-11.0.23/bin:/home/tad/apache-maven-3.9.9/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:, file.encoding=UTF-8, env.LC_IDENTIFICATION=en_US.UTF-8, env.LC_NUMERIC=en_US.UTF-8, java.vendor.version=18.9, env._=/home/tad/apache-maven-3.9.9/bin/mvn, env.XDG_SESSION_DESKTOP=ubuntu, env.SHLVL=1, java.io.tmpdir=/tmp, env.GSM_SKIP_SSH_AGENT_WORKAROUND=true, java.version=11.0.23, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.print.PSPrinterJob, env.GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/604df9a9_7f3f_4395_940a_f7c2548efafe, java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor=Oracle Corporation, env.IM_CONFIG_PHASE=1, java.specification.maintenance.version=2, classworlds.conf=/home/tad/apache-maven-3.9.9/bin/m2.conf, sun.io.unicode.encoding=UnicodeLittle, env.XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.ZLVY02, sun.desktop=gnome, env.SESSION_MANAGER=local/tad-Inspiron-660:@/tmp/.ICE-unix/2717999,unix/tad-Inspiron-660:/tmp/.ICE-unix/2717999, env.LANG=en_US.UTF-8, env.LC_MONETARY=en_US.UTF-8, env.XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop, user.timezone=, os.name=Linux, java.vm.specification.version=11, env.DISPLAY=:0, user.home=/home/tad, maven.compiler.compilerId=javac, env.COLORTERM=truecolor, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, env.LANGUAGE=en, env.DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus, path.separator=:, env.GNOME_TERMINAL_SERVICE=:1.134, os.version=6.8.0-51-generic, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.LC_ADDRESS=en_US.UTF-8, env.SHELL=/bin/bash, env.LESSCLOSE=/usr/bin/lesspipe %s %s, env.GTK_MODULES=gail:atk-bridge, env.VTE_VERSION=7600, env.USERNAME=tad, os.arch=amd64, maven.multiModuleProjectDirectory=/home/tad/wkTUP2023/TUPracticalPieces, env.DESKTOP_SESSION=ubuntu, env.MAVEN_PROJECTBASEDIR=/home/tad/wkTUP2023/TUPracticalPieces, java.vm.info=mixed mode, env.SYSTEMD_EXEC_PID=2718031, env.USER=tad, java.class.version=55.0, awt.toolkit=sun.awt.X11.XToolkit, sun.jnu.encoding=UTF-8, env.GNOME_SETUP_DISPLAY=:1, datanucleus.version=6.0.0-release, maven.build.version=Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937), env.PAPERSIZE=letter, env.MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=, maven.home=/home/tad/apache-maven-3.9.9, gwtVersion=2.12.1, env.JAVA_HOME=/usr/java/jdk-11.0.23, env.GDMSESSION=ubuntu, file.separator=/, java.vm.compressedOopsMode=32-bit, line.separator=
+, env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated, env.LC_TELEPHONE=en_US.UTF-8, user.name=tad, env.LC_TIME=en_US.UTF-8, env.LOGNAME=tad, env.SSH_AUTH_SOCK=/run/user/1000/keyring/ssh, env.XDG_RUNTIME_DIR=/run/user/1000, env.XMODIFIERS=@im=ibus, project.reporting.outputEncoding=UTF-8, sun.os.patch.level=unknown, env.XDG_SESSION_TYPE=wayland, library.jansi.path=/home/tad/apache-maven-3.9.9/lib/jansi-native, env.XDG_SESSION_CLASS=user, env.LC_MEASUREMENT=en_US.UTF-8, env.OLDPWD=/home/tad/wkTUP2023/TUPracticalPieces, env.PWD=/home/tad/wkTUP2023/TUPracticalPieces, env.LESSOPEN=| /usr/bin/lesspipe %s, env.LC_NAME=en_US.UTF-8, java.class.path=/home/tad/apache-maven-3.9.9/boot/plexus-classworlds-2.8.0.jar, env.HOME=/home/tad, env.QT_IM_MODULE=ibus, java.vm.vendor=Oracle Corporation, maven.conf=/home/tad/apache-maven-3.9.9/conf, sun.java.launcher=SUN_STANDARD, user.country=US, env.QT_ACCESSIBILITY=1, sun.cpu.endian=little, user.language=en, env.WAYLAND_DISPLAY=wayland-0, gwtVersionSuffixGoogle=, jettyVersion=11.0.24, env.LC_PAPER=en_US.UTF-8, env.XDG_MENU_PREFIX=gnome-, maven.compiler.showDeprecation=true, java.runtime.name=Java(TM) SE Runtime Environment, project.build.sourceEncoding=UTF-8, env.MAVEN_CMD_LINE_ARGS= -X jetty:run, java.vendor.url.bug=https://bugreport.java.com/bugreport/, env.XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg, user.dir=/home/tad/wkTUP2023/TUPracticalPieces, env.MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure, env.XDG_CURRENT_DESKTOP=ubuntu:GNOME, gwtVersionSuffixMojo=, java.vm.version=11.0.23+7-LTS-222, env.GNOME_SHELL_SESSION_MODE=ubuntu}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /home/tad/wkTUP2023/TUPracticalPieces/src/test/resources
+excludes []
+includes []
+[INFO] skip non existing resourceDirectory /home/tad/wkTUP2023/TUPracticalPieces/src/test/resources
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ TUPracticalPieces ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-compiler-plugin:3.13.0:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.13.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is automatically retrieved.
+[WARNING]  Parameter 'forceJavacCompilerUse' (user property 'maven.compiler.forceJavacCompilerUse') is deprecated: Use forceLegacyJavacApi instead
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-compiler-plugin:3.13.0:testCompile:default-testCompile' with basic configurator -->
+[DEBUG]   (f) annotationProcessorPathsUseDepMgmt = false
+[DEBUG]   (f) annotationProcessors = [com.google.web.bindery.requestfactory.apt.RfValidator]
+[DEBUG]   (f) basedir = /home/tad/wkTUP2023/TUPracticalPieces
+[DEBUG]   (f) buildDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target
+[DEBUG]   (f) compileSourceRoots = [/home/tad/wkTUP2023/TUPracticalPieces/src/test/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) compilerVersion = $(maven.compiler.source)
+[DEBUG]   (f) createMissingPackageInfoClass = true
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) debugFileName = javac-test
+[DEBUG]   (f) enablePreview = false
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = false
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) fileExtensions = [jar, class]
+[DEBUG]   (f) forceJavacCompilerUse = true
+[DEBUG]   (f) forceLegacyJavacApi = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/generated-test-sources/test-annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.13.0:testCompile {execution: default-testCompile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/test-classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT @ /home/tad/wkTUP2023/TUPracticalPieces/pom.xml
+[DEBUG]   (s) release = 11
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@733c464f
+[DEBUG]   (f) showCompilationChanges = false
+[DEBUG]   (f) showDeprecation = true
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 11
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 11
+[DEBUG]   (f) testPath = [/home/tad/wkTUP2023/TUPracticalPieces/target/test-classes, /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/classes, /home/tad/.m2/repository/org/apache/maven/maven-plugin-api/3.9.6/maven-plugin-api-3.9.6.jar, /home/tad/.m2/repository/org/apache/maven/maven-artifact/3.9.6/maven-artifact-3.9.6.jar, /home/tad/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar, /home/tad/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M2/org.eclipse.sisu.plexus-0.9.0.M2.jar, /home/tad/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.7.0/plexus-classworlds-2.7.0.jar, /home/tad/.m2/repository/org/apache/maven/maven-core/3.9.9/maven-core-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-settings/3.9.9/maven-settings-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-settings-builder/3.9.9/maven-settings-builder-3.9.9.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-cipher/2.0/plexus-cipher-2.0.jar, /home/tad/.m2/repository/org/apache/maven/maven-builder-support/3.9.9/maven-builder-support-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-repository-metadata/3.9.9/maven-repository-metadata-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-model-builder/3.9.9/maven-model-builder-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/maven-resolver-provider/3.9.9/maven-resolver-provider-3.9.9.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-impl/1.9.22/maven-resolver-impl-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-named-locks/1.9.22/maven-resolver-named-locks-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-api/1.9.22/maven-resolver-api-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-spi/1.9.22/maven-resolver-spi-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.9.22/maven-resolver-util-1.9.22.jar, /home/tad/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar, /home/tad/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.jar, /home/tad/.m2/repository/com/google/inject/guice/5.1.0/guice-5.1.0.jar, /home/tad/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, /home/tad/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar, /home/tad/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar, /home/tad/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.27/plexus-interpolation-1.27.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar, /home/tad/.m2/repository/org/apache/maven/maven-model/3.9.9/maven-model-3.9.9.jar, /home/tad/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar, /home/tad/.m2/repository/org/gwtproject/gwt-servlet-jakarta/2.12.1/gwt-servlet-jakarta-2.12.1.jar, /home/tad/.m2/repository/org/gwtproject/gwt-codeserver/2.12.1/gwt-codeserver-2.12.1.jar, /home/tad/.m2/repository/org/gwtproject/gwt-user/2.12.1/gwt-user-2.12.1.jar, /home/tad/.m2/repository/com/google/jsinterop/jsinterop-annotations/2.0.0/jsinterop-annotations-2.0.0.jar, /home/tad/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar, /home/tad/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar, /home/tad/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar, /home/tad/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar, /home/tad/.m2/repository/org/gwtproject/gwt-dev/2.12.1/gwt-dev-2.12.1.jar, /home/tad/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar, /home/tad/.m2/repository/com/google/code/gson/gson/2.10/gson-2.10.jar, /home/tad/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar, /home/tad/.m2/repository/org/ow2/asm/asm-util/9.6/asm-util-9.6.jar, /home/tad/.m2/repository/org/ow2/asm/asm-tree/9.6/asm-tree-9.6.jar, /home/tad/.m2/repository/org/ow2/asm/asm-analysis/9.6/asm-analysis-9.6.jar, /home/tad/.m2/repository/org/ow2/asm/asm-commons/9.6/asm-commons-9.6.jar, /home/tad/.m2/repository/colt/colt/1.2.0/colt-1.2.0.jar, /home/tad/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar, /home/tad/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar, /home/tad/.m2/repository/com/ibm/icu/icu4j/63.1/icu4j-63.1.jar, /home/tad/.m2/repository/tapestry/tapestry/4.0.2/tapestry-4.0.2.jar, /home/tad/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.55.0/htmlunit-2.55.0.jar, /home/tad/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar, /home/tad/.m2/repository/xalan/serializer/2.7.2/serializer-2.7.2.jar, /home/tad/.m2/repository/org/apache/commons/commons-text/1.9/commons-text-1.9.jar, /home/tad/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar, /home/tad/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.55.0/htmlunit-core-js-2.55.0.jar, /home/tad/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.55.0/neko-htmlunit-2.55.0.jar, /home/tad/.m2/repository/net/sourceforge/htmlunit/htmlunit-cssparser/1.10.0/htmlunit-cssparser-1.10.0.jar, /home/tad/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar, /home/tad/.m2/repository/commons-net/commons-net/3.8.0/commons-net-3.8.0.jar, /home/tad/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar, /home/tad/.m2/repository/com/shapesecurity/salvation2/3.0.0/salvation2-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.4.44.v20210927/websocket-client-9.4.44.v20210927.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.4.44.v20210927/websocket-common-9.4.44.v20210927.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.4.44.v20210927/websocket-api-9.4.44.v20210927.jar, /home/tad/.m2/repository/org/gwtproject/web/bindery/requestfactory-server-jakarta/2.12.1/requestfactory-server-jakarta-2.12.1.jar, /home/tad/.m2/repository/com/google/gwt/inject/gin/2.1.2/gin-2.1.2.jar, /home/tad/.m2/repository/com/google/inject/extensions/guice-assistedinject/3.0/guice-assistedinject-3.0.jar, /home/tad/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar, /home/tad/.m2/repository/jakarta/servlet/jakarta.servlet-api/5.0.0/jakarta.servlet-api-5.0.0.jar, /home/tad/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.0/jakarta.validation-api-3.1.0.jar, /home/tad/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar, /home/tad/.m2/repository/org/slf4j/slf4j-reload4j/2.0.6/slf4j-reload4j-2.0.6.jar, /home/tad/.m2/repository/ch/qos/reload4j/reload4j/1.2.22/reload4j-1.2.22.jar, /home/tad/.m2/repository/org/hibernate/hibernate-validator/5.4.3.Final/hibernate-validator-5.4.3.Final.jar, /home/tad/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, /home/tad/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar, /home/tad/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa/3.0.0/org.eclipse.persistence.jpa-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.asm/3.0.0/org.eclipse.persistence.asm-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.core/3.0.0/org.eclipse.persistence.core-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa.jpql/3.0.0/org.eclipse.persistence.jpa.jpql-3.0.0.jar, /home/tad/.m2/repository/org/eclipse/persistence/eclipselink/3.0.0/eclipselink-3.0.0.jar, /home/tad/.m2/repository/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar, /home/tad/.m2/repository/com/google/protobuf/protobuf-java/3.21.10/protobuf-java-3.21.10.jar, /home/tad/.m2/repository/org/apache/pulsar/pulsar-client-messagecrypto-bc/3.3.0/pulsar-client-messagecrypto-bc-3.3.0.jar, /home/tad/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar, /home/tad/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar, /home/tad/.m2/repository/org/json/json/20240303/json-20240303.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-maven-plugin/11.0.24/jetty-maven-plugin-11.0.24.jar, /home/tad/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar, /home/tad/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-tools-api/3.13.1/maven-plugin-tools-api-3.13.1.jar, /home/tad/.m2/repository/org/apache/maven/reporting/maven-reporting-api/3.1.1/maven-reporting-api-3.1.1.jar, /home/tad/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.11.1/doxia-sink-api-1.11.1.jar, /home/tad/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.11.1/doxia-logging-api-1.11.1.jar, /home/tad/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar, /home/tad/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar, /home/tad/.m2/repository/org/apache/maven/wagon/wagon-provider-api/3.5.3/wagon-provider-api-3.5.3.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar, /home/tad/.m2/repository/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar, /home/tad/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.4/plexus-xml-4.0.4.jar, /home/tad/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-9/maven-xml-impl-4.0.0-alpha-9.jar, /home/tad/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-9/maven-api-xml-4.0.0-alpha-9.jar, /home/tad/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-9/maven-api-meta-4.0.0-alpha-9.jar, /home/tad/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar, /home/tad/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar, /home/tad/.m2/repository/org/eclipse/jetty/apache-jsp/11.0.24/apache-jsp-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-servlet-api/5.0.2/jetty-jakarta-servlet-api-5.0.2.jar, /home/tad/.m2/repository/org/eclipse/jetty/glassfish-jstl/11.0.24/glassfish-jstl-11.0.24.jar, /home/tad/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/2.0.0/jakarta.servlet.jsp.jstl-api-2.0.0.jar, /home/tad/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.0/jakarta.xml.bind-api-3.0.0.jar, /home/tad/.m2/repository/com/sun/activation/jakarta.activation/2.0.0/jakarta.activation-2.0.0.jar, /home/tad/.m2/repository/org/glassfish/web/jakarta.servlet.jsp.jstl/2.0.0/jakarta.servlet.jsp.jstl-2.0.0.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-annotations/11.0.24/jetty-annotations-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-client/11.0.24/jetty-client-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-alpn-client/11.0.24/jetty-alpn-client-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-http/11.0.24/jetty-http-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-io/11.0.24/jetty-io-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-jaas/11.0.24/jetty-jaas-11.0.24.jar, /home/tad/.m2/repository/org/apache/directory/api/api-asn1-api/2.1.6/api-asn1-api-2.1.6.jar, /home/tad/.m2/repository/org/apache/directory/api/api-i18n/2.1.6/api-i18n-2.1.6.jar, /home/tad/.m2/repository/org/apache/directory/api/api-ldap-model/2.1.6/api-ldap-model-2.1.6.jar, /home/tad/.m2/repository/org/apache/directory/api/api-asn1-ber/2.1.6/api-asn1-ber-2.1.6.jar, /home/tad/.m2/repository/org/apache/mina/mina-core/2.2.3/mina-core-2.2.3.jar, /home/tad/.m2/repository/org/apache/servicemix/bundles/org.apache.servicemix.bundles.antlr/2.7.7_5/org.apache.servicemix.bundles.antlr-2.7.7_5.jar, /home/tad/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar, /home/tad/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.9.3/caffeine-2.9.3.jar, /home/tad/.m2/repository/org/apache/directory/api/api-util/2.1.6/api-util-2.1.6.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-security/11.0.24/jetty-security-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-jmx/11.0.24/jetty-jmx-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-jndi/11.0.24/jetty-jndi-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-plus/11.0.24/jetty-plus-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-quickstart/11.0.24/jetty-quickstart-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-server/11.0.24/jetty-server-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-servlet/11.0.24/jetty-servlet-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-util/11.0.24/jetty-util-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-webapp/11.0.24/jetty-webapp-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/jetty-xml/11.0.24/jetty-xml-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-server/11.0.24/websocket-jakarta-server-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-websocket-api/2.0.0/jetty-jakarta-websocket-api-2.0.0.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-client/11.0.24/websocket-jakarta-client-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-client/11.0.24/websocket-core-client-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-common/11.0.24/websocket-jakarta-common-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-servlet/11.0.24/websocket-servlet-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-server/11.0.24/websocket-core-server-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-server/11.0.24/websocket-jetty-server-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-api/11.0.24/websocket-jetty-api-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-common/11.0.24/websocket-jetty-common-11.0.24.jar, /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-common/11.0.24/websocket-core-common-11.0.24.jar, /home/tad/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar]
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) useModulePath = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding /home/tad/wkTUP2023/TUPracticalPieces/target/generated-test-sources/test-annotations to test-compile source roots:
+  /home/tad/wkTUP2023/TUPracticalPieces/src/test/java
+[DEBUG] New test-compile source roots:
+  /home/tad/wkTUP2023/TUPracticalPieces/src/test/java
+  /home/tad/wkTUP2023/TUPracticalPieces/target/generated-test-sources/test-annotations
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< jetty:11.0.24:run (default-cli) < test-compile @ TUPracticalPieces <<<
+[INFO] 
+[INFO] 
+[INFO] --- jetty:11.0.24:run (default-cli) @ TUPracticalPieces ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=263392, ConflictMarker.markTime=2220768, ConflictMarker.nodeCount=287, ConflictIdSorter.graphTime=208219, ConflictIdSorter.topsortTime=540255, ConflictIdSorter.conflictIdCount=104, ConflictIdSorter.conflictIdCycleCount=1, ConflictResolver.totalTime=11588698, ConflictResolver.conflictItemCount=239, DfDependencyCollector.collectTime=90335933, DfDependencyCollector.transformTime=14898582}
+[DEBUG] org.eclipse.jetty:jetty-maven-plugin:jar:11.0.24
+[DEBUG]    org.eclipse.jetty:jetty-jmx:jar:11.0.24:runtime
+[DEBUG]    org.slf4j:slf4j-reload4j:jar:2.0.12:runtime
+[DEBUG]       ch.qos.reload4j:reload4j:jar:1.2.22:runtime
+[DEBUG]    org.slf4j:slf4j-api:jar:2.0.12:runtime
+[DEBUG]    jakarta.transaction:jakarta.transaction-api:jar:2.0.0:compile
+[DEBUG]    org.apache.maven.plugin-tools:maven-plugin-tools-api:jar:3.13.1:compile
+[DEBUG]       org.apache.maven:maven-core:jar:3.9.6:compile (version managed from default) (exclusions managed from default)
+[DEBUG]          org.apache.maven:maven-settings-builder:jar:3.9.6:compile
+[DEBUG]             org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile
+[DEBUG]                org.codehaus.plexus:plexus-cipher:jar:2.0:compile
+[DEBUG]          org.apache.maven:maven-builder-support:jar:3.9.6:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:3.9.6:compile
+[DEBUG]          org.apache.maven:maven-model-builder:jar:3.9.6:compile
+[DEBUG]          org.apache.maven:maven-resolver-provider:jar:3.9.6:compile (version managed from default) (exclusions managed from default)
+[DEBUG]          org.apache.maven.resolver:maven-resolver-impl:jar:1.9.18:compile
+[DEBUG]             org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.18:compile
+[DEBUG]          org.apache.maven.resolver:maven-resolver-spi:jar:1.9.18:compile
+[DEBUG]          org.apache.maven.resolver:maven-resolver-util:jar:1.9.18:compile
+[DEBUG]          org.apache.maven.shared:maven-shared-utils:jar:3.3.4:compile
+[DEBUG]          org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:compile
+[DEBUG]          com.google.inject:guice:jar:5.1.0:compile (version managed from default)
+[DEBUG]             aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]          com.google.guava:guava:jar:33.2.1-jre:compile (version managed from default)
+[DEBUG]          com.google.guava:failureaccess:jar:1.0.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-interpolation:jar:1.26:compile
+[DEBUG]          org.codehaus.plexus:plexus-component-annotations:jar:2.2.0:compile (version managed from default)
+[DEBUG]          org.apache.commons:commons-lang3:jar:3.15.0:compile (version managed from default)
+[DEBUG]       org.apache.maven:maven-model:jar:3.9.6:compile (version managed from default)
+[DEBUG]       org.apache.maven:maven-plugin-api:jar:3.9.6:compile (version managed from default) (exclusions managed from default)
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.9.6:compile (version managed from default)
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:3.1.1:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.11.1:compile
+[DEBUG]             org.apache.maven.doxia:doxia-logging-api:jar:1.11.1:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.9.6:compile (version managed from default)
+[DEBUG]       org.apache.maven.resolver:maven-resolver-api:jar:1.9.18:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.7.0:compile
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile
+[DEBUG]          javax.enterprise:cdi-api:jar:1.2:compile
+[DEBUG]             javax.inject:javax.inject:jar:1:compile
+[DEBUG]       org.apache.httpcomponents:httpclient:jar:4.5.14:compile
+[DEBUG]          commons-logging:commons-logging:jar:1.2:compile
+[DEBUG]          commons-codec:commons-codec:jar:1.17.1:compile (version managed from default)
+[DEBUG]       org.apache.httpcomponents:httpcore:jar:4.4.16:compile
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:3.5.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-java:jar:1.2.0:compile
+[DEBUG]          com.thoughtworks.qdox:qdox:jar:2.0.3:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:4.0.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-xml:jar:4.0.4:compile
+[DEBUG]       org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-9:compile
+[DEBUG]          org.apache.maven:maven-api-xml:jar:4.0.0-alpha-9:compile
+[DEBUG]             org.apache.maven:maven-api-meta:jar:4.0.0-alpha-9:compile
+[DEBUG]          com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile
+[DEBUG]             org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
+[DEBUG]    org.eclipse.jetty:apache-jsp:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:compile (version managed from default)
+[DEBUG]       org.mortbay.jasper:apache-jsp:jar:10.0.27:compile (version managed from default)
+[DEBUG]          org.eclipse.jetty.toolchain:jetty-schemas:jar:5.2:compile
+[DEBUG]          org.mortbay.jasper:apache-el:jar:10.0.27:compile (version managed from default)
+[DEBUG]          org.eclipse.jdt:ecj:jar:3.33.0:compile
+[DEBUG]    org.eclipse.jetty:glassfish-jstl:jar:11.0.24:compile
+[DEBUG]       jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0:compile (version managed from default) (exclusions managed from default)
+[DEBUG]          jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile (version managed from default)
+[DEBUG]             com.sun.activation:jakarta.activation:jar:2.0.1:compile
+[DEBUG]       org.glassfish.web:jakarta.servlet.jsp.jstl:jar:2.0.0:compile (version managed from default)
+[DEBUG]    org.eclipse.jetty:jetty-annotations:jar:11.0.24:compile
+[DEBUG]       jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (version managed from default)
+[DEBUG]       org.ow2.asm:asm:jar:9.7:compile (version managed from default)
+[DEBUG]       org.ow2.asm:asm-commons:jar:9.7:compile (version managed from default)
+[DEBUG]          org.ow2.asm:asm-tree:jar:9.7:compile (version managed from default)
+[DEBUG]    org.eclipse.jetty:jetty-client:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-alpn-client:jar:11.0.24:compile (version managed from default)
+[DEBUG]    org.eclipse.jetty:jetty-http:jar:11.0.24:compile
+[DEBUG]    org.eclipse.jetty:jetty-io:jar:11.0.24:compile
+[DEBUG]    org.eclipse.jetty:jetty-jaas:jar:11.0.24:compile
+[DEBUG]       org.apache.directory.api:api-asn1-api:jar:2.1.6:compile
+[DEBUG]          org.apache.directory.api:api-i18n:jar:2.1.6:compile
+[DEBUG]       org.apache.directory.api:api-ldap-model:jar:2.1.6:compile
+[DEBUG]          org.apache.directory.api:api-asn1-ber:jar:2.1.6:compile
+[DEBUG]          org.apache.mina:mina-core:jar:2.2.3:compile (version managed from default)
+[DEBUG]          org.apache.servicemix.bundles:org.apache.servicemix.bundles.antlr:jar:2.7.7_5:compile
+[DEBUG]          org.apache.commons:commons-collections4:jar:4.4:compile
+[DEBUG]          com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile
+[DEBUG]       org.apache.directory.api:api-util:jar:2.1.6:compile
+[DEBUG]       org.eclipse.jetty:jetty-security:jar:11.0.24:compile (version managed from default)
+[DEBUG]    org.eclipse.jetty:jetty-jndi:jar:11.0.24:compile
+[DEBUG]    org.eclipse.jetty:jetty-plus:jar:11.0.24:compile
+[DEBUG]    org.eclipse.jetty:jetty-quickstart:jar:11.0.24:compile
+[DEBUG]    org.eclipse.jetty:jetty-server:jar:11.0.24:compile
+[DEBUG]    org.eclipse.jetty:jetty-servlet:jar:11.0.24:compile
+[DEBUG]    org.eclipse.jetty:jetty-util:jar:11.0.24:compile
+[DEBUG]    org.eclipse.jetty:jetty-webapp:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty:jetty-xml:jar:11.0.24:compile (version managed from default)
+[DEBUG]    org.eclipse.jetty.websocket:websocket-jakarta-server:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty.toolchain:jetty-jakarta-websocket-api:jar:2.0.0:compile (version managed from default)
+[DEBUG]       org.eclipse.jetty.websocket:websocket-jakarta-client:jar:11.0.24:compile (version managed from default)
+[DEBUG]          org.eclipse.jetty.websocket:websocket-core-client:jar:11.0.24:compile (version managed from default)
+[DEBUG]          org.eclipse.jetty.websocket:websocket-jakarta-common:jar:11.0.24:compile (version managed from default)
+[DEBUG]       org.eclipse.jetty.websocket:websocket-servlet:jar:11.0.24:compile (version managed from default)
+[DEBUG]          org.eclipse.jetty.websocket:websocket-core-server:jar:11.0.24:compile (version managed from default)
+[DEBUG]    org.eclipse.jetty.websocket:websocket-jetty-server:jar:11.0.24:compile
+[DEBUG]       org.eclipse.jetty.websocket:websocket-jetty-api:jar:11.0.24:compile (version managed from default)
+[DEBUG]       org.eclipse.jetty.websocket:websocket-jetty-common:jar:11.0.24:compile (version managed from default)
+[DEBUG]          org.eclipse.jetty.websocket:websocket-core-common:jar:11.0.24:compile (version managed from default)
+[DEBUG] Created new class realm plugin>org.eclipse.jetty:jetty-maven-plugin:11.0.24
+[DEBUG] Importing foreign packages into class realm plugin>org.eclipse.jetty:jetty-maven-plugin:11.0.24
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.eclipse.jetty:jetty-maven-plugin:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-maven-plugin:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-jmx:jar:11.0.24
+[DEBUG]   Included: org.slf4j:slf4j-reload4j:jar:2.0.12
+[DEBUG]   Included: ch.qos.reload4j:reload4j:jar:1.2.22
+[DEBUG]   Included: jakarta.transaction:jakarta.transaction-api:jar:2.0.0
+[DEBUG]   Included: org.apache.maven.plugin-tools:maven-plugin-tools-api:jar:3.13.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-cipher:jar:2.0
+[DEBUG]   Included: org.apache.maven:maven-builder-support:jar:3.9.6
+[DEBUG]   Included: org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.18
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.3.4
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2
+[DEBUG]   Included: com.google.inject:guice:jar:5.1.0
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: com.google.guava:guava:jar:33.2.1-jre
+[DEBUG]   Included: com.google.guava:failureaccess:jar:1.0.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.26
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:2.2.0
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.15.0
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:3.1.1
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.11.1
+[DEBUG]   Included: org.apache.maven.doxia:doxia-logging-api:jar:1.11.1
+[DEBUG]   Included: javax.enterprise:cdi-api:jar:1.2
+[DEBUG]   Included: org.apache.httpcomponents:httpclient:jar:4.5.14
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.2
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.17.1
+[DEBUG]   Included: org.apache.httpcomponents:httpcore:jar:4.4.16
+[DEBUG]   Included: org.codehaus.plexus:plexus-java:jar:1.2.0
+[DEBUG]   Included: com.thoughtworks.qdox:qdox:jar:2.0.3
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:4.0.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-xml:jar:4.0.4
+[DEBUG]   Included: org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-9
+[DEBUG]   Included: org.apache.maven:maven-api-xml:jar:4.0.0-alpha-9
+[DEBUG]   Included: org.apache.maven:maven-api-meta:jar:4.0.0-alpha-9
+[DEBUG]   Included: com.fasterxml.woodstox:woodstox-core:jar:6.5.1
+[DEBUG]   Included: org.codehaus.woodstox:stax2-api:jar:4.2.1
+[DEBUG]   Included: org.eclipse.jetty:apache-jsp:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2
+[DEBUG]   Included: org.mortbay.jasper:apache-jsp:jar:10.0.27
+[DEBUG]   Included: org.eclipse.jetty.toolchain:jetty-schemas:jar:5.2
+[DEBUG]   Included: org.mortbay.jasper:apache-el:jar:10.0.27
+[DEBUG]   Included: org.eclipse.jdt:ecj:jar:3.33.0
+[DEBUG]   Included: org.eclipse.jetty:glassfish-jstl:jar:11.0.24
+[DEBUG]   Included: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0
+[DEBUG]   Included: jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1
+[DEBUG]   Included: com.sun.activation:jakarta.activation:jar:2.0.1
+[DEBUG]   Included: org.glassfish.web:jakarta.servlet.jsp.jstl:jar:2.0.0
+[DEBUG]   Included: org.eclipse.jetty:jetty-annotations:jar:11.0.24
+[DEBUG]   Included: jakarta.annotation:jakarta.annotation-api:jar:2.1.1
+[DEBUG]   Included: org.ow2.asm:asm:jar:9.7
+[DEBUG]   Included: org.ow2.asm:asm-commons:jar:9.7
+[DEBUG]   Included: org.ow2.asm:asm-tree:jar:9.7
+[DEBUG]   Included: org.eclipse.jetty:jetty-client:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-alpn-client:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-http:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-io:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-jaas:jar:11.0.24
+[DEBUG]   Included: org.apache.directory.api:api-asn1-api:jar:2.1.6
+[DEBUG]   Included: org.apache.directory.api:api-i18n:jar:2.1.6
+[DEBUG]   Included: org.apache.directory.api:api-ldap-model:jar:2.1.6
+[DEBUG]   Included: org.apache.directory.api:api-asn1-ber:jar:2.1.6
+[DEBUG]   Included: org.apache.mina:mina-core:jar:2.2.3
+[DEBUG]   Included: org.apache.servicemix.bundles:org.apache.servicemix.bundles.antlr:jar:2.7.7_5
+[DEBUG]   Included: org.apache.commons:commons-collections4:jar:4.4
+[DEBUG]   Included: com.github.ben-manes.caffeine:caffeine:jar:2.9.3
+[DEBUG]   Included: org.apache.directory.api:api-util:jar:2.1.6
+[DEBUG]   Included: org.eclipse.jetty:jetty-security:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-jndi:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-plus:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-quickstart:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-server:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-servlet:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-util:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-webapp:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty:jetty-xml:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-jakarta-server:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.toolchain:jetty-jakarta-websocket-api:jar:2.0.0
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-jakarta-client:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-core-client:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-jakarta-common:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-servlet:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-core-server:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-jetty-server:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-jetty-api:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-jetty-common:jar:11.0.24
+[DEBUG]   Included: org.eclipse.jetty.websocket:websocket-core-common:jar:11.0.24
+[DEBUG] Loading mojo org.eclipse.jetty:jetty-maven-plugin:11.0.24:run from plugin realm ClassRealm[plugin>org.eclipse.jetty:jetty-maven-plugin:11.0.24, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[WARNING]  Parameter 'webAppSourceDirectory' is read-only, must not be used in configuration
+[DEBUG] Configuring mojo execution 'org.eclipse.jetty:jetty-maven-plugin:11.0.24:run:default-cli' with basic configurator -->
+[DEBUG]   (f) classesDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/classes
+[DEBUG]   (f) deployMode = EMBED
+[DEBUG]   (f) execution = org.eclipse.jetty:jetty-maven-plugin:11.0.24:run {execution: default-cli}
+[DEBUG]   (f) forkWebXml = /home/tad/wkTUP2023/TUPracticalPieces/target/fork-web.xml
+[DEBUG]   (f) jettyXmls = [/home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty.xml, /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-ssl-context.xml, /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-ssl.xml, /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-https.xml]
+[DEBUG]   (f) maxChildStartCheckMs = 200
+[DEBUG]   (f) maxChildStartChecks = 10
+[DEBUG]   (f) plugin = Component Descriptor: role: 'org.apache.maven.plugin.Mojo', implementation: 'org.eclipse.jetty.maven.plugin.JettyEffectiveWebXml', role hint: 'org.eclipse.jetty:jetty-maven-plugin:11.0.24:effective-web-xml'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.eclipse.jetty.jetty_maven_plugin.HelpMojo', role hint: 'org.eclipse.jetty:jetty-maven-plugin:11.0.24:help'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.eclipse.jetty.maven.plugin.JettyRunMojo', role hint: 'org.eclipse.jetty:jetty-maven-plugin:11.0.24:run'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.eclipse.jetty.maven.plugin.JettyRunWarMojo', role hint: 'org.eclipse.jetty:jetty-maven-plugin:11.0.24:run-war'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.eclipse.jetty.maven.plugin.JettyStartMojo', role hint: 'org.eclipse.jetty:jetty-maven-plugin:11.0.24:start'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.eclipse.jetty.maven.plugin.JettyStartWarMojo', role hint: 'org.eclipse.jetty:jetty-maven-plugin:11.0.24:start-war'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.eclipse.jetty.maven.plugin.JettyStopMojo', role hint: 'org.eclipse.jetty:jetty-maven-plugin:11.0.24:stop'
+---
+[DEBUG]   (f) pluginArtifacts = [org.eclipse.jetty:jetty-maven-plugin:maven-plugin:11.0.24:, org.eclipse.jetty:jetty-jmx:jar:11.0.24:runtime, org.slf4j:slf4j-reload4j:jar:2.0.12:runtime, ch.qos.reload4j:reload4j:jar:1.2.22:runtime, org.slf4j:slf4j-api:jar:2.0.12:runtime, jakarta.transaction:jakarta.transaction-api:jar:2.0.0:compile, org.apache.maven.plugin-tools:maven-plugin-tools-api:jar:3.13.1:compile, org.apache.maven:maven-core:jar:3.9.6:compile, org.apache.maven:maven-settings-builder:jar:3.9.6:compile, org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile, org.codehaus.plexus:plexus-cipher:jar:2.0:compile, org.apache.maven:maven-builder-support:jar:3.9.6:compile, org.apache.maven:maven-repository-metadata:jar:3.9.6:compile, org.apache.maven:maven-model-builder:jar:3.9.6:compile, org.apache.maven:maven-resolver-provider:jar:3.9.6:compile, org.apache.maven.resolver:maven-resolver-impl:jar:1.9.18:compile, org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.18:compile, org.apache.maven.resolver:maven-resolver-spi:jar:1.9.18:compile, org.apache.maven.resolver:maven-resolver-util:jar:1.9.18:compile, org.apache.maven.shared:maven-shared-utils:jar:3.3.4:compile, org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:compile, com.google.inject:guice:jar:5.1.0:compile, aopalliance:aopalliance:jar:1.0:compile, com.google.guava:guava:jar:33.2.1-jre:compile, com.google.guava:failureaccess:jar:1.0.1:compile, org.codehaus.plexus:plexus-interpolation:jar:1.26:compile, org.codehaus.plexus:plexus-component-annotations:jar:2.2.0:compile, org.apache.commons:commons-lang3:jar:3.15.0:compile, org.apache.maven:maven-model:jar:3.9.6:compile, org.apache.maven:maven-plugin-api:jar:3.9.6:compile, org.apache.maven:maven-artifact:jar:3.9.6:compile, org.apache.maven.reporting:maven-reporting-api:jar:3.1.1:compile, org.apache.maven.doxia:doxia-sink-api:jar:1.11.1:compile, org.apache.maven.doxia:doxia-logging-api:jar:1.11.1:compile, org.apache.maven:maven-settings:jar:3.9.6:compile, org.apache.maven.resolver:maven-resolver-api:jar:1.9.18:compile, org.codehaus.plexus:plexus-classworlds:jar:2.7.0:compile, org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile, javax.enterprise:cdi-api:jar:1.2:compile, javax.inject:javax.inject:jar:1:compile, org.apache.httpcomponents:httpclient:jar:4.5.14:compile, commons-logging:commons-logging:jar:1.2:compile, commons-codec:commons-codec:jar:1.17.1:compile, org.apache.httpcomponents:httpcore:jar:4.4.16:compile, org.apache.maven.wagon:wagon-provider-api:jar:3.5.3:compile, org.codehaus.plexus:plexus-java:jar:1.2.0:compile, com.thoughtworks.qdox:qdox:jar:2.0.3:compile, org.codehaus.plexus:plexus-utils:jar:4.0.1:compile, org.codehaus.plexus:plexus-xml:jar:4.0.4:compile, org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-9:compile, org.apache.maven:maven-api-xml:jar:4.0.0-alpha-9:compile, org.apache.maven:maven-api-meta:jar:4.0.0-alpha-9:compile, com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile, org.codehaus.woodstox:stax2-api:jar:4.2.1:compile, org.eclipse.jetty:apache-jsp:jar:11.0.24:compile, org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:compile, org.mortbay.jasper:apache-jsp:jar:10.0.27:compile, org.eclipse.jetty.toolchain:jetty-schemas:jar:5.2:compile, org.mortbay.jasper:apache-el:jar:10.0.27:compile, org.eclipse.jdt:ecj:jar:3.33.0:compile, org.eclipse.jetty:glassfish-jstl:jar:11.0.24:compile, jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0:compile, jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile, com.sun.activation:jakarta.activation:jar:2.0.1:compile, org.glassfish.web:jakarta.servlet.jsp.jstl:jar:2.0.0:compile, org.eclipse.jetty:jetty-annotations:jar:11.0.24:compile, jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile, org.ow2.asm:asm:jar:9.7:compile, org.ow2.asm:asm-commons:jar:9.7:compile, org.ow2.asm:asm-tree:jar:9.7:compile, org.eclipse.jetty:jetty-client:jar:11.0.24:compile, org.eclipse.jetty:jetty-alpn-client:jar:11.0.24:compile, org.eclipse.jetty:jetty-http:jar:11.0.24:compile, org.eclipse.jetty:jetty-io:jar:11.0.24:compile, org.eclipse.jetty:jetty-jaas:jar:11.0.24:compile, org.apache.directory.api:api-asn1-api:jar:2.1.6:compile, org.apache.directory.api:api-i18n:jar:2.1.6:compile, org.apache.directory.api:api-ldap-model:jar:2.1.6:compile, org.apache.directory.api:api-asn1-ber:jar:2.1.6:compile, org.apache.mina:mina-core:jar:2.2.3:compile, org.apache.servicemix.bundles:org.apache.servicemix.bundles.antlr:jar:2.7.7_5:compile, org.apache.commons:commons-collections4:jar:4.4:compile, com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile, org.apache.directory.api:api-util:jar:2.1.6:compile, org.eclipse.jetty:jetty-security:jar:11.0.24:compile, org.eclipse.jetty:jetty-jndi:jar:11.0.24:compile, org.eclipse.jetty:jetty-plus:jar:11.0.24:compile, org.eclipse.jetty:jetty-quickstart:jar:11.0.24:compile, org.eclipse.jetty:jetty-server:jar:11.0.24:compile, org.eclipse.jetty:jetty-servlet:jar:11.0.24:compile, org.eclipse.jetty:jetty-util:jar:11.0.24:compile, org.eclipse.jetty:jetty-webapp:jar:11.0.24:compile, org.eclipse.jetty:jetty-xml:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jakarta-server:jar:11.0.24:compile, org.eclipse.jetty.toolchain:jetty-jakarta-websocket-api:jar:2.0.0:compile, org.eclipse.jetty.websocket:websocket-jakarta-client:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-core-client:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jakarta-common:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-servlet:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-core-server:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jetty-server:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jetty-api:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jetty-common:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-core-common:jar:11.0.24:compile]
+[DEBUG]   (f) project = MavenProject: com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT @ /home/tad/wkTUP2023/TUPracticalPieces/pom.xml
+[DEBUG]   (f) projectArtifacts = [org.apache.maven:maven-plugin-api:jar:3.9.6:provided, org.apache.maven:maven-artifact:jar:3.9.6:compile, org.apache.commons:commons-lang3:jar:3.12.0:compile, org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile, javax.annotation:javax.annotation-api:jar:1.2:compile, org.codehaus.plexus:plexus-utils:jar:3.5.1:compile, org.codehaus.plexus:plexus-classworlds:jar:2.7.0:compile, org.apache.maven:maven-core:jar:3.9.9:provided, org.apache.maven:maven-settings:jar:3.9.9:compile, org.apache.maven:maven-settings-builder:jar:3.9.9:provided, org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:provided, org.codehaus.plexus:plexus-cipher:jar:2.0:provided, org.apache.maven:maven-builder-support:jar:3.9.9:provided, org.apache.maven:maven-repository-metadata:jar:3.9.9:provided, org.apache.maven:maven-model-builder:jar:3.9.9:provided, org.apache.maven:maven-resolver-provider:jar:3.9.9:provided, org.apache.maven.resolver:maven-resolver-impl:jar:1.9.22:provided, org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.22:provided, org.apache.maven.resolver:maven-resolver-api:jar:1.9.22:compile, org.apache.maven.resolver:maven-resolver-spi:jar:1.9.22:provided, org.apache.maven.resolver:maven-resolver-util:jar:1.9.22:provided, org.apache.maven.shared:maven-shared-utils:jar:3.4.2:provided, org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M3:compile, com.google.inject:guice:jar:5.1.0:provided, aopalliance:aopalliance:jar:1.0:provided, com.google.guava:guava:jar:31.1-jre:provided, com.google.guava:failureaccess:jar:1.0.2:provided, javax.inject:javax.inject:jar:1:provided, org.codehaus.plexus:plexus-interpolation:jar:1.27:provided, org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile, org.apache.maven:maven-model:jar:3.9.9:provided, jakarta.annotation:jakarta.annotation-api:jar:3.0.0:compile, org.gwtproject:gwt-servlet-jakarta:jar:2.12.1:compile, org.gwtproject:gwt-codeserver:jar:2.12.1:provided, org.gwtproject:gwt-user:jar:2.12.1:provided, com.google.jsinterop:jsinterop-annotations:jar:2.0.0:provided, javax.validation:validation-api:jar:1.0.0.GA:compile, javax.validation:validation-api:jar:sources:1.0.0.GA:provided, javax.servlet:javax.servlet-api:jar:3.1.0:provided, org.w3c.css:sac:jar:1.3:provided, org.gwtproject:gwt-dev:jar:2.12.1:provided, com.google.code.findbugs:jsr305:jar:1.3.9:provided, com.google.code.gson:gson:jar:2.10:provided, org.ow2.asm:asm:jar:9.6:compile, org.ow2.asm:asm-util:jar:9.6:provided, org.ow2.asm:asm-tree:jar:9.6:compile, org.ow2.asm:asm-analysis:jar:9.6:provided, org.ow2.asm:asm-commons:jar:9.6:compile, colt:colt:jar:1.2.0:provided, commons-collections:commons-collections:jar:3.2.2:provided, commons-io:commons-io:jar:2.4:provided, com.ibm.icu:icu4j:jar:63.1:provided, tapestry:tapestry:jar:4.0.2:provided, net.sourceforge.htmlunit:htmlunit:jar:2.55.0:provided, xalan:xalan:jar:2.7.2:provided, xalan:serializer:jar:2.7.2:provided, org.apache.commons:commons-text:jar:1.9:provided, org.apache.httpcomponents:httpmime:jar:4.5.13:provided, net.sourceforge.htmlunit:htmlunit-core-js:jar:2.55.0:provided, net.sourceforge.htmlunit:neko-htmlunit:jar:2.55.0:provided, net.sourceforge.htmlunit:htmlunit-cssparser:jar:1.10.0:provided, commons-logging:commons-logging:jar:1.2:compile, commons-net:commons-net:jar:3.8.0:provided, org.brotli:dec:jar:0.1.2:provided, com.shapesecurity:salvation2:jar:3.0.0:provided, org.eclipse.jetty.websocket:websocket-client:jar:9.4.44.v20210927:provided, org.eclipse.jetty.websocket:websocket-common:jar:9.4.44.v20210927:provided, org.eclipse.jetty.websocket:websocket-api:jar:9.4.44.v20210927:provided, org.gwtproject.web.bindery:requestfactory-server-jakarta:jar:2.12.1:compile, com.google.gwt.inject:gin:jar:2.1.2:provided, com.google.inject.extensions:guice-assistedinject:jar:3.0:provided, jakarta.inject:jakarta.inject-api:jar:2.0.1:compile, jakarta.servlet:jakarta.servlet-api:jar:5.0.0:provided, jakarta.validation:jakarta.validation-api:jar:3.1.0:compile, org.slf4j:slf4j-api:jar:2.0.6:compile, org.slf4j:slf4j-reload4j:jar:2.0.6:test, ch.qos.reload4j:reload4j:jar:1.2.22:test, org.hibernate:hibernate-validator:jar:5.4.3.Final:compile, org.jboss.logging:jboss-logging:jar:3.3.0.Final:compile, com.fasterxml:classmate:jar:1.3.1:compile, jakarta.persistence:jakarta.persistence-api:jar:3.0.0:compile, org.eclipse.persistence:org.eclipse.persistence.jpa:jar:3.0.0:compile, org.eclipse.persistence:org.eclipse.persistence.asm:jar:3.0.0:compile, org.eclipse.persistence:org.eclipse.persistence.core:jar:3.0.0:compile, org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:jar:3.0.0:compile, org.eclipse.persistence:eclipselink:jar:3.0.0:compile, mysql:mysql-connector-java:jar:8.0.30:compile, com.google.protobuf:protobuf-java:jar:3.21.10:compile, org.apache.pulsar:pulsar-client-messagecrypto-bc:jar:3.3.0:compile, xerces:xercesImpl:jar:2.11.0:compile, xml-apis:xml-apis:jar:1.4.01:compile, org.json:json:jar:20240303:compile, org.eclipse.jetty:jetty-maven-plugin:jar:11.0.24:compile, jakarta.transaction:jakarta.transaction-api:jar:2.0.0:compile, org.apache.maven.plugin-tools:maven-plugin-tools-api:jar:3.13.1:compile, org.apache.maven.reporting:maven-reporting-api:jar:3.1.1:compile, org.apache.maven.doxia:doxia-sink-api:jar:1.11.1:compile, org.apache.maven.doxia:doxia-logging-api:jar:1.11.1:compile, org.apache.httpcomponents:httpclient:jar:4.5.14:compile, org.apache.httpcomponents:httpcore:jar:4.4.16:compile, org.apache.maven.wagon:wagon-provider-api:jar:3.5.3:compile, org.codehaus.plexus:plexus-java:jar:1.2.0:compile, com.thoughtworks.qdox:qdox:jar:2.0.3:compile, org.codehaus.plexus:plexus-xml:jar:4.0.4:compile, org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-9:compile, org.apache.maven:maven-api-xml:jar:4.0.0-alpha-9:compile, org.apache.maven:maven-api-meta:jar:4.0.0-alpha-9:compile, com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile, org.codehaus.woodstox:stax2-api:jar:4.2.1:compile, org.eclipse.jetty:apache-jsp:jar:11.0.24:compile, org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:compile, org.eclipse.jetty:glassfish-jstl:jar:11.0.24:compile, jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0:compile, jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.0:compile, com.sun.activation:jakarta.activation:jar:2.0.0:compile, org.glassfish.web:jakarta.servlet.jsp.jstl:jar:2.0.0:compile, org.eclipse.jetty:jetty-annotations:jar:11.0.24:compile, org.eclipse.jetty:jetty-client:jar:11.0.24:compile, org.eclipse.jetty:jetty-alpn-client:jar:11.0.24:compile, org.eclipse.jetty:jetty-http:jar:11.0.24:compile, org.eclipse.jetty:jetty-io:jar:11.0.24:compile, org.eclipse.jetty:jetty-jaas:jar:11.0.24:compile, org.apache.directory.api:api-asn1-api:jar:2.1.6:compile, org.apache.directory.api:api-i18n:jar:2.1.6:compile, org.apache.directory.api:api-ldap-model:jar:2.1.6:compile, org.apache.directory.api:api-asn1-ber:jar:2.1.6:compile, org.apache.mina:mina-core:jar:2.2.3:compile, org.apache.servicemix.bundles:org.apache.servicemix.bundles.antlr:jar:2.7.7_5:compile, org.apache.commons:commons-collections4:jar:4.4:compile, com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile, org.apache.directory.api:api-util:jar:2.1.6:compile, org.eclipse.jetty:jetty-security:jar:11.0.24:compile, org.eclipse.jetty:jetty-jmx:jar:11.0.24:compile, org.eclipse.jetty:jetty-jndi:jar:11.0.24:compile, org.eclipse.jetty:jetty-plus:jar:11.0.24:compile, org.eclipse.jetty:jetty-quickstart:jar:11.0.24:compile, org.eclipse.jetty:jetty-server:jar:11.0.24:compile, org.eclipse.jetty:jetty-servlet:jar:11.0.24:compile, org.eclipse.jetty:jetty-util:jar:11.0.24:compile, org.eclipse.jetty:jetty-webapp:jar:11.0.24:compile, org.eclipse.jetty:jetty-xml:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jakarta-server:jar:11.0.24:compile, org.eclipse.jetty.toolchain:jetty-jakarta-websocket-api:jar:2.0.0:compile, org.eclipse.jetty.websocket:websocket-jakarta-client:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-core-client:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jakarta-common:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-servlet:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-core-server:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jetty-server:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jetty-api:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-jetty-common:jar:11.0.24:compile, org.eclipse.jetty.websocket:websocket-core-common:jar:11.0.24:compile, commons-codec:commons-codec:jar:1.10:compile]
+[DEBUG]   (f) reactorProjects = [MavenProject: com.google.gwt.personal.tupracticalpieces:TUPracticalPieces:6.0.0-SNAPSHOT @ /home/tad/wkTUP2023/TUPracticalPieces/pom.xml]
+[DEBUG]   (f) remoteRepositories = [      id: central
+      url: https://repo1.maven.org/maven2/
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+   blocked: false
+,       id: sonatype-google-releases
+      url: https://oss.sonatype.org/service/local/repositories/google-releases/content
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+   blocked: false
+,       id: sonatype
+      url: https://www.eclipse.org/jetty
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => daily]
+   blocked: false
+,       id: lifecycle-mapping
+      url: https://mvnrepository.com/artifact/org.eclipse.m2e/lifecycle-mapping
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => daily]
+   blocked: false
+,       id: opennms
+      url: https://repo.opennms.org/maven2/
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+   blocked: false
+]
+[DEBUG]   (f) scan = -1
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@733c464f
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) target = /home/tad/wkTUP2023/TUPracticalPieces/target
+[DEBUG]   (f) testClassesDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/test-classes
+[DEBUG]   (f) useProvidedScope = false
+[DEBUG]   (f) useTestScope = false
+[DEBUG] o.e.j.m.p.MavenWebAppContext@1a2e563e{/,null,STOPPED} added {SymlinkAllowedResourceAliasChecker@71166348{base=null,protected=[]},MANAGED}
+[DEBUG] o.e.j.m.p.MavenWebAppContext@1a2e563e{/,null,STOPPED} added {org.eclipse.jetty.server.session.SessionHandler217062446==dftMaxIdleSec=-1,MANAGED}
+[DEBUG] ConstraintSecurityHandler@9a9aa68{STOPPED} added {org.eclipse.jetty.util.component.DumpableCollection@3a3883c4,POJO}
+[DEBUG] org.eclipse.jetty.server.session.SessionHandler217062446==dftMaxIdleSec=-1 added {ConstraintSecurityHandler@9a9aa68{STOPPED},MANAGED}
+[DEBUG] ConstraintSecurityHandler@9a9aa68{STOPPED} added {ServletHandler@5b0902b4{STOPPED},MANAGED}
+[DEBUG] o.e.j.m.p.MavenWebAppContext@1a2e563e{/,null,STOPPED} added {ErrorPageErrorHandler@9d3d54e{STOPPED},MANAGED}
+[DEBUG]   (s) contextPath = /
+[DEBUG]   (s) descriptor = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/web.xml
+[DEBUG]   (s) defaultsDescriptor = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/webdefault.xml
+[DEBUG]   (f) webApp = o.e.j.m.p.MavenWebAppContext@1a2e563e{/,null,STOPPED}
+[DEBUG]   (f) webAppSourceDirectory = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT
+[DEBUG]   (f) webXml = /home/tad/wkTUP2023/TUPracticalPieces/${project.baseDir}/src/main/webapp/WEB-INF/web.xml
+[DEBUG] -- end configuration --
+[INFO] Configuring Jetty for project: TUPracticalPieces Maven Webapp
+[INFO] Classes = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/classes
+[INFO] Context path = /
+[INFO] Tmp directory = /home/tad/wkTUP2023/TUPracticalPieces/target/tmp
+[DEBUG] Artifact org.apache.maven:maven-artifact:jar:3.9.6 loaded from /home/tad/.m2/repository/org/apache/maven/maven-artifact/3.9.6/maven-artifact-3.9.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.commons:commons-lang3:jar:3.12.0 loaded from /home/tad/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2 loaded from /home/tad/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M2/org.eclipse.sisu.plexus-0.9.0.M2.jar added to WEB-INF/lib
+[DEBUG] Artifact javax.annotation:javax.annotation-api:jar:1.2 loaded from /home/tad/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar added to WEB-INF/lib
+[DEBUG] Artifact org.codehaus.plexus:plexus-utils:jar:3.5.1 loaded from /home/tad/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar added to WEB-INF/lib
+[DEBUG] Artifact org.codehaus.plexus:plexus-classworlds:jar:2.7.0 loaded from /home/tad/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.7.0/plexus-classworlds-2.7.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven:maven-settings:jar:3.9.9 loaded from /home/tad/.m2/repository/org/apache/maven/maven-settings/3.9.9/maven-settings-3.9.9.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven.resolver:maven-resolver-api:jar:1.9.22 loaded from /home/tad/.m2/repository/org/apache/maven/resolver/maven-resolver-api/1.9.22/maven-resolver-api-1.9.22.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M3 loaded from /home/tad/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.jar added to WEB-INF/lib
+[DEBUG] Artifact org.codehaus.plexus:plexus-component-annotations:jar:2.1.0 loaded from /home/tad/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar added to WEB-INF/lib
+[DEBUG] Artifact jakarta.annotation:jakarta.annotation-api:jar:3.0.0 loaded from /home/tad/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.gwtproject:gwt-servlet-jakarta:jar:2.12.1 loaded from /home/tad/.m2/repository/org/gwtproject/gwt-servlet-jakarta/2.12.1/gwt-servlet-jakarta-2.12.1.jar added to WEB-INF/lib
+[DEBUG] Artifact javax.validation:validation-api:jar:1.0.0.GA loaded from /home/tad/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar added to WEB-INF/lib
+[DEBUG] Artifact org.ow2.asm:asm:jar:9.6 loaded from /home/tad/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.ow2.asm:asm-tree:jar:9.6 loaded from /home/tad/.m2/repository/org/ow2/asm/asm-tree/9.6/asm-tree-9.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.ow2.asm:asm-commons:jar:9.6 loaded from /home/tad/.m2/repository/org/ow2/asm/asm-commons/9.6/asm-commons-9.6.jar added to WEB-INF/lib
+[DEBUG] Artifact commons-logging:commons-logging:jar:1.2 loaded from /home/tad/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar added to WEB-INF/lib
+[DEBUG] Artifact org.gwtproject.web.bindery:requestfactory-server-jakarta:jar:2.12.1 loaded from /home/tad/.m2/repository/org/gwtproject/web/bindery/requestfactory-server-jakarta/2.12.1/requestfactory-server-jakarta-2.12.1.jar added to WEB-INF/lib
+[DEBUG] Artifact jakarta.inject:jakarta.inject-api:jar:2.0.1 loaded from /home/tad/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar added to WEB-INF/lib
+[DEBUG] Artifact jakarta.validation:jakarta.validation-api:jar:3.1.0 loaded from /home/tad/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.0/jakarta.validation-api-3.1.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.slf4j:slf4j-api:jar:2.0.6 loaded from /home/tad/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.hibernate:hibernate-validator:jar:5.4.3.Final loaded from /home/tad/.m2/repository/org/hibernate/hibernate-validator/5.4.3.Final/hibernate-validator-5.4.3.Final.jar added to WEB-INF/lib
+[DEBUG] Artifact org.jboss.logging:jboss-logging:jar:3.3.0.Final loaded from /home/tad/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar added to WEB-INF/lib
+[DEBUG] Artifact com.fasterxml:classmate:jar:1.3.1 loaded from /home/tad/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar added to WEB-INF/lib
+[DEBUG] Artifact jakarta.persistence:jakarta.persistence-api:jar:3.0.0 loaded from /home/tad/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.persistence:org.eclipse.persistence.jpa:jar:3.0.0 loaded from /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa/3.0.0/org.eclipse.persistence.jpa-3.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.persistence:org.eclipse.persistence.asm:jar:3.0.0 loaded from /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.asm/3.0.0/org.eclipse.persistence.asm-3.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.persistence:org.eclipse.persistence.core:jar:3.0.0 loaded from /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.core/3.0.0/org.eclipse.persistence.core-3.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:jar:3.0.0 loaded from /home/tad/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa.jpql/3.0.0/org.eclipse.persistence.jpa.jpql-3.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.persistence:eclipselink:jar:3.0.0 loaded from /home/tad/.m2/repository/org/eclipse/persistence/eclipselink/3.0.0/eclipselink-3.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact mysql:mysql-connector-java:jar:8.0.30 loaded from /home/tad/.m2/repository/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar added to WEB-INF/lib
+[DEBUG] Artifact com.google.protobuf:protobuf-java:jar:3.21.10 loaded from /home/tad/.m2/repository/com/google/protobuf/protobuf-java/3.21.10/protobuf-java-3.21.10.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.pulsar:pulsar-client-messagecrypto-bc:jar:3.3.0 loaded from /home/tad/.m2/repository/org/apache/pulsar/pulsar-client-messagecrypto-bc/3.3.0/pulsar-client-messagecrypto-bc-3.3.0.jar added to WEB-INF/lib
+[DEBUG] Artifact xerces:xercesImpl:jar:2.11.0 loaded from /home/tad/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar added to WEB-INF/lib
+[DEBUG] Artifact xml-apis:xml-apis:jar:1.4.01 loaded from /home/tad/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar added to WEB-INF/lib
+[DEBUG] Artifact org.json:json:jar:20240303 loaded from /home/tad/.m2/repository/org/json/json/20240303/json-20240303.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-maven-plugin:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-maven-plugin/11.0.24/jetty-maven-plugin-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact jakarta.transaction:jakarta.transaction-api:jar:2.0.0 loaded from /home/tad/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven.plugin-tools:maven-plugin-tools-api:jar:3.13.1 loaded from /home/tad/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-tools-api/3.13.1/maven-plugin-tools-api-3.13.1.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven.reporting:maven-reporting-api:jar:3.1.1 loaded from /home/tad/.m2/repository/org/apache/maven/reporting/maven-reporting-api/3.1.1/maven-reporting-api-3.1.1.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven.doxia:doxia-sink-api:jar:1.11.1 loaded from /home/tad/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.11.1/doxia-sink-api-1.11.1.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven.doxia:doxia-logging-api:jar:1.11.1 loaded from /home/tad/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.11.1/doxia-logging-api-1.11.1.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.httpcomponents:httpclient:jar:4.5.14 loaded from /home/tad/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.httpcomponents:httpcore:jar:4.4.16 loaded from /home/tad/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven.wagon:wagon-provider-api:jar:3.5.3 loaded from /home/tad/.m2/repository/org/apache/maven/wagon/wagon-provider-api/3.5.3/wagon-provider-api-3.5.3.jar added to WEB-INF/lib
+[DEBUG] Artifact org.codehaus.plexus:plexus-java:jar:1.2.0 loaded from /home/tad/.m2/repository/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar added to WEB-INF/lib
+[DEBUG] Artifact com.thoughtworks.qdox:qdox:jar:2.0.3 loaded from /home/tad/.m2/repository/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar added to WEB-INF/lib
+[DEBUG] Artifact org.codehaus.plexus:plexus-xml:jar:4.0.4 loaded from /home/tad/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.4/plexus-xml-4.0.4.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-9 loaded from /home/tad/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-9/maven-xml-impl-4.0.0-alpha-9.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven:maven-api-xml:jar:4.0.0-alpha-9 loaded from /home/tad/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-9/maven-api-xml-4.0.0-alpha-9.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.maven:maven-api-meta:jar:4.0.0-alpha-9 loaded from /home/tad/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-9/maven-api-meta-4.0.0-alpha-9.jar added to WEB-INF/lib
+[DEBUG] Artifact com.fasterxml.woodstox:woodstox-core:jar:6.5.1 loaded from /home/tad/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar added to WEB-INF/lib
+[DEBUG] Artifact org.codehaus.woodstox:stax2-api:jar:4.2.1 loaded from /home/tad/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:apache-jsp:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/apache-jsp/11.0.24/apache-jsp-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2 loaded from /home/tad/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-servlet-api/5.0.2/jetty-jakarta-servlet-api-5.0.2.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:glassfish-jstl:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/glassfish-jstl/11.0.24/glassfish-jstl-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:2.0.0 loaded from /home/tad/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/2.0.0/jakarta.servlet.jsp.jstl-api-2.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.0 loaded from /home/tad/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.0/jakarta.xml.bind-api-3.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact com.sun.activation:jakarta.activation:jar:2.0.0 loaded from /home/tad/.m2/repository/com/sun/activation/jakarta.activation/2.0.0/jakarta.activation-2.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.glassfish.web:jakarta.servlet.jsp.jstl:jar:2.0.0 loaded from /home/tad/.m2/repository/org/glassfish/web/jakarta.servlet.jsp.jstl/2.0.0/jakarta.servlet.jsp.jstl-2.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-annotations:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-annotations/11.0.24/jetty-annotations-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-client:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-client/11.0.24/jetty-client-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-alpn-client:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-alpn-client/11.0.24/jetty-alpn-client-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-http:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-http/11.0.24/jetty-http-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-io:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-io/11.0.24/jetty-io-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-jaas:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-jaas/11.0.24/jetty-jaas-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.directory.api:api-asn1-api:jar:2.1.6 loaded from /home/tad/.m2/repository/org/apache/directory/api/api-asn1-api/2.1.6/api-asn1-api-2.1.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.directory.api:api-i18n:jar:2.1.6 loaded from /home/tad/.m2/repository/org/apache/directory/api/api-i18n/2.1.6/api-i18n-2.1.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.directory.api:api-ldap-model:jar:2.1.6 loaded from /home/tad/.m2/repository/org/apache/directory/api/api-ldap-model/2.1.6/api-ldap-model-2.1.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.directory.api:api-asn1-ber:jar:2.1.6 loaded from /home/tad/.m2/repository/org/apache/directory/api/api-asn1-ber/2.1.6/api-asn1-ber-2.1.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.mina:mina-core:jar:2.2.3 loaded from /home/tad/.m2/repository/org/apache/mina/mina-core/2.2.3/mina-core-2.2.3.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.servicemix.bundles:org.apache.servicemix.bundles.antlr:jar:2.7.7_5 loaded from /home/tad/.m2/repository/org/apache/servicemix/bundles/org.apache.servicemix.bundles.antlr/2.7.7_5/org.apache.servicemix.bundles.antlr-2.7.7_5.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.commons:commons-collections4:jar:4.4 loaded from /home/tad/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar added to WEB-INF/lib
+[DEBUG] Artifact com.github.ben-manes.caffeine:caffeine:jar:2.9.3 loaded from /home/tad/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.9.3/caffeine-2.9.3.jar added to WEB-INF/lib
+[DEBUG] Artifact org.apache.directory.api:api-util:jar:2.1.6 loaded from /home/tad/.m2/repository/org/apache/directory/api/api-util/2.1.6/api-util-2.1.6.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-security:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-security/11.0.24/jetty-security-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-jmx:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-jmx/11.0.24/jetty-jmx-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-jndi:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-jndi/11.0.24/jetty-jndi-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-plus:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-plus/11.0.24/jetty-plus-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-quickstart:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-quickstart/11.0.24/jetty-quickstart-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-server:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-server/11.0.24/jetty-server-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-servlet:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-servlet/11.0.24/jetty-servlet-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-util:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-util/11.0.24/jetty-util-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-webapp:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-webapp/11.0.24/jetty-webapp-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty:jetty-xml:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/jetty-xml/11.0.24/jetty-xml-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-jakarta-server:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-server/11.0.24/websocket-jakarta-server-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.toolchain:jetty-jakarta-websocket-api:jar:2.0.0 loaded from /home/tad/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-websocket-api/2.0.0/jetty-jakarta-websocket-api-2.0.0.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-jakarta-client:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-client/11.0.24/websocket-jakarta-client-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-core-client:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-client/11.0.24/websocket-core-client-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-jakarta-common:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jakarta-common/11.0.24/websocket-jakarta-common-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-servlet:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-servlet/11.0.24/websocket-servlet-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-core-server:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-server/11.0.24/websocket-core-server-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-jetty-server:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-server/11.0.24/websocket-jetty-server-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-jetty-api:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-api/11.0.24/websocket-jetty-api-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-jetty-common:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-common/11.0.24/websocket-jetty-common-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact org.eclipse.jetty.websocket:websocket-core-common:jar:11.0.24 loaded from /home/tad/.m2/repository/org/eclipse/jetty/websocket/websocket-core-common/11.0.24/websocket-core-common-11.0.24.jar added to WEB-INF/lib
+[DEBUG] Artifact commons-codec:commons-codec:jar:1.10 loaded from /home/tad/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar added to WEB-INF/lib
+[INFO] web.xml file = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/web.xml
+[INFO] Webapp directory = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT
+[INFO] Web defaults = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/webdefault.xml
+[INFO] Web overrides =  none
+[DEBUG] STARTING JettyEmbedder@7b5ac347{STOPPED}
+[INFO] Configuring Jetty from xml configuration file = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty.xml
+[DEBUG] Pool@34d9df9f[inUse=0,size=1,max=2,closed=false] returning new reserved entry MonoEntry@615b5480{PENDING,pooled=null}
+[DEBUG] parsing: sid=null,pid=null
+[DEBUG] resolveEntity(-//Jetty//Configure//EN,https://jetty.org/configure_10_0.dtd)
+[DEBUG] Redirected entity https://jetty.org/configure_10_0.dtd  --> jar:file:/home/tad/.m2/repository/org/eclipse/jetty/jetty-xml/11.0.24/jetty-xml-11.0.24.jar!/org/eclipse/jetty/xml/configure_10_0.dtd
+[DEBUG] Configure file:///home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty.xml
+[DEBUG] Configure class org.eclipse.jetty.server.Server null
+[DEBUG] QueuedThreadPool[qtp1628421660]@610fbe1c{STOPPED,8<=0<=200,i=0,r=-1,t=-575466556ms,q=0}[NO_TRY] added {org.eclipse.jetty.util.thread.ThreadPoolBudget@2eebce87,POJO}
+[DEBUG] Server@6ee37ca7{STOPPED}[11.0.24,sto=0] added {QueuedThreadPool[qtp1628421660]@610fbe1c{STOPPED,8<=0<=200,i=0,r=-1,t=-575466557ms,q=0}[NO_TRY],AUTO}
+[DEBUG] Server@6ee37ca7{STOPPED}[11.0.24,sto=0] added {AttributeContainerMap@6775c0d1{size=0},AUTO}
+[DEBUG] XML call addBean
+[DEBUG] XML call addBean
+[DEBUG] XML new org.eclipse.jetty.util.thread.ScheduledExecutorScheduler
+[DEBUG] Server@6ee37ca7{STOPPED}[11.0.24,sto=0] added {ScheduledExecutorScheduler@7cd3e0da{STOPPED},AUTO}
+[DEBUG] XML new org.eclipse.jetty.server.HttpConfiguration
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,https://:0,[]}.setSecureScheme ("https")
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,"https"://:0,[]}.setSecurePort (8443)
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,"https"://:8443,[]}.setSendDateHeader (false)
+[DEBUG] XML call from
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,"https"://:8443,[]}.setHttpCompliance (CUSTOM0[])
+[DEBUG] XML call from
+[DEBUG] UriCompliance from SAFE->CUSTOM0[AMBIGUOUS_PATH_SEPARATOR, AMBIGUOUS_PATH_ENCODING]
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,"https"://:8443,[]}.setUriCompliance (CUSTOM0[AMBIGUOUS_PATH_SEPARATOR, AMBIGUOUS_PATH_ENCODING])
+[DEBUG] XML call from
+[DEBUG] CookieCompliance from RFC6265->RFC6265@b5c902[INVALID_COOKIES, OPTIONAL_WHITE_SPACE, SPACE_IN_VALUES]
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,"https"://:8443,[]}.setRequestCookieCompliance (RFC6265@b5c902[INVALID_COOKIES, OPTIONAL_WHITE_SPACE, SPACE_IN_VALUES])
+[DEBUG] XML call from
+[DEBUG] CookieCompliance from RFC6265->RFC6265@b5c902[INVALID_COOKIES, OPTIONAL_WHITE_SPACE, SPACE_IN_VALUES]
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,"https"://:8443,[]}.setResponseCookieCompliance (RFC6265@b5c902[INVALID_COOKIES, OPTIONAL_WHITE_SPACE, SPACE_IN_VALUES])
+[DEBUG] XML call valueOf
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,"https"://:8443,[]}.setMultiPartFormDataCompliance (RFC7578)
+[DEBUG] XML HttpConfiguration@796c68bf{32768/8192,8192/8192,"https"://:8443,[]}.setRelativeRedirectAllowed (false)
+[DEBUG] XML new org.eclipse.jetty.server.handler.HandlerList
+[DEBUG] XML new org.eclipse.jetty.server.handler.ContextHandlerCollection
+[DEBUG] XML new org.eclipse.jetty.server.handler.DefaultHandler
+[DEBUG] XML HandlerList@99c4993{STOPPED}.setHandlers ([ContextHandlerCollection@9729a97{STOPPED}, DefaultHandler@5dfd31f4{STOPPED}])
+[DEBUG] HandlerList@99c4993{STOPPED} added {ContextHandlerCollection@9729a97{STOPPED},AUTO}
+[DEBUG] HandlerList@99c4993{STOPPED} added {DefaultHandler@5dfd31f4{STOPPED},AUTO}
+[DEBUG] XML Server@6ee37ca7{STOPPED}[11.0.24,sto=0].setHandler (HandlerList@99c4993{STOPPED})
+[DEBUG] Server@6ee37ca7{STOPPED}[11.0.24,sto=0] added {HandlerList@99c4993{STOPPED},MANAGED}
+[DEBUG] XML Server@6ee37ca7{STOPPED}[11.0.24,sto=0].setStopAtShutdown (true)
+[DEBUG] XML Server@6ee37ca7{STOPPED}[11.0.24,sto=0].setStopTimeout (5000)
+[INFO] Configuring Jetty from xml configuration file = /home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-ssl-context.xml
+[DEBUG] parsing: sid=null,pid=null
+[DEBUG] resolveEntity(-//Jetty//Configure//EN,https://jetty.org/configure_10_0.dtd)
+[DEBUG] Redirected entity https://jetty.org/configure_10_0.dtd  --> jar:file:/home/tad/.m2/repository/org/eclipse/jetty/jetty-xml/11.0.24/jetty-xml-11.0.24.jar!/org/eclipse/jetty/xml/configure_10_0.dtd
+[DEBUG] Configure file:///home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-ssl-context.xml
+[DEBUG] Configure class org.eclipse.jetty.server.Server Server@6ee37ca7{STOPPED}[11.0.24,sto=5000]
+[DEBUG] XML call addBean
+[DEBUG] XML new org.eclipse.jetty.util.ssl.SslContextFactory$Server
+[DEBUG] XML call resolvePath
+[DEBUG] XML Server@1c2d63f0[provider=null,keyStore=null,trustStore=null].setKeyStorePath (null)
+[WARNING] Config error java.lang.reflect.InvocationTargetException at <Set name="KeyStorePath">
+          <Call name="resolvePath" class="org.eclipse.jetty.xml.XmlConfiguration"><Arg><Property name="jetty.base"/></Arg><Arg><Property name="jetty.sslContext.keyStorePath"/>"target/TUPracticalPieces-6.0.0-SNAPSHOT.war/WEB-INF/keystore.p12"</Arg></Call>
+        </Set> in file:///home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-ssl-context.xml
+[WARNING] Config error java.lang.reflect.InvocationTargetException at <Call name="addBean"><Arg>
+      <New id="sslContextFactory" class="org.eclipse.jetty.util.ssl.SslContextFactory$Server"><Set name="Provider" property="jetty.sslContext.provider"/><Set name="KeyStorePath">
+          <Call name="resolvePath" class="org.eclipse.jetty.xml.XmlConfiguration"><Arg><Property name="jetty.base"/></Arg><Arg><Property name="jetty.sslContext.keyStorePath"/>"target/TUPracticalPieces-6.0.0-SNAPSHOT.war/WEB-INF/keystore.p12"</Arg></Call>
+        </Set><Set name="KeyStorePassword" property="jetty.sslContext.keyStorePassword">"OBF:1ehl1k1h1m0v1v2h1pi91t3b1s4e1vne1vno1s2o1t2v1pjx1v1x1lxb1jyh1eg5"</Set><Set name="KeyStoreType" property="jetty.sslContext.keyStoreType">"PKCS12"</Set><Set name="KeyStoreProvider" property="jetty.sslContext.keyStoreProvider"/><Set name="KeyManagerPassword" property="jetty.sslContext.keyManagerPassword">"OBF:1ehl1k1h1m0v1v2h1pi91t3b1s4e1vne1vno1s2o1t2v1pjx1v1x1lxb1jyh1eg5"</Set><Set name="TrustStorePath">
+	  <Call name="resolvePath" class="org.eclipse.jetty.xml.XmlConfiguration"><Arg><Property name="jetty.base"/></Arg><Arg><Property name="jetty.sslContext.trustStorePath"/>"target/TUPracticalPieces-6.0.0-SNAPSHOT.war/WEB-INF/keystore.p12"</Arg></Call>
+	</Set><Set name="TrustStorePassword" property="jetty.sslContext.trustStorePassword">"OBF:1ehl1k1h1m0v1v2h1pi91t3b1s4e1vne1vno1s2o1t2v1pjx1v1x1lxb1jyh1eg5"</Set><Set name="TrustStoreType" property="jetty.sslContext.trustStoreType">"PKCS12"</Set><Set name="TrustStoreProvider" property="jetty.sslContext.trustStoreProvider"/><Set name="EndpointIdentificationAlgorithm" property="jetty.sslContext.endpointIdentificationAlgorithm"/><Set name="NeedClientAuth" property="jetty.sslContext.needClientAuth">false</Set><Set name="WantClientAuth" property="jetty.sslContext.wantClientAuth">false</Set><Set name="useCipherSuitesOrder" property="jetty.sslContext.useCipherSuitesOrder">true</Set><Set name="sslSessionCacheSize" property="jetty.sslContext.sslSessionCacheSize">-1</Set><Set name="sslSessionTimeout" property="jetty.sslContext.sslSessionTimeout">-1</Set><Set name="RenegotiationAllowed" property="jetty.sslContext.renegotiationAllowed">true</Set><Set name="RenegotiationLimit" property="jetty.sslContext.renegotiationLimit">5</Set><Set name="SniRequired" property="jetty.sslContext.sniRequired">false</Set></New>
+    </Arg></Call> in file:///home/tad/wkTUP2023/TUPracticalPieces/target/TUPracticalPieces-6.0.0-SNAPSHOT/WEB-INF/jetty-ssl-context.xml
+[WARNING] FAILED JettyEmbedder@7b5ac347{FAILED}: java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetException
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.invokeMethod (XmlConfiguration.java:777)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.set (XmlConfiguration.java:687)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:498)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.newObj (XmlConfiguration.java:1028)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.itemValue (XmlConfiguration.java:1543)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.value (XmlConfiguration.java:1444)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init> (XmlConfiguration.java:1702)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call (XmlConfiguration.java:950)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:504)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:457)
+    at org.eclipse.jetty.xml.XmlConfiguration.configure (XmlConfiguration.java:359)
+    at org.eclipse.jetty.maven.plugin.ServerSupport.applyXmlConfigurations (ServerSupport.java:225)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.configure (JettyEmbedder.java:257)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.doStart (JettyEmbedder.java:222)
+    at org.eclipse.jetty.util.component.AbstractLifeCycle.start (AbstractLifeCycle.java:93)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.startJettyEmbedded (JettyRunMojo.java:97)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.startJetty (AbstractWebAppMojo.java:441)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.execute (AbstractWebAppMojo.java:419)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute (JettyRunMojo.java:85)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: java.lang.IllegalArgumentException: java.lang.NullPointerException
+    at org.eclipse.jetty.util.ssl.SslContextFactory.setKeyStorePath (SslContextFactory.java:640)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.invokeMethod (XmlConfiguration.java:777)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.set (XmlConfiguration.java:687)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:498)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.newObj (XmlConfiguration.java:1028)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.itemValue (XmlConfiguration.java:1543)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.value (XmlConfiguration.java:1444)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init> (XmlConfiguration.java:1702)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call (XmlConfiguration.java:950)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:504)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:457)
+    at org.eclipse.jetty.xml.XmlConfiguration.configure (XmlConfiguration.java:359)
+    at org.eclipse.jetty.maven.plugin.ServerSupport.applyXmlConfigurations (ServerSupport.java:225)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.configure (JettyEmbedder.java:257)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.doStart (JettyEmbedder.java:222)
+    at org.eclipse.jetty.util.component.AbstractLifeCycle.start (AbstractLifeCycle.java:93)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.startJettyEmbedded (JettyRunMojo.java:97)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.startJetty (AbstractWebAppMojo.java:441)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.execute (AbstractWebAppMojo.java:419)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute (JettyRunMojo.java:85)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: java.lang.NullPointerException
+    at org.eclipse.jetty.util.resource.Resource.newResource (Resource.java:199)
+    at org.eclipse.jetty.util.resource.Resource.newResource (Resource.java:178)
+    at org.eclipse.jetty.util.ssl.SslContextFactory.setKeyStorePath (SslContextFactory.java:636)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.invokeMethod (XmlConfiguration.java:777)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.set (XmlConfiguration.java:687)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:498)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.newObj (XmlConfiguration.java:1028)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.itemValue (XmlConfiguration.java:1543)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.value (XmlConfiguration.java:1444)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init> (XmlConfiguration.java:1702)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call (XmlConfiguration.java:950)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:504)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:457)
+    at org.eclipse.jetty.xml.XmlConfiguration.configure (XmlConfiguration.java:359)
+    at org.eclipse.jetty.maven.plugin.ServerSupport.applyXmlConfigurations (ServerSupport.java:225)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.configure (JettyEmbedder.java:257)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.doStart (JettyEmbedder.java:222)
+    at org.eclipse.jetty.util.component.AbstractLifeCycle.start (AbstractLifeCycle.java:93)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.startJettyEmbedded (JettyRunMojo.java:97)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.startJetty (AbstractWebAppMojo.java:441)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.execute (AbstractWebAppMojo.java:419)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute (JettyRunMojo.java:85)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.284 s
+[INFO] Finished at: 2025-01-28T20:45:25+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.eclipse.jetty:jetty-maven-plugin:11.0.24:run (default-cli) on project TUPracticalPieces: Error starting jetty: InvocationTargetException: java.lang.NullPointerException -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.eclipse.jetty:jetty-maven-plugin:11.0.24:run (default-cli) on project TUPracticalPieces: Error starting jetty
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.MojoExecutionException: Error starting jetty
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.startJettyEmbedded (JettyRunMojo.java:103)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.startJetty (AbstractWebAppMojo.java:441)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.execute (AbstractWebAppMojo.java:419)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute (JettyRunMojo.java:85)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: java.lang.reflect.InvocationTargetException
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.invokeMethod (XmlConfiguration.java:777)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.set (XmlConfiguration.java:687)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:498)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.newObj (XmlConfiguration.java:1028)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.itemValue (XmlConfiguration.java:1543)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.value (XmlConfiguration.java:1444)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init> (XmlConfiguration.java:1702)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call (XmlConfiguration.java:950)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:504)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:457)
+    at org.eclipse.jetty.xml.XmlConfiguration.configure (XmlConfiguration.java:359)
+    at org.eclipse.jetty.maven.plugin.ServerSupport.applyXmlConfigurations (ServerSupport.java:225)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.configure (JettyEmbedder.java:257)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.doStart (JettyEmbedder.java:222)
+    at org.eclipse.jetty.util.component.AbstractLifeCycle.start (AbstractLifeCycle.java:93)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.startJettyEmbedded (JettyRunMojo.java:97)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.startJetty (AbstractWebAppMojo.java:441)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.execute (AbstractWebAppMojo.java:419)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute (JettyRunMojo.java:85)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: java.lang.IllegalArgumentException: java.lang.NullPointerException
+    at org.eclipse.jetty.util.ssl.SslContextFactory.setKeyStorePath (SslContextFactory.java:640)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.invokeMethod (XmlConfiguration.java:777)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.set (XmlConfiguration.java:687)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:498)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.newObj (XmlConfiguration.java:1028)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.itemValue (XmlConfiguration.java:1543)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.value (XmlConfiguration.java:1444)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init> (XmlConfiguration.java:1702)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call (XmlConfiguration.java:950)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:504)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:457)
+    at org.eclipse.jetty.xml.XmlConfiguration.configure (XmlConfiguration.java:359)
+    at org.eclipse.jetty.maven.plugin.ServerSupport.applyXmlConfigurations (ServerSupport.java:225)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.configure (JettyEmbedder.java:257)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.doStart (JettyEmbedder.java:222)
+    at org.eclipse.jetty.util.component.AbstractLifeCycle.start (AbstractLifeCycle.java:93)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.startJettyEmbedded (JettyRunMojo.java:97)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.startJetty (AbstractWebAppMojo.java:441)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.execute (AbstractWebAppMojo.java:419)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute (JettyRunMojo.java:85)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: java.lang.NullPointerException
+    at org.eclipse.jetty.util.resource.Resource.newResource (Resource.java:199)
+    at org.eclipse.jetty.util.resource.Resource.newResource (Resource.java:178)
+    at org.eclipse.jetty.util.ssl.SslContextFactory.setKeyStorePath (SslContextFactory.java:636)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.invokeMethod (XmlConfiguration.java:777)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.set (XmlConfiguration.java:687)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:498)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.newObj (XmlConfiguration.java:1028)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.itemValue (XmlConfiguration.java:1543)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.value (XmlConfiguration.java:1444)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init> (XmlConfiguration.java:1702)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call (XmlConfiguration.java:950)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:504)
+    at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure (XmlConfiguration.java:457)
+    at org.eclipse.jetty.xml.XmlConfiguration.configure (XmlConfiguration.java:359)
+    at org.eclipse.jetty.maven.plugin.ServerSupport.applyXmlConfigurations (ServerSupport.java:225)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.configure (JettyEmbedder.java:257)
+    at org.eclipse.jetty.maven.plugin.JettyEmbedder.doStart (JettyEmbedder.java:222)
+    at org.eclipse.jetty.util.component.AbstractLifeCycle.start (AbstractLifeCycle.java:93)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.startJettyEmbedded (JettyRunMojo.java:97)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.startJetty (AbstractWebAppMojo.java:441)
+    at org.eclipse.jetty.maven.plugin.AbstractWebAppMojo.execute (AbstractWebAppMojo.java:419)
+    at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute (JettyRunMojo.java:85)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[DEBUG] Shutting down adapter factory; available factories [file-lock, rwlock-local, semaphore-local, noop]; available name mappers [discriminating, file-gav, file-hgav, file-static, gav, static]
+[DEBUG] Shutting down 'file-lock' factory
+[DEBUG] Shutting down 'rwlock-local' factory
+[DEBUG] Shutting down 'semaphore-local' factory
+[DEBUG] Shutting down 'noop' factory

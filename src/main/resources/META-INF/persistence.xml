@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<persistence
-    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
-          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
-    version="2.2">
+
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
+             version="3.1">
+
      <persistence-unit name="TUPPDB" transaction-type="RESOURCE_LOCAL">
         <!--<provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>-->
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <!-- <jta-data-source>jdbc/__default Trifle</jta-data-source> -->
         <class>com.google.gwt.personal.tupracticalpieces.database.Mileage</class>
         <class>com.google.gwt.personal.tupracticalpieces.database.User</class>
         <exclude-unlisted-classes/>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Trifle?useSSL%3Dfalse" />
-            <property name="jakarta.persistence.jdbc.user" value="tad" />
-            <property name="jakarta.persistence.jdbc.password" value="identmysql555" />
+            <property name="jakarta.persistence.jdbc.user" value="jetty" />
+            <property name="jakarta.persistence.jdbc.password" value="IdentMySql*555" />
     		<!-- 
             <property name="datanucleus.identifier.case" value="MixedCase"/>
     		<property name="datanucleus.validation.mode" value="none" />
@@ -24,13 +26,25 @@
             <property name="datanucleus.schema.validateTables" value="false"/>
             <property name="datanucleus.schema.validateConstraints" value="false"/>
     		 -->
-
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
-
+            <!-- <property name="eclipselink.ddl-generation.output-mode" value="both"/> -->
+            <property name="eclipselink.target-database" value="MYSQL"/>
+            <property name="eclipselink.deploy-on-startup" value="false"/>
+	    <property name="eclipselink.exclude-eclipselink-orm" value="true"/>
         </properties>
      </persistence-unit>
 </persistence>
           
+     <!-- <persistence-unit name="TUPPDB" transaction-type="RESOURCE_LOCAL">-->
+        <!--<provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>-->
+        <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
+<!-- <persistence
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+    version="2.2"> -->
 <!-- <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" -->
 <!--     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
 <!--     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence -->

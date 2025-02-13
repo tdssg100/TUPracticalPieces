@@ -10,6 +10,5 @@
 		
 		var locsArray = JSON.parse(JsonStr);
 		var ret = new Boolean(locsArray["match"]);
-
 		return ret;
 	}

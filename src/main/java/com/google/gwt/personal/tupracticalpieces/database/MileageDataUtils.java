@@ -116,7 +116,7 @@ public class MileageDataUtils extends HttpServlet {
 		} catch (Exception e) { 
 			log.severe("JPA cache init: " + e.toString());				
 		} finally {
-			cm.close();
+//			cm.close();
 		}
 	}
 	

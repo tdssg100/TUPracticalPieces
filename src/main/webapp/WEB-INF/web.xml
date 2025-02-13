@@ -35,8 +35,20 @@
     
   <security-constraint>
     <web-resource-collection>
-      <web-resource-name>TUPracticalPieces</web-resource-name>
-      <url-pattern>/*</url-pattern>
+        <web-resource-name>TUPracticalPiecesHTML</web-resource-name>
+        <url-pattern>/TUPracticalPieces.html</url-pattern>
+        <url-pattern>/TUPracticalPieces</url-pattern>
+        <url-pattern>/gwtRequest</url-pattern>
+        <url-pattern>/gwtRequest/*</url-pattern>
+        <url-pattern>/mileagedatautils</url-pattern>
+        <url-pattern>/tupracticalpieces/admintask</url-pattern>
+        <url-pattern>/tupracticalpieces/adminsvc</url-pattern>
+        <url-pattern>/oauth2callback</url-pattern>
+        <url-pattern>/proxy8181</url-pattern>
+        <url-pattern>/agent8181</url-pattern>
+        <url-pattern>/surveillancecamera</url-pattern>
+        <url-pattern>/messagedigest</url-pattern>
+        <url-pattern>/_ah/*</url-pattern>
     </web-resource-collection>
     <user-data-constraint>
       <transport-guarantee>NONE</transport-guarantee>
@@ -138,8 +150,8 @@
   </servlet-mapping>
   <!-- 202406 -->
   <servlet>
-    <servlet-name>SurveillanceCameraProxyServlet</servlet-name>
-    <servlet-class>com.google.gwt.personal.tupracticalpieces.server.SurveillanceCameraProxyServlet</servlet-class>
+    <servlet-name>MessageDigestServlet</servlet-name>
+    <servlet-class>com.google.gwt.personal.tupracticalpieces.server.MessageDigestServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>MessageDigestServlet</servlet-name>

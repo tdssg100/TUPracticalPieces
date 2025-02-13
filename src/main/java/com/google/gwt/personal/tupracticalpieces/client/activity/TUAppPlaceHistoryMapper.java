@@ -24,7 +24,6 @@ package com.google.gwt.personal.tupracticalpieces.client.activity;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.gwt.place.shared.WithTokenizers;
 import com.google.gwt.personal.tupracticalpieces.presenter.list.AdminMileagePlace;
-import com.google.gwt.place.shared.Place;
 import com.google.gwt.personal.tupracticalpieces.presenter.editor.MileageEditPlace;
 
 /**

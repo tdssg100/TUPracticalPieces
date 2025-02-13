@@ -307,7 +307,7 @@ public class LoginState  {
 							url = "https://accounts.google.com/o/oauth2/auth?" + 
 									URL.encode("response_type=code&" +
 											"client_id=882057016296-tl5oic5jm1anrd625dlt1t10ud1rhpn0.apps.googleusercontent.com&" + 
-											"redirect_uri=" + Window.Location.getProtocol() + "/" + Window.Location.getHost() + "/oauth2callback&" +
+											"redirect_uri=" + Window.Location.getProtocol() + "//" + Window.Location.getHost() + "/oauth2callback&" +
 											"scope=https://www.googleapis.com/auth/userinfo.profile " +  
 											"https://www.googleapis.com/auth/userinfo.email&" +
 											"state=/profile");
@@ -443,7 +443,7 @@ public class LoginState  {
 		    }
 		    hashedStr = "{" + sb.toString() + "}";
 		   
-//Window.alert("Encrypt :" + hashedStr);	//
+Window.alert("Encrypt :" + hashedStr);	//
 		} catch (Exception e) {  //NoSuchAlgorithmException
 			Window.alert("Encrypt fail. " + e.toString());
 		}
