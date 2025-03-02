@@ -190,6 +190,22 @@ public class TUPracticalPiecesConstants_ implements com.google.gwt.personal.tupr
     return "Version update with some fixes. Gwt 2.9.0, Datanucleus 5.0.0, appengine 1.9.82.";
   }
   
+  public java.lang.String cwPrefaceParam() {
+    return "For the twenty-second edition.(updated 2024.6)";
+  }
+  
+  public java.lang.String cwPrefaceParamcont() {
+    return "Adding an authentication dialog for the administrator pages.";
+  }
+  
+  public java.lang.String cwPrefaceParan() {
+    return "For the the twenty-third edition.(updated 2025.2)";
+  }
+  
+  public java.lang.String cwPrefaceParancont() {
+    return "According to updating Gwt 2.9.0, the app is updatate. Deploy to Amazon EC2 with jetty 12.";
+  }
+  
   public java.lang.String cwNotesDescription() {
     return "Memorandum.";
   }
@@ -284,6 +300,14 @@ public class TUPracticalPiecesConstants_ implements com.google.gwt.personal.tupr
   
   public java.lang.String cwNotesPm() {
     return "Version update with some fixes. Gwt 2.9.0(java8),Datanucleus 5.0.0, appengine 1.9.82. (Octorber 2016)";
+  }
+  
+  public java.lang.String cwNotesPn() {
+    return "Add an authentication modal view for the administrator views. (June 2024)";
+  }
+  
+  public java.lang.String cwNotesPo() {
+    return "According to upgrading GWT to 2.9.12, I update the system to java 17, maven 3.9.9, jetty 12.1.16, ee10, JPA 3.1. (Feburary 2025)";
   }
   
   public java.lang.String cwMethodDescription() {

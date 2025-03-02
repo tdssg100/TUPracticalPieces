@@ -121,6 +121,14 @@ public class CwPreface extends ContentWidget {
     String cwPrefaceParal();
     
     String cwPrefaceParalcont();    
+    
+    String cwPrefaceParam();
+    
+    String cwPrefaceParamcont();    
+    
+    String cwPrefaceParan();
+    
+    String cwPrefaceParancont();    
   }
 
   /**
@@ -264,6 +272,18 @@ public class CwPreface extends ContentWidget {
 	    wedgeStr += "<h3>" + constants.cwPrefaceParal() + "</h3>";
 	    wedgeStr += "<ol style='list-style-type: disc'>";
 	    wedgeStr += "<li>" + constants.cwPrefaceParalcont() + "</li>";
+	    wedgeStr += "</ol>";
+	    
+	    wedgeStr += "<br/>";
+	    wedgeStr += "<h3>" + constants.cwPrefaceParam() + "</h3>";
+	    wedgeStr += "<ol style='list-style-type: disc'>";
+	    wedgeStr += "<li>" + constants.cwPrefaceParamcont() + "</li>";
+	    wedgeStr += "</ol>";
+	    
+	    wedgeStr += "<br/>";
+	    wedgeStr += "<h3>" + constants.cwPrefaceParan() + "</h3>";
+	    wedgeStr += "<ol style='list-style-type: disc'>";
+	    wedgeStr += "<li>" + constants.cwPrefaceParancont() + "</li>";
 	    wedgeStr += "</ol>";
 	    
 	    

@@ -190,6 +190,22 @@ public class TUPracticalPiecesConstants_ja implements com.google.gwt.personal.tu
     return "GWT 2.9.0、Datanucleus 5.0.0、appengine 1.9.82 にバージョンアップしました。";
   }
   
+  public java.lang.String cwPrefaceParam() {
+    return "第22版(2024.6更新)";
+  }
+  
+  public java.lang.String cwPrefaceParamcont() {
+    return "アドミニストレート権限が必要なページに認証画面を追加しました。これは、DBにユーザのテーブルを用意して暗号化したパスワード保存することで実装しました。";
+  }
+  
+  public java.lang.String cwPrefaceParan() {
+    return "第23版(2020.12更新)";
+  }
+  
+  public java.lang.String cwPrefaceParancont() {
+    return "GWT 2.12.1 のアップグレードに伴い、java 17, maven 3.9.9, jetty 12.1.16, ee10, JPA 3.1 に更新しました。GWTサンプルのMobileWebAppを組み込んだところを正常に動作するように修正しました。";
+  }
+  
   public java.lang.String cwNotesDescription() {
     return "おぼえがき";
   }
@@ -284,6 +300,14 @@ public class TUPracticalPiecesConstants_ja implements com.google.gwt.personal.tu
   
   public java.lang.String cwNotesPm() {
     return "GWT 2.9.0にバージョンアップされたので更新しました（Java 8）。Datanucleus、appengineのバージョンアップも行いました。 (2020年12月)";
+  }
+  
+  public java.lang.String cwNotesPn() {
+    return "アドミニスタ権限のページにログイン画面を作成した。(2024年6月)";
+  }
+  
+  public java.lang.String cwNotesPo() {
+    return "AmazonのEC２にsystemdでjettyのもとにデプロイした。今回の改修ではGeminiを利用してわからないで放っておくというのがなくなった。(2024年6月)";
   }
   
   public java.lang.String cwMethodDescription() {

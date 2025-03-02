@@ -82,6 +82,10 @@ public class CwNotes extends ContentWidget {
     String cwNotesPl();
 
     String cwNotesPm();
+
+    String cwNotesPn();
+
+    String cwNotesPo();
   }
     
   /**
@@ -132,6 +136,8 @@ public class CwNotes extends ContentWidget {
     wedgeStr += "<li><p>" + constants.cwNotesPk() + "</p></li>";
     wedgeStr += "<li><p>" + constants.cwNotesPl() + "</p></li>";
     wedgeStr += "<li><p>" + constants.cwNotesPm() + "</p></li>";
+    wedgeStr += "<li><p>" + constants.cwNotesPn() + "</p></li>";
+    wedgeStr += "<li><p>" + constants.cwNotesPo() + "</p></li>";
     wedgeStr += "</ol>";
 	vPanel.add(new HTML(wedgeStr));
     return vPanel;
