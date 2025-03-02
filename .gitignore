@@ -2,3 +2,6 @@
 *.bin
 *.ova
 target/gwt-unitCache/*
+target/TUPracticalPieces-6.0.0-SNAPSHOT.war
+target/TUPracticalPieces-6.0.0-SNAPSHOT-jar-with-dependencies.jar
+
